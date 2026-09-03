@@ -49,3 +49,42 @@ export async function predictProjectRisk(input: ProjectRiskInput): Promise<Proje
   }
   return response.json() as Promise<ProjectRiskResponse>;
 }
+
+// --- Historical project similarity ---
+
+export type HistoricalProjectMatch = {
+  project_id: string;
+  similarity_percentage: number;
+  sector: string;
+  state: string;
+  original_cost: number;
+  actual_delay_months: number;
+  actual_outcome: string;
+  primary_delay_cause: string;
+};
+
+export type SimilarityEvidence = {
+  similar_projects_count: number;
+  delayed_projects_count: number;
+  delayed_over_six_months_count: number;
+  delay_rate: number;
+  summary: string;
+};
+
+export type SimilarityResponse = {
+  matches: HistoricalProjectMatch[];
+  evidence: SimilarityEvidence;
+};
+
+export async function findSimilarProjects(input: ProjectRiskInput): Promise<SimilarityResponse> {
+  const response = await fetch(`${API_URL}/api/v1/similar-projects`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(input),
+  });
+  if (!response.ok) {
+    const error = await response.json().catch(() => null);
+    throw new Error(error?.detail?.[0]?.msg ?? error?.detail ?? `Similarity search failed (${response.status})`);
+  }
+  return response.json() as Promise<SimilarityResponse>;
+}
