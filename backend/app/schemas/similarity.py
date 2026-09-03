@@ -15,6 +15,7 @@ class HistoricalProjectMatch(BaseModel):
     sector: str
     state: str
     original_cost: float
+    revised_cost: float
     actual_delay_months: int = Field(ge=0)
     actual_outcome: str
     primary_delay_cause: str

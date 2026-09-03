@@ -66,6 +66,7 @@ class HistoricalSimilarityModel:
                 "sector": str(record["sector"]),
                 "state": str(record["state"]),
                 "original_cost": float(record["original_cost"]),
+                "revised_cost": float(record.get("revised_cost", record["original_cost"])),
                 "actual_delay_months": int(record["actual_delay_months"]),
                 "actual_outcome": str(record["actual_outcome"]),
                 "primary_delay_cause": str(record["primary_delay_cause"]),
