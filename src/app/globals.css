@@ -83,4 +83,5 @@ button, input { font: inherit; }
 .detail-wrap .scenario-section .report-title h2 { color: #2e4837; }
 .detail-wrap .estimate-label { color: #64806e; }
 .detail-wrap .anomaly-section { background: transparent; border-color: #cfc7b9; border-left-color: #ba7a4e; }
+.predict-button { border: 1px solid #557664; background: transparent; color: #41644f; display: flex; align-items: center; gap: 7px; padding: 9px 12px; font-size: 10px; cursor: pointer; }.predict-button:hover { background: #e7f0e8; }.predict-button:disabled { opacity: .6; cursor: wait; }.prediction-hint, .prediction-error { display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #dce3dc; padding: 12px 0; color: #75837a; font-size: 10px; }.prediction-hint svg { color: #c77b4d; }.prediction-error { color: #a65d45; border-color: #e3d5ca; }.prediction-error svg { color: #bb6949; }.prediction-error button { border: 0; background: none; color: #8b5f49; text-decoration: underline; font-size: 10px; cursor: pointer; margin-left: auto; }
 @media (max-width: 900px) { .detail-wrap .scenario-section { margin-left: 0; margin-right: 0; } }

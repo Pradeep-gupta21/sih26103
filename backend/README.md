@@ -56,7 +56,38 @@ Example request:
 }
 ```
 
-The response includes a probability, 0-100 risk percentage, `LOW`/`MODERATE`/`HIGH`/`CRITICAL` level, and a transparent heuristic confidence basis. The already-trained pipeline is loaded from `trained_models/delay_risk_pipeline.joblib`; requests never retrain the model.
+The response includes a probability, 0-100 risk percentage, `LOW`/`MODERATE`/`HIGH`/`CRITICAL` level, transparent heuristic confidence, deterministic natural-language `summary`, and 3-5 SHAP-ranked `top_risk_factors`. Factors are mapped back from encoded and engineered model features and explicitly labeled as `increases_risk` or `reduces_risk`. The already-trained pipeline is loaded from `trained_models/delay_risk_pipeline.joblib`; requests never retrain the model. The SHAP explainer is created once when the service loads the model and reused across requests.
+
+Example response:
+
+```json
+{
+  "project_risk": {
+    "delay_probability": 0.84243,
+    "risk_percentage": 84,
+    "risk_level": "CRITICAL",
+    "model_confidence": "HIGH",
+    "confidence_basis": "Heuristic confidence: probability is at least 30 points from the decision boundary."
+  },
+  "top_risk_factors": [
+    {
+      "factor": "financial_physical_gap",
+      "impact": "increases_risk",
+      "importance": 0.24,
+      "description": "A gap between physical and financial progress is increasing project risk."
+    },
+    {
+      "factor": "land_acquisition_pending",
+      "impact": "increases_risk",
+      "importance": 0.19,
+      "description": "Pending land acquisition is a major contributor to the predicted delay risk."
+    }
+  ],
+  "summary": "The project is primarily at risk due to financial-physical progress gap and land acquisition."
+}
+```
+
+The model is loaded during FastAPI startup. API requests only perform preprocessing, prediction, and SHAP explanation; they do not retrain the model.
 
 ## Architecture
 

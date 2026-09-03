@@ -7,6 +7,7 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 
 from app.schemas.project import ProjectRiskRequest, ProjectRiskResponse, ProjectRiskSummary
+from app.services.explanation_service import build_explainer, explain_prediction
 
 MODEL_PATH = Path(__file__).resolve().parents[2] / "trained_models" / "delay_risk_pipeline.joblib"
 
@@ -22,6 +23,7 @@ class SavedPredictionService:
             raise ValueError("Saved model is not a compatible prediction pipeline")
         self.pipeline = loaded
         self.model_path = model_path
+        self.explainer = build_explainer(self.pipeline)
 
     def predict(self, payload: ProjectRiskRequest) -> ProjectRiskResponse:
         features = payload.model_dump(exclude={"project_id"})
@@ -36,6 +38,7 @@ class SavedPredictionService:
         else:
             risk_level = "CRITICAL"
         confidence, basis = self._confidence(probability)
+        factors, summary = explain_prediction(self.pipeline, self.explainer, features)
         return ProjectRiskResponse(
             project_risk=ProjectRiskSummary(
                 delay_probability=round(probability, 6),
@@ -43,7 +46,9 @@ class SavedPredictionService:
                 risk_level=risk_level,
                 model_confidence=confidence,
                 confidence_basis=basis,
-            )
+            ),
+            top_risk_factors=factors,
+            summary=summary,
         )
 
     @staticmethod

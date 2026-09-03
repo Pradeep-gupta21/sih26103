@@ -32,6 +32,8 @@ class ProjectRiskRequest(BaseModel):
 
 class ProjectRiskResponse(BaseModel):
     project_risk: "ProjectRiskSummary"
+    top_risk_factors: list["RiskFactor"]
+    summary: str
 
 
 class ProjectRiskSummary(BaseModel):
@@ -40,3 +42,10 @@ class ProjectRiskSummary(BaseModel):
     risk_level: str
     model_confidence: str
     confidence_basis: str
+
+
+class RiskFactor(BaseModel):
+    factor: str
+    impact: str
+    importance: float = Field(ge=0, le=1)
+    description: str

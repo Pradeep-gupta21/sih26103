@@ -7,7 +7,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes.prediction import router as prediction_router
+from app.api.routes.similarity import router as similarity_router
 from app.services.prediction_service import build_prediction_service
+from app.services.similarity_service import build_similarity_service
 
 
 @asynccontextmanager
@@ -18,6 +20,12 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     except (FileNotFoundError, ValueError, OSError) as exc:
         app.state.prediction_service = None
         app.state.model_error = str(exc)
+    try:
+        app.state.similarity_service = build_similarity_service()
+        app.state.similarity_error = None
+    except (FileNotFoundError, ValueError, OSError) as exc:
+        app.state.similarity_service = None
+        app.state.similarity_error = str(exc)
     yield
 
 
@@ -30,6 +38,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(prediction_router, prefix="/api/v1")
+app.include_router(similarity_router, prefix="/api/v1")
 
 
 @app.get("/health", tags=["system"])
@@ -40,4 +49,6 @@ def health() -> dict[str, str | None]:
         "service": "project-intelligence",
         "model_status": "loaded" if model_available else "unavailable",
         "model_error": getattr(app.state, "model_error", None),
+        "similarity_status": "loaded" if getattr(app.state, "similarity_service", None) is not None else "unavailable",
+        "similarity_error": getattr(app.state, "similarity_error", None),
     }

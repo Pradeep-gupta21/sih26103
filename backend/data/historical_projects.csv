@@ -1,0 +1,1501 @@
+project_id,sector,state,original_cost,revised_cost,planned_duration_months,project_age_months,physical_progress,financial_progress,milestones_total,milestones_delayed,land_acquisition_pending,clearance_pending,funding_issue,contractor_issue,previous_schedule_deviation,actual_delay_months,actual_outcome,primary_delay_cause
+HIST-00001,Railways,Maharashtra,469.8,543.8,21,62,100.0,100.0,6,1,1,1,0,1,-5.1,9,9-month delay,Land acquisition
+HIST-00002,Urban Transit,Madhya Pradesh,214.1,233.4,35,73,100.0,100.0,9,1,1,0,0,0,8.4,5,5-month delay,Land acquisition
+HIST-00003,Railways,Tamil Nadu,183.6,189.9,12,63,83.3,93.9,4,1,0,0,0,0,6.7,0,Delivered within plan,No material delay
+HIST-00004,Ports,Madhya Pradesh,71.6,78.3,63,74,100.0,100.0,13,2,1,0,0,0,2.6,8,8-month delay,Land acquisition
+HIST-00005,Railways,Maharashtra,351.1,375.9,35,68,95.1,100.0,7,2,0,0,1,0,1.0,5,5-month delay,Milestone slippage
+HIST-00006,Urban Transit,Uttar Pradesh,129.1,138.4,46,23,49.7,52.6,12,1,0,0,1,0,2.1,0,Delivered within plan,Funding release
+HIST-00007,Urban Transit,Maharashtra,121.5,124.1,34,74,95.9,91.2,9,1,0,1,0,0,1.7,1,1-month delay,Pending clearance
+HIST-00008,Water & Sanitation,West Bengal,225.6,244.5,31,76,95.0,100.0,8,2,0,0,1,0,3.0,1,1-month delay,Milestone slippage
+HIST-00009,Airports,Tamil Nadu,310.7,317.0,62,52,87.7,100.0,15,1,0,0,0,0,4.0,1,1-month delay,No material delay
+HIST-00010,Ports,Jharkhand,427.6,453.3,25,59,84.0,82.1,7,1,0,0,0,0,-4.2,0,Delivered within plan,No material delay
+HIST-00011,Railways,West Bengal,219.6,252.1,69,12,23.2,25.8,17,3,0,1,0,1,12.4,7,7-month delay,Milestone slippage
+HIST-00012,Railways,Bihar,183.3,194.6,55,55,99.1,93.3,15,1,1,0,0,0,3.8,0,Delivered within plan,Land acquisition
+HIST-00013,Roads,Haryana,1050.1,1077.7,47,41,98.1,100.0,10,0,0,0,0,0,-0.7,0,Delivered within plan,No material delay
+HIST-00014,Airports,Andhra Pradesh,1025.4,1044.5,36,49,100.0,79.0,5,0,0,0,0,0,0.8,0,Delivered within plan,No material delay
+HIST-00015,Ports,Maharashtra,68.5,77.8,25,50,97.1,94.7,6,2,1,0,0,1,6.0,7,7-month delay,Land acquisition
+HIST-00016,Urban Transit,Rajasthan,185.1,191.6,36,41,100.0,97.7,10,0,0,0,0,1,-5.5,2,2-month delay,No material delay
+HIST-00017,Power,Jharkhand,283.1,290.0,57,18,32.6,42.5,13,0,0,0,0,0,3.0,1,1-month delay,No material delay
+HIST-00018,Roads,Kerala,375.3,400.5,22,13,60.5,61.1,4,1,1,0,0,0,1.9,9,9-month delay,Land acquisition
+HIST-00019,Urban Transit,Maharashtra,153.0,158.0,58,71,100.0,92.7,15,1,0,0,0,0,11.8,6,6-month delay,No material delay
+HIST-00020,Ports,Kerala,100.9,103.2,30,53,100.0,100.0,12,0,0,1,0,1,-10.8,0,Delivered within plan,Pending clearance
+HIST-00021,Urban Transit,Andhra Pradesh,149.2,152.8,39,22,44.6,45.2,12,0,0,0,0,0,1.0,1,1-month delay,No material delay
+HIST-00022,Ports,Tamil Nadu,147.4,166.7,63,81,89.3,76.4,17,1,1,0,0,0,9.6,7,7-month delay,Land acquisition
+HIST-00023,Roads,Gujarat,112.4,115.3,23,47,97.9,98.9,6,0,1,0,0,0,5.1,0,Delivered within plan,Land acquisition
+HIST-00024,Roads,Uttar Pradesh,179.2,198.1,52,74,98.4,93.3,11,1,1,1,0,0,1.4,9,9-month delay,Land acquisition
+HIST-00025,Water & Sanitation,Karnataka,320.2,351.6,22,72,100.0,100.0,9,2,1,1,0,0,-2.8,5,5-month delay,Land acquisition
+HIST-00026,Roads,Uttar Pradesh,185.8,197.4,31,80,76.5,69.9,7,0,0,0,1,0,3.4,3,3-month delay,Funding release
+HIST-00027,Roads,Jharkhand,35.2,36.6,30,47,100.0,100.0,6,0,1,0,0,0,-1.3,0,Delivered within plan,Land acquisition
+HIST-00028,Urban Transit,Bihar,205.8,205.8,61,45,79.6,81.5,18,1,1,0,0,0,-5.3,1,1-month delay,Land acquisition
+HIST-00029,Industrial Corridors,Odisha,265.9,277.8,38,35,96.9,95.1,11,1,0,0,0,0,-2.1,0,Delivered within plan,No material delay
+HIST-00030,Roads,Odisha,175.4,183.9,43,52,100.0,100.0,10,1,1,0,0,0,0.1,7,7-month delay,Land acquisition
+HIST-00031,Water & Sanitation,Kerala,139.4,151.4,39,83,100.0,100.0,8,2,0,0,1,0,1.4,5,5-month delay,Milestone slippage
+HIST-00032,Power,Gujarat,199.3,220.3,24,17,78.1,70.4,4,2,0,0,0,0,14.4,4,4-month delay,Milestone slippage
+HIST-00033,Industrial Corridors,Andhra Pradesh,127.4,132.1,47,31,68.5,74.9,8,1,0,0,0,1,-0.9,5,5-month delay,No material delay
+HIST-00034,Roads,West Bengal,260.8,285.9,35,81,100.0,97.4,8,0,0,1,0,1,1.4,0,Delivered within plan,Pending clearance
+HIST-00035,Roads,Odisha,453.2,463.4,19,29,87.3,86.9,6,1,1,0,0,0,-3.0,5,5-month delay,Land acquisition
+HIST-00036,Ports,Telangana,223.1,240.0,36,11,8.4,0.0,10,1,0,0,1,0,9.3,5,5-month delay,Funding release
+HIST-00037,Water & Sanitation,Odisha,192.3,198.2,41,68,97.0,100.0,8,1,0,0,0,0,1.9,0,Delivered within plan,No material delay
+HIST-00038,Airports,Rajasthan,129.5,134.3,74,25,45.0,50.3,19,1,0,0,0,0,-12.0,0,Delivered within plan,No material delay
+HIST-00039,Railways,Telangana,83.7,86.8,67,48,62.8,50.9,17,1,0,0,0,0,4.3,2,2-month delay,No material delay
+HIST-00040,Power,Andhra Pradesh,344.2,351.4,46,55,93.6,87.2,12,0,0,0,0,0,-1.5,1,1-month delay,No material delay
+HIST-00041,Water & Sanitation,Madhya Pradesh,182.1,185.9,86,21,33.5,34.1,22,0,0,1,0,0,-5.4,3,3-month delay,Pending clearance
+HIST-00042,Industrial Corridors,Madhya Pradesh,114.8,133.8,67,34,44.7,26.5,20,4,0,0,0,1,15.1,3,3-month delay,Milestone slippage
+HIST-00043,Urban Transit,Kerala,67.5,68.1,27,48,100.0,94.0,10,0,0,1,0,0,-3.5,0,Delivered within plan,Pending clearance
+HIST-00044,Water & Sanitation,Karnataka,62.7,64.2,50,48,100.0,100.0,13,0,0,0,0,0,-4.9,0,Delivered within plan,No material delay
+HIST-00045,Urban Transit,Rajasthan,195.1,216.4,26,69,100.0,100.0,4,0,1,0,1,0,3.3,1,1-month delay,Land acquisition
+HIST-00046,Water & Sanitation,Telangana,456.2,481.0,55,35,60.8,64.9,12,1,1,0,0,0,2.4,0,Delivered within plan,Land acquisition
+HIST-00047,Industrial Corridors,Karnataka,374.8,382.5,38,47,100.0,96.0,6,0,1,0,0,0,0.1,6,6-month delay,Land acquisition
+HIST-00048,Urban Transit,Maharashtra,139.8,146.9,49,15,33.4,37.9,13,1,0,1,0,0,6.2,0,Delivered within plan,Pending clearance
+HIST-00049,Power,Maharashtra,177.5,188.4,18,14,90.3,87.6,4,3,0,0,0,1,6.7,6,6-month delay,Milestone slippage
+HIST-00050,Roads,Tamil Nadu,109.1,111.1,29,33,100.0,95.5,11,1,0,0,0,0,5.1,0,Delivered within plan,No material delay
+HIST-00051,Power,Rajasthan,82.1,84.9,40,26,68.1,72.7,9,0,0,0,1,0,2.0,2,2-month delay,Funding release
+HIST-00052,Urban Transit,Bihar,179.9,186.9,34,41,95.0,90.6,9,1,1,0,0,0,-2.2,6,6-month delay,Land acquisition
+HIST-00053,Roads,Maharashtra,147.3,150.0,63,25,32.0,32.2,12,0,0,0,0,0,5.3,0,Delivered within plan,No material delay
+HIST-00054,Roads,Maharashtra,228.3,255.3,37,42,95.7,85.0,6,2,0,0,0,1,6.7,4,4-month delay,Milestone slippage
+HIST-00055,Power,Gujarat,1507.4,1585.9,37,53,94.9,99.3,6,1,0,0,0,1,6.7,1,1-month delay,No material delay
+HIST-00056,Industrial Corridors,Gujarat,424.8,453.2,12,62,95.1,86.5,4,2,1,0,0,0,5.3,8,8-month delay,Land acquisition
+HIST-00057,Ports,Haryana,69.1,69.4,53,83,100.0,100.0,16,0,0,0,0,0,6.4,0,Delivered within plan,No material delay
+HIST-00058,Water & Sanitation,Karnataka,212.5,242.2,53,46,89.0,75.4,16,1,0,1,1,0,9.3,2,2-month delay,Funding release
+HIST-00059,Industrial Corridors,Gujarat,132.5,143.1,48,66,100.0,100.0,14,1,1,0,0,0,3.6,0,Delivered within plan,Land acquisition
+HIST-00060,Urban Transit,Andhra Pradesh,164.4,166.9,41,66,99.0,91.4,10,0,0,1,0,0,-3.6,0,Delivered within plan,Pending clearance
+HIST-00061,Urban Transit,Odisha,560.3,605.7,72,73,98.9,100.0,19,2,0,1,0,0,6.6,2,2-month delay,Milestone slippage
+HIST-00062,Industrial Corridors,Karnataka,350.9,355.1,55,27,65.0,67.2,13,0,0,1,0,0,-12.0,1,1-month delay,Pending clearance
+HIST-00063,Water & Sanitation,Gujarat,597.8,613.0,67,23,27.1,28.3,20,0,0,0,0,0,5.2,0,Delivered within plan,No material delay
+HIST-00064,Power,Uttar Pradesh,207.5,226.1,52,60,96.0,78.9,11,2,0,0,0,0,14.4,3,3-month delay,Milestone slippage
+HIST-00065,Railways,Telangana,306.7,320.2,47,73,100.0,95.4,11,0,0,0,0,0,3.9,0,Delivered within plan,No material delay
+HIST-00066,Railways,Jharkhand,492.8,514.6,35,74,91.0,100.0,8,0,0,0,0,0,4.9,0,Delivered within plan,No material delay
+HIST-00067,Railways,Rajasthan,77.2,90.9,56,75,100.0,82.7,12,2,1,1,1,0,1.6,9,9-month delay,Land acquisition
+HIST-00068,Water & Sanitation,Karnataka,184.1,191.4,13,36,100.0,97.6,5,0,0,0,0,0,-6.3,0,Delivered within plan,No material delay
+HIST-00069,Power,Tamil Nadu,344.9,379.0,12,35,100.0,79.7,4,1,1,0,0,0,6.1,2,2-month delay,Land acquisition
+HIST-00070,Roads,Kerala,248.2,278.6,44,50,100.0,88.3,10,1,1,0,0,0,11.2,0,Delivered within plan,Land acquisition
+HIST-00071,Roads,Rajasthan,515.1,538.6,15,24,92.3,89.8,4,0,0,0,1,0,4.3,1,1-month delay,Funding release
+HIST-00072,Urban Transit,Bihar,166.9,182.0,21,84,78.3,74.4,8,2,0,0,0,1,4.6,7,7-month delay,Milestone slippage
+HIST-00073,Water & Sanitation,Tamil Nadu,390.7,404.3,37,24,64.5,70.4,9,2,0,0,0,0,10.0,1,1-month delay,Milestone slippage
+HIST-00074,Water & Sanitation,Telangana,177.4,180.5,38,55,94.0,88.5,8,0,0,0,0,0,-2.1,1,1-month delay,No material delay
+HIST-00075,Roads,Andhra Pradesh,110.5,111.3,57,42,63.2,64.9,13,0,1,0,0,0,1.2,1,1-month delay,Land acquisition
+HIST-00076,Power,Karnataka,743.7,806.9,60,48,77.1,59.2,19,0,0,0,1,1,-0.1,1,1-month delay,Funding release
+HIST-00077,Railways,Rajasthan,96.0,98.7,41,7,24.1,28.3,11,1,0,0,0,0,-2.3,0,Delivered within plan,No material delay
+HIST-00078,Railways,Kerala,139.6,142.9,42,39,100.0,96.7,12,1,0,1,0,0,-1.6,0,Delivered within plan,Pending clearance
+HIST-00079,Roads,Jharkhand,205.2,231.7,40,68,100.0,96.8,12,6,0,0,0,0,12.1,9,9-month delay,Milestone slippage
+HIST-00080,Railways,Rajasthan,121.4,125.1,33,83,89.8,80.0,6,1,0,0,0,0,4.5,3,3-month delay,No material delay
+HIST-00081,Power,Telangana,406.2,417.3,36,82,100.0,86.9,5,0,1,0,0,0,3.5,0,Delivered within plan,Land acquisition
+HIST-00082,Industrial Corridors,Maharashtra,226.0,249.8,51,80,94.4,89.4,9,0,1,0,1,0,4.1,1,1-month delay,Land acquisition
+HIST-00083,Roads,Maharashtra,442.3,514.0,73,66,90.8,79.5,20,3,1,0,0,0,11.5,8,8-month delay,Land acquisition
+HIST-00084,Railways,Rajasthan,74.7,76.5,34,14,40.5,37.8,4,0,0,0,0,1,-5.2,0,Delivered within plan,No material delay
+HIST-00085,Ports,Uttar Pradesh,111.3,120.9,35,40,100.0,100.0,7,1,1,0,0,0,9.1,1,1-month delay,Land acquisition
+HIST-00086,Power,Telangana,304.2,318.2,19,72,99.4,86.5,8,0,0,0,0,0,6.4,1,1-month delay,No material delay
+HIST-00087,Roads,Gujarat,279.3,332.5,60,42,61.8,45.7,14,2,1,0,1,1,5.2,9,9-month delay,Land acquisition
+HIST-00088,Water & Sanitation,Bihar,67.0,82.1,74,60,93.2,100.0,20,5,1,0,1,1,18.6,10,10-month delay,Land acquisition
+HIST-00089,Water & Sanitation,Kerala,127.7,129.0,36,16,39.2,26.5,9,0,0,0,0,0,-4.7,0,Delivered within plan,No material delay
+HIST-00090,Industrial Corridors,Odisha,452.8,460.4,46,17,35.3,39.3,12,0,0,0,0,0,4.1,0,Delivered within plan,No material delay
+HIST-00091,Railways,Madhya Pradesh,63.6,74.4,51,20,33.2,40.2,15,1,1,1,0,1,10.4,7,7-month delay,Land acquisition
+HIST-00092,Railways,West Bengal,588.4,607.1,45,75,89.3,85.6,9,2,0,0,0,0,9.2,0,Delivered within plan,Milestone slippage
+HIST-00093,Industrial Corridors,Tamil Nadu,149.7,153.5,59,28,39.4,52.1,17,0,0,0,0,0,-2.2,0,Delivered within plan,No material delay
+HIST-00094,Roads,Jharkhand,105.8,121.2,35,78,96.3,100.0,7,1,1,1,0,1,9.7,6,6-month delay,Land acquisition
+HIST-00095,Industrial Corridors,Rajasthan,302.4,310.6,64,21,23.3,30.7,14,0,0,0,0,0,-4.9,0,Delivered within plan,No material delay
+HIST-00096,Urban Transit,Andhra Pradesh,242.3,245.3,49,63,100.0,92.0,13,0,0,1,0,0,1.6,1,1-month delay,Pending clearance
+HIST-00097,Water & Sanitation,Bihar,1492.8,1521.5,27,69,100.0,100.0,5,0,0,0,0,0,4.6,0,Delivered within plan,No material delay
+HIST-00098,Airports,Kerala,406.9,443.1,70,26,48.8,56.1,18,5,0,0,0,0,10.2,8,8-month delay,Milestone slippage
+HIST-00099,Industrial Corridors,Maharashtra,764.2,773.2,31,58,96.2,91.9,9,0,0,0,0,0,-3.8,1,1-month delay,No material delay
+HIST-00100,Railways,Odisha,374.7,386.2,14,47,94.9,94.1,9,1,0,0,0,0,-3.5,0,Delivered within plan,No material delay
+HIST-00101,Urban Transit,Telangana,228.1,239.3,13,26,93.2,100.0,5,1,0,0,0,0,-6.0,1,1-month delay,No material delay
+HIST-00102,Roads,Gujarat,347.1,369.4,62,17,14.5,22.5,15,2,0,1,0,0,5.8,0,Delivered within plan,Milestone slippage
+HIST-00103,Urban Transit,Maharashtra,190.5,208.6,49,16,36.3,26.9,13,2,0,0,1,0,13.0,0,Delivered within plan,Milestone slippage
+HIST-00104,Industrial Corridors,Andhra Pradesh,465.4,532.9,62,55,96.3,100.0,15,3,1,1,0,0,2.7,10,10-month delay,Land acquisition
+HIST-00105,Ports,Andhra Pradesh,403.0,415.3,55,75,100.0,100.0,17,0,0,0,0,0,1.1,0,Delivered within plan,No material delay
+HIST-00106,Ports,Haryana,427.5,475.6,30,10,18.9,23.8,8,2,0,1,0,1,6.4,0,Delivered within plan,Milestone slippage
+HIST-00107,Water & Sanitation,Gujarat,294.6,310.8,28,54,85.8,81.1,7,0,0,1,1,0,-3.3,3,3-month delay,Funding release
+HIST-00108,Power,Maharashtra,196.2,228.9,25,80,93.1,84.4,4,3,0,1,0,1,15.4,0,Delivered within plan,Milestone slippage
+HIST-00109,Water & Sanitation,Telangana,93.0,94.3,37,65,94.4,94.9,9,1,0,0,0,0,7.3,6,6-month delay,No material delay
+HIST-00110,Railways,Telangana,153.1,183.3,21,84,100.0,84.3,4,2,1,1,1,0,14.3,8,8-month delay,Land acquisition
+HIST-00111,Industrial Corridors,Bihar,329.6,333.7,43,64,100.0,88.2,12,1,0,0,0,0,1.3,4,4-month delay,No material delay
+HIST-00112,Roads,Bihar,168.0,171.0,26,6,14.0,18.5,8,1,0,0,0,0,-0.9,0,Delivered within plan,No material delay
+HIST-00113,Industrial Corridors,Rajasthan,184.8,194.3,61,29,53.6,55.4,15,2,0,0,0,0,0.4,0,Delivered within plan,Milestone slippage
+HIST-00114,Railways,Gujarat,122.3,126.4,53,15,32.5,45.2,13,0,1,0,0,0,-3.6,8,8-month delay,Land acquisition
+HIST-00115,Power,Uttar Pradesh,378.0,403.1,30,16,43.4,51.4,9,1,0,0,1,0,4.6,1,1-month delay,Funding release
+HIST-00116,Water & Sanitation,Bihar,254.6,267.3,35,62,100.0,100.0,5,0,1,0,0,0,4.4,6,6-month delay,Land acquisition
+HIST-00117,Industrial Corridors,Madhya Pradesh,82.5,84.9,47,21,36.4,47.8,13,0,0,0,0,0,0.2,0,Delivered within plan,No material delay
+HIST-00118,Power,Bihar,783.5,807.5,12,82,100.0,92.7,4,0,0,0,0,0,7.7,0,Delivered within plan,No material delay
+HIST-00119,Roads,Maharashtra,224.8,252.5,33,72,100.0,99.0,8,2,1,0,0,1,4.4,10,10-month delay,Land acquisition
+HIST-00120,Industrial Corridors,Uttar Pradesh,828.2,841.0,39,26,73.8,69.8,11,3,0,0,0,0,8.3,1,1-month delay,Milestone slippage
+HIST-00121,Ports,Jharkhand,157.4,157.4,57,15,30.0,44.8,13,0,0,1,0,0,-9.0,0,Delivered within plan,Pending clearance
+HIST-00122,Ports,Jharkhand,69.2,69.9,45,47,92.6,96.0,15,1,0,0,0,0,3.8,2,2-month delay,No material delay
+HIST-00123,Industrial Corridors,Uttar Pradesh,145.4,153.9,34,22,57.9,51.9,8,2,0,0,0,0,5.0,6,6-month delay,Milestone slippage
+HIST-00124,Roads,West Bengal,302.3,327.3,42,82,100.0,95.6,7,2,0,1,0,0,6.1,6,6-month delay,Milestone slippage
+HIST-00125,Roads,Haryana,469.0,542.1,37,50,100.0,82.3,10,1,1,0,1,0,4.5,4,4-month delay,Land acquisition
+HIST-00126,Roads,West Bengal,459.3,535.7,49,21,45.6,34.0,11,3,1,0,0,1,11.7,11,11-month delay,Land acquisition
+HIST-00127,Urban Transit,Karnataka,433.9,445.4,36,75,100.0,94.6,6,0,0,0,0,0,2.1,1,1-month delay,No material delay
+HIST-00128,Ports,Rajasthan,103.1,116.0,45,71,88.1,97.1,13,2,0,0,0,1,11.8,4,4-month delay,Milestone slippage
+HIST-00129,Power,Andhra Pradesh,455.6,475.0,46,12,20.3,24.1,12,0,0,0,0,0,0.8,0,Delivered within plan,No material delay
+HIST-00130,Railways,Jharkhand,303.3,310.7,61,58,80.3,65.4,19,1,0,0,0,0,-2.6,4,4-month delay,No material delay
+HIST-00131,Power,Odisha,361.1,364.2,18,71,100.0,100.0,4,1,0,0,0,0,0.2,0,Delivered within plan,No material delay
+HIST-00132,Railways,Kerala,2076.3,2083.6,68,54,81.7,70.7,17,0,1,0,0,0,2.7,1,1-month delay,Land acquisition
+HIST-00133,Roads,West Bengal,85.8,89.5,27,38,100.0,99.6,9,1,0,0,0,0,8.7,3,3-month delay,No material delay
+HIST-00134,Water & Sanitation,Tamil Nadu,350.3,392.6,61,29,50.8,42.7,15,3,0,0,1,0,12.4,5,5-month delay,Milestone slippage
+HIST-00135,Roads,Gujarat,1634.8,1691.8,33,55,95.2,99.5,9,0,0,1,0,1,2.4,0,Delivered within plan,Pending clearance
+HIST-00136,Railways,Haryana,119.1,128.8,59,81,100.0,100.0,11,0,1,1,0,0,-4.8,4,4-month delay,Land acquisition
+HIST-00137,Power,West Bengal,279.8,290.5,46,62,100.0,98.3,14,1,0,0,0,0,4.5,2,2-month delay,No material delay
+HIST-00138,Roads,Telangana,149.8,152.1,57,28,46.7,44.6,15,0,0,0,0,0,-1.0,0,Delivered within plan,No material delay
+HIST-00139,Industrial Corridors,Kerala,875.8,1004.1,74,29,43.3,50.5,23,3,1,0,0,1,11.6,0,Delivered within plan,Land acquisition
+HIST-00140,Roads,Andhra Pradesh,433.9,480.6,43,53,99.8,100.0,16,2,0,1,0,0,9.2,3,3-month delay,Milestone slippage
+HIST-00141,Railways,Jharkhand,81.2,83.4,55,11,28.2,36.1,17,1,0,0,0,0,3.2,4,4-month delay,No material delay
+HIST-00142,Ports,Odisha,164.4,174.5,20,6,21.7,27.3,9,1,1,0,0,0,-9.1,7,7-month delay,Land acquisition
+HIST-00143,Roads,Maharashtra,194.8,222.7,64,68,98.4,84.4,17,1,1,1,0,1,5.8,8,8-month delay,Land acquisition
+HIST-00144,Industrial Corridors,Kerala,259.9,276.3,45,53,92.1,75.8,11,0,0,1,0,1,-4.0,1,1-month delay,Pending clearance
+HIST-00145,Roads,Gujarat,244.4,261.3,47,66,73.1,69.7,16,1,0,0,1,0,14.0,2,2-month delay,Funding release
+HIST-00146,Railways,Odisha,309.4,349.6,30,27,96.8,100.0,7,3,0,0,1,0,4.6,5,5-month delay,Milestone slippage
+HIST-00147,Railways,Jharkhand,40.0,43.6,55,31,63.9,76.3,13,1,1,0,0,0,2.5,6,6-month delay,Land acquisition
+HIST-00148,Power,Jharkhand,283.1,287.9,38,74,98.1,96.2,8,0,1,0,0,0,2.6,1,1-month delay,Land acquisition
+HIST-00149,Railways,Uttar Pradesh,152.8,163.6,41,73,93.1,75.2,14,0,0,1,0,0,2.9,2,2-month delay,Pending clearance
+HIST-00150,Urban Transit,Telangana,169.6,176.3,39,22,65.5,68.5,9,1,0,0,0,1,0.5,0,Delivered within plan,No material delay
+HIST-00151,Railways,Rajasthan,396.3,414.5,65,18,35.9,38.1,18,1,0,1,0,0,-4.4,0,Delivered within plan,Pending clearance
+HIST-00152,Power,Madhya Pradesh,302.5,321.4,36,17,59.1,71.6,8,3,0,0,0,0,9.3,0,Delivered within plan,Milestone slippage
+HIST-00153,Railways,Tamil Nadu,265.0,271.4,41,55,100.0,100.0,12,0,0,1,0,0,0.7,0,Delivered within plan,Pending clearance
+HIST-00154,Railways,Gujarat,183.9,189.6,32,6,10.8,0.0,10,0,0,0,0,0,0.2,0,Delivered within plan,No material delay
+HIST-00155,Railways,Telangana,355.9,367.5,20,27,96.9,99.7,4,1,0,0,0,0,4.4,0,Delivered within plan,No material delay
+HIST-00156,Roads,Odisha,295.0,316.5,48,77,92.1,100.0,12,1,1,0,0,0,1.6,2,2-month delay,Land acquisition
+HIST-00157,Urban Transit,Karnataka,68.3,70.2,46,15,40.2,33.9,10,2,0,0,0,0,1.7,3,3-month delay,Milestone slippage
+HIST-00158,Railways,Karnataka,366.5,379.8,40,7,16.6,4.2,11,1,0,1,0,0,2.4,1,1-month delay,Pending clearance
+HIST-00159,Industrial Corridors,Karnataka,453.1,495.2,22,77,88.1,81.1,5,1,1,1,0,0,4.4,6,6-month delay,Land acquisition
+HIST-00160,Airports,Gujarat,338.2,349.2,44,53,94.2,100.0,12,0,0,0,0,0,4.2,0,Delivered within plan,No material delay
+HIST-00161,Urban Transit,Rajasthan,344.5,358.3,53,30,65.2,67.8,15,1,0,0,0,0,0.7,0,Delivered within plan,No material delay
+HIST-00162,Roads,Bihar,257.7,265.6,65,8,1.0,18.3,15,0,0,0,0,0,2.3,0,Delivered within plan,No material delay
+HIST-00163,Urban Transit,Uttar Pradesh,626.9,705.5,57,83,83.8,82.3,12,1,1,0,1,0,6.1,11,11-month delay,Land acquisition
+HIST-00164,Roads,Bihar,1664.9,1722.6,50,64,84.6,81.2,15,1,0,0,0,0,3.8,0,Delivered within plan,No material delay
+HIST-00165,Water & Sanitation,Madhya Pradesh,86.9,90.6,53,19,23.2,15.9,13,1,0,0,0,0,2.8,0,Delivered within plan,No material delay
+HIST-00166,Water & Sanitation,Andhra Pradesh,59.6,71.3,40,77,100.0,99.3,9,3,1,0,1,1,7.3,7,7-month delay,Land acquisition
+HIST-00167,Industrial Corridors,Gujarat,146.2,160.2,44,54,100.0,100.0,8,1,1,1,0,0,1.1,7,7-month delay,Land acquisition
+HIST-00168,Urban Transit,Madhya Pradesh,58.8,61.1,26,20,81.6,71.5,7,2,0,0,0,0,-0.1,3,3-month delay,Milestone slippage
+HIST-00169,Industrial Corridors,Tamil Nadu,345.2,378.5,62,12,31.6,32.2,15,4,0,0,0,1,10.4,6,6-month delay,Milestone slippage
+HIST-00170,Roads,Gujarat,120.0,122.4,46,8,23.3,25.3,13,0,1,0,0,0,4.1,1,1-month delay,Land acquisition
+HIST-00171,Railways,Haryana,159.6,162.1,52,26,50.7,51.4,10,0,0,1,0,0,1.1,0,Delivered within plan,Pending clearance
+HIST-00172,Urban Transit,Tamil Nadu,690.9,700.1,17,40,94.9,99.7,4,1,0,0,0,0,-3.4,3,3-month delay,No material delay
+HIST-00173,Roads,Tamil Nadu,226.6,257.8,17,42,98.4,99.5,4,2,1,0,0,1,1.4,8,8-month delay,Land acquisition
+HIST-00174,Roads,Haryana,132.0,140.2,53,36,80.5,83.3,14,3,0,0,0,0,6.7,0,Delivered within plan,Milestone slippage
+HIST-00175,Urban Transit,Uttar Pradesh,146.5,151.4,70,29,39.1,27.5,20,0,0,0,0,0,-2.1,0,Delivered within plan,No material delay
+HIST-00176,Urban Transit,Tamil Nadu,57.7,67.2,27,80,97.1,88.6,7,0,1,0,1,0,0.7,2,2-month delay,Land acquisition
+HIST-00177,Ports,Madhya Pradesh,536.1,568.1,61,16,20.4,20.3,14,0,0,0,1,0,-2.5,1,1-month delay,Funding release
+HIST-00178,Airports,West Bengal,205.0,224.9,62,33,51.4,48.9,17,1,1,1,0,0,1.9,6,6-month delay,Land acquisition
+HIST-00179,Industrial Corridors,Rajasthan,201.5,211.3,36,7,24.7,41.8,10,1,0,0,0,1,-2.8,5,5-month delay,No material delay
+HIST-00180,Ports,Uttar Pradesh,49.9,50.9,30,11,36.4,29.7,4,0,0,0,0,0,-9.6,5,5-month delay,No material delay
+HIST-00181,Railways,Rajasthan,359.6,402.4,29,66,83.2,73.4,10,0,1,1,0,0,6.6,8,8-month delay,Land acquisition
+HIST-00182,Water & Sanitation,Gujarat,273.0,281.6,49,20,40.7,26.5,14,1,0,0,0,0,3.7,4,4-month delay,No material delay
+HIST-00183,Roads,Haryana,85.4,99.2,40,83,99.1,100.0,9,3,0,1,0,1,10.5,6,6-month delay,Milestone slippage
+HIST-00184,Urban Transit,Telangana,586.8,617.7,23,32,100.0,97.5,4,0,0,0,0,0,-2.3,1,1-month delay,No material delay
+HIST-00185,Urban Transit,Jharkhand,396.4,437.2,56,11,27.3,20.6,14,1,0,0,1,0,11.8,0,Delivered within plan,Funding release
+HIST-00186,Airports,Kerala,254.8,261.1,37,13,35.4,29.3,12,0,0,0,0,0,4.1,0,Delivered within plan,No material delay
+HIST-00187,Industrial Corridors,Karnataka,238.1,258.8,12,55,98.8,95.6,4,1,1,1,0,0,-4.0,5,5-month delay,Land acquisition
+HIST-00188,Railways,Odisha,139.6,143.6,62,47,70.6,73.6,17,1,1,1,0,0,5.6,7,7-month delay,Land acquisition
+HIST-00189,Water & Sanitation,Kerala,429.8,458.7,64,28,47.7,36.1,20,1,1,0,0,0,0.7,0,Delivered within plan,Land acquisition
+HIST-00190,Railways,Bihar,71.5,73.6,44,67,100.0,100.0,13,1,0,0,0,0,8.7,0,Delivered within plan,No material delay
+HIST-00191,Water & Sanitation,Madhya Pradesh,187.7,208.6,60,50,93.9,97.7,13,1,1,1,1,0,3.6,7,7-month delay,Land acquisition
+HIST-00192,Water & Sanitation,Jharkhand,579.0,613.9,16,49,100.0,100.0,4,0,0,0,0,0,4.2,0,Delivered within plan,No material delay
+HIST-00193,Industrial Corridors,Rajasthan,335.9,378.1,48,46,100.0,83.7,15,3,1,0,0,0,0.7,1,1-month delay,Land acquisition
+HIST-00194,Railways,Karnataka,319.9,366.1,26,13,43.4,51.8,10,2,1,1,0,0,9.4,9,9-month delay,Land acquisition
+HIST-00195,Airports,Tamil Nadu,192.3,194.4,47,11,34.0,34.6,12,1,0,0,0,0,-0.6,0,Delivered within plan,No material delay
+HIST-00196,Roads,West Bengal,313.8,370.5,34,79,89.5,74.1,6,2,1,1,1,0,5.1,9,9-month delay,Land acquisition
+HIST-00197,Water & Sanitation,Bihar,143.0,148.9,51,15,29.5,28.0,11,2,0,0,0,0,3.8,5,5-month delay,Milestone slippage
+HIST-00198,Power,Madhya Pradesh,272.3,278.1,61,77,84.8,100.0,16,0,0,0,0,0,2.2,1,1-month delay,No material delay
+HIST-00199,Airports,Haryana,115.6,120.9,56,21,29.4,10.5,18,0,0,0,0,0,3.5,0,Delivered within plan,No material delay
+HIST-00200,Railways,Telangana,89.5,96.3,60,10,8.6,10.4,18,2,0,0,1,0,2.8,4,4-month delay,Milestone slippage
+HIST-00201,Water & Sanitation,Uttar Pradesh,137.4,139.4,62,66,100.0,100.0,16,0,0,0,0,0,-1.0,0,Delivered within plan,No material delay
+HIST-00202,Roads,Tamil Nadu,150.3,159.2,13,28,100.0,95.7,7,1,0,0,0,1,0.2,0,Delivered within plan,No material delay
+HIST-00203,Water & Sanitation,Kerala,366.5,378.1,56,62,100.0,100.0,11,1,0,0,0,0,7.8,3,3-month delay,No material delay
+HIST-00204,Industrial Corridors,West Bengal,835.2,869.8,38,66,99.3,98.4,13,0,1,0,0,0,-1.8,7,7-month delay,Land acquisition
+HIST-00205,Railways,Jharkhand,661.5,726.0,47,25,50.2,50.9,11,1,1,0,0,1,3.2,9,9-month delay,Land acquisition
+HIST-00206,Power,Rajasthan,143.0,150.9,26,39,97.7,100.0,5,1,0,0,0,0,2.1,0,Delivered within plan,No material delay
+HIST-00207,Urban Transit,Rajasthan,57.2,59.4,14,46,95.5,100.0,4,0,0,0,0,0,-3.2,1,1-month delay,No material delay
+HIST-00208,Ports,Odisha,105.1,109.2,41,27,71.9,71.6,11,0,0,0,0,0,3.1,0,Delivered within plan,No material delay
+HIST-00209,Railways,Gujarat,179.9,185.3,57,75,98.9,100.0,16,1,0,0,0,0,5.3,5,5-month delay,No material delay
+HIST-00210,Power,Maharashtra,68.9,80.2,68,31,57.4,70.5,14,2,1,0,0,1,8.4,7,7-month delay,Land acquisition
+HIST-00211,Ports,Tamil Nadu,1499.6,1697.3,76,15,9.1,5.1,19,2,1,0,0,0,4.1,1,1-month delay,Land acquisition
+HIST-00212,Water & Sanitation,Bihar,550.6,550.6,29,83,98.9,100.0,12,1,0,0,0,0,8.6,0,Delivered within plan,No material delay
+HIST-00213,Railways,Rajasthan,168.7,183.8,64,53,72.8,80.0,17,0,1,0,0,0,5.5,8,8-month delay,Land acquisition
+HIST-00214,Power,West Bengal,138.2,142.9,61,17,24.6,6.7,14,0,0,1,0,0,1.2,1,1-month delay,Pending clearance
+HIST-00215,Railways,Bihar,601.9,632.0,26,22,81.5,86.7,8,0,0,0,0,0,2.4,0,Delivered within plan,No material delay
+HIST-00216,Railways,Kerala,430.5,473.8,50,41,76.0,57.7,14,0,1,1,0,0,9.5,5,5-month delay,Land acquisition
+HIST-00217,Power,Rajasthan,69.0,72.4,61,30,50.2,53.5,14,0,1,0,0,0,-3.3,0,Delivered within plan,Land acquisition
+HIST-00218,Water & Sanitation,Karnataka,150.9,153.9,21,12,36.5,35.8,12,1,0,0,0,0,1.6,1,1-month delay,No material delay
+HIST-00219,Urban Transit,Gujarat,189.2,196.3,46,9,27.7,46.6,10,2,0,0,0,1,-1.0,1,1-month delay,Milestone slippage
+HIST-00220,Industrial Corridors,Uttar Pradesh,215.1,217.8,47,80,98.2,100.0,11,0,0,0,0,0,6.2,0,Delivered within plan,No material delay
+HIST-00221,Water & Sanitation,Kerala,249.4,251.0,64,32,66.4,75.3,14,3,0,0,0,0,6.8,0,Delivered within plan,Milestone slippage
+HIST-00222,Roads,Rajasthan,57.7,59.9,49,59,100.0,100.0,15,1,0,1,0,0,3.0,1,1-month delay,Pending clearance
+HIST-00223,Railways,Andhra Pradesh,49.6,50.7,18,19,100.0,100.0,4,0,1,0,0,0,0.7,1,1-month delay,Land acquisition
+HIST-00224,Railways,Jharkhand,275.3,320.7,65,45,67.8,62.5,16,0,1,1,1,0,5.4,0,Delivered within plan,Land acquisition
+HIST-00225,Industrial Corridors,Telangana,325.7,343.3,27,64,91.5,100.0,6,1,1,0,0,0,-3.1,0,Delivered within plan,Land acquisition
+HIST-00226,Industrial Corridors,Haryana,353.3,367.1,40,66,90.9,100.0,11,0,0,0,0,0,1.2,1,1-month delay,No material delay
+HIST-00227,Urban Transit,Haryana,486.8,492.5,34,56,91.9,85.0,9,0,0,1,0,0,-0.5,0,Delivered within plan,Pending clearance
+HIST-00228,Industrial Corridors,Maharashtra,360.2,389.1,52,21,53.8,51.3,13,3,1,0,0,0,4.9,1,1-month delay,Land acquisition
+HIST-00229,Water & Sanitation,Karnataka,935.5,1041.8,70,42,78.5,80.3,17,2,0,0,0,1,8.3,1,1-month delay,Milestone slippage
+HIST-00230,Industrial Corridors,Maharashtra,358.5,383.6,66,46,61.0,45.8,14,1,0,1,0,1,3.1,6,6-month delay,Pending clearance
+HIST-00231,Urban Transit,Uttar Pradesh,286.8,295.8,47,48,95.2,93.9,12,0,0,0,0,0,6.0,0,Delivered within plan,No material delay
+HIST-00232,Industrial Corridors,Jharkhand,206.0,231.4,61,49,79.2,90.5,18,2,1,1,0,0,9.4,1,1-month delay,Land acquisition
+HIST-00233,Railways,Haryana,693.4,731.8,63,25,43.1,56.3,17,1,0,0,1,0,5.9,2,2-month delay,Funding release
+HIST-00234,Roads,West Bengal,151.4,166.6,61,11,31.0,33.2,15,3,1,0,0,0,10.2,11,11-month delay,Land acquisition
+HIST-00235,Roads,Jharkhand,128.2,129.9,44,17,41.5,35.8,11,0,0,0,0,0,3.9,0,Delivered within plan,No material delay
+HIST-00236,Water & Sanitation,Karnataka,52.5,55.0,46,8,29.9,33.6,10,2,0,0,0,0,-0.8,0,Delivered within plan,Milestone slippage
+HIST-00237,Industrial Corridors,Madhya Pradesh,1069.0,1251.9,38,22,72.6,58.3,13,3,1,1,1,0,12.7,10,10-month delay,Land acquisition
+HIST-00238,Ports,Odisha,322.4,327.3,53,75,100.0,91.9,13,1,0,0,0,0,4.5,1,1-month delay,No material delay
+HIST-00239,Roads,Haryana,61.5,62.5,52,57,96.1,100.0,10,1,0,0,0,0,8.8,0,Delivered within plan,No material delay
+HIST-00240,Urban Transit,Karnataka,878.0,895.1,33,12,26.7,32.4,7,1,0,0,0,0,-0.5,0,Delivered within plan,No material delay
+HIST-00241,Roads,Andhra Pradesh,597.5,613.4,54,44,85.0,93.3,14,1,0,0,0,0,5.4,0,Delivered within plan,No material delay
+HIST-00242,Roads,Madhya Pradesh,65.7,75.6,61,76,86.5,83.9,13,2,1,0,0,1,8.1,10,10-month delay,Land acquisition
+HIST-00243,Ports,Telangana,181.7,183.8,46,35,86.3,89.7,13,0,0,0,0,0,0.6,1,1-month delay,No material delay
+HIST-00244,Roads,Rajasthan,290.4,305.8,34,10,23.8,15.4,6,1,1,1,0,0,2.9,7,7-month delay,Land acquisition
+HIST-00245,Industrial Corridors,Madhya Pradesh,852.9,921.3,32,11,48.5,66.6,9,0,1,1,0,0,1.6,7,7-month delay,Land acquisition
+HIST-00246,Urban Transit,Tamil Nadu,499.9,522.3,53,57,100.0,85.1,11,3,0,0,0,0,16.7,0,Delivered within plan,Milestone slippage
+HIST-00247,Railways,Gujarat,122.1,126.0,27,59,100.0,100.0,6,1,1,0,0,0,6.5,1,1-month delay,Land acquisition
+HIST-00248,Ports,Tamil Nadu,138.7,149.5,50,21,28.1,28.4,10,1,0,0,0,1,3.4,1,1-month delay,No material delay
+HIST-00249,Industrial Corridors,Andhra Pradesh,649.6,684.5,48,73,100.0,100.0,12,1,0,0,0,1,5.9,0,Delivered within plan,No material delay
+HIST-00250,Water & Sanitation,Haryana,1015.0,1047.7,48,68,100.0,95.0,13,1,0,0,0,0,2.2,2,2-month delay,No material delay
+HIST-00251,Railways,Rajasthan,424.3,445.5,15,79,91.2,78.5,4,1,1,0,0,0,8.1,0,Delivered within plan,Land acquisition
+HIST-00252,Roads,Karnataka,82.2,83.5,37,12,33.0,18.6,12,1,0,0,0,0,-11.6,1,1-month delay,No material delay
+HIST-00253,Ports,Madhya Pradesh,162.6,175.3,36,46,100.0,100.0,13,1,0,0,1,1,-5.3,1,1-month delay,Funding release
+HIST-00254,Airports,Tamil Nadu,95.0,102.7,59,77,89.8,76.1,11,1,0,0,0,1,-0.9,0,Delivered within plan,No material delay
+HIST-00255,Roads,Kerala,278.3,302.9,59,65,86.0,82.3,13,1,1,0,0,0,-1.1,4,4-month delay,Land acquisition
+HIST-00256,Power,Uttar Pradesh,990.8,1029.3,31,35,100.0,92.5,6,0,0,0,0,0,-2.2,0,Delivered within plan,No material delay
+HIST-00257,Roads,Haryana,321.0,334.8,52,22,18.5,6.3,16,0,0,1,0,1,-3.4,2,2-month delay,Pending clearance
+HIST-00258,Airports,Kerala,222.9,252.7,59,66,74.0,61.7,13,2,0,1,0,0,11.8,4,4-month delay,Milestone slippage
+HIST-00259,Railways,Maharashtra,84.9,95.3,40,69,93.7,82.0,5,1,1,1,0,0,0.6,1,1-month delay,Land acquisition
+HIST-00260,Industrial Corridors,Gujarat,382.1,403.2,33,33,99.5,100.0,10,0,0,0,0,0,2.6,0,Delivered within plan,No material delay
+HIST-00261,Water & Sanitation,Maharashtra,542.8,614.6,48,59,86.3,89.5,13,3,1,0,0,0,12.6,0,Delivered within plan,Land acquisition
+HIST-00262,Railways,Karnataka,347.4,382.8,28,9,12.1,24.4,6,1,1,0,0,1,-1.8,0,Delivered within plan,Land acquisition
+HIST-00263,Railways,Tamil Nadu,111.1,117.2,63,58,84.4,83.5,17,1,0,1,0,0,1.2,3,3-month delay,Pending clearance
+HIST-00264,Roads,Odisha,251.9,263.9,47,48,92.6,93.9,10,0,1,0,0,0,-0.8,4,4-month delay,Land acquisition
+HIST-00265,Industrial Corridors,West Bengal,440.6,467.7,40,57,98.5,100.0,12,1,0,0,0,1,10.9,1,1-month delay,No material delay
+HIST-00266,Roads,Bihar,25.0,25.4,54,26,52.6,39.7,12,1,0,0,0,0,-6.5,1,1-month delay,No material delay
+HIST-00267,Roads,Bihar,153.2,155.4,34,13,36.6,51.2,8,0,1,0,0,0,0.8,5,5-month delay,Land acquisition
+HIST-00268,Ports,Haryana,453.7,474.5,71,44,54.3,57.1,19,2,0,0,0,0,5.4,0,Delivered within plan,Milestone slippage
+HIST-00269,Roads,Karnataka,200.0,230.3,42,22,50.3,36.0,11,3,0,1,1,0,-0.3,0,Delivered within plan,Milestone slippage
+HIST-00270,Industrial Corridors,Karnataka,1081.5,1250.6,63,62,92.2,95.5,16,1,1,0,1,0,4.9,8,8-month delay,Land acquisition
+HIST-00271,Ports,Odisha,528.3,568.7,23,32,90.6,83.1,8,0,1,0,0,1,-4.1,0,Delivered within plan,Land acquisition
+HIST-00272,Industrial Corridors,Rajasthan,204.1,208.3,93,60,68.4,77.3,24,1,1,0,0,0,-0.9,4,4-month delay,Land acquisition
+HIST-00273,Power,Maharashtra,152.1,181.1,12,76,100.0,100.0,4,2,0,1,1,1,8.2,5,5-month delay,Milestone slippage
+HIST-00274,Airports,Rajasthan,56.8,60.0,58,84,95.4,99.9,13,0,0,0,0,0,-2.5,0,Delivered within plan,No material delay
+HIST-00275,Roads,Telangana,100.7,104.1,39,59,88.8,72.2,11,1,0,0,0,0,1.6,0,Delivered within plan,No material delay
+HIST-00276,Roads,Telangana,815.4,845.0,45,26,74.0,76.1,10,2,0,0,0,0,3.6,1,1-month delay,Milestone slippage
+HIST-00277,Industrial Corridors,Maharashtra,195.2,206.5,34,22,58.8,51.1,8,0,1,0,0,0,5.0,0,Delivered within plan,Land acquisition
+HIST-00278,Water & Sanitation,Telangana,898.4,958.9,46,80,90.1,88.8,7,0,0,0,1,0,6.3,1,1-month delay,Funding release
+HIST-00279,Water & Sanitation,Tamil Nadu,303.3,305.5,24,20,86.6,96.9,6,1,0,0,0,0,-2.0,0,Delivered within plan,No material delay
+HIST-00280,Power,Jharkhand,154.0,160.5,16,43,100.0,100.0,4,1,1,0,0,0,-3.3,1,1-month delay,Land acquisition
+HIST-00281,Ports,Telangana,443.3,443.3,17,49,70.4,67.5,5,0,0,1,0,0,0.6,1,1-month delay,Pending clearance
+HIST-00282,Urban Transit,Jharkhand,354.2,365.5,20,43,100.0,100.0,5,0,0,0,0,0,-0.9,0,Delivered within plan,No material delay
+HIST-00283,Urban Transit,Haryana,1460.0,1599.9,21,47,96.6,90.8,5,0,1,1,0,0,-3.5,1,1-month delay,Land acquisition
+HIST-00284,Roads,Tamil Nadu,1151.6,1282.9,56,60,99.5,96.0,17,1,0,1,1,0,-0.2,1,1-month delay,Funding release
+HIST-00285,Railways,Kerala,181.4,199.8,38,77,100.0,85.6,10,0,0,0,1,0,-1.2,1,1-month delay,Funding release
+HIST-00286,Industrial Corridors,Madhya Pradesh,568.0,598.6,62,72,100.0,91.9,16,2,0,0,0,0,-0.9,1,1-month delay,Milestone slippage
+HIST-00287,Urban Transit,Odisha,554.3,609.2,32,64,93.6,89.9,6,1,0,0,0,0,10.5,5,5-month delay,No material delay
+HIST-00288,Urban Transit,Jharkhand,1329.9,1501.0,70,30,41.6,52.0,15,2,1,0,0,0,10.7,7,7-month delay,Land acquisition
+HIST-00289,Roads,Bihar,1451.8,1588.1,20,59,100.0,96.1,4,0,1,1,0,0,-5.1,5,5-month delay,Land acquisition
+HIST-00290,Railways,Jharkhand,156.6,172.6,55,42,86.1,84.4,14,2,1,0,1,0,-0.7,10,10-month delay,Land acquisition
+HIST-00291,Water & Sanitation,Kerala,77.9,80.0,39,61,100.0,99.7,10,2,0,1,0,0,1.6,4,4-month delay,Milestone slippage
+HIST-00292,Power,Rajasthan,234.1,240.2,51,57,99.8,100.0,11,1,0,0,0,0,3.3,1,1-month delay,No material delay
+HIST-00293,Railways,Andhra Pradesh,329.0,341.0,40,14,21.5,34.9,12,0,0,0,0,0,0.3,0,Delivered within plan,No material delay
+HIST-00294,Industrial Corridors,Maharashtra,623.2,677.7,47,6,12.5,3.6,12,1,1,0,0,0,8.4,0,Delivered within plan,Land acquisition
+HIST-00295,Urban Transit,Tamil Nadu,431.6,450.7,55,33,53.3,63.7,15,1,0,0,0,1,-3.8,0,Delivered within plan,No material delay
+HIST-00296,Urban Transit,Rajasthan,787.0,851.8,31,57,100.0,100.0,5,1,1,0,0,0,6.1,0,Delivered within plan,Land acquisition
+HIST-00297,Industrial Corridors,Haryana,276.6,279.6,50,24,52.1,43.6,11,1,0,0,0,0,-2.1,1,1-month delay,No material delay
+HIST-00298,Railways,Rajasthan,1055.9,1113.1,15,20,100.0,100.0,4,1,0,0,0,0,-1.8,1,1-month delay,No material delay
+HIST-00299,Roads,Haryana,1438.8,1663.8,64,67,88.2,66.3,19,0,1,1,1,0,5.4,7,7-month delay,Land acquisition
+HIST-00300,Water & Sanitation,Karnataka,166.4,168.5,45,49,100.0,74.1,11,0,0,0,0,0,-1.0,1,1-month delay,No material delay
+HIST-00301,Railways,West Bengal,413.9,444.6,35,80,100.0,94.9,7,0,1,0,0,0,4.6,0,Delivered within plan,Land acquisition
+HIST-00302,Roads,Haryana,133.8,148.5,58,74,99.6,100.0,14,1,1,0,0,0,15.8,0,Delivered within plan,Land acquisition
+HIST-00303,Industrial Corridors,Karnataka,460.4,500.1,49,65,100.0,92.7,13,0,1,1,0,0,4.7,7,7-month delay,Land acquisition
+HIST-00304,Railways,Karnataka,169.9,177.6,43,19,49.0,33.9,13,1,0,0,0,0,0.8,0,Delivered within plan,No material delay
+HIST-00305,Water & Sanitation,Maharashtra,71.1,79.7,40,83,89.0,83.4,10,2,0,0,1,0,11.0,6,6-month delay,Milestone slippage
+HIST-00306,Water & Sanitation,Bihar,382.7,410.2,36,76,100.0,100.0,7,2,0,0,1,0,3.6,7,7-month delay,Milestone slippage
+HIST-00307,Railways,Andhra Pradesh,125.4,127.7,31,11,42.7,50.4,10,1,0,0,0,0,-8.2,0,Delivered within plan,No material delay
+HIST-00308,Water & Sanitation,West Bengal,273.2,295.6,34,79,100.0,100.0,5,0,1,0,0,0,8.6,5,5-month delay,Land acquisition
+HIST-00309,Urban Transit,Andhra Pradesh,59.2,59.4,12,7,49.6,41.2,4,1,0,1,0,0,-2.9,5,5-month delay,Pending clearance
+HIST-00310,Urban Transit,Andhra Pradesh,342.4,351.9,31,52,100.0,100.0,9,0,0,0,0,0,0.2,0,Delivered within plan,No material delay
+HIST-00311,Urban Transit,Rajasthan,122.5,124.7,28,36,100.0,100.0,5,0,0,0,0,0,-0.3,0,Delivered within plan,No material delay
+HIST-00312,Railways,Tamil Nadu,763.6,794.7,33,66,100.0,100.0,10,0,1,0,0,0,3.2,0,Delivered within plan,Land acquisition
+HIST-00313,Urban Transit,Andhra Pradesh,773.0,810.4,44,76,100.0,100.0,11,0,0,0,0,0,-0.6,2,2-month delay,No material delay
+HIST-00314,Ports,Tamil Nadu,211.6,214.6,14,77,86.7,90.1,4,1,0,0,0,0,1.4,0,Delivered within plan,No material delay
+HIST-00315,Railways,Odisha,180.1,191.4,57,59,90.4,83.5,17,1,1,1,0,0,3.7,0,Delivered within plan,Land acquisition
+HIST-00316,Industrial Corridors,Madhya Pradesh,121.4,126.8,56,32,54.5,46.8,11,0,1,0,0,0,1.2,0,Delivered within plan,Land acquisition
+HIST-00317,Ports,Kerala,278.8,320.0,34,64,88.2,84.7,6,2,1,1,1,0,8.0,8,8-month delay,Land acquisition
+HIST-00318,Roads,Madhya Pradesh,111.7,115.7,26,30,99.2,99.0,9,1,0,0,0,0,-5.7,6,6-month delay,No material delay
+HIST-00319,Ports,Karnataka,530.7,540.3,29,39,93.7,100.0,9,1,0,0,0,0,1.4,0,Delivered within plan,No material delay
+HIST-00320,Urban Transit,Maharashtra,552.5,597.9,33,63,93.2,89.7,9,1,1,0,0,0,7.9,0,Delivered within plan,Land acquisition
+HIST-00321,Airports,Tamil Nadu,199.3,206.5,35,32,88.1,80.2,7,0,0,0,0,0,1.7,0,Delivered within plan,No material delay
+HIST-00322,Urban Transit,Haryana,457.6,460.1,51,6,9.6,0.8,14,1,0,1,0,0,4.8,0,Delivered within plan,Pending clearance
+HIST-00323,Roads,Jharkhand,190.4,202.9,53,68,99.6,100.0,12,0,1,0,0,0,-0.6,3,3-month delay,Land acquisition
+HIST-00324,Industrial Corridors,Telangana,331.6,331.6,64,40,53.1,49.8,17,2,0,1,0,0,-2.0,7,7-month delay,Milestone slippage
+HIST-00325,Industrial Corridors,Maharashtra,807.1,910.5,56,42,61.1,59.9,17,2,0,0,1,0,9.4,4,4-month delay,Milestone slippage
+HIST-00326,Industrial Corridors,Bihar,201.2,206.6,42,65,100.0,98.0,11,1,1,0,0,0,1.6,1,1-month delay,Land acquisition
+HIST-00327,Airports,Jharkhand,395.8,401.3,40,16,50.6,40.9,9,0,0,0,0,0,-1.0,0,Delivered within plan,No material delay
+HIST-00328,Industrial Corridors,Odisha,885.5,896.7,53,28,47.3,41.5,15,1,0,0,0,0,2.7,1,1-month delay,No material delay
+HIST-00329,Water & Sanitation,Jharkhand,240.7,250.0,37,56,100.0,100.0,13,1,0,1,0,0,-0.4,1,1-month delay,Pending clearance
+HIST-00330,Urban Transit,Tamil Nadu,125.0,129.6,50,24,48.2,59.4,11,1,0,0,0,0,4.7,0,Delivered within plan,No material delay
+HIST-00331,Industrial Corridors,Karnataka,115.4,119.6,40,44,90.0,93.4,10,1,1,0,0,0,-1.6,8,8-month delay,Land acquisition
+HIST-00332,Roads,Karnataka,219.6,231.9,43,8,28.7,49.4,11,1,1,1,0,0,-7.5,0,Delivered within plan,Land acquisition
+HIST-00333,Industrial Corridors,Maharashtra,167.6,196.7,58,45,75.6,72.4,16,1,1,0,1,1,7.5,11,11-month delay,Land acquisition
+HIST-00334,Industrial Corridors,Andhra Pradesh,416.4,421.3,33,54,100.0,97.5,11,0,0,0,0,0,-0.5,1,1-month delay,No material delay
+HIST-00335,Urban Transit,Odisha,206.4,219.0,39,28,86.2,95.8,6,3,0,0,0,0,7.8,7,7-month delay,Milestone slippage
+HIST-00336,Railways,Haryana,144.6,159.3,62,84,100.0,100.0,17,1,1,1,0,0,-0.3,0,Delivered within plan,Land acquisition
+HIST-00337,Water & Sanitation,Kerala,185.2,196.6,40,41,100.0,100.0,6,0,0,0,1,0,7.5,0,Delivered within plan,Funding release
+HIST-00338,Water & Sanitation,Kerala,242.3,262.6,63,57,84.2,100.0,15,2,1,0,0,0,7.3,10,10-month delay,Land acquisition
+HIST-00339,Roads,Andhra Pradesh,225.3,251.6,56,74,92.1,91.4,14,2,1,0,0,0,6.9,0,Delivered within plan,Land acquisition
+HIST-00340,Airports,Jharkhand,108.9,123.5,45,74,100.0,100.0,12,1,1,1,0,0,7.9,9,9-month delay,Land acquisition
+HIST-00341,Roads,Gujarat,168.6,173.5,12,80,85.3,97.6,4,0,1,1,0,0,-12.0,1,1-month delay,Land acquisition
+HIST-00342,Water & Sanitation,West Bengal,168.2,176.3,22,32,97.9,100.0,4,0,0,0,0,0,-3.1,1,1-month delay,No material delay
+HIST-00343,Railways,Gujarat,281.0,286.0,31,19,63.1,65.0,4,2,0,0,0,0,13.9,0,Delivered within plan,Milestone slippage
+HIST-00344,Roads,West Bengal,1743.9,1845.9,66,62,100.0,100.0,15,0,1,0,0,0,3.6,4,4-month delay,Land acquisition
+HIST-00345,Railways,Madhya Pradesh,170.4,193.3,18,52,100.0,95.1,5,1,1,1,0,0,12.7,7,7-month delay,Land acquisition
+HIST-00346,Water & Sanitation,Gujarat,410.5,425.4,38,52,98.8,89.0,7,0,0,0,0,0,-6.4,0,Delivered within plan,No material delay
+HIST-00347,Roads,Rajasthan,1248.6,1265.1,44,27,63.8,60.2,12,0,1,0,0,1,-1.7,5,5-month delay,Land acquisition
+HIST-00348,Urban Transit,Uttar Pradesh,392.6,392.6,19,76,94.1,100.0,5,0,0,1,0,0,-3.4,0,Delivered within plan,Pending clearance
+HIST-00349,Railways,Telangana,130.4,149.7,46,67,98.3,93.3,9,2,1,0,0,0,4.0,9,9-month delay,Land acquisition
+HIST-00350,Water & Sanitation,Tamil Nadu,721.9,758.7,63,63,100.0,100.0,15,2,1,0,0,0,6.5,10,10-month delay,Land acquisition
+HIST-00351,Water & Sanitation,Rajasthan,257.8,267.9,54,84,94.4,100.0,14,0,0,0,0,0,-2.9,0,Delivered within plan,No material delay
+HIST-00352,Railways,Haryana,1281.9,1326.6,36,8,32.1,32.6,11,0,0,0,0,0,-2.4,1,1-month delay,No material delay
+HIST-00353,Roads,Jharkhand,181.8,189.4,52,44,81.3,74.3,13,0,0,0,0,0,9.0,0,Delivered within plan,No material delay
+HIST-00354,Urban Transit,West Bengal,95.8,101.2,41,56,100.0,99.5,8,2,0,0,0,1,3.4,1,1-month delay,Milestone slippage
+HIST-00355,Railways,Jharkhand,437.1,450.7,56,23,56.3,54.4,10,1,0,0,0,0,5.4,1,1-month delay,No material delay
+HIST-00356,Water & Sanitation,Rajasthan,148.0,159.7,28,38,100.0,97.6,7,2,0,0,0,1,13.5,3,3-month delay,Milestone slippage
+HIST-00357,Urban Transit,Kerala,33.2,34.7,52,16,28.8,28.8,11,0,0,0,0,0,-8.1,1,1-month delay,No material delay
+HIST-00358,Urban Transit,Maharashtra,57.4,59.1,45,46,98.4,91.0,12,1,0,0,0,0,1.4,3,3-month delay,No material delay
+HIST-00359,Ports,Tamil Nadu,635.0,671.7,43,75,98.0,100.0,9,0,0,0,0,0,0.9,0,Delivered within plan,No material delay
+HIST-00360,Railways,West Bengal,136.8,152.1,61,16,12.8,11.2,15,0,1,0,0,0,-12.0,1,1-month delay,Land acquisition
+HIST-00361,Water & Sanitation,Telangana,217.7,225.2,69,13,30.1,39.0,14,1,0,0,0,0,-3.9,1,1-month delay,No material delay
+HIST-00362,Railways,Madhya Pradesh,184.3,187.2,34,57,91.7,79.8,9,0,0,1,0,0,-4.1,0,Delivered within plan,Pending clearance
+HIST-00363,Industrial Corridors,Tamil Nadu,480.8,525.7,56,6,1.0,7.6,13,2,1,0,0,1,-2.8,8,8-month delay,Land acquisition
+HIST-00364,Roads,Odisha,120.5,140.8,56,54,84.2,89.4,15,1,1,1,0,1,7.1,7,7-month delay,Land acquisition
+HIST-00365,Roads,Gujarat,111.7,118.2,46,9,14.9,15.5,9,1,1,0,0,0,0.2,8,8-month delay,Land acquisition
+HIST-00366,Water & Sanitation,Haryana,177.1,179.8,58,74,96.3,98.8,14,0,0,0,0,0,1.3,0,Delivered within plan,No material delay
+HIST-00367,Urban Transit,Telangana,120.0,128.7,51,49,96.8,99.4,12,2,0,0,0,0,12.6,4,4-month delay,Milestone slippage
+HIST-00368,Railways,Uttar Pradesh,613.3,646.1,53,37,56.1,48.1,14,0,0,1,0,0,2.7,0,Delivered within plan,Pending clearance
+HIST-00369,Railways,Maharashtra,343.6,374.6,22,54,84.6,93.2,8,0,1,0,1,0,-1.5,5,5-month delay,Land acquisition
+HIST-00370,Railways,Uttar Pradesh,166.2,175.8,19,45,99.7,86.1,5,1,1,0,0,0,5.7,1,1-month delay,Land acquisition
+HIST-00371,Roads,Haryana,153.5,157.6,62,37,48.9,58.7,18,2,0,0,0,0,13.5,5,5-month delay,Milestone slippage
+HIST-00372,Industrial Corridors,Uttar Pradesh,179.7,181.6,39,69,86.2,75.8,10,1,0,0,0,0,4.7,3,3-month delay,No material delay
+HIST-00373,Power,Gujarat,237.7,252.5,74,70,99.4,96.6,20,1,0,0,1,0,2.2,0,Delivered within plan,Funding release
+HIST-00374,Railways,Kerala,895.1,985.2,32,15,49.3,43.8,6,2,0,0,0,1,11.3,4,4-month delay,Milestone slippage
+HIST-00375,Industrial Corridors,Jharkhand,1097.5,1159.1,76,10,22.0,10.8,22,2,0,0,0,0,3.4,0,Delivered within plan,Milestone slippage
+HIST-00376,Roads,Gujarat,203.4,206.6,31,43,100.0,100.0,6,0,0,0,0,0,6.3,0,Delivered within plan,No material delay
+HIST-00377,Railways,Haryana,300.7,310.4,60,26,38.0,48.4,14,2,0,1,0,0,1.9,0,Delivered within plan,Milestone slippage
+HIST-00378,Urban Transit,Andhra Pradesh,819.8,959.3,12,28,84.0,73.8,4,2,1,1,0,0,12.2,10,10-month delay,Land acquisition
+HIST-00379,Railways,West Bengal,36.0,40.4,37,51,92.0,96.5,9,0,1,0,0,1,9.9,6,6-month delay,Land acquisition
+HIST-00380,Railways,Gujarat,208.5,213.4,63,6,19.0,30.6,18,1,0,0,0,0,-4.2,2,2-month delay,No material delay
+HIST-00381,Airports,Jharkhand,221.2,225.8,64,38,72.4,68.7,15,0,0,0,0,0,0.7,0,Delivered within plan,No material delay
+HIST-00382,Airports,Karnataka,814.6,847.3,86,44,50.8,49.1,22,1,0,0,0,0,1.8,0,Delivered within plan,No material delay
+HIST-00383,Airports,Madhya Pradesh,137.9,148.9,33,71,92.4,82.7,11,0,0,0,0,1,13.7,0,Delivered within plan,No material delay
+HIST-00384,Water & Sanitation,Uttar Pradesh,231.0,235.4,23,56,100.0,81.4,9,1,0,0,0,0,8.0,3,3-month delay,No material delay
+HIST-00385,Railways,Tamil Nadu,181.7,184.8,46,16,30.0,29.5,15,0,0,0,0,0,-2.5,0,Delivered within plan,No material delay
+HIST-00386,Railways,Karnataka,561.6,664.0,34,80,100.0,85.3,9,2,1,0,0,1,5.6,9,9-month delay,Land acquisition
+HIST-00387,Industrial Corridors,Rajasthan,1914.2,1940.0,48,53,99.3,100.0,14,0,0,0,0,0,5.6,1,1-month delay,No material delay
+HIST-00388,Roads,Tamil Nadu,150.2,151.0,30,81,93.0,100.0,9,1,0,0,0,0,5.0,0,Delivered within plan,No material delay
+HIST-00389,Airports,Bihar,616.2,638.6,49,44,86.5,94.6,13,2,0,0,0,0,5.8,7,7-month delay,Milestone slippage
+HIST-00390,Roads,Rajasthan,326.2,361.5,37,35,95.0,97.0,11,1,1,0,0,0,-5.3,5,5-month delay,Land acquisition
+HIST-00391,Power,West Bengal,502.6,535.3,42,56,93.1,86.5,11,0,1,1,0,0,10.5,1,1-month delay,Land acquisition
+HIST-00392,Industrial Corridors,Uttar Pradesh,87.5,87.7,42,81,100.0,95.6,7,1,0,0,0,0,0.4,1,1-month delay,No material delay
+HIST-00393,Roads,Uttar Pradesh,32.8,34.8,48,43,87.0,94.4,11,0,1,0,0,1,-4.0,5,5-month delay,Land acquisition
+HIST-00394,Power,Jharkhand,155.3,168.5,27,21,74.4,87.4,9,2,0,0,0,1,4.1,6,6-month delay,Milestone slippage
+HIST-00395,Industrial Corridors,Rajasthan,3372.6,3521.6,37,9,24.3,15.6,14,0,1,0,0,1,-4.7,7,7-month delay,Land acquisition
+HIST-00396,Water & Sanitation,Telangana,1074.5,1074.5,22,36,92.0,92.8,4,0,0,0,0,0,-0.5,0,Delivered within plan,No material delay
+HIST-00397,Ports,Jharkhand,522.5,562.0,40,67,100.0,100.0,13,1,1,0,0,1,0.7,8,8-month delay,Land acquisition
+HIST-00398,Industrial Corridors,Kerala,287.5,295.9,46,60,96.9,100.0,10,2,0,0,0,0,3.9,1,1-month delay,Milestone slippage
+HIST-00399,Industrial Corridors,Tamil Nadu,295.4,314.5,62,83,87.6,97.1,14,2,0,0,0,0,3.8,0,Delivered within plan,Milestone slippage
+HIST-00400,Industrial Corridors,Tamil Nadu,435.2,490.4,27,45,97.7,85.5,8,3,1,0,0,0,5.1,12,12-month delay,Land acquisition
+HIST-00401,Railways,Odisha,353.8,366.2,47,37,77.0,80.5,11,1,0,1,0,1,2.5,3,3-month delay,Pending clearance
+HIST-00402,Railways,Gujarat,126.3,131.4,63,55,94.9,92.3,15,1,0,0,0,0,-2.5,1,1-month delay,No material delay
+HIST-00403,Power,Telangana,137.7,138.4,35,24,73.4,72.9,12,1,0,0,0,0,3.8,4,4-month delay,No material delay
+HIST-00404,Water & Sanitation,Haryana,73.2,76.2,31,67,90.8,79.5,5,0,0,0,0,0,-0.5,0,Delivered within plan,No material delay
+HIST-00405,Power,Tamil Nadu,52.4,54.8,61,53,79.9,97.8,14,2,0,0,0,0,5.6,1,1-month delay,Milestone slippage
+HIST-00406,Urban Transit,Uttar Pradesh,145.2,147.8,60,46,81.5,83.0,11,1,0,0,0,0,2.9,0,Delivered within plan,No material delay
+HIST-00407,Water & Sanitation,Tamil Nadu,330.4,343.8,44,79,95.3,100.0,10,0,0,0,0,1,1.9,1,1-month delay,No material delay
+HIST-00408,Railways,Uttar Pradesh,125.7,128.2,29,8,27.2,15.2,7,0,0,0,0,0,2.3,1,1-month delay,No material delay
+HIST-00409,Ports,Rajasthan,255.4,268.9,17,56,96.1,93.0,6,0,1,1,0,0,-4.2,7,7-month delay,Land acquisition
+HIST-00410,Railways,Telangana,50.3,54.8,56,11,21.4,17.5,11,1,0,0,1,1,8.8,2,2-month delay,Funding release
+HIST-00411,Urban Transit,Odisha,474.5,494.9,58,78,97.7,79.0,16,1,0,1,0,0,5.5,0,Delivered within plan,Pending clearance
+HIST-00412,Water & Sanitation,Rajasthan,110.6,112.6,25,72,98.3,100.0,8,0,1,0,0,0,0.7,0,Delivered within plan,Land acquisition
+HIST-00413,Railways,Kerala,651.6,737.9,34,68,95.5,95.8,10,1,1,1,0,1,6.7,9,9-month delay,Land acquisition
+HIST-00414,Power,Haryana,96.0,99.1,29,75,94.4,100.0,6,1,0,0,0,0,2.2,1,1-month delay,No material delay
+HIST-00415,Railways,Telangana,545.7,582.1,44,69,100.0,91.2,13,1,1,0,0,0,-3.6,7,7-month delay,Land acquisition
+HIST-00416,Railways,Telangana,147.0,155.4,49,30,63.3,77.7,15,0,0,0,0,1,1.9,1,1-month delay,No material delay
+HIST-00417,Water & Sanitation,Madhya Pradesh,86.0,87.2,27,80,98.1,100.0,9,1,0,0,0,0,-2.6,0,Delivered within plan,No material delay
+HIST-00418,Roads,Kerala,305.6,327.1,45,59,100.0,99.8,9,1,1,0,0,1,-4.9,0,Delivered within plan,Land acquisition
+HIST-00419,Urban Transit,Telangana,894.2,963.2,50,81,97.1,100.0,13,1,0,0,1,0,5.4,3,3-month delay,Funding release
+HIST-00420,Industrial Corridors,Madhya Pradesh,202.6,209.8,62,29,41.5,58.5,17,0,0,0,0,0,7.7,0,Delivered within plan,No material delay
+HIST-00421,Railways,Bihar,487.5,548.1,39,78,90.7,100.0,8,0,1,1,0,1,4.7,0,Delivered within plan,Land acquisition
+HIST-00422,Airports,Haryana,127.4,133.8,32,69,91.0,98.9,8,1,0,1,0,0,13.3,5,5-month delay,Pending clearance
+HIST-00423,Roads,Odisha,132.0,140.9,49,80,89.5,100.0,11,2,0,0,0,0,3.9,4,4-month delay,Milestone slippage
+HIST-00424,Power,Maharashtra,480.5,485.9,68,11,9.1,8.8,15,0,1,0,0,0,0.4,0,Delivered within plan,Land acquisition
+HIST-00425,Urban Transit,Haryana,68.6,70.7,30,48,98.8,100.0,4,0,0,1,0,0,-2.0,0,Delivered within plan,Pending clearance
+HIST-00426,Urban Transit,Jharkhand,311.9,365.1,26,69,96.2,100.0,10,0,1,0,1,0,2.3,6,6-month delay,Land acquisition
+HIST-00427,Railways,Karnataka,107.7,123.2,31,64,98.5,78.1,11,3,1,0,0,0,5.6,10,10-month delay,Land acquisition
+HIST-00428,Water & Sanitation,Madhya Pradesh,144.0,149.0,71,52,67.6,61.7,18,0,0,0,0,0,-1.5,0,Delivered within plan,No material delay
+HIST-00429,Railways,Rajasthan,662.1,750.4,48,37,81.8,84.2,13,2,0,1,0,1,15.3,6,6-month delay,Milestone slippage
+HIST-00430,Power,Telangana,308.8,327.6,44,29,65.5,76.3,12,1,1,0,0,0,-1.2,0,Delivered within plan,Land acquisition
+HIST-00431,Industrial Corridors,Haryana,520.2,528.7,14,49,98.2,100.0,4,0,1,0,0,0,1.5,6,6-month delay,Land acquisition
+HIST-00432,Urban Transit,Uttar Pradesh,154.1,158.9,49,30,61.1,53.6,12,0,0,0,0,0,1.2,1,1-month delay,No material delay
+HIST-00433,Roads,Uttar Pradesh,310.0,325.7,22,64,83.8,68.4,8,0,1,0,0,0,-5.4,0,Delivered within plan,Land acquisition
+HIST-00434,Industrial Corridors,Madhya Pradesh,426.4,439.6,42,83,100.0,100.0,14,1,0,0,0,0,3.4,0,Delivered within plan,No material delay
+HIST-00435,Ports,Rajasthan,160.4,165.2,51,23,44.9,48.1,11,0,1,0,0,0,-1.3,6,6-month delay,Land acquisition
+HIST-00436,Industrial Corridors,Rajasthan,220.4,227.0,28,51,93.0,100.0,4,1,0,0,0,0,1.0,0,Delivered within plan,No material delay
+HIST-00437,Airports,Kerala,213.3,233.5,16,61,95.7,100.0,4,0,0,0,1,0,5.6,0,Delivered within plan,Funding release
+HIST-00438,Urban Transit,Jharkhand,523.2,541.2,12,80,88.2,83.1,4,1,0,0,0,0,2.1,0,Delivered within plan,No material delay
+HIST-00439,Urban Transit,Tamil Nadu,214.0,240.2,34,84,87.5,83.3,9,1,0,1,0,1,6.2,4,4-month delay,Pending clearance
+HIST-00440,Urban Transit,Kerala,206.7,213.2,44,25,51.0,54.1,10,0,0,0,0,0,-0.4,0,Delivered within plan,No material delay
+HIST-00441,Urban Transit,Telangana,406.9,420.5,26,51,99.9,92.6,4,0,0,0,0,0,1.3,0,Delivered within plan,No material delay
+HIST-00442,Industrial Corridors,Jharkhand,207.9,221.9,65,53,74.6,81.5,12,1,1,0,0,0,2.1,0,Delivered within plan,Land acquisition
+HIST-00443,Roads,Karnataka,202.6,239.6,30,29,100.0,100.0,7,1,1,1,0,1,13.7,6,6-month delay,Land acquisition
+HIST-00444,Roads,Telangana,214.7,255.1,47,72,99.0,100.0,14,1,1,1,0,1,2.1,11,11-month delay,Land acquisition
+HIST-00445,Urban Transit,Madhya Pradesh,294.1,308.4,59,41,53.5,68.5,11,0,1,0,0,0,7.3,3,3-month delay,Land acquisition
+HIST-00446,Roads,Madhya Pradesh,196.8,201.2,44,9,19.7,35.2,12,0,1,0,0,0,-1.2,0,Delivered within plan,Land acquisition
+HIST-00447,Airports,Telangana,184.7,193.9,40,12,34.7,44.3,12,1,0,0,0,0,7.3,1,1-month delay,No material delay
+HIST-00448,Roads,Andhra Pradesh,47.0,47.7,74,36,64.7,54.2,21,1,0,0,0,0,6.0,0,Delivered within plan,No material delay
+HIST-00449,Urban Transit,Gujarat,462.8,494.1,45,62,99.4,100.0,10,2,0,0,0,0,-0.3,4,4-month delay,Milestone slippage
+HIST-00450,Power,Tamil Nadu,280.9,289.7,45,61,85.6,74.0,12,2,0,0,0,0,2.3,0,Delivered within plan,Milestone slippage
+HIST-00451,Ports,Uttar Pradesh,186.8,196.9,25,43,98.1,100.0,8,1,1,0,0,0,-0.4,5,5-month delay,Land acquisition
+HIST-00452,Roads,Madhya Pradesh,169.4,190.1,64,30,33.3,45.5,18,0,1,0,1,0,7.1,2,2-month delay,Land acquisition
+HIST-00453,Roads,Gujarat,143.0,144.8,12,9,91.3,90.1,4,0,0,1,0,0,-3.7,1,1-month delay,Pending clearance
+HIST-00454,Ports,Odisha,118.6,126.0,40,21,42.2,43.1,10,2,0,0,0,0,9.7,0,Delivered within plan,Milestone slippage
+HIST-00455,Power,Tamil Nadu,295.4,319.7,71,42,65.4,65.8,16,2,1,1,0,0,8.9,10,10-month delay,Land acquisition
+HIST-00456,Railways,West Bengal,187.1,202.8,22,11,41.8,39.1,6,2,1,0,0,0,-3.7,0,Delivered within plan,Land acquisition
+HIST-00457,Industrial Corridors,Tamil Nadu,262.0,273.2,40,58,100.0,85.4,11,0,0,0,1,0,6.8,0,Delivered within plan,Funding release
+HIST-00458,Roads,Telangana,227.6,258.5,34,32,90.3,73.5,10,2,1,0,0,0,7.9,11,11-month delay,Land acquisition
+HIST-00459,Industrial Corridors,Tamil Nadu,120.5,141.7,69,73,87.2,81.3,18,1,1,1,0,1,6.7,4,4-month delay,Land acquisition
+HIST-00460,Water & Sanitation,Maharashtra,345.8,357.8,62,7,9.1,29.8,17,2,0,0,0,0,2.2,0,Delivered within plan,Milestone slippage
+HIST-00461,Water & Sanitation,Madhya Pradesh,141.9,145.6,35,30,98.5,90.5,9,1,0,0,0,0,7.7,0,Delivered within plan,No material delay
+HIST-00462,Industrial Corridors,Uttar Pradesh,389.3,410.6,40,12,19.0,24.9,10,0,0,0,0,1,-9.1,1,1-month delay,No material delay
+HIST-00463,Water & Sanitation,Uttar Pradesh,1258.9,1395.8,35,11,30.4,34.6,11,0,1,0,0,1,6.2,4,4-month delay,Land acquisition
+HIST-00464,Industrial Corridors,Jharkhand,70.9,74.1,36,82,100.0,100.0,9,1,0,0,0,0,7.2,3,3-month delay,No material delay
+HIST-00465,Water & Sanitation,Telangana,109.0,116.3,32,54,98.9,91.6,11,2,1,0,0,0,1.7,10,10-month delay,Land acquisition
+HIST-00466,Railways,Maharashtra,115.6,124.6,43,81,93.0,81.9,14,0,1,1,0,0,4.8,1,1-month delay,Land acquisition
+HIST-00467,Industrial Corridors,West Bengal,156.9,167.5,55,29,42.9,36.1,13,1,0,1,0,1,-2.9,0,Delivered within plan,Pending clearance
+HIST-00468,Railways,Tamil Nadu,45.9,47.4,46,54,100.0,100.0,11,0,0,0,0,0,2.5,1,1-month delay,No material delay
+HIST-00469,Industrial Corridors,Maharashtra,307.7,321.6,37,45,92.3,97.7,9,1,1,0,0,0,5.2,11,11-month delay,Land acquisition
+HIST-00470,Urban Transit,Tamil Nadu,826.8,878.8,62,76,84.0,71.1,16,0,1,0,0,0,-1.1,7,7-month delay,Land acquisition
+HIST-00471,Roads,Andhra Pradesh,634.0,715.8,22,72,92.5,83.9,4,2,1,0,0,0,10.7,7,7-month delay,Land acquisition
+HIST-00472,Power,Telangana,364.9,398.6,58,65,86.0,82.0,16,0,0,0,1,0,6.7,0,Delivered within plan,Funding release
+HIST-00473,Urban Transit,Gujarat,295.7,301.3,54,24,50.1,58.4,14,2,0,0,0,0,4.2,0,Delivered within plan,Milestone slippage
+HIST-00474,Railways,Andhra Pradesh,478.9,556.4,28,50,97.6,100.0,8,3,1,0,0,0,11.2,11,11-month delay,Land acquisition
+HIST-00475,Urban Transit,West Bengal,224.6,230.0,66,15,19.6,26.6,19,2,0,0,0,0,10.2,7,7-month delay,Milestone slippage
+HIST-00476,Power,Uttar Pradesh,51.7,55.5,33,50,95.9,100.0,4,3,0,0,0,0,14.7,4,4-month delay,Milestone slippage
+HIST-00477,Water & Sanitation,Maharashtra,286.3,305.7,44,41,94.8,100.0,13,0,1,0,0,0,4.8,5,5-month delay,Land acquisition
+HIST-00478,Railways,Kerala,57.8,60.8,14,81,90.7,83.7,4,0,1,0,0,0,-3.6,6,6-month delay,Land acquisition
+HIST-00479,Railways,Madhya Pradesh,962.8,1057.3,35,27,83.9,69.8,10,2,1,1,0,0,-2.1,11,11-month delay,Land acquisition
+HIST-00480,Water & Sanitation,Uttar Pradesh,851.6,885.8,76,40,50.9,56.1,17,0,0,0,0,0,2.4,0,Delivered within plan,No material delay
+HIST-00481,Industrial Corridors,Uttar Pradesh,289.0,316.2,53,55,92.5,86.5,11,0,1,0,0,0,13.4,0,Delivered within plan,Land acquisition
+HIST-00482,Urban Transit,Odisha,225.0,238.5,21,11,59.0,53.1,6,2,0,1,0,1,-1.5,0,Delivered within plan,Milestone slippage
+HIST-00483,Roads,Jharkhand,396.4,405.4,46,15,33.7,30.2,13,0,0,0,0,0,5.4,0,Delivered within plan,No material delay
+HIST-00484,Water & Sanitation,Andhra Pradesh,79.0,79.3,56,34,73.0,81.5,16,1,0,0,0,0,-1.5,1,1-month delay,No material delay
+HIST-00485,Roads,Andhra Pradesh,291.4,320.5,45,59,95.1,100.0,13,0,1,0,1,0,2.1,6,6-month delay,Land acquisition
+HIST-00486,Urban Transit,Gujarat,1032.9,1120.6,28,84,100.0,100.0,11,0,1,0,0,1,8.4,7,7-month delay,Land acquisition
+HIST-00487,Water & Sanitation,Madhya Pradesh,103.9,106.9,43,28,64.9,65.1,7,1,0,1,0,0,1.8,0,Delivered within plan,Pending clearance
+HIST-00488,Roads,Kerala,111.1,124.1,25,48,100.0,100.0,9,0,1,1,0,1,-9.6,0,Delivered within plan,Land acquisition
+HIST-00489,Urban Transit,Uttar Pradesh,529.4,533.4,62,34,60.9,53.7,19,0,0,1,0,0,9.5,2,2-month delay,Pending clearance
+HIST-00490,Airports,Tamil Nadu,126.7,132.3,40,54,91.3,88.1,7,1,0,1,0,0,8.1,4,4-month delay,Pending clearance
+HIST-00491,Roads,Rajasthan,176.7,189.8,31,79,100.0,97.0,8,0,1,0,1,0,-0.6,6,6-month delay,Land acquisition
+HIST-00492,Urban Transit,Jharkhand,160.1,179.5,53,27,47.8,44.6,14,1,1,0,0,1,2.0,7,7-month delay,Land acquisition
+HIST-00493,Roads,Kerala,698.0,754.0,58,31,48.5,51.7,18,0,1,0,0,1,-4.7,7,7-month delay,Land acquisition
+HIST-00494,Industrial Corridors,Tamil Nadu,346.3,405.0,33,75,89.8,84.4,7,1,1,1,0,0,4.0,7,7-month delay,Land acquisition
+HIST-00495,Railways,Andhra Pradesh,142.8,146.9,49,47,93.1,95.6,9,0,1,0,0,0,-1.4,0,Delivered within plan,Land acquisition
+HIST-00496,Industrial Corridors,Tamil Nadu,245.1,262.4,23,78,99.6,100.0,6,1,1,0,0,0,7.6,6,6-month delay,Land acquisition
+HIST-00497,Ports,Jharkhand,381.2,442.3,64,64,88.1,60.9,16,1,0,1,1,0,8.3,2,2-month delay,Funding release
+HIST-00498,Power,West Bengal,227.3,234.8,51,54,99.1,98.6,12,2,0,0,0,0,9.3,5,5-month delay,Milestone slippage
+HIST-00499,Power,Bihar,80.0,83.2,21,6,39.9,43.5,7,0,0,0,0,0,-5.1,0,Delivered within plan,No material delay
+HIST-00500,Roads,Andhra Pradesh,206.9,221.3,33,80,83.6,88.3,7,0,1,0,1,0,-3.7,1,1-month delay,Land acquisition
+HIST-00501,Industrial Corridors,Karnataka,804.2,905.8,65,15,27.4,35.6,17,1,1,1,0,0,7.6,4,4-month delay,Land acquisition
+HIST-00502,Railways,Odisha,387.5,407.5,41,40,95.9,91.3,14,0,1,0,0,0,-7.2,1,1-month delay,Land acquisition
+HIST-00503,Industrial Corridors,Uttar Pradesh,224.4,232.4,30,74,95.4,93.3,11,1,0,0,0,1,8.9,0,Delivered within plan,No material delay
+HIST-00504,Industrial Corridors,Gujarat,644.7,741.0,32,68,95.7,100.0,9,1,1,0,0,1,7.4,9,9-month delay,Land acquisition
+HIST-00505,Urban Transit,Haryana,425.8,451.2,47,7,16.0,20.8,10,1,0,0,1,0,5.1,0,Delivered within plan,Funding release
+HIST-00506,Urban Transit,Kerala,215.4,219.7,41,13,29.4,22.6,10,0,0,1,0,0,-3.1,3,3-month delay,Pending clearance
+HIST-00507,Roads,Telangana,482.5,491.0,30,55,98.1,96.9,11,1,0,0,0,0,-4.4,4,4-month delay,No material delay
+HIST-00508,Roads,Jharkhand,176.5,187.3,46,71,100.0,100.0,11,0,1,0,0,0,4.5,6,6-month delay,Land acquisition
+HIST-00509,Roads,Haryana,843.6,889.9,39,45,85.1,94.6,13,0,0,1,0,1,-10.1,0,Delivered within plan,Pending clearance
+HIST-00510,Urban Transit,Andhra Pradesh,435.9,506.7,44,65,100.0,100.0,9,3,1,1,0,0,8.8,0,Delivered within plan,Land acquisition
+HIST-00511,Roads,Uttar Pradesh,72.9,74.3,45,18,45.6,40.3,13,1,0,0,0,0,3.2,0,Delivered within plan,No material delay
+HIST-00512,Urban Transit,Maharashtra,675.5,685.1,41,19,54.9,53.1,12,0,0,0,0,0,1.8,0,Delivered within plan,No material delay
+HIST-00513,Roads,Bihar,353.0,388.5,61,46,67.6,66.5,15,0,1,1,0,1,0.4,1,1-month delay,Land acquisition
+HIST-00514,Roads,Jharkhand,195.7,202.0,67,40,56.5,56.6,16,0,0,0,0,0,5.6,2,2-month delay,No material delay
+HIST-00515,Railways,Maharashtra,502.7,512.4,57,11,18.8,7.3,12,2,0,0,0,1,5.8,0,Delivered within plan,Milestone slippage
+HIST-00516,Roads,Andhra Pradesh,1098.0,1291.1,87,62,74.4,74.1,22,1,1,0,0,1,12.9,8,8-month delay,Land acquisition
+HIST-00517,Industrial Corridors,Uttar Pradesh,180.0,186.6,33,46,100.0,98.6,9,1,0,0,0,0,-10.5,0,Delivered within plan,No material delay
+HIST-00518,Railways,Kerala,127.9,148.1,47,31,69.7,66.3,8,2,1,1,0,1,-1.5,7,7-month delay,Land acquisition
+HIST-00519,Ports,Maharashtra,190.6,196.8,16,22,83.3,88.7,6,0,0,0,0,0,-7.5,0,Delivered within plan,No material delay
+HIST-00520,Railways,Haryana,508.9,551.8,62,59,99.4,100.0,16,2,1,0,0,0,1.9,7,7-month delay,Land acquisition
+HIST-00521,Railways,Telangana,536.9,574.7,12,42,91.2,98.3,5,1,1,0,0,1,-6.2,0,Delivered within plan,Land acquisition
+HIST-00522,Industrial Corridors,Tamil Nadu,123.0,129.3,33,8,19.1,6.8,5,2,0,0,0,0,5.1,5,5-month delay,Milestone slippage
+HIST-00523,Urban Transit,Kerala,88.0,97.5,57,63,87.9,99.5,13,2,0,0,1,0,10.9,4,4-month delay,Milestone slippage
+HIST-00524,Water & Sanitation,Gujarat,70.8,79.1,55,73,95.4,100.0,13,2,0,0,1,0,6.9,0,Delivered within plan,Milestone slippage
+HIST-00525,Roads,Gujarat,64.9,67.8,56,63,98.7,100.0,15,1,1,0,0,0,-0.8,0,Delivered within plan,Land acquisition
+HIST-00526,Roads,Bihar,128.5,130.6,20,25,93.4,88.8,4,0,0,0,0,0,-3.3,1,1-month delay,No material delay
+HIST-00527,Airports,Gujarat,118.8,122.0,30,41,92.5,100.0,7,1,0,0,0,0,4.1,1,1-month delay,No material delay
+HIST-00528,Industrial Corridors,Maharashtra,74.3,78.1,69,46,61.3,68.0,11,0,0,1,0,0,5.5,1,1-month delay,Pending clearance
+HIST-00529,Roads,Odisha,283.9,294.5,29,38,100.0,98.1,6,1,0,0,0,0,0.3,0,Delivered within plan,No material delay
+HIST-00530,Power,Rajasthan,98.4,105.3,76,47,53.9,60.6,19,2,0,1,0,0,15.6,2,2-month delay,Milestone slippage
+HIST-00531,Urban Transit,Karnataka,158.1,168.4,61,56,100.0,99.9,13,3,0,0,0,0,11.5,1,1-month delay,Milestone slippage
+HIST-00532,Urban Transit,West Bengal,283.1,303.4,32,41,100.0,96.3,11,2,0,0,0,0,2.8,5,5-month delay,Milestone slippage
+HIST-00533,Power,Jharkhand,1146.2,1155.2,50,7,16.6,11.9,14,0,0,0,0,0,-0.9,0,Delivered within plan,No material delay
+HIST-00534,Roads,Haryana,450.3,477.2,57,25,47.9,48.2,15,2,1,0,0,0,1.3,9,9-month delay,Land acquisition
+HIST-00535,Airports,Maharashtra,130.5,134.9,46,69,95.1,90.0,12,1,0,0,0,0,-0.2,0,Delivered within plan,No material delay
+HIST-00536,Railways,West Bengal,454.9,490.2,28,27,100.0,98.3,9,1,1,1,0,0,5.6,9,9-month delay,Land acquisition
+HIST-00537,Power,Haryana,290.0,312.8,56,20,44.7,29.9,18,1,0,0,1,0,-1.4,0,Delivered within plan,Funding release
+HIST-00538,Ports,Bihar,41.7,43.5,62,48,76.9,71.4,21,1,0,1,0,0,3.9,0,Delivered within plan,Pending clearance
+HIST-00539,Water & Sanitation,West Bengal,631.3,649.2,70,7,3.9,0.0,17,2,0,0,0,0,6.0,5,5-month delay,Milestone slippage
+HIST-00540,Urban Transit,West Bengal,66.1,67.5,67,18,24.0,27.5,16,1,0,1,0,0,1.2,0,Delivered within plan,Pending clearance
+HIST-00541,Urban Transit,Uttar Pradesh,121.6,124.0,36,20,57.4,51.1,7,1,0,0,0,0,-2.2,1,1-month delay,No material delay
+HIST-00542,Ports,Telangana,470.6,474.7,55,70,100.0,95.7,11,1,0,0,0,0,-3.8,3,3-month delay,No material delay
+HIST-00543,Power,Rajasthan,186.0,193.8,35,71,100.0,89.5,10,0,0,0,0,0,1.5,0,Delivered within plan,No material delay
+HIST-00544,Roads,Telangana,107.1,111.6,44,63,93.7,95.5,13,0,0,1,0,0,5.0,5,5-month delay,Pending clearance
+HIST-00545,Urban Transit,Madhya Pradesh,122.6,127.8,30,69,100.0,100.0,5,0,0,0,1,0,-1.3,1,1-month delay,Funding release
+HIST-00546,Urban Transit,Kerala,139.1,148.1,35,63,96.8,87.8,9,0,1,0,0,1,-3.1,6,6-month delay,Land acquisition
+HIST-00547,Water & Sanitation,Uttar Pradesh,127.1,132.3,30,53,100.0,100.0,9,0,0,0,0,0,2.7,0,Delivered within plan,No material delay
+HIST-00548,Water & Sanitation,Jharkhand,154.3,173.7,27,40,90.1,100.0,6,0,1,1,0,0,7.8,0,Delivered within plan,Land acquisition
+HIST-00549,Roads,Gujarat,547.1,631.4,60,76,95.9,73.9,14,3,1,0,0,0,10.4,0,Delivered within plan,Land acquisition
+HIST-00550,Railways,Bihar,175.2,185.0,33,74,92.6,90.4,11,0,0,0,0,0,1.9,3,3-month delay,No material delay
+HIST-00551,Industrial Corridors,Bihar,293.9,310.0,60,14,26.6,31.8,12,1,0,0,0,1,8.9,5,5-month delay,No material delay
+HIST-00552,Water & Sanitation,Tamil Nadu,415.5,432.4,40,44,100.0,97.8,14,1,0,0,0,0,3.4,4,4-month delay,No material delay
+HIST-00553,Water & Sanitation,Karnataka,206.9,223.4,47,40,100.0,91.4,12,2,0,0,0,1,9.0,0,Delivered within plan,Milestone slippage
+HIST-00554,Railways,Haryana,370.6,431.0,83,38,49.9,40.7,24,2,0,0,1,1,-5.4,4,4-month delay,Milestone slippage
+HIST-00555,Water & Sanitation,Andhra Pradesh,55.4,56.0,22,7,28.9,21.6,4,0,0,0,0,0,-8.0,0,Delivered within plan,No material delay
+HIST-00556,Railways,Maharashtra,566.8,655.6,46,62,100.0,100.0,14,2,1,1,1,0,10.2,1,1-month delay,Land acquisition
+HIST-00557,Ports,West Bengal,100.1,104.9,32,37,99.8,100.0,9,1,0,1,0,0,-5.5,0,Delivered within plan,Pending clearance
+HIST-00558,Industrial Corridors,West Bengal,63.8,66.5,48,33,66.6,53.6,13,0,0,1,0,1,-5.8,0,Delivered within plan,Pending clearance
+HIST-00559,Industrial Corridors,Tamil Nadu,300.4,304.1,18,48,98.1,91.9,4,0,0,1,0,0,5.1,1,1-month delay,Pending clearance
+HIST-00560,Railways,Bihar,279.0,307.0,27,17,62.9,60.4,5,2,1,0,0,0,11.7,10,10-month delay,Land acquisition
+HIST-00561,Power,Rajasthan,488.9,501.6,70,35,46.8,36.4,19,1,0,0,0,0,6.7,0,Delivered within plan,No material delay
+HIST-00562,Roads,Bihar,57.2,64.3,39,34,96.1,95.2,9,1,1,1,0,0,14.2,2,2-month delay,Land acquisition
+HIST-00563,Urban Transit,West Bengal,90.3,91.5,25,48,95.6,100.0,5,0,0,0,0,0,0.4,0,Delivered within plan,No material delay
+HIST-00564,Railways,Gujarat,395.8,427.7,52,33,68.1,57.2,10,0,1,0,0,0,3.2,8,8-month delay,Land acquisition
+HIST-00565,Industrial Corridors,Haryana,222.5,235.3,72,58,80.7,71.0,19,0,1,0,0,0,1.6,0,Delivered within plan,Land acquisition
+HIST-00566,Railways,Uttar Pradesh,566.6,582.0,12,8,43.5,29.5,4,0,1,0,0,0,0.6,0,Delivered within plan,Land acquisition
+HIST-00567,Water & Sanitation,Odisha,382.4,396.9,38,20,49.3,47.8,12,0,0,0,0,0,4.5,1,1-month delay,No material delay
+HIST-00568,Water & Sanitation,Jharkhand,906.2,1029.2,37,16,33.3,39.9,9,2,0,0,1,1,-1.1,0,Delivered within plan,Milestone slippage
+HIST-00569,Power,Telangana,211.1,221.0,18,41,98.3,86.1,7,2,0,0,0,0,12.7,3,3-month delay,Milestone slippage
+HIST-00570,Water & Sanitation,Karnataka,431.4,446.4,18,9,43.5,43.7,4,0,0,0,0,0,-1.7,0,Delivered within plan,No material delay
+HIST-00571,Power,Madhya Pradesh,756.3,795.8,55,48,70.8,74.3,14,0,1,0,0,0,-3.4,0,Delivered within plan,Land acquisition
+HIST-00572,Urban Transit,Jharkhand,41.8,42.1,97,57,52.1,54.7,25,1,0,1,0,0,-1.9,2,2-month delay,Pending clearance
+HIST-00573,Roads,Tamil Nadu,25.0,28.2,28,64,91.9,88.6,7,1,1,1,1,0,-0.1,6,6-month delay,Land acquisition
+HIST-00574,Railways,Rajasthan,518.7,531.5,36,27,78.0,81.5,8,0,1,0,0,0,-1.4,6,6-month delay,Land acquisition
+HIST-00575,Urban Transit,Uttar Pradesh,361.6,383.8,54,8,15.9,16.2,14,3,0,0,0,0,16.1,7,7-month delay,Milestone slippage
+HIST-00576,Power,Jharkhand,268.7,280.5,37,36,100.0,88.8,12,0,1,0,0,0,1.4,0,Delivered within plan,Land acquisition
+HIST-00577,Ports,Andhra Pradesh,119.7,132.1,12,10,72.8,60.6,4,1,1,0,0,0,1.0,1,1-month delay,Land acquisition
+HIST-00578,Power,Karnataka,341.8,351.6,55,74,100.0,94.4,17,0,0,0,0,0,-1.3,0,Delivered within plan,No material delay
+HIST-00579,Railways,Uttar Pradesh,394.6,461.3,39,71,100.0,100.0,7,1,1,1,1,0,4.4,9,9-month delay,Land acquisition
+HIST-00580,Industrial Corridors,Telangana,1124.5,1154.4,50,49,93.4,100.0,15,1,0,1,0,0,11.8,0,Delivered within plan,Pending clearance
+HIST-00581,Roads,Gujarat,405.7,407.2,65,43,57.0,67.6,14,0,0,0,0,0,1.7,0,Delivered within plan,No material delay
+HIST-00582,Industrial Corridors,Maharashtra,506.6,556.9,45,25,61.2,56.8,12,0,1,1,0,0,6.3,5,5-month delay,Land acquisition
+HIST-00583,Ports,Madhya Pradesh,285.1,293.1,36,50,100.0,100.0,11,1,0,1,0,0,-0.6,4,4-month delay,Pending clearance
+HIST-00584,Power,Rajasthan,347.6,349.8,12,29,89.9,93.0,4,2,0,0,0,0,10.2,2,2-month delay,Milestone slippage
+HIST-00585,Power,Karnataka,234.5,246.6,31,79,92.5,100.0,10,0,0,0,0,0,1.7,3,3-month delay,No material delay
+HIST-00586,Industrial Corridors,Tamil Nadu,68.0,70.5,37,61,92.4,91.9,4,0,1,0,0,0,7.8,0,Delivered within plan,Land acquisition
+HIST-00587,Urban Transit,Telangana,85.7,87.3,42,9,19.5,17.8,14,0,0,0,0,0,-3.8,0,Delivered within plan,No material delay
+HIST-00588,Railways,Rajasthan,1033.3,1096.9,42,52,100.0,97.8,14,2,0,1,0,0,3.6,5,5-month delay,Milestone slippage
+HIST-00589,Roads,Odisha,189.5,198.9,50,8,19.1,31.9,13,0,0,0,1,0,-7.6,0,Delivered within plan,Funding release
+HIST-00590,Roads,Kerala,184.0,194.8,53,14,30.3,37.2,17,5,0,0,0,0,12.7,10,10-month delay,Milestone slippage
+HIST-00591,Urban Transit,Karnataka,149.6,155.3,28,31,90.0,79.2,8,3,0,0,0,0,9.7,5,5-month delay,Milestone slippage
+HIST-00592,Roads,Madhya Pradesh,225.9,244.3,34,19,66.1,70.3,6,3,0,0,0,0,12.4,0,Delivered within plan,Milestone slippage
+HIST-00593,Water & Sanitation,Bihar,419.3,449.2,40,56,100.0,100.0,10,1,1,0,0,0,2.9,0,Delivered within plan,Land acquisition
+HIST-00594,Urban Transit,Karnataka,426.6,443.1,61,43,57.2,53.8,15,0,0,1,0,0,-1.1,1,1-month delay,Pending clearance
+HIST-00595,Roads,West Bengal,158.8,163.5,34,58,100.0,98.3,5,2,1,0,0,0,0.9,0,Delivered within plan,Land acquisition
+HIST-00596,Roads,Telangana,86.1,91.5,57,76,94.4,90.0,15,1,1,1,0,0,4.2,0,Delivered within plan,Land acquisition
+HIST-00597,Water & Sanitation,Kerala,331.7,343.2,30,37,100.0,100.0,12,0,0,0,0,0,-1.9,0,Delivered within plan,No material delay
+HIST-00598,Urban Transit,Kerala,54.4,56.0,27,72,100.0,98.9,8,1,0,0,0,0,15.3,0,Delivered within plan,No material delay
+HIST-00599,Roads,Rajasthan,63.4,67.2,15,72,95.0,100.0,4,0,1,0,0,1,0.8,0,Delivered within plan,Land acquisition
+HIST-00600,Power,Gujarat,88.0,92.5,40,68,100.0,100.0,13,1,1,0,0,0,1.7,6,6-month delay,Land acquisition
+HIST-00601,Roads,Andhra Pradesh,169.2,177.3,25,47,100.0,100.0,11,0,1,1,0,0,3.2,4,4-month delay,Land acquisition
+HIST-00602,Railways,Telangana,209.7,217.9,43,63,95.7,90.5,12,0,0,1,0,0,-3.8,0,Delivered within plan,Pending clearance
+HIST-00603,Railways,Telangana,353.1,364.8,62,60,100.0,100.0,13,1,0,0,0,0,3.4,0,Delivered within plan,No material delay
+HIST-00604,Industrial Corridors,Madhya Pradesh,453.0,485.4,18,46,100.0,100.0,5,0,1,0,0,1,-10.1,8,8-month delay,Land acquisition
+HIST-00605,Water & Sanitation,Madhya Pradesh,96.1,108.9,47,81,96.2,100.0,12,4,0,1,0,0,10.8,0,Delivered within plan,Milestone slippage
+HIST-00606,Water & Sanitation,Maharashtra,349.4,359.6,65,69,92.3,88.2,20,0,0,0,0,0,4.4,3,3-month delay,No material delay
+HIST-00607,Urban Transit,West Bengal,770.3,812.9,28,57,92.1,95.2,5,1,0,1,0,0,0.2,0,Delivered within plan,Pending clearance
+HIST-00608,Industrial Corridors,Jharkhand,129.5,134.7,66,14,30.8,31.0,18,2,0,0,0,0,8.8,0,Delivered within plan,Milestone slippage
+HIST-00609,Roads,Uttar Pradesh,300.9,311.5,63,15,18.5,24.7,14,0,0,1,0,1,1.1,1,1-month delay,Pending clearance
+HIST-00610,Railways,West Bengal,122.9,141.5,31,32,95.8,84.5,6,3,1,0,0,1,6.8,9,9-month delay,Land acquisition
+HIST-00611,Airports,Madhya Pradesh,432.6,438.8,64,39,63.2,53.8,15,0,0,0,0,0,-5.2,0,Delivered within plan,No material delay
+HIST-00612,Airports,Jharkhand,150.2,151.8,60,39,60.9,67.5,18,1,0,0,0,0,-2.7,1,1-month delay,No material delay
+HIST-00613,Industrial Corridors,Rajasthan,145.4,154.6,60,63,97.2,88.2,17,1,1,0,0,0,3.4,2,2-month delay,Land acquisition
+HIST-00614,Power,Maharashtra,326.5,351.2,73,65,98.1,96.5,17,1,0,0,0,0,10.1,0,Delivered within plan,No material delay
+HIST-00615,Urban Transit,Andhra Pradesh,160.5,163.7,33,8,16.9,20.2,9,1,1,0,0,0,-0.2,0,Delivered within plan,Land acquisition
+HIST-00616,Power,Madhya Pradesh,421.3,433.9,48,78,94.3,98.6,12,1,0,0,0,0,2.7,0,Delivered within plan,No material delay
+HIST-00617,Power,Uttar Pradesh,61.5,65.1,27,29,89.9,82.1,5,2,0,0,0,0,9.8,4,4-month delay,Milestone slippage
+HIST-00618,Railways,Karnataka,249.3,263.9,87,27,28.9,29.5,23,1,1,0,0,0,2.5,0,Delivered within plan,Land acquisition
+HIST-00619,Roads,West Bengal,509.5,561.0,68,28,39.0,44.4,16,0,1,0,0,1,1.9,0,Delivered within plan,Land acquisition
+HIST-00620,Urban Transit,Bihar,341.2,345.8,44,33,58.4,56.9,11,0,0,0,0,0,0.6,0,Delivered within plan,No material delay
+HIST-00621,Roads,Haryana,282.2,297.2,12,7,66.0,73.2,4,2,0,0,0,0,0.4,1,1-month delay,Milestone slippage
+HIST-00622,Railways,Andhra Pradesh,548.4,571.3,26,11,34.7,28.5,6,0,1,0,0,0,-4.5,1,1-month delay,Land acquisition
+HIST-00623,Roads,Tamil Nadu,261.5,276.6,67,25,37.9,36.9,16,0,0,0,0,1,-5.9,0,Delivered within plan,No material delay
+HIST-00624,Roads,Andhra Pradesh,357.7,357.7,36,64,100.0,100.0,9,0,0,0,0,0,-2.2,0,Delivered within plan,No material delay
+HIST-00625,Water & Sanitation,Uttar Pradesh,326.9,328.0,39,82,100.0,89.7,7,0,0,1,0,0,6.9,1,1-month delay,Pending clearance
+HIST-00626,Roads,Karnataka,521.4,539.0,28,42,100.0,100.0,5,1,1,0,0,0,-1.2,9,9-month delay,Land acquisition
+HIST-00627,Power,Karnataka,144.9,149.8,38,27,72.7,75.0,8,3,0,0,0,0,4.1,1,1-month delay,Milestone slippage
+HIST-00628,Roads,Karnataka,220.0,226.3,34,58,100.0,100.0,6,0,1,0,0,0,3.1,0,Delivered within plan,Land acquisition
+HIST-00629,Industrial Corridors,Bihar,136.8,143.9,43,52,93.6,100.0,10,1,0,0,1,0,5.3,3,3-month delay,Funding release
+HIST-00630,Railways,Uttar Pradesh,282.5,288.7,56,80,99.9,100.0,14,0,0,1,0,0,11.9,2,2-month delay,Pending clearance
+HIST-00631,Railways,Rajasthan,216.1,251.5,66,50,85.8,66.1,18,3,0,0,0,1,9.0,5,5-month delay,Milestone slippage
+HIST-00632,Power,Bihar,263.2,266.5,20,11,47.8,60.1,4,1,0,0,0,0,1.5,0,Delivered within plan,No material delay
+HIST-00633,Urban Transit,Tamil Nadu,165.2,168.2,60,21,44.4,45.9,15,3,0,0,0,0,8.4,6,6-month delay,Milestone slippage
+HIST-00634,Urban Transit,Madhya Pradesh,222.1,224.6,12,25,99.4,89.4,5,0,0,0,0,0,8.0,1,1-month delay,No material delay
+HIST-00635,Roads,Jharkhand,88.9,90.3,63,6,21.8,28.9,14,0,1,0,0,0,-4.1,0,Delivered within plan,Land acquisition
+HIST-00636,Railways,Madhya Pradesh,155.3,165.6,61,23,20.7,6.4,12,2,0,0,0,1,1.1,0,Delivered within plan,Milestone slippage
+HIST-00637,Roads,Odisha,231.5,232.5,52,79,100.0,97.3,13,0,1,0,0,0,-6.0,1,1-month delay,Land acquisition
+HIST-00638,Railways,Bihar,216.4,228.8,64,14,16.2,9.8,18,0,1,0,0,0,0.3,4,4-month delay,Land acquisition
+HIST-00639,Water & Sanitation,Haryana,118.9,124.3,57,83,93.0,90.3,15,1,0,0,0,0,5.8,0,Delivered within plan,No material delay
+HIST-00640,Railways,Bihar,649.6,679.3,27,27,81.5,86.1,7,0,1,0,0,0,-6.8,0,Delivered within plan,Land acquisition
+HIST-00641,Railways,Karnataka,166.1,179.8,47,71,96.1,100.0,12,1,0,1,0,0,8.2,1,1-month delay,Pending clearance
+HIST-00642,Urban Transit,Tamil Nadu,507.6,518.6,61,63,100.0,89.0,18,1,0,0,0,0,12.4,1,1-month delay,No material delay
+HIST-00643,Roads,Jharkhand,181.7,183.5,26,23,97.7,99.8,6,0,0,0,0,0,5.7,1,1-month delay,No material delay
+HIST-00644,Power,Kerala,1244.7,1393.5,12,47,83.2,81.4,4,1,1,0,0,0,11.8,8,8-month delay,Land acquisition
+HIST-00645,Water & Sanitation,Haryana,70.8,73.9,35,6,16.6,17.0,10,2,0,0,0,0,-2.4,0,Delivered within plan,Milestone slippage
+HIST-00646,Industrial Corridors,West Bengal,372.4,410.4,21,22,100.0,100.0,5,4,0,0,1,0,7.1,0,Delivered within plan,Milestone slippage
+HIST-00647,Urban Transit,West Bengal,318.2,338.0,46,62,99.3,100.0,8,3,0,0,0,0,8.4,6,6-month delay,Milestone slippage
+HIST-00648,Airports,Telangana,159.1,159.1,45,17,40.0,27.0,9,1,0,0,0,0,-3.7,0,Delivered within plan,No material delay
+HIST-00649,Power,Haryana,190.2,192.1,65,74,100.0,100.0,15,1,0,1,0,0,0.1,2,2-month delay,Pending clearance
+HIST-00650,Power,Haryana,195.2,200.2,67,34,35.5,32.1,19,1,0,1,0,0,-2.5,1,1-month delay,Pending clearance
+HIST-00651,Railways,Maharashtra,416.7,455.3,54,79,87.7,73.7,11,2,1,1,0,0,6.7,7,7-month delay,Land acquisition
+HIST-00652,Water & Sanitation,Kerala,177.7,183.3,34,69,88.1,100.0,9,0,0,0,0,0,10.5,0,Delivered within plan,No material delay
+HIST-00653,Railways,Jharkhand,145.1,146.4,24,49,89.2,83.9,6,0,0,0,0,0,3.0,0,Delivered within plan,No material delay
+HIST-00654,Urban Transit,Haryana,84.3,86.0,53,29,59.2,53.1,11,2,0,0,0,0,-0.8,5,5-month delay,Milestone slippage
+HIST-00655,Airports,Andhra Pradesh,97.6,100.5,47,73,100.0,91.9,16,1,0,0,0,0,-0.4,0,Delivered within plan,No material delay
+HIST-00656,Urban Transit,West Bengal,198.7,210.6,24,69,97.3,88.2,6,0,1,0,0,0,10.0,0,Delivered within plan,Land acquisition
+HIST-00657,Urban Transit,Kerala,43.6,44.8,39,65,100.0,100.0,11,0,0,0,0,0,-2.2,0,Delivered within plan,No material delay
+HIST-00658,Water & Sanitation,Tamil Nadu,316.6,347.1,28,73,100.0,100.0,6,2,0,0,0,1,11.3,1,1-month delay,Milestone slippage
+HIST-00659,Urban Transit,Tamil Nadu,291.0,308.7,53,73,100.0,95.4,14,2,0,0,0,0,13.9,3,3-month delay,Milestone slippage
+HIST-00660,Railways,Haryana,171.1,187.4,31,45,100.0,92.3,12,1,0,1,1,0,4.9,3,3-month delay,Funding release
+HIST-00661,Ports,Maharashtra,527.4,539.1,52,20,41.2,40.8,10,2,0,0,0,0,2.8,0,Delivered within plan,Milestone slippage
+HIST-00662,Water & Sanitation,Madhya Pradesh,285.2,314.8,37,82,100.0,74.6,9,0,0,1,0,0,-0.3,0,Delivered within plan,Pending clearance
+HIST-00663,Water & Sanitation,Jharkhand,235.0,242.7,31,58,92.4,90.2,6,1,0,0,0,0,-1.6,1,1-month delay,No material delay
+HIST-00664,Roads,Haryana,966.2,1044.8,34,68,84.2,67.2,12,0,1,0,0,0,5.2,0,Delivered within plan,Land acquisition
+HIST-00665,Airports,Maharashtra,531.8,542.5,43,36,90.5,92.7,11,0,1,0,0,0,-0.5,0,Delivered within plan,Land acquisition
+HIST-00666,Urban Transit,Telangana,371.5,383.3,33,43,100.0,100.0,12,2,0,0,0,0,5.3,7,7-month delay,Milestone slippage
+HIST-00667,Roads,Madhya Pradesh,302.6,311.0,37,9,21.0,23.5,12,0,0,0,0,1,-7.1,2,2-month delay,No material delay
+HIST-00668,Ports,Rajasthan,215.3,238.2,36,46,96.9,95.6,11,0,1,0,0,0,3.2,1,1-month delay,Land acquisition
+HIST-00669,Railways,Madhya Pradesh,299.1,323.7,46,71,86.4,81.9,9,0,1,0,0,0,7.0,5,5-month delay,Land acquisition
+HIST-00670,Water & Sanitation,Madhya Pradesh,92.3,94.2,48,44,94.7,97.0,8,2,0,0,0,0,6.0,2,2-month delay,Milestone slippage
+HIST-00671,Power,Telangana,164.0,169.4,20,83,100.0,96.1,4,1,0,0,0,0,9.1,1,1-month delay,No material delay
+HIST-00672,Power,Haryana,3117.0,3117.0,35,23,62.3,63.5,9,0,0,0,0,0,-1.4,0,Delivered within plan,No material delay
+HIST-00673,Roads,Madhya Pradesh,677.0,761.2,33,20,69.8,52.2,8,3,0,0,0,0,20.0,3,3-month delay,Milestone slippage
+HIST-00674,Railways,Telangana,401.4,420.7,51,9,22.4,30.9,15,1,0,0,0,0,3.9,1,1-month delay,No material delay
+HIST-00675,Roads,Uttar Pradesh,241.1,287.6,35,71,100.0,100.0,8,3,1,0,1,1,5.5,9,9-month delay,Land acquisition
+HIST-00676,Water & Sanitation,Maharashtra,521.1,539.1,29,28,73.0,72.0,7,1,1,0,0,0,3.7,1,1-month delay,Land acquisition
+HIST-00677,Urban Transit,Kerala,532.1,540.9,50,42,81.2,84.5,13,1,0,0,0,0,5.7,2,2-month delay,No material delay
+HIST-00678,Railways,West Bengal,327.8,362.8,62,26,37.3,44.6,16,1,1,0,0,0,4.6,9,9-month delay,Land acquisition
+HIST-00679,Water & Sanitation,Madhya Pradesh,280.1,297.1,52,56,91.5,88.7,14,0,1,0,0,0,5.8,0,Delivered within plan,Land acquisition
+HIST-00680,Water & Sanitation,Rajasthan,453.4,490.1,27,74,100.0,100.0,5,3,0,0,0,0,13.8,6,6-month delay,Milestone slippage
+HIST-00681,Roads,Jharkhand,579.4,592.6,60,24,31.1,45.9,16,0,0,0,0,0,-1.9,0,Delivered within plan,No material delay
+HIST-00682,Power,Rajasthan,214.2,214.7,81,81,98.9,98.7,22,0,0,0,0,0,-0.7,0,Delivered within plan,No material delay
+HIST-00683,Urban Transit,Uttar Pradesh,63.1,65.2,41,77,99.9,100.0,10,0,0,0,0,0,-8.2,0,Delivered within plan,No material delay
+HIST-00684,Water & Sanitation,Gujarat,440.7,444.4,50,44,91.3,100.0,15,1,0,0,0,0,-2.1,1,1-month delay,No material delay
+HIST-00685,Roads,Gujarat,511.0,541.4,34,34,96.6,92.2,9,0,0,1,1,0,-1.3,4,4-month delay,Funding release
+HIST-00686,Roads,Jharkhand,234.1,248.8,21,72,100.0,100.0,4,1,0,1,0,0,7.0,3,3-month delay,Pending clearance
+HIST-00687,Ports,Bihar,252.5,260.8,35,41,93.6,96.8,8,0,0,0,0,0,-1.6,0,Delivered within plan,No material delay
+HIST-00688,Roads,Maharashtra,236.6,247.1,34,40,92.1,100.0,8,1,0,0,0,0,7.1,0,Delivered within plan,No material delay
+HIST-00689,Power,Jharkhand,676.2,750.5,26,72,94.9,82.0,6,0,1,1,0,0,-5.2,1,1-month delay,Land acquisition
+HIST-00690,Industrial Corridors,Tamil Nadu,305.9,347.6,44,12,26.9,14.5,9,1,1,1,0,0,2.8,8,8-month delay,Land acquisition
+HIST-00691,Power,Tamil Nadu,558.1,572.4,12,54,91.7,97.8,5,0,0,0,0,0,0.9,0,Delivered within plan,No material delay
+HIST-00692,Roads,Uttar Pradesh,279.9,290.4,45,73,100.0,94.1,13,0,0,0,0,0,3.4,1,1-month delay,No material delay
+HIST-00693,Roads,Kerala,126.4,135.7,34,30,93.7,100.0,5,3,0,1,0,0,-1.0,6,6-month delay,Milestone slippage
+HIST-00694,Industrial Corridors,Jharkhand,3965.6,4486.7,28,10,31.2,36.6,8,1,1,0,1,0,-1.0,6,6-month delay,Land acquisition
+HIST-00695,Roads,Uttar Pradesh,513.6,567.9,62,69,100.0,100.0,18,0,0,1,1,1,-0.2,4,4-month delay,Funding release
+HIST-00696,Industrial Corridors,Maharashtra,570.1,583.3,60,15,32.0,39.0,13,0,0,1,0,0,0.5,0,Delivered within plan,Pending clearance
+HIST-00697,Ports,Tamil Nadu,52.4,54.9,27,12,48.0,46.2,6,1,1,0,0,0,4.1,7,7-month delay,Land acquisition
+HIST-00698,Industrial Corridors,Odisha,704.3,734.0,50,44,100.0,100.0,11,0,1,0,0,0,-0.4,0,Delivered within plan,Land acquisition
+HIST-00699,Urban Transit,Jharkhand,284.9,293.5,30,74,90.4,81.2,10,0,0,0,0,0,5.9,0,Delivered within plan,No material delay
+HIST-00700,Urban Transit,Karnataka,388.4,390.3,35,75,98.1,95.1,11,1,0,0,0,0,3.5,1,1-month delay,No material delay
+HIST-00701,Airports,Jharkhand,61.4,63.6,32,69,97.5,79.6,11,0,0,0,0,0,7.7,0,Delivered within plan,No material delay
+HIST-00702,Railways,Haryana,86.1,94.3,43,80,100.0,86.4,14,0,1,0,0,0,8.8,5,5-month delay,Land acquisition
+HIST-00703,Power,Telangana,129.2,131.1,42,69,100.0,100.0,9,1,0,0,0,0,5.6,1,1-month delay,No material delay
+HIST-00704,Urban Transit,Telangana,184.8,188.4,61,24,60.2,51.1,14,1,0,0,0,0,-3.6,4,4-month delay,No material delay
+HIST-00705,Water & Sanitation,Telangana,153.9,156.0,57,18,27.8,33.8,16,1,0,0,0,0,3.2,3,3-month delay,No material delay
+HIST-00706,Railways,Rajasthan,267.7,295.0,14,15,93.8,91.3,4,1,1,0,0,1,5.5,0,Delivered within plan,Land acquisition
+HIST-00707,Railways,Bihar,195.3,200.0,39,57,93.0,100.0,12,0,0,0,0,0,1.7,0,Delivered within plan,No material delay
+HIST-00708,Railways,Gujarat,202.9,209.5,24,18,71.7,80.7,4,0,0,0,0,1,-5.1,0,Delivered within plan,No material delay
+HIST-00709,Power,Maharashtra,173.4,177.5,35,28,83.9,73.3,6,0,1,0,0,0,7.9,0,Delivered within plan,Land acquisition
+HIST-00710,Roads,Kerala,89.9,94.2,48,54,98.2,100.0,13,0,0,0,0,1,3.6,0,Delivered within plan,No material delay
+HIST-00711,Water & Sanitation,Rajasthan,534.2,534.2,36,14,44.3,54.6,5,0,0,0,0,0,-4.9,0,Delivered within plan,No material delay
+HIST-00712,Power,Karnataka,25.0,25.8,59,58,96.4,95.0,15,0,0,0,0,0,-2.2,0,Delivered within plan,No material delay
+HIST-00713,Roads,Odisha,649.7,661.7,49,57,87.3,94.6,11,0,1,0,0,0,3.1,0,Delivered within plan,Land acquisition
+HIST-00714,Urban Transit,Jharkhand,561.4,658.9,73,76,100.0,100.0,20,1,1,1,1,0,4.9,6,6-month delay,Land acquisition
+HIST-00715,Railways,Tamil Nadu,839.8,954.0,58,18,40.5,35.7,12,1,0,1,1,0,2.6,0,Delivered within plan,Funding release
+HIST-00716,Railways,Madhya Pradesh,845.4,927.7,39,60,96.1,100.0,7,1,1,1,0,0,0.5,7,7-month delay,Land acquisition
+HIST-00717,Water & Sanitation,Jharkhand,200.6,208.9,50,34,64.0,77.1,17,2,0,0,0,0,5.7,2,2-month delay,Milestone slippage
+HIST-00718,Water & Sanitation,Madhya Pradesh,109.9,116.4,18,70,92.8,100.0,4,1,0,0,0,0,2.8,0,Delivered within plan,No material delay
+HIST-00719,Water & Sanitation,Kerala,398.5,411.0,24,40,100.0,94.8,4,1,0,0,0,0,-2.1,5,5-month delay,No material delay
+HIST-00720,Ports,Kerala,97.2,102.3,61,68,97.2,100.0,17,2,0,0,0,0,6.3,0,Delivered within plan,Milestone slippage
+HIST-00721,Industrial Corridors,Jharkhand,745.2,759.0,43,8,19.8,22.3,10,1,0,0,0,0,-2.6,0,Delivered within plan,No material delay
+HIST-00722,Railways,Maharashtra,494.9,511.4,35,67,99.2,99.5,12,1,0,1,0,0,1.4,0,Delivered within plan,Pending clearance
+HIST-00723,Power,Uttar Pradesh,200.4,227.2,57,22,36.8,36.7,15,4,0,1,0,0,11.8,5,5-month delay,Milestone slippage
+HIST-00724,Airports,Kerala,194.7,203.3,54,43,79.4,77.2,15,0,0,0,1,0,0.1,1,1-month delay,Funding release
+HIST-00725,Roads,Jharkhand,163.7,190.8,41,77,97.9,98.8,10,1,1,0,0,1,11.3,6,6-month delay,Land acquisition
+HIST-00726,Airports,Maharashtra,227.7,233.4,38,60,97.2,100.0,11,0,0,0,0,0,1.1,0,Delivered within plan,No material delay
+HIST-00727,Water & Sanitation,West Bengal,353.1,364.0,46,18,32.1,40.1,14,0,0,0,0,0,4.7,1,1-month delay,No material delay
+HIST-00728,Power,Tamil Nadu,706.0,715.5,32,46,95.6,90.9,5,1,0,0,0,0,6.4,0,Delivered within plan,No material delay
+HIST-00729,Ports,Jharkhand,384.6,415.3,40,46,92.9,95.5,7,2,0,0,0,1,1.3,0,Delivered within plan,Milestone slippage
+HIST-00730,Railways,Karnataka,236.2,239.4,30,11,26.7,32.8,10,0,1,0,0,0,0.9,0,Delivered within plan,Land acquisition
+HIST-00731,Roads,Kerala,260.2,274.6,35,54,94.0,97.0,7,1,1,0,0,0,3.1,1,1-month delay,Land acquisition
+HIST-00732,Ports,Haryana,509.8,530.6,72,48,44.7,45.0,20,0,1,0,0,0,-1.0,1,1-month delay,Land acquisition
+HIST-00733,Urban Transit,Bihar,46.1,46.7,53,51,100.0,100.0,14,0,0,0,0,0,-4.2,4,4-month delay,No material delay
+HIST-00734,Roads,Rajasthan,404.8,432.9,41,16,32.6,30.7,6,2,1,0,0,0,7.8,1,1-month delay,Land acquisition
+HIST-00735,Railways,Madhya Pradesh,156.4,157.9,46,71,92.3,94.5,7,0,0,0,0,0,7.4,1,1-month delay,No material delay
+HIST-00736,Roads,Tamil Nadu,377.0,414.9,33,69,91.7,100.0,7,1,0,0,1,0,5.7,1,1-month delay,Funding release
+HIST-00737,Ports,Haryana,205.6,243.6,63,84,100.0,81.6,16,0,1,1,1,0,0.5,0,Delivered within plan,Land acquisition
+HIST-00738,Roads,Maharashtra,407.2,421.9,19,82,87.2,89.2,8,0,1,0,0,0,2.2,5,5-month delay,Land acquisition
+HIST-00739,Power,Odisha,278.4,282.3,45,23,44.9,52.1,10,0,0,0,0,0,-4.0,1,1-month delay,No material delay
+HIST-00740,Roads,Bihar,61.2,61.7,51,61,88.5,87.7,14,0,0,0,0,0,-1.6,0,Delivered within plan,No material delay
+HIST-00741,Airports,Telangana,399.9,416.7,37,66,100.0,100.0,9,0,0,1,1,0,-8.1,0,Delivered within plan,Funding release
+HIST-00742,Urban Transit,Jharkhand,334.2,380.9,36,33,94.6,87.9,8,3,0,0,0,1,11.9,0,Delivered within plan,Milestone slippage
+HIST-00743,Ports,Haryana,126.3,141.9,56,64,88.7,87.9,19,2,1,1,0,0,7.8,7,7-month delay,Land acquisition
+HIST-00744,Power,Odisha,368.3,446.5,48,48,96.9,100.0,5,2,1,1,1,1,4.3,11,11-month delay,Land acquisition
+HIST-00745,Industrial Corridors,Karnataka,327.4,340.7,62,62,90.2,78.0,17,0,0,0,0,1,-0.6,2,2-month delay,No material delay
+HIST-00746,Airports,West Bengal,156.6,167.3,61,57,99.3,100.0,12,0,0,0,1,0,-6.8,1,1-month delay,Funding release
+HIST-00747,Power,Maharashtra,180.6,190.6,16,28,93.0,97.9,8,2,0,0,0,0,4.7,0,Delivered within plan,Milestone slippage
+HIST-00748,Airports,Gujarat,2063.9,2136.4,12,8,67.4,54.3,5,1,0,0,0,0,1.8,0,Delivered within plan,No material delay
+HIST-00749,Airports,Jharkhand,181.9,185.5,22,56,97.3,97.1,4,1,0,1,0,0,9.9,1,1-month delay,Pending clearance
+HIST-00750,Ports,Uttar Pradesh,616.5,685.6,31,21,61.8,56.5,7,1,1,1,0,0,7.7,0,Delivered within plan,Land acquisition
+HIST-00751,Water & Sanitation,West Bengal,239.0,247.1,39,18,45.9,51.4,9,1,0,0,0,0,2.3,1,1-month delay,No material delay
+HIST-00752,Airports,Karnataka,444.1,454.4,22,68,100.0,100.0,6,0,0,0,1,0,1.8,0,Delivered within plan,Funding release
+HIST-00753,Power,Bihar,291.8,298.0,41,47,87.5,96.8,13,0,0,0,0,0,2.4,0,Delivered within plan,No material delay
+HIST-00754,Ports,Bihar,93.7,95.6,35,40,100.0,93.1,9,0,1,0,0,0,1.1,0,Delivered within plan,Land acquisition
+HIST-00755,Power,Haryana,192.9,199.6,20,6,23.1,35.9,8,0,0,0,0,1,-6.4,1,1-month delay,No material delay
+HIST-00756,Urban Transit,West Bengal,1759.4,1827.2,33,82,92.1,100.0,6,0,0,0,0,0,-3.8,1,1-month delay,No material delay
+HIST-00757,Roads,Bihar,389.9,453.9,56,55,100.0,78.1,14,0,1,0,1,1,6.2,7,7-month delay,Land acquisition
+HIST-00758,Railways,Jharkhand,1172.7,1172.7,21,77,100.0,90.7,5,0,0,0,0,0,5.2,1,1-month delay,No material delay
+HIST-00759,Railways,Gujarat,272.3,282.5,62,59,96.1,100.0,15,0,1,1,0,0,1.0,0,Delivered within plan,Land acquisition
+HIST-00760,Roads,Jharkhand,225.3,238.6,12,79,100.0,89.7,4,1,1,0,0,0,2.5,1,1-month delay,Land acquisition
+HIST-00761,Railways,Haryana,895.3,920.1,12,14,88.8,82.7,4,0,1,0,0,0,1.7,8,8-month delay,Land acquisition
+HIST-00762,Ports,West Bengal,252.1,290.5,40,47,100.0,100.0,12,2,1,1,1,0,-1.3,8,8-month delay,Land acquisition
+HIST-00763,Water & Sanitation,West Bengal,94.5,100.3,41,18,53.7,59.5,8,0,0,0,0,0,1.3,0,Delivered within plan,No material delay
+HIST-00764,Power,Telangana,94.0,97.9,45,13,15.1,12.5,13,0,0,0,0,0,0.1,0,Delivered within plan,No material delay
+HIST-00765,Industrial Corridors,Uttar Pradesh,169.4,200.1,58,74,78.9,69.5,13,3,1,0,0,1,16.0,8,8-month delay,Land acquisition
+HIST-00766,Railways,Karnataka,288.6,297.2,53,35,65.3,76.8,14,0,0,1,0,0,0.7,2,2-month delay,Pending clearance
+HIST-00767,Water & Sanitation,Tamil Nadu,60.7,67.7,23,48,100.0,85.0,4,2,0,1,0,0,14.8,4,4-month delay,Milestone slippage
+HIST-00768,Roads,Bihar,222.5,224.7,36,38,100.0,100.0,8,0,0,0,0,0,-0.0,1,1-month delay,No material delay
+HIST-00769,Roads,Haryana,70.8,75.3,24,75,88.7,82.3,6,2,1,0,0,0,5.7,8,8-month delay,Land acquisition
+HIST-00770,Industrial Corridors,Karnataka,490.3,505.3,38,38,100.0,100.0,11,1,0,0,0,0,8.3,0,Delivered within plan,No material delay
+HIST-00771,Urban Transit,Telangana,221.1,244.5,23,67,99.9,97.7,4,3,0,0,0,0,11.5,0,Delivered within plan,Milestone slippage
+HIST-00772,Urban Transit,Kerala,288.6,300.7,55,27,55.5,45.2,13,1,0,0,0,0,-3.5,6,6-month delay,No material delay
+HIST-00773,Power,Haryana,173.0,191.0,32,30,97.8,98.9,8,2,0,0,0,1,9.3,5,5-month delay,Milestone slippage
+HIST-00774,Airports,Bihar,27.9,29.1,53,23,52.1,61.3,11,1,0,0,0,1,-0.1,0,Delivered within plan,No material delay
+HIST-00775,Ports,Gujarat,150.8,153.1,62,27,44.1,44.7,13,1,0,0,0,0,7.3,0,Delivered within plan,No material delay
+HIST-00776,Urban Transit,Haryana,259.4,267.5,66,57,92.0,94.5,16,1,0,1,0,0,-3.6,0,Delivered within plan,Pending clearance
+HIST-00777,Railways,Jharkhand,1404.9,1423.0,22,25,100.0,92.4,6,0,0,0,0,0,-1.6,1,1-month delay,No material delay
+HIST-00778,Water & Sanitation,Maharashtra,356.8,377.7,52,22,56.4,59.5,14,2,1,0,0,0,7.9,0,Delivered within plan,Land acquisition
+HIST-00779,Railways,Kerala,36.3,38.0,42,28,74.1,71.3,12,0,0,0,0,0,-4.5,1,1-month delay,No material delay
+HIST-00780,Urban Transit,Odisha,450.2,515.0,31,67,88.9,83.0,8,2,1,0,0,0,7.8,1,1-month delay,Land acquisition
+HIST-00781,Railways,Gujarat,207.8,210.3,12,29,82.3,81.3,4,0,0,0,0,0,-1.7,0,Delivered within plan,No material delay
+HIST-00782,Industrial Corridors,Gujarat,154.0,166.7,27,76,93.0,100.0,6,0,1,1,0,0,0.2,4,4-month delay,Land acquisition
+HIST-00783,Urban Transit,Uttar Pradesh,508.4,542.2,30,60,99.1,100.0,7,0,1,0,1,0,1.7,0,Delivered within plan,Land acquisition
+HIST-00784,Urban Transit,Telangana,63.6,72.1,68,20,43.0,36.7,20,2,0,1,0,1,7.2,4,4-month delay,Milestone slippage
+HIST-00785,Roads,Tamil Nadu,42.1,48.8,13,42,100.0,76.1,6,1,0,0,1,0,5.1,2,2-month delay,Funding release
+HIST-00786,Railways,Rajasthan,95.5,99.8,43,16,50.2,54.1,12,1,1,0,0,0,-0.9,0,Delivered within plan,Land acquisition
+HIST-00787,Railways,Telangana,209.6,231.4,21,60,100.0,100.0,5,0,0,0,1,1,7.4,2,2-month delay,Funding release
+HIST-00788,Industrial Corridors,Telangana,162.2,168.5,39,58,97.1,100.0,11,2,0,0,0,0,10.1,0,Delivered within plan,Milestone slippage
+HIST-00789,Urban Transit,Jharkhand,228.1,232.1,48,28,67.9,59.1,13,0,0,0,0,0,-2.3,0,Delivered within plan,No material delay
+HIST-00790,Railways,Madhya Pradesh,368.8,414.3,43,76,99.1,100.0,7,1,0,1,0,1,-0.6,4,4-month delay,Pending clearance
+HIST-00791,Railways,Uttar Pradesh,235.7,241.5,58,10,15.1,13.4,12,0,0,0,0,0,-2.6,1,1-month delay,No material delay
+HIST-00792,Roads,Haryana,281.2,285.9,18,46,81.6,79.7,7,0,0,0,0,0,0.7,0,Delivered within plan,No material delay
+HIST-00793,Urban Transit,Bihar,211.5,235.5,75,81,98.7,100.0,18,3,1,0,0,0,9.4,0,Delivered within plan,Land acquisition
+HIST-00794,Roads,Odisha,494.7,530.9,42,62,100.0,100.0,11,2,0,1,0,0,5.2,0,Delivered within plan,Milestone slippage
+HIST-00795,Airports,Uttar Pradesh,111.0,119.8,52,44,80.9,96.7,17,0,1,1,0,0,0.4,7,7-month delay,Land acquisition
+HIST-00796,Railways,Madhya Pradesh,146.7,148.6,36,62,100.0,92.5,7,2,0,0,0,0,1.6,0,Delivered within plan,Milestone slippage
+HIST-00797,Railways,Andhra Pradesh,296.4,309.8,36,50,99.3,100.0,5,0,0,1,0,0,-1.3,2,2-month delay,Pending clearance
+HIST-00798,Water & Sanitation,Uttar Pradesh,418.6,429.1,63,72,100.0,100.0,16,0,0,0,0,0,1.1,0,Delivered within plan,No material delay
+HIST-00799,Industrial Corridors,Uttar Pradesh,1447.9,1652.2,20,26,95.5,76.1,4,3,1,0,0,0,5.6,0,Delivered within plan,Land acquisition
+HIST-00800,Power,Rajasthan,138.2,141.8,35,13,24.3,23.6,9,2,0,0,0,0,3.2,6,6-month delay,Milestone slippage
+HIST-00801,Urban Transit,Jharkhand,560.1,573.6,40,29,72.7,81.7,9,0,0,0,0,0,-6.5,1,1-month delay,No material delay
+HIST-00802,Railways,Odisha,635.4,697.6,46,43,100.0,100.0,12,2,0,0,0,1,7.4,1,1-month delay,Milestone slippage
+HIST-00803,Industrial Corridors,Bihar,84.6,95.1,49,17,30.9,25.9,11,2,1,1,0,0,6.0,9,9-month delay,Land acquisition
+HIST-00804,Railways,Karnataka,215.2,244.4,41,80,100.0,94.9,8,1,1,0,1,0,2.2,5,5-month delay,Land acquisition
+HIST-00805,Industrial Corridors,Karnataka,58.2,64.1,17,6,28.1,23.9,7,3,1,0,0,0,4.0,0,Delivered within plan,Land acquisition
+HIST-00806,Urban Transit,Karnataka,1614.8,1631.7,33,22,63.8,59.0,7,0,0,0,0,0,0.6,1,1-month delay,No material delay
+HIST-00807,Power,Madhya Pradesh,697.4,711.1,65,57,87.5,95.5,17,0,0,1,0,0,6.2,0,Delivered within plan,Pending clearance
+HIST-00808,Urban Transit,Jharkhand,112.0,115.3,46,9,7.6,6.1,11,2,0,0,1,0,3.7,1,1-month delay,Milestone slippage
+HIST-00809,Roads,Kerala,233.5,253.1,48,14,30.2,33.2,8,2,0,0,0,1,0.1,0,Delivered within plan,Milestone slippage
+HIST-00810,Power,West Bengal,54.6,56.1,42,66,92.4,92.4,6,1,0,0,0,0,5.9,0,Delivered within plan,No material delay
+HIST-00811,Railways,Rajasthan,977.1,1006.1,44,9,22.5,27.5,11,1,1,0,0,0,5.3,0,Delivered within plan,Land acquisition
+HIST-00812,Power,Rajasthan,206.5,209.1,54,28,49.0,42.6,15,1,0,1,0,0,1.9,0,Delivered within plan,Pending clearance
+HIST-00813,Urban Transit,Telangana,671.1,699.0,41,67,100.0,90.9,7,0,0,0,0,0,4.3,1,1-month delay,No material delay
+HIST-00814,Water & Sanitation,Telangana,147.4,169.0,93,71,74.7,62.2,26,0,1,0,1,0,-2.6,5,5-month delay,Land acquisition
+HIST-00815,Airports,Uttar Pradesh,92.1,94.8,46,29,64.2,54.3,13,0,0,0,0,0,-0.2,1,1-month delay,No material delay
+HIST-00816,Roads,Haryana,536.9,560.6,38,41,96.9,100.0,14,0,1,0,0,0,5.4,9,9-month delay,Land acquisition
+HIST-00817,Industrial Corridors,Bihar,692.0,754.4,13,13,94.1,100.0,8,1,0,1,0,1,-4.4,1,1-month delay,Pending clearance
+HIST-00818,Water & Sanitation,West Bengal,703.7,784.5,35,63,100.0,100.0,11,1,1,1,0,0,0.5,7,7-month delay,Land acquisition
+HIST-00819,Water & Sanitation,West Bengal,284.5,295.6,43,40,91.0,88.9,11,2,0,0,0,0,3.7,0,Delivered within plan,Milestone slippage
+HIST-00820,Water & Sanitation,Bihar,111.6,123.8,45,56,95.5,100.0,11,2,1,0,0,0,8.9,10,10-month delay,Land acquisition
+HIST-00821,Industrial Corridors,Bihar,290.0,295.0,12,10,81.8,83.8,4,0,0,1,0,0,4.9,0,Delivered within plan,Pending clearance
+HIST-00822,Water & Sanitation,Gujarat,280.9,336.0,56,11,15.3,21.2,17,3,0,0,1,1,12.6,2,2-month delay,Milestone slippage
+HIST-00823,Industrial Corridors,Maharashtra,840.0,871.5,62,24,34.6,21.6,14,0,0,1,0,0,1.4,0,Delivered within plan,Pending clearance
+HIST-00824,Railways,Haryana,50.0,51.0,38,47,96.6,94.5,12,0,0,0,0,1,-8.5,0,Delivered within plan,No material delay
+HIST-00825,Industrial Corridors,Maharashtra,241.1,250.6,45,75,100.0,95.5,13,1,1,0,0,0,5.3,0,Delivered within plan,Land acquisition
+HIST-00826,Urban Transit,Uttar Pradesh,1525.8,1638.0,45,36,62.0,57.6,12,1,0,1,0,1,-3.0,0,Delivered within plan,Pending clearance
+HIST-00827,Water & Sanitation,Haryana,360.2,360.2,39,36,95.8,90.1,10,1,0,0,0,0,4.3,3,3-month delay,No material delay
+HIST-00828,Roads,Odisha,321.3,331.1,52,15,16.1,19.0,12,2,1,0,0,0,-0.4,10,10-month delay,Land acquisition
+HIST-00829,Industrial Corridors,Telangana,175.2,190.1,52,41,99.3,100.0,13,3,1,0,0,0,6.0,0,Delivered within plan,Land acquisition
+HIST-00830,Urban Transit,Karnataka,141.5,143.6,12,62,100.0,100.0,4,1,0,0,0,0,8.5,0,Delivered within plan,No material delay
+HIST-00831,Power,Jharkhand,83.6,89.3,53,13,33.8,36.4,10,1,1,0,0,0,-6.8,0,Delivered within plan,Land acquisition
+HIST-00832,Power,Andhra Pradesh,236.6,247.6,31,73,97.9,100.0,6,0,1,0,0,0,1.5,0,Delivered within plan,Land acquisition
+HIST-00833,Power,Odisha,1039.4,1084.7,43,56,93.9,83.7,15,1,0,0,0,0,5.6,1,1-month delay,No material delay
+HIST-00834,Urban Transit,Odisha,4319.6,4379.9,31,65,99.8,100.0,8,1,0,0,0,0,6.1,0,Delivered within plan,No material delay
+HIST-00835,Water & Sanitation,Andhra Pradesh,90.8,90.8,22,16,58.0,72.2,5,0,0,0,0,0,-4.1,0,Delivered within plan,No material delay
+HIST-00836,Roads,Andhra Pradesh,112.3,122.1,75,10,12.9,13.0,18,2,0,1,0,1,8.1,5,5-month delay,Milestone slippage
+HIST-00837,Roads,Andhra Pradesh,67.6,68.5,47,68,99.3,97.2,9,0,0,0,0,0,-1.7,0,Delivered within plan,No material delay
+HIST-00838,Power,Madhya Pradesh,285.3,291.7,54,79,100.0,100.0,17,1,0,0,0,0,3.5,4,4-month delay,No material delay
+HIST-00839,Urban Transit,Bihar,144.1,148.9,33,16,39.2,42.8,8,0,0,0,0,0,7.6,1,1-month delay,No material delay
+HIST-00840,Urban Transit,Rajasthan,392.6,401.7,60,82,96.2,100.0,16,1,1,0,0,0,7.5,2,2-month delay,Land acquisition
+HIST-00841,Railways,Karnataka,551.7,577.1,64,54,85.1,89.5,16,0,1,0,0,0,-0.9,4,4-month delay,Land acquisition
+HIST-00842,Urban Transit,Uttar Pradesh,361.0,364.9,55,70,90.6,94.3,13,0,0,0,0,0,-0.6,0,Delivered within plan,No material delay
+HIST-00843,Power,Telangana,309.5,324.3,33,78,91.8,91.8,9,1,0,0,1,0,2.5,0,Delivered within plan,Funding release
+HIST-00844,Industrial Corridors,Rajasthan,71.1,72.2,51,33,73.1,70.9,15,0,0,0,0,0,-3.0,0,Delivered within plan,No material delay
+HIST-00845,Urban Transit,Tamil Nadu,195.1,199.5,18,60,100.0,92.7,4,1,0,0,0,0,0.2,0,Delivered within plan,No material delay
+HIST-00846,Roads,Andhra Pradesh,501.6,517.0,57,62,89.9,94.7,15,0,0,0,0,1,3.0,4,4-month delay,No material delay
+HIST-00847,Urban Transit,Haryana,196.9,198.1,22,10,55.5,56.4,8,1,1,0,0,0,-1.9,1,1-month delay,Land acquisition
+HIST-00848,Railways,Andhra Pradesh,163.0,190.6,51,66,94.4,74.2,15,0,1,1,1,0,-6.0,5,5-month delay,Land acquisition
+HIST-00849,Roads,Odisha,43.5,43.8,61,56,82.3,89.2,17,1,0,1,0,0,1.7,0,Delivered within plan,Pending clearance
+HIST-00850,Railways,Tamil Nadu,165.2,169.6,63,9,13.0,28.5,20,0,1,0,0,0,-4.8,0,Delivered within plan,Land acquisition
+HIST-00851,Railways,Odisha,185.0,220.8,14,55,94.1,87.2,4,3,1,0,1,0,4.9,6,6-month delay,Land acquisition
+HIST-00852,Industrial Corridors,Maharashtra,556.5,596.4,53,52,100.0,100.0,16,0,1,1,0,0,3.8,2,2-month delay,Land acquisition
+HIST-00853,Railways,Madhya Pradesh,319.3,343.9,64,76,100.0,100.0,17,1,1,1,0,0,1.4,0,Delivered within plan,Land acquisition
+HIST-00854,Power,Odisha,1233.9,1330.0,36,14,40.2,35.2,7,0,0,0,1,1,-1.6,0,Delivered within plan,Funding release
+HIST-00855,Urban Transit,Bihar,311.6,347.1,61,49,75.9,71.8,14,1,1,0,1,0,1.1,8,8-month delay,Land acquisition
+HIST-00856,Ports,West Bengal,96.4,99.2,33,83,100.0,100.0,10,0,1,0,0,0,-0.5,5,5-month delay,Land acquisition
+HIST-00857,Power,Rajasthan,229.5,243.6,23,23,100.0,100.0,6,0,0,0,0,1,7.2,0,Delivered within plan,No material delay
+HIST-00858,Water & Sanitation,Bihar,228.0,252.8,73,64,80.7,76.5,16,1,1,1,0,0,7.3,7,7-month delay,Land acquisition
+HIST-00859,Roads,Gujarat,290.5,297.0,43,31,89.8,100.0,9,2,0,0,0,0,-2.2,1,1-month delay,Milestone slippage
+HIST-00860,Roads,Tamil Nadu,74.0,79.1,39,29,78.1,78.8,13,2,0,0,0,1,6.0,0,Delivered within plan,Milestone slippage
+HIST-00861,Water & Sanitation,Odisha,66.8,68.7,55,7,14.2,16.1,13,1,0,0,0,0,-0.1,0,Delivered within plan,No material delay
+HIST-00862,Water & Sanitation,Andhra Pradesh,136.2,161.0,49,83,81.8,89.2,10,1,1,1,1,0,10.6,1,1-month delay,Land acquisition
+HIST-00863,Airports,Tamil Nadu,479.8,486.2,63,79,82.3,79.5,17,0,0,0,0,0,3.7,0,Delivered within plan,No material delay
+HIST-00864,Ports,Haryana,75.4,76.0,26,63,89.1,85.0,9,0,0,0,0,0,-0.2,1,1-month delay,No material delay
+HIST-00865,Water & Sanitation,Madhya Pradesh,573.9,605.2,83,66,87.9,87.0,21,2,1,0,0,0,1.2,11,11-month delay,Land acquisition
+HIST-00866,Ports,Uttar Pradesh,255.0,265.4,53,52,82.1,92.5,12,1,0,0,0,1,3.3,1,1-month delay,No material delay
+HIST-00867,Urban Transit,Rajasthan,668.9,691.8,48,79,97.3,92.8,11,1,0,0,0,0,6.4,0,Delivered within plan,No material delay
+HIST-00868,Railways,Rajasthan,56.1,61.8,63,22,56.5,50.7,19,2,0,1,0,0,11.9,0,Delivered within plan,Milestone slippage
+HIST-00869,Railways,Kerala,144.8,157.7,12,37,100.0,100.0,4,1,1,0,0,1,-2.6,0,Delivered within plan,Land acquisition
+HIST-00870,Ports,Kerala,354.9,367.9,25,29,100.0,100.0,4,1,0,1,0,0,-1.5,4,4-month delay,Pending clearance
+HIST-00871,Urban Transit,Maharashtra,193.5,200.1,54,22,39.6,24.7,14,0,0,0,0,0,1.0,1,1-month delay,No material delay
+HIST-00872,Ports,Madhya Pradesh,39.0,41.0,34,55,100.0,97.1,9,1,1,0,0,0,1.4,1,1-month delay,Land acquisition
+HIST-00873,Roads,Telangana,146.5,147.8,49,60,100.0,100.0,11,1,0,0,0,0,6.6,0,Delivered within plan,No material delay
+HIST-00874,Urban Transit,Gujarat,175.7,207.6,75,35,60.4,46.3,21,3,1,0,1,0,9.6,11,11-month delay,Land acquisition
+HIST-00875,Airports,Haryana,275.3,281.9,39,23,72.1,83.0,11,0,0,0,0,0,-7.1,1,1-month delay,No material delay
+HIST-00876,Urban Transit,Kerala,482.4,539.2,51,44,76.4,73.5,11,2,1,0,0,1,5.6,10,10-month delay,Land acquisition
+HIST-00877,Railways,Rajasthan,95.3,105.5,37,65,100.0,99.3,9,4,1,0,0,0,12.7,11,11-month delay,Land acquisition
+HIST-00878,Industrial Corridors,Haryana,300.0,347.5,14,79,100.0,78.4,5,1,0,0,1,1,1.9,4,4-month delay,Funding release
+HIST-00879,Power,Andhra Pradesh,287.9,294.5,48,61,100.0,100.0,16,1,0,0,0,0,5.0,2,2-month delay,No material delay
+HIST-00880,Railways,Karnataka,539.2,590.8,47,46,94.1,81.8,10,0,1,0,1,0,-6.2,0,Delivered within plan,Land acquisition
+HIST-00881,Railways,Jharkhand,325.2,340.1,12,6,50.1,50.3,4,0,1,1,0,0,-1.3,6,6-month delay,Land acquisition
+HIST-00882,Urban Transit,Odisha,359.0,367.2,63,22,36.3,45.1,21,0,0,0,0,0,1.0,0,Delivered within plan,No material delay
+HIST-00883,Water & Sanitation,Jharkhand,213.2,224.1,52,14,30.2,36.6,14,1,0,0,0,0,5.8,3,3-month delay,No material delay
+HIST-00884,Power,Kerala,375.5,382.1,48,71,90.3,96.0,13,2,0,0,0,0,5.6,7,7-month delay,Milestone slippage
+HIST-00885,Urban Transit,Jharkhand,267.4,287.8,48,84,98.3,100.0,16,0,1,1,0,0,-2.4,5,5-month delay,Land acquisition
+HIST-00886,Airports,Bihar,458.1,511.5,16,24,99.2,100.0,4,3,0,0,1,0,8.0,6,6-month delay,Milestone slippage
+HIST-00887,Power,Kerala,2746.7,2870.7,54,10,28.6,20.6,10,2,0,0,0,0,7.7,0,Delivered within plan,Milestone slippage
+HIST-00888,Railways,Jharkhand,425.4,464.7,36,17,48.9,53.5,8,2,1,0,0,0,5.9,0,Delivered within plan,Land acquisition
+HIST-00889,Urban Transit,Andhra Pradesh,207.8,215.8,65,30,41.9,53.4,16,2,0,0,0,0,-4.9,5,5-month delay,Milestone slippage
+HIST-00890,Urban Transit,Jharkhand,529.4,549.2,25,53,100.0,100.0,4,0,0,0,0,0,-1.6,0,Delivered within plan,No material delay
+HIST-00891,Industrial Corridors,Haryana,522.2,542.2,55,15,28.8,54.5,17,0,1,0,0,0,-0.2,6,6-month delay,Land acquisition
+HIST-00892,Urban Transit,Haryana,659.4,732.5,57,52,100.0,100.0,16,3,0,1,0,0,7.8,4,4-month delay,Milestone slippage
+HIST-00893,Water & Sanitation,Karnataka,347.0,357.9,51,40,77.6,73.8,13,1,0,0,0,0,5.0,0,Delivered within plan,No material delay
+HIST-00894,Water & Sanitation,Odisha,248.3,269.5,72,77,92.7,97.7,19,1,1,1,0,0,3.6,0,Delivered within plan,Land acquisition
+HIST-00895,Railways,Madhya Pradesh,551.4,572.3,51,41,90.9,97.7,14,1,1,0,0,0,-0.3,1,1-month delay,Land acquisition
+HIST-00896,Industrial Corridors,Madhya Pradesh,321.2,329.8,38,27,71.2,79.7,11,1,0,1,0,0,1.3,5,5-month delay,Pending clearance
+HIST-00897,Industrial Corridors,Maharashtra,82.2,86.3,44,39,96.1,100.0,12,2,0,0,0,0,5.4,0,Delivered within plan,Milestone slippage
+HIST-00898,Airports,Tamil Nadu,266.4,281.3,23,52,96.9,100.0,5,0,0,0,0,0,2.9,0,Delivered within plan,No material delay
+HIST-00899,Ports,Karnataka,979.3,1000.8,71,14,17.8,16.6,17,1,0,0,0,0,9.5,0,Delivered within plan,No material delay
+HIST-00900,Ports,Gujarat,82.7,89.8,46,6,9.2,0.0,10,1,1,1,0,0,-1.4,7,7-month delay,Land acquisition
+HIST-00901,Roads,Bihar,225.4,231.4,20,57,99.5,100.0,5,1,0,0,0,0,5.3,0,Delivered within plan,No material delay
+HIST-00902,Ports,Andhra Pradesh,272.7,277.8,46,33,73.5,63.6,12,0,0,0,0,0,-5.1,0,Delivered within plan,No material delay
+HIST-00903,Roads,Tamil Nadu,382.4,402.7,30,58,100.0,100.0,8,1,1,0,0,0,0.4,8,8-month delay,Land acquisition
+HIST-00904,Power,Kerala,71.5,81.6,75,61,85.0,85.4,15,3,1,0,0,1,6.6,11,11-month delay,Land acquisition
+HIST-00905,Power,Uttar Pradesh,326.4,327.4,42,59,83.4,80.5,10,0,0,0,0,0,-2.0,0,Delivered within plan,No material delay
+HIST-00906,Water & Sanitation,Madhya Pradesh,245.0,281.2,44,72,80.9,77.3,10,1,0,0,1,1,16.1,1,1-month delay,Funding release
+HIST-00907,Roads,Tamil Nadu,419.6,462.4,55,9,16.0,8.9,14,2,1,0,0,0,5.6,0,Delivered within plan,Land acquisition
+HIST-00908,Power,Madhya Pradesh,220.6,236.6,38,44,83.9,86.7,10,0,0,0,1,0,-4.9,0,Delivered within plan,Funding release
+HIST-00909,Water & Sanitation,Maharashtra,168.3,169.4,46,15,28.1,26.5,14,1,0,0,0,0,3.3,0,Delivered within plan,No material delay
+HIST-00910,Water & Sanitation,Karnataka,1160.7,1274.9,26,53,98.9,98.3,5,4,0,0,0,1,7.0,9,9-month delay,Milestone slippage
+HIST-00911,Power,West Bengal,74.3,77.7,43,12,27.1,28.8,11,1,0,1,0,0,-2.9,0,Delivered within plan,Pending clearance
+HIST-00912,Urban Transit,Uttar Pradesh,218.3,223.5,35,70,98.5,100.0,8,0,0,0,0,0,6.4,0,Delivered within plan,No material delay
+HIST-00913,Urban Transit,Madhya Pradesh,68.6,80.7,18,21,96.4,100.0,4,3,0,0,1,1,14.3,4,4-month delay,Milestone slippage
+HIST-00914,Ports,West Bengal,1249.2,1271.9,34,33,100.0,100.0,10,1,0,0,0,0,3.6,1,1-month delay,No material delay
+HIST-00915,Urban Transit,Haryana,115.5,117.6,67,9,25.5,20.2,20,1,0,0,0,0,-1.2,0,Delivered within plan,No material delay
+HIST-00916,Urban Transit,Uttar Pradesh,220.4,238.2,42,75,92.0,98.0,14,1,1,0,0,0,0.8,0,Delivered within plan,Land acquisition
+HIST-00917,Airports,Odisha,117.0,129.6,40,76,89.9,95.6,12,2,0,0,1,1,-4.1,1,1-month delay,Milestone slippage
+HIST-00918,Roads,Gujarat,634.4,673.5,31,68,95.5,100.0,6,0,0,1,0,1,-1.2,3,3-month delay,Pending clearance
+HIST-00919,Railways,Telangana,237.4,255.0,31,7,19.6,24.6,10,1,1,0,0,1,0.8,7,7-month delay,Land acquisition
+HIST-00920,Railways,Tamil Nadu,250.6,259.6,21,24,100.0,87.1,4,0,0,0,1,0,-0.1,1,1-month delay,Funding release
+HIST-00921,Roads,Telangana,180.0,190.7,32,70,100.0,86.3,5,0,0,1,1,0,5.7,1,1-month delay,Funding release
+HIST-00922,Water & Sanitation,Bihar,399.0,411.2,16,25,100.0,100.0,4,2,0,0,0,0,7.9,0,Delivered within plan,Milestone slippage
+HIST-00923,Railways,Uttar Pradesh,200.6,216.1,72,51,81.2,94.5,17,0,1,0,0,0,1.0,1,1-month delay,Land acquisition
+HIST-00924,Roads,Tamil Nadu,1359.7,1371.0,67,31,51.9,56.8,17,1,0,0,0,0,5.3,1,1-month delay,No material delay
+HIST-00925,Power,Andhra Pradesh,297.0,312.6,60,29,43.0,26.3,16,2,0,0,0,0,6.4,0,Delivered within plan,Milestone slippage
+HIST-00926,Industrial Corridors,Maharashtra,303.0,317.7,25,21,78.0,80.2,6,1,0,0,0,0,6.4,0,Delivered within plan,No material delay
+HIST-00927,Urban Transit,Maharashtra,138.2,138.2,36,55,97.3,94.8,10,0,0,0,0,0,0.1,0,Delivered within plan,No material delay
+HIST-00928,Airports,Telangana,740.2,754.9,47,12,27.0,26.6,13,1,0,0,0,0,0.1,0,Delivered within plan,No material delay
+HIST-00929,Water & Sanitation,Odisha,782.4,836.1,43,71,83.3,77.2,16,2,0,0,0,1,2.3,0,Delivered within plan,Milestone slippage
+HIST-00930,Power,Madhya Pradesh,349.6,369.4,49,75,96.3,94.3,12,1,0,0,0,0,6.7,0,Delivered within plan,No material delay
+HIST-00931,Water & Sanitation,Madhya Pradesh,438.0,439.1,31,27,81.7,87.0,8,1,1,1,0,0,2.4,9,9-month delay,Land acquisition
+HIST-00932,Urban Transit,Rajasthan,167.6,173.2,29,67,100.0,100.0,7,1,0,1,0,0,5.9,1,1-month delay,Pending clearance
+HIST-00933,Water & Sanitation,Andhra Pradesh,645.3,645.3,41,61,99.1,100.0,7,1,0,1,0,0,4.9,0,Delivered within plan,Pending clearance
+HIST-00934,Industrial Corridors,Kerala,265.6,272.5,59,54,90.2,84.1,15,0,0,0,0,0,8.6,0,Delivered within plan,No material delay
+HIST-00935,Roads,Kerala,232.9,240.9,54,28,59.7,55.8,13,0,0,0,0,0,9.3,1,1-month delay,No material delay
+HIST-00936,Water & Sanitation,Uttar Pradesh,336.7,373.1,39,63,100.0,100.0,8,1,1,0,0,0,8.8,8,8-month delay,Land acquisition
+HIST-00937,Roads,Karnataka,295.4,307.6,64,57,90.4,100.0,18,0,0,1,0,0,1.0,2,2-month delay,Pending clearance
+HIST-00938,Urban Transit,Haryana,1638.7,1719.7,28,13,48.4,51.0,10,1,0,0,0,0,0.4,0,Delivered within plan,No material delay
+HIST-00939,Power,Kerala,404.2,416.8,29,82,85.8,87.6,12,0,0,0,0,0,-1.9,0,Delivered within plan,No material delay
+HIST-00940,Power,Maharashtra,130.5,132.8,44,14,33.9,34.3,12,2,0,0,0,0,0.6,0,Delivered within plan,Milestone slippage
+HIST-00941,Urban Transit,Maharashtra,132.9,156.7,45,61,100.0,100.0,11,3,1,1,0,1,13.2,10,10-month delay,Land acquisition
+HIST-00942,Roads,Tamil Nadu,424.0,453.1,51,77,92.0,94.7,16,0,1,0,0,0,-5.9,0,Delivered within plan,Land acquisition
+HIST-00943,Railways,Telangana,567.0,641.3,77,6,6.9,3.5,20,0,1,1,0,1,-5.0,8,8-month delay,Land acquisition
+HIST-00944,Power,Uttar Pradesh,641.3,656.6,66,59,87.9,80.4,18,1,1,0,0,0,10.3,10,10-month delay,Land acquisition
+HIST-00945,Power,Uttar Pradesh,571.2,589.5,16,74,100.0,91.0,6,1,0,0,0,0,-3.6,0,Delivered within plan,No material delay
+HIST-00946,Roads,West Bengal,1674.9,1713.0,28,27,98.0,100.0,7,1,0,0,0,0,1.7,0,Delivered within plan,No material delay
+HIST-00947,Railways,Andhra Pradesh,810.0,823.2,41,15,35.2,26.4,8,0,0,0,0,0,-0.9,2,2-month delay,No material delay
+HIST-00948,Power,Andhra Pradesh,174.6,188.8,33,30,95.3,100.0,8,1,1,0,0,0,4.2,6,6-month delay,Land acquisition
+HIST-00949,Roads,Andhra Pradesh,141.2,146.4,46,74,100.0,100.0,11,1,0,0,0,1,9.6,1,1-month delay,No material delay
+HIST-00950,Industrial Corridors,Tamil Nadu,444.9,454.2,48,22,41.8,27.3,11,1,0,0,0,0,5.6,0,Delivered within plan,No material delay
+HIST-00951,Airports,Uttar Pradesh,165.9,171.9,61,80,100.0,100.0,15,0,1,0,0,0,-5.2,0,Delivered within plan,Land acquisition
+HIST-00952,Power,West Bengal,218.8,229.4,20,37,100.0,100.0,4,1,1,0,0,0,-0.8,0,Delivered within plan,Land acquisition
+HIST-00953,Roads,Bihar,594.8,689.1,41,21,60.0,59.0,13,3,1,0,0,0,10.7,10,10-month delay,Land acquisition
+HIST-00954,Roads,Maharashtra,469.1,499.0,12,14,100.0,99.2,4,0,0,1,0,1,0.0,0,Delivered within plan,Pending clearance
+HIST-00955,Roads,West Bengal,429.9,435.4,12,27,96.4,100.0,5,1,0,1,0,0,-0.8,2,2-month delay,Pending clearance
+HIST-00956,Industrial Corridors,West Bengal,864.5,978.9,31,84,83.6,93.1,4,0,1,0,1,0,-3.0,4,4-month delay,Land acquisition
+HIST-00957,Industrial Corridors,Karnataka,79.1,80.8,41,72,90.1,83.1,6,1,0,0,0,0,1.9,5,5-month delay,No material delay
+HIST-00958,Water & Sanitation,Rajasthan,2491.3,2517.0,35,22,62.0,53.3,8,0,0,0,0,0,-6.9,0,Delivered within plan,No material delay
+HIST-00959,Water & Sanitation,Haryana,294.6,301.4,16,32,100.0,100.0,4,2,0,0,0,1,-2.0,0,Delivered within plan,Milestone slippage
+HIST-00960,Roads,Rajasthan,135.0,135.0,65,12,31.4,36.9,17,2,0,0,0,0,4.8,1,1-month delay,Milestone slippage
+HIST-00961,Airports,Tamil Nadu,2301.1,2496.1,33,48,100.0,76.0,10,0,0,0,1,0,-0.5,0,Delivered within plan,Funding release
+HIST-00962,Power,Jharkhand,383.5,393.2,25,10,27.0,28.9,9,0,1,0,0,0,0.1,0,Delivered within plan,Land acquisition
+HIST-00963,Roads,Bihar,224.0,235.3,30,26,98.8,100.0,7,0,1,0,0,0,2.6,8,8-month delay,Land acquisition
+HIST-00964,Railways,West Bengal,277.3,294.3,73,84,91.5,100.0,19,1,1,0,0,0,6.7,0,Delivered within plan,Land acquisition
+HIST-00965,Industrial Corridors,Gujarat,144.9,149.3,58,12,16.7,36.6,15,1,0,0,0,0,13.1,0,Delivered within plan,No material delay
+HIST-00966,Urban Transit,Madhya Pradesh,185.3,192.0,13,80,100.0,100.0,4,1,0,1,0,0,6.3,5,5-month delay,Pending clearance
+HIST-00967,Railways,Kerala,71.2,81.1,42,62,97.2,100.0,12,1,1,1,0,0,6.4,0,Delivered within plan,Land acquisition
+HIST-00968,Urban Transit,Haryana,433.0,441.1,44,25,56.2,44.5,11,0,0,0,0,0,3.5,2,2-month delay,No material delay
+HIST-00969,Roads,Maharashtra,68.4,70.7,37,38,87.5,90.7,9,0,0,1,0,0,-1.0,0,Delivered within plan,Pending clearance
+HIST-00970,Industrial Corridors,Uttar Pradesh,73.3,74.8,63,32,44.8,60.9,16,1,0,0,0,0,9.1,0,Delivered within plan,No material delay
+HIST-00971,Railways,Odisha,1050.1,1227.6,38,75,100.0,100.0,7,1,1,1,1,0,5.1,8,8-month delay,Land acquisition
+HIST-00972,Railways,Haryana,1370.3,1412.1,14,10,71.0,87.5,4,0,0,0,0,0,-1.1,0,Delivered within plan,No material delay
+HIST-00973,Water & Sanitation,Madhya Pradesh,66.2,68.4,42,69,100.0,100.0,9,1,0,0,0,0,0.7,0,Delivered within plan,No material delay
+HIST-00974,Airports,Telangana,128.0,133.3,66,57,83.6,85.2,17,0,0,0,0,1,-3.1,0,Delivered within plan,No material delay
+HIST-00975,Urban Transit,West Bengal,676.8,727.0,49,45,100.0,97.2,9,4,0,0,0,0,13.6,9,9-month delay,Milestone slippage
+HIST-00976,Industrial Corridors,Odisha,53.9,57.7,67,64,94.7,78.1,15,0,1,0,0,0,6.7,0,Delivered within plan,Land acquisition
+HIST-00977,Roads,Gujarat,130.0,139.2,90,30,38.4,29.5,24,0,0,1,0,1,-7.7,1,1-month delay,Pending clearance
+HIST-00978,Railways,Uttar Pradesh,1887.7,1926.8,57,32,65.5,58.0,12,0,0,0,0,0,1.5,1,1-month delay,No material delay
+HIST-00979,Railways,Telangana,806.9,806.9,31,38,91.0,98.8,11,2,0,0,0,0,4.8,0,Delivered within plan,Milestone slippage
+HIST-00980,Railways,Tamil Nadu,3281.4,3592.8,42,72,92.5,95.7,8,0,1,0,0,0,10.3,0,Delivered within plan,Land acquisition
+HIST-00981,Roads,Tamil Nadu,85.3,89.1,54,47,83.4,91.4,13,0,0,0,0,0,-4.6,0,Delivered within plan,No material delay
+HIST-00982,Ports,Uttar Pradesh,206.5,225.0,51,20,51.1,40.6,13,1,1,0,0,1,6.0,8,8-month delay,Land acquisition
+HIST-00983,Ports,Karnataka,46.0,47.6,67,33,54.0,46.1,17,0,0,0,0,0,-4.4,3,3-month delay,No material delay
+HIST-00984,Roads,Bihar,798.7,820.6,34,80,100.0,94.6,11,0,0,1,0,0,-2.1,0,Delivered within plan,Pending clearance
+HIST-00985,Power,Haryana,340.4,373.3,64,49,75.3,70.3,17,1,0,0,1,0,1.4,3,3-month delay,Funding release
+HIST-00986,Industrial Corridors,Karnataka,66.0,69.2,58,40,79.5,88.6,14,1,1,1,0,0,3.3,7,7-month delay,Land acquisition
+HIST-00987,Railways,Odisha,223.4,235.2,51,29,65.6,74.1,12,0,1,0,0,0,-1.4,0,Delivered within plan,Land acquisition
+HIST-00988,Industrial Corridors,Andhra Pradesh,74.2,83.5,27,60,94.8,88.0,8,0,1,0,1,0,-5.4,8,8-month delay,Land acquisition
+HIST-00989,Roads,Jharkhand,257.3,292.8,63,65,100.0,100.0,15,2,0,0,1,1,10.5,3,3-month delay,Milestone slippage
+HIST-00990,Urban Transit,Maharashtra,231.2,255.8,67,46,77.5,70.1,16,1,1,0,0,0,9.9,0,Delivered within plan,Land acquisition
+HIST-00991,Urban Transit,Maharashtra,129.1,129.1,22,48,94.1,98.8,6,2,0,0,0,0,0.5,0,Delivered within plan,Milestone slippage
+HIST-00992,Roads,Gujarat,1541.8,1600.2,46,11,32.1,27.7,16,0,0,0,0,0,1.6,0,Delivered within plan,No material delay
+HIST-00993,Roads,Rajasthan,309.2,346.3,57,66,98.6,100.0,15,1,0,0,0,1,15.3,0,Delivered within plan,No material delay
+HIST-00994,Ports,Kerala,192.9,197.6,39,51,92.4,100.0,14,0,1,0,0,0,1.5,0,Delivered within plan,Land acquisition
+HIST-00995,Water & Sanitation,Rajasthan,286.3,295.6,69,30,29.7,32.0,14,0,0,0,0,0,7.7,1,1-month delay,No material delay
+HIST-00996,Industrial Corridors,Odisha,289.5,303.7,54,67,100.0,100.0,13,1,0,0,0,1,-1.9,5,5-month delay,No material delay
+HIST-00997,Industrial Corridors,Karnataka,207.3,213.5,37,67,88.1,86.0,13,0,0,0,0,0,3.4,0,Delivered within plan,No material delay
+HIST-00998,Industrial Corridors,Kerala,48.1,50.3,19,18,87.2,100.0,4,0,0,0,0,0,-3.6,2,2-month delay,No material delay
+HIST-00999,Water & Sanitation,Odisha,229.5,245.4,55,80,90.2,85.7,17,1,1,0,0,0,8.8,8,8-month delay,Land acquisition
+HIST-01000,Industrial Corridors,Jharkhand,247.9,276.9,52,19,29.2,24.4,15,2,1,0,0,0,6.8,8,8-month delay,Land acquisition
+HIST-01001,Ports,West Bengal,91.8,99.1,42,11,10.8,11.1,10,1,1,1,0,0,3.2,10,10-month delay,Land acquisition
+HIST-01002,Power,Madhya Pradesh,364.5,369.5,30,26,85.7,85.1,8,0,0,0,0,0,-0.7,1,1-month delay,No material delay
+HIST-01003,Railways,Telangana,579.4,677.8,30,57,96.6,100.0,8,2,1,0,0,1,12.0,10,10-month delay,Land acquisition
+HIST-01004,Power,Andhra Pradesh,346.1,351.7,53,68,100.0,100.0,15,1,0,0,0,0,3.9,0,Delivered within plan,No material delay
+HIST-01005,Urban Transit,Bihar,636.9,674.1,60,84,99.1,93.0,15,0,0,0,0,0,-6.1,0,Delivered within plan,No material delay
+HIST-01006,Water & Sanitation,Haryana,316.3,348.1,32,57,100.0,90.4,6,1,0,1,1,0,8.7,0,Delivered within plan,Funding release
+HIST-01007,Water & Sanitation,West Bengal,1074.8,1217.1,16,78,90.6,91.7,4,2,1,1,0,0,8.0,10,10-month delay,Land acquisition
+HIST-01008,Power,Odisha,235.2,263.0,29,72,100.0,100.0,7,2,0,0,1,0,13.3,0,Delivered within plan,Milestone slippage
+HIST-01009,Water & Sanitation,Uttar Pradesh,138.7,152.2,59,52,88.9,81.7,15,2,0,0,0,1,2.9,5,5-month delay,Milestone slippage
+HIST-01010,Industrial Corridors,Rajasthan,290.9,333.5,55,76,92.1,86.7,18,2,1,0,0,1,4.7,8,8-month delay,Land acquisition
+HIST-01011,Railways,Uttar Pradesh,118.9,121.6,46,12,28.3,31.2,11,1,1,0,0,0,5.8,0,Delivered within plan,Land acquisition
+HIST-01012,Airports,West Bengal,223.0,235.1,41,41,97.9,94.4,9,1,1,0,0,0,7.5,6,6-month delay,Land acquisition
+HIST-01013,Power,Tamil Nadu,115.8,133.4,23,8,26.5,18.0,7,3,1,0,0,0,7.8,7,7-month delay,Land acquisition
+HIST-01014,Airports,Maharashtra,223.3,231.8,64,20,31.6,27.1,15,1,0,0,0,0,9.0,1,1-month delay,No material delay
+HIST-01015,Industrial Corridors,Rajasthan,177.6,211.4,62,61,100.0,100.0,18,2,1,0,1,0,13.4,6,6-month delay,Land acquisition
+HIST-01016,Railways,Bihar,101.1,108.5,23,19,81.9,91.3,4,0,1,1,0,0,-7.0,4,4-month delay,Land acquisition
+HIST-01017,Industrial Corridors,Karnataka,67.5,76.2,74,69,100.0,92.4,18,2,1,0,0,0,3.8,10,10-month delay,Land acquisition
+HIST-01018,Water & Sanitation,Telangana,563.0,573.3,28,51,94.7,100.0,6,0,0,0,0,0,6.2,0,Delivered within plan,No material delay
+HIST-01019,Airports,Maharashtra,130.0,147.4,57,78,100.0,84.5,11,4,0,0,1,0,10.3,9,9-month delay,Milestone slippage
+HIST-01020,Roads,Karnataka,61.4,61.8,66,33,35.0,29.2,18,1,0,0,0,0,-7.5,1,1-month delay,No material delay
+HIST-01021,Ports,Jharkhand,137.9,150.2,22,36,100.0,98.7,5,3,0,0,0,0,15.0,0,Delivered within plan,Milestone slippage
+HIST-01022,Ports,Kerala,606.7,678.4,30,79,100.0,93.1,10,0,1,0,1,0,4.0,4,4-month delay,Land acquisition
+HIST-01023,Ports,Maharashtra,70.1,71.5,25,20,89.0,83.7,8,0,0,0,0,0,0.5,0,Delivered within plan,No material delay
+HIST-01024,Railways,Andhra Pradesh,506.8,536.9,72,32,34.2,49.2,21,0,1,0,0,1,-1.0,0,Delivered within plan,Land acquisition
+HIST-01025,Roads,Haryana,51.6,53.1,42,83,99.4,97.2,8,0,1,1,0,0,-0.7,0,Delivered within plan,Land acquisition
+HIST-01026,Urban Transit,Bihar,276.3,316.0,63,16,37.6,35.6,17,4,0,0,1,0,10.4,7,7-month delay,Milestone slippage
+HIST-01027,Water & Sanitation,Rajasthan,136.7,145.0,30,72,100.0,100.0,10,0,1,0,0,0,2.9,1,1-month delay,Land acquisition
+HIST-01028,Railways,Odisha,73.7,76.6,31,63,92.8,96.2,8,0,0,0,0,1,1.1,0,Delivered within plan,No material delay
+HIST-01029,Industrial Corridors,Kerala,181.1,186.8,41,30,89.9,80.9,8,3,0,0,0,0,-1.4,0,Delivered within plan,Milestone slippage
+HIST-01030,Power,Tamil Nadu,68.7,71.0,12,21,100.0,100.0,4,2,0,1,0,0,4.3,5,5-month delay,Milestone slippage
+HIST-01031,Urban Transit,West Bengal,635.6,651.5,29,32,80.5,75.5,6,0,0,0,0,0,2.4,1,1-month delay,No material delay
+HIST-01032,Airports,Odisha,224.2,235.6,64,15,25.3,24.0,16,0,0,0,0,0,-5.3,0,Delivered within plan,No material delay
+HIST-01033,Roads,Tamil Nadu,155.8,157.7,65,58,79.6,89.8,16,0,0,0,0,0,4.1,0,Delivered within plan,No material delay
+HIST-01034,Railways,Madhya Pradesh,1221.8,1403.6,60,59,92.1,100.0,13,2,0,0,1,0,11.7,4,4-month delay,Milestone slippage
+HIST-01035,Railways,Haryana,157.6,166.7,45,30,67.7,75.1,11,2,1,0,0,0,-0.6,0,Delivered within plan,Land acquisition
+HIST-01036,Railways,Karnataka,114.5,117.6,45,29,58.5,52.1,10,0,0,0,0,0,0.5,0,Delivered within plan,No material delay
+HIST-01037,Water & Sanitation,West Bengal,180.4,197.3,47,41,87.3,68.0,12,2,0,0,1,0,11.9,5,5-month delay,Milestone slippage
+HIST-01038,Railways,Andhra Pradesh,434.3,452.9,37,17,62.2,57.6,11,0,1,0,0,0,-0.5,6,6-month delay,Land acquisition
+HIST-01039,Water & Sanitation,Haryana,99.8,102.1,31,75,91.5,93.1,6,1,0,1,0,0,0.6,0,Delivered within plan,Pending clearance
+HIST-01040,Power,Telangana,745.0,880.5,12,66,89.7,87.2,4,1,0,1,1,1,5.2,2,2-month delay,Funding release
+HIST-01041,Power,Rajasthan,110.1,110.1,24,62,100.0,100.0,4,0,0,0,0,0,2.0,2,2-month delay,No material delay
+HIST-01042,Industrial Corridors,Haryana,44.9,48.2,38,80,88.3,98.3,13,0,1,0,0,0,7.9,2,2-month delay,Land acquisition
+HIST-01043,Airports,Tamil Nadu,397.4,407.3,53,32,54.5,55.9,10,0,0,1,0,0,-1.8,0,Delivered within plan,Pending clearance
+HIST-01044,Power,Bihar,115.2,115.2,50,7,1.9,0.0,11,1,0,0,0,0,13.4,2,2-month delay,No material delay
+HIST-01045,Urban Transit,Bihar,99.8,102.6,64,14,32.2,32.5,16,0,0,0,0,0,1.4,0,Delivered within plan,No material delay
+HIST-01046,Roads,Maharashtra,333.9,348.5,41,61,100.0,100.0,8,0,0,0,0,0,1.7,0,Delivered within plan,No material delay
+HIST-01047,Roads,Haryana,1312.1,1516.2,64,34,47.5,53.4,17,3,1,0,0,1,11.4,7,7-month delay,Land acquisition
+HIST-01048,Urban Transit,Maharashtra,222.0,232.0,58,60,92.1,97.5,15,0,1,0,0,1,0.6,1,1-month delay,Land acquisition
+HIST-01049,Water & Sanitation,Jharkhand,218.4,246.0,39,62,100.0,85.6,10,1,0,0,0,1,4.7,5,5-month delay,No material delay
+HIST-01050,Ports,Odisha,493.2,502.5,61,78,94.5,100.0,19,0,1,0,0,0,0.9,0,Delivered within plan,Land acquisition
+HIST-01051,Industrial Corridors,Maharashtra,573.5,601.1,53,39,76.3,75.5,12,2,0,0,0,0,11.6,1,1-month delay,Milestone slippage
+HIST-01052,Industrial Corridors,Kerala,478.8,548.5,14,77,100.0,100.0,10,2,1,0,0,1,6.0,7,7-month delay,Land acquisition
+HIST-01053,Railways,Rajasthan,40.1,43.0,54,50,100.0,100.0,10,2,0,0,0,0,12.2,0,Delivered within plan,Milestone slippage
+HIST-01054,Roads,Rajasthan,189.7,198.7,39,82,93.5,94.2,12,0,0,0,0,0,0.9,0,Delivered within plan,No material delay
+HIST-01055,Ports,West Bengal,133.3,138.7,26,8,38.5,37.6,6,2,0,0,0,0,5.1,0,Delivered within plan,Milestone slippage
+HIST-01056,Roads,West Bengal,262.7,271.7,26,34,98.4,89.2,5,2,0,0,0,0,4.6,1,1-month delay,Milestone slippage
+HIST-01057,Water & Sanitation,Haryana,622.5,649.8,20,74,95.7,93.8,4,0,0,1,0,0,3.3,0,Delivered within plan,Pending clearance
+HIST-01058,Power,Kerala,177.7,181.3,50,13,32.6,16.5,11,2,0,0,0,0,5.1,0,Delivered within plan,Milestone slippage
+HIST-01059,Roads,Rajasthan,1301.3,1369.4,55,18,31.9,27.9,16,0,0,0,1,0,1.0,1,1-month delay,Funding release
+HIST-01060,Railways,Kerala,622.9,647.1,19,67,96.9,84.5,6,1,1,0,0,0,-1.5,7,7-month delay,Land acquisition
+HIST-01061,Roads,Maharashtra,141.5,163.6,44,19,50.0,61.2,13,3,1,0,1,0,6.8,11,11-month delay,Land acquisition
+HIST-01062,Ports,Maharashtra,135.5,142.9,36,21,59.3,50.2,9,2,0,1,0,0,5.5,0,Delivered within plan,Milestone slippage
+HIST-01063,Industrial Corridors,Maharashtra,82.9,97.7,34,74,99.2,91.6,8,3,1,1,0,0,14.0,10,10-month delay,Land acquisition
+HIST-01064,Urban Transit,Karnataka,144.8,145.5,60,36,66.7,69.6,13,1,0,0,0,0,4.9,0,Delivered within plan,No material delay
+HIST-01065,Ports,Kerala,1299.7,1386.9,68,27,47.0,54.2,15,1,1,1,0,0,-6.5,7,7-month delay,Land acquisition
+HIST-01066,Ports,Madhya Pradesh,614.5,627.8,40,56,100.0,90.5,11,1,0,0,0,0,3.5,1,1-month delay,No material delay
+HIST-01067,Roads,Karnataka,296.1,311.8,63,35,48.5,44.0,20,0,1,0,1,0,-5.0,5,5-month delay,Land acquisition
+HIST-01068,Railways,Haryana,135.4,157.2,48,27,64.7,83.3,9,1,1,0,0,1,4.7,7,7-month delay,Land acquisition
+HIST-01069,Urban Transit,Karnataka,1369.5,1390.5,47,11,20.6,15.2,12,0,0,0,0,0,5.2,4,4-month delay,No material delay
+HIST-01070,Water & Sanitation,Maharashtra,69.6,74.5,50,14,18.2,7.9,13,1,1,0,0,0,0.8,7,7-month delay,Land acquisition
+HIST-01071,Water & Sanitation,Jharkhand,305.6,343.4,29,47,100.0,100.0,6,2,0,1,1,0,7.6,6,6-month delay,Milestone slippage
+HIST-01072,Water & Sanitation,Telangana,231.3,246.8,41,74,100.0,100.0,11,1,0,0,1,0,8.1,0,Delivered within plan,Funding release
+HIST-01073,Urban Transit,Odisha,548.7,561.6,35,84,86.1,84.9,8,0,0,0,0,0,-4.9,0,Delivered within plan,No material delay
+HIST-01074,Power,Madhya Pradesh,137.3,142.7,45,50,100.0,96.2,12,0,0,0,0,1,5.5,0,Delivered within plan,No material delay
+HIST-01075,Railways,Andhra Pradesh,642.8,672.7,56,18,31.7,31.4,9,0,0,0,1,0,1.4,0,Delivered within plan,Funding release
+HIST-01076,Roads,Haryana,330.8,332.3,56,8,18.1,25.9,14,1,0,0,0,0,7.5,0,Delivered within plan,No material delay
+HIST-01077,Roads,Uttar Pradesh,103.0,112.6,29,75,98.0,94.6,6,1,0,0,1,0,5.8,5,5-month delay,Funding release
+HIST-01078,Power,Telangana,278.6,329.2,22,58,96.2,82.5,4,1,1,1,1,0,5.3,5,5-month delay,Land acquisition
+HIST-01079,Power,Tamil Nadu,272.6,278.1,48,51,100.0,100.0,9,0,0,0,0,0,2.7,0,Delivered within plan,No material delay
+HIST-01080,Urban Transit,Gujarat,369.9,392.5,18,48,95.6,100.0,6,1,0,0,0,1,3.7,0,Delivered within plan,No material delay
+HIST-01081,Power,Karnataka,805.3,818.5,43,48,88.9,84.4,9,0,0,0,0,0,-1.1,0,Delivered within plan,No material delay
+HIST-01082,Railways,Bihar,161.7,167.2,47,64,97.1,99.5,9,1,0,0,0,1,-2.0,0,Delivered within plan,No material delay
+HIST-01083,Water & Sanitation,Telangana,242.7,244.8,26,62,90.3,95.3,6,0,0,1,0,0,10.0,1,1-month delay,Pending clearance
+HIST-01084,Railways,Gujarat,1660.0,1740.5,53,43,82.4,75.0,11,2,0,1,0,0,6.5,1,1-month delay,Milestone slippage
+HIST-01085,Roads,Tamil Nadu,916.2,959.1,66,63,87.3,100.0,18,0,0,0,0,1,-0.6,0,Delivered within plan,No material delay
+HIST-01086,Urban Transit,Andhra Pradesh,323.3,328.6,44,18,44.3,46.1,11,1,1,0,0,0,5.5,8,8-month delay,Land acquisition
+HIST-01087,Railways,Bihar,160.7,166.7,38,73,100.0,100.0,12,1,1,0,0,0,7.7,7,7-month delay,Land acquisition
+HIST-01088,Urban Transit,Karnataka,590.0,610.8,38,38,98.3,99.6,10,1,0,0,0,0,6.1,0,Delivered within plan,No material delay
+HIST-01089,Roads,Madhya Pradesh,146.7,161.8,26,24,100.0,100.0,5,1,1,0,0,1,-4.0,6,6-month delay,Land acquisition
+HIST-01090,Industrial Corridors,Uttar Pradesh,318.8,367.9,55,66,100.0,100.0,16,1,1,1,0,1,6.1,8,8-month delay,Land acquisition
+HIST-01091,Roads,Karnataka,307.0,319.9,42,40,87.1,93.7,10,2,1,0,0,0,1.6,0,Delivered within plan,Land acquisition
+HIST-01092,Industrial Corridors,Haryana,379.2,397.5,24,72,94.4,96.5,8,1,0,0,0,1,2.2,0,Delivered within plan,No material delay
+HIST-01093,Roads,Kerala,183.3,192.4,60,11,13.3,18.3,14,2,0,0,0,1,-0.8,0,Delivered within plan,Milestone slippage
+HIST-01094,Railways,Telangana,83.7,89.7,35,25,84.4,85.1,6,2,0,1,0,1,5.7,7,7-month delay,Milestone slippage
+HIST-01095,Industrial Corridors,Kerala,90.5,96.7,57,39,63.8,63.4,15,0,1,0,0,0,4.3,0,Delivered within plan,Land acquisition
+HIST-01096,Roads,West Bengal,64.6,68.9,71,15,31.7,29.3,15,1,1,0,0,0,4.6,8,8-month delay,Land acquisition
+HIST-01097,Urban Transit,Madhya Pradesh,180.7,186.4,23,33,100.0,100.0,4,1,0,0,0,0,-2.0,0,Delivered within plan,No material delay
+HIST-01098,Water & Sanitation,Andhra Pradesh,616.8,698.5,51,53,95.3,100.0,16,3,0,1,1,0,4.2,1,1-month delay,Milestone slippage
+HIST-01099,Water & Sanitation,Telangana,829.2,862.1,33,56,98.3,100.0,13,0,0,0,0,0,3.4,1,1-month delay,No material delay
+HIST-01100,Industrial Corridors,Madhya Pradesh,317.4,355.6,48,68,92.8,91.5,9,2,1,1,0,0,-2.6,9,9-month delay,Land acquisition
+HIST-01101,Railways,Andhra Pradesh,629.8,655.3,59,62,100.0,94.0,18,0,1,0,0,0,0.5,0,Delivered within plan,Land acquisition
+HIST-01102,Railways,Uttar Pradesh,72.9,76.5,37,44,99.8,98.4,8,0,0,0,0,0,1.4,0,Delivered within plan,No material delay
+HIST-01103,Ports,Odisha,118.6,119.4,44,7,17.1,18.9,12,0,0,0,0,0,3.0,1,1-month delay,No material delay
+HIST-01104,Water & Sanitation,Telangana,239.9,248.1,37,76,100.0,100.0,9,1,0,0,0,1,-2.7,5,5-month delay,No material delay
+HIST-01105,Railways,Bihar,223.4,227.9,40,58,92.1,88.5,13,1,1,0,0,0,-3.2,0,Delivered within plan,Land acquisition
+HIST-01106,Roads,West Bengal,404.4,415.7,48,37,81.3,94.4,14,1,0,0,0,1,-6.3,0,Delivered within plan,No material delay
+HIST-01107,Urban Transit,Odisha,1488.8,1544.0,48,33,73.6,82.2,12,1,0,0,0,0,5.9,1,1-month delay,No material delay
+HIST-01108,Airports,Rajasthan,88.0,90.5,54,10,17.7,15.4,12,1,0,0,0,0,-1.2,1,1-month delay,No material delay
+HIST-01109,Industrial Corridors,Kerala,287.9,323.6,52,84,99.5,91.9,12,0,1,0,1,0,-6.8,0,Delivered within plan,Land acquisition
+HIST-01110,Urban Transit,Gujarat,167.0,169.1,49,72,98.8,100.0,11,1,0,0,0,0,7.3,0,Delivered within plan,No material delay
+HIST-01111,Ports,Bihar,130.3,143.4,29,26,82.5,89.0,7,1,0,0,1,0,7.0,1,1-month delay,Funding release
+HIST-01112,Railways,Uttar Pradesh,430.6,440.5,61,81,100.0,100.0,15,1,0,0,0,0,16.0,0,Delivered within plan,No material delay
+HIST-01113,Industrial Corridors,Bihar,188.9,191.5,32,42,100.0,100.0,11,0,0,1,0,0,-2.8,0,Delivered within plan,Pending clearance
+HIST-01114,Power,Rajasthan,126.8,137.7,69,76,93.5,96.0,19,3,0,0,0,1,10.3,1,1-month delay,Milestone slippage
+HIST-01115,Power,Bihar,685.2,685.2,43,23,53.1,57.2,9,0,0,0,0,0,-6.1,0,Delivered within plan,No material delay
+HIST-01116,Water & Sanitation,Gujarat,121.2,121.2,46,60,96.4,100.0,11,1,0,0,0,0,5.5,1,1-month delay,No material delay
+HIST-01117,Roads,Bihar,281.5,315.6,48,70,91.1,89.3,13,1,1,1,0,0,5.6,5,5-month delay,Land acquisition
+HIST-01118,Ports,Madhya Pradesh,93.7,99.5,48,50,91.2,100.0,12,1,0,0,1,0,1.9,0,Delivered within plan,Funding release
+HIST-01119,Power,Bihar,223.3,231.2,52,38,63.6,69.1,11,1,0,0,0,0,3.2,0,Delivered within plan,No material delay
+HIST-01120,Industrial Corridors,Karnataka,399.4,419.2,47,53,95.3,100.0,12,1,0,0,0,0,-0.0,0,Delivered within plan,No material delay
+HIST-01121,Urban Transit,West Bengal,707.4,710.1,57,61,100.0,100.0,11,1,0,0,0,0,1.2,1,1-month delay,No material delay
+HIST-01122,Roads,Jharkhand,302.1,344.8,61,48,82.3,80.8,12,2,0,0,1,0,9.9,5,5-month delay,Milestone slippage
+HIST-01123,Railways,West Bengal,230.5,239.6,26,16,68.1,64.3,4,2,1,0,0,0,-2.9,8,8-month delay,Land acquisition
+HIST-01124,Power,Kerala,178.0,216.2,55,70,97.2,83.0,16,2,1,0,1,0,5.0,8,8-month delay,Land acquisition
+HIST-01125,Water & Sanitation,Karnataka,215.1,219.5,49,48,97.4,100.0,11,0,0,0,0,0,2.7,0,Delivered within plan,No material delay
+HIST-01126,Urban Transit,Andhra Pradesh,138.0,151.6,43,79,97.5,91.3,10,0,1,0,0,0,7.6,7,7-month delay,Land acquisition
+HIST-01127,Ports,Tamil Nadu,98.2,107.3,63,65,92.2,97.8,14,2,1,0,0,0,5.2,0,Delivered within plan,Land acquisition
+HIST-01128,Urban Transit,Rajasthan,234.3,239.7,58,8,14.1,13.0,15,0,0,0,0,0,-0.3,0,Delivered within plan,No material delay
+HIST-01129,Urban Transit,Andhra Pradesh,269.8,283.2,18,77,97.5,85.6,7,0,1,1,0,0,0.7,4,4-month delay,Land acquisition
+HIST-01130,Ports,Haryana,669.9,697.3,42,15,31.1,44.1,13,1,0,0,0,1,-5.6,0,Delivered within plan,No material delay
+HIST-01131,Power,Rajasthan,972.4,972.4,53,62,88.7,86.9,13,1,0,0,0,0,5.9,4,4-month delay,No material delay
+HIST-01132,Urban Transit,Tamil Nadu,262.7,272.8,31,43,100.0,86.1,11,0,0,0,0,0,-4.4,1,1-month delay,No material delay
+HIST-01133,Roads,West Bengal,776.9,834.9,24,18,70.1,76.8,5,2,0,0,0,0,13.5,0,Delivered within plan,Milestone slippage
+HIST-01134,Roads,Telangana,358.8,404.5,68,64,100.0,100.0,17,2,1,0,0,0,10.9,9,9-month delay,Land acquisition
+HIST-01135,Roads,Gujarat,290.1,290.1,38,67,100.0,93.2,11,1,0,0,0,0,2.0,0,Delivered within plan,No material delay
+HIST-01136,Roads,Madhya Pradesh,70.2,71.5,63,27,25.6,17.3,18,2,0,1,0,0,-0.4,1,1-month delay,Milestone slippage
+HIST-01137,Roads,Jharkhand,246.7,275.1,72,51,60.9,59.0,18,2,1,1,0,1,1.2,7,7-month delay,Land acquisition
+HIST-01138,Water & Sanitation,Rajasthan,172.0,194.0,30,25,82.1,89.7,11,0,1,0,1,1,-1.7,8,8-month delay,Land acquisition
+HIST-01139,Roads,Uttar Pradesh,151.2,151.3,57,8,12.4,7.6,15,1,0,0,0,0,-1.9,0,Delivered within plan,No material delay
+HIST-01140,Urban Transit,Gujarat,52.0,53.3,41,63,87.4,73.2,11,0,0,0,0,0,5.2,2,2-month delay,No material delay
+HIST-01141,Urban Transit,Telangana,239.7,244.7,53,83,99.3,85.9,12,1,0,0,0,0,-1.1,1,1-month delay,No material delay
+HIST-01142,Airports,Tamil Nadu,220.0,230.3,39,63,91.0,82.4,10,0,0,0,0,1,7.3,0,Delivered within plan,No material delay
+HIST-01143,Railways,Andhra Pradesh,360.6,401.2,23,47,95.4,84.3,7,0,1,0,1,0,-1.1,0,Delivered within plan,Land acquisition
+HIST-01144,Water & Sanitation,Rajasthan,292.4,295.7,48,19,52.6,51.6,8,1,0,0,0,0,0.2,5,5-month delay,No material delay
+HIST-01145,Railways,Andhra Pradesh,162.0,170.2,27,25,79.1,75.1,6,1,0,0,0,0,-0.6,0,Delivered within plan,No material delay
+HIST-01146,Roads,Bihar,49.8,51.2,66,64,100.0,94.4,18,1,0,1,0,0,-0.5,0,Delivered within plan,Pending clearance
+HIST-01147,Water & Sanitation,Tamil Nadu,66.3,68.1,82,7,3.6,0.0,24,0,1,0,0,0,-2.3,5,5-month delay,Land acquisition
+HIST-01148,Ports,Andhra Pradesh,168.9,176.0,32,77,100.0,92.0,8,1,0,0,0,0,-4.9,3,3-month delay,No material delay
+HIST-01149,Water & Sanitation,Telangana,373.8,413.5,35,71,100.0,96.2,7,2,1,0,0,0,0.7,9,9-month delay,Land acquisition
+HIST-01150,Power,Karnataka,309.4,325.8,37,84,100.0,100.0,10,1,0,0,1,0,10.9,2,2-month delay,Funding release
+HIST-01151,Roads,Haryana,292.6,313.6,68,6,7.3,0.0,17,0,0,0,0,1,-3.4,2,2-month delay,No material delay
+HIST-01152,Industrial Corridors,West Bengal,239.4,262.1,27,29,99.2,98.6,9,2,1,0,0,0,6.4,9,9-month delay,Land acquisition
+HIST-01153,Urban Transit,Maharashtra,127.7,133.4,37,38,92.9,86.8,9,0,0,0,0,0,0.6,0,Delivered within plan,No material delay
+HIST-01154,Ports,Maharashtra,257.8,265.8,60,75,98.3,94.6,16,0,0,0,0,0,-0.2,1,1-month delay,No material delay
+HIST-01155,Railways,Madhya Pradesh,262.4,266.1,22,8,43.3,38.5,9,0,0,1,0,0,0.1,1,1-month delay,Pending clearance
+HIST-01156,Power,Gujarat,333.2,357.7,21,55,100.0,92.2,4,0,0,0,1,0,-7.5,3,3-month delay,Funding release
+HIST-01157,Water & Sanitation,Andhra Pradesh,192.5,197.2,49,9,18.3,27.8,14,0,0,0,0,0,-5.4,4,4-month delay,No material delay
+HIST-01158,Urban Transit,Maharashtra,491.1,494.9,61,74,89.8,95.4,17,1,0,0,0,0,-1.5,0,Delivered within plan,No material delay
+HIST-01159,Roads,Haryana,144.5,163.0,49,36,79.8,73.6,11,1,1,1,0,0,-1.7,0,Delivered within plan,Land acquisition
+HIST-01160,Roads,Maharashtra,240.0,249.9,57,35,82.5,73.6,16,2,0,1,0,0,3.0,1,1-month delay,Milestone slippage
+HIST-01161,Railways,Gujarat,447.2,464.4,17,48,85.4,67.8,5,0,0,0,0,0,-2.6,0,Delivered within plan,No material delay
+HIST-01162,Railways,Telangana,129.8,152.6,17,66,98.7,100.0,4,2,1,1,1,0,9.2,9,9-month delay,Land acquisition
+HIST-01163,Railways,Haryana,83.8,95.4,44,33,64.2,75.3,9,0,1,1,1,0,-1.6,0,Delivered within plan,Land acquisition
+HIST-01164,Airports,Karnataka,401.5,411.6,47,30,69.1,77.1,13,1,0,0,0,0,4.5,1,1-month delay,No material delay
+HIST-01165,Ports,Odisha,32.6,34.8,61,64,97.6,100.0,16,0,1,0,0,0,4.2,1,1-month delay,Land acquisition
+HIST-01166,Power,Karnataka,263.4,267.2,39,81,94.7,99.6,7,0,0,0,0,0,4.2,1,1-month delay,No material delay
+HIST-01167,Power,West Bengal,339.1,345.4,51,45,89.0,91.0,9,0,0,0,0,0,-2.2,0,Delivered within plan,No material delay
+HIST-01168,Railways,Maharashtra,54.1,55.7,44,20,46.9,44.9,11,1,0,0,1,0,0.9,1,1-month delay,Funding release
+HIST-01169,Water & Sanitation,Jharkhand,1175.8,1231.6,67,33,50.2,57.8,14,1,0,0,0,0,-3.3,2,2-month delay,No material delay
+HIST-01170,Urban Transit,Gujarat,493.9,514.0,39,38,100.0,100.0,12,3,0,0,0,0,3.7,3,3-month delay,Milestone slippage
+HIST-01171,Roads,Karnataka,287.7,304.0,37,45,100.0,100.0,9,0,1,0,0,1,4.4,3,3-month delay,Land acquisition
+HIST-01172,Urban Transit,Uttar Pradesh,188.9,192.0,57,84,100.0,94.2,10,0,0,0,0,0,8.0,1,1-month delay,No material delay
+HIST-01173,Railways,Uttar Pradesh,168.2,181.0,26,19,62.7,82.0,4,2,1,0,0,0,9.0,9,9-month delay,Land acquisition
+HIST-01174,Industrial Corridors,Uttar Pradesh,150.2,164.1,56,63,100.0,100.0,12,0,1,1,1,0,1.4,4,4-month delay,Land acquisition
+HIST-01175,Water & Sanitation,Telangana,312.1,324.5,57,58,100.0,94.7,15,1,0,0,0,0,10.5,1,1-month delay,No material delay
+HIST-01176,Water & Sanitation,Rajasthan,1524.5,1574.8,44,36,79.3,83.9,12,0,0,0,0,0,-5.7,0,Delivered within plan,No material delay
+HIST-01177,Water & Sanitation,Madhya Pradesh,164.9,172.9,51,68,100.0,94.6,11,0,0,0,1,0,1.3,0,Delivered within plan,Funding release
+HIST-01178,Industrial Corridors,Kerala,576.8,632.1,36,45,96.4,91.1,9,1,1,1,0,0,0.8,0,Delivered within plan,Land acquisition
+HIST-01179,Water & Sanitation,Uttar Pradesh,796.5,845.3,35,66,89.1,91.7,8,1,1,0,0,0,3.7,7,7-month delay,Land acquisition
+HIST-01180,Roads,Karnataka,97.5,102.2,51,22,42.4,57.6,16,1,0,0,0,0,3.2,0,Delivered within plan,No material delay
+HIST-01181,Ports,Rajasthan,936.2,947.7,59,63,88.6,80.5,14,0,0,1,0,0,-2.0,5,5-month delay,Pending clearance
+HIST-01182,Water & Sanitation,Kerala,95.3,96.5,52,63,95.6,100.0,13,0,0,0,0,0,2.0,0,Delivered within plan,No material delay
+HIST-01183,Roads,Rajasthan,161.0,161.7,57,38,64.2,74.8,15,0,0,0,0,0,-3.3,2,2-month delay,No material delay
+HIST-01184,Roads,Gujarat,191.4,192.5,49,14,24.0,34.7,15,0,0,0,0,0,-0.9,1,1-month delay,No material delay
+HIST-01185,Industrial Corridors,Maharashtra,1157.5,1163.9,46,51,100.0,93.5,12,0,0,0,0,0,-6.7,0,Delivered within plan,No material delay
+HIST-01186,Power,Odisha,815.6,848.2,49,31,57.0,55.2,13,0,0,0,0,0,-5.3,0,Delivered within plan,No material delay
+HIST-01187,Railways,Telangana,90.8,108.8,29,68,97.3,92.7,6,1,1,0,1,1,7.1,7,7-month delay,Land acquisition
+HIST-01188,Water & Sanitation,Karnataka,80.0,85.5,28,39,100.0,86.8,6,0,0,0,1,0,-8.7,5,5-month delay,Funding release
+HIST-01189,Power,Rajasthan,156.5,160.4,66,36,51.8,57.6,15,2,0,0,0,0,5.7,3,3-month delay,Milestone slippage
+HIST-01190,Ports,Kerala,316.6,356.5,39,72,100.0,100.0,10,2,1,0,0,0,10.4,0,Delivered within plan,Land acquisition
+HIST-01191,Urban Transit,Andhra Pradesh,75.2,77.0,37,31,82.7,85.5,10,0,0,0,0,0,3.2,1,1-month delay,No material delay
+HIST-01192,Railways,West Bengal,147.6,158.8,36,68,100.0,86.4,9,1,0,0,1,0,8.0,6,6-month delay,Funding release
+HIST-01193,Water & Sanitation,Uttar Pradesh,133.6,147.5,38,56,99.5,87.5,6,0,0,1,0,1,6.7,4,4-month delay,Pending clearance
+HIST-01194,Airports,Madhya Pradesh,376.4,394.3,26,57,99.1,96.7,10,0,0,0,1,0,5.4,0,Delivered within plan,Funding release
+HIST-01195,Roads,Madhya Pradesh,300.3,352.9,45,54,93.0,100.0,10,0,1,0,1,1,1.5,0,Delivered within plan,Land acquisition
+HIST-01196,Roads,Tamil Nadu,979.9,1174.9,18,63,82.6,76.7,5,1,1,0,1,1,-1.6,7,7-month delay,Land acquisition
+HIST-01197,Roads,Kerala,383.9,455.0,38,25,69.3,65.9,7,4,0,0,0,1,18.4,6,6-month delay,Milestone slippage
+HIST-01198,Railways,Odisha,404.4,497.3,52,48,98.6,82.1,13,2,1,0,1,1,7.4,7,7-month delay,Land acquisition
+HIST-01199,Water & Sanitation,Madhya Pradesh,266.2,274.4,54,20,38.0,37.1,11,0,0,0,0,0,-4.2,1,1-month delay,No material delay
+HIST-01200,Urban Transit,Kerala,171.0,189.2,33,55,100.0,100.0,7,2,0,0,0,0,12.1,6,6-month delay,Milestone slippage
+HIST-01201,Airports,Rajasthan,293.7,301.5,22,7,39.6,43.1,4,2,0,0,0,0,10.6,1,1-month delay,Milestone slippage
+HIST-01202,Railways,Gujarat,136.2,155.9,34,51,100.0,89.0,7,2,0,0,1,0,8.3,4,4-month delay,Milestone slippage
+HIST-01203,Water & Sanitation,Karnataka,196.3,202.4,29,28,97.6,100.0,8,1,1,0,0,0,-2.4,1,1-month delay,Land acquisition
+HIST-01204,Railways,West Bengal,566.2,628.8,21,46,91.6,96.8,4,0,1,0,0,0,3.5,4,4-month delay,Land acquisition
+HIST-01205,Power,Haryana,750.8,772.1,33,32,99.5,100.0,8,0,0,0,0,0,-6.1,0,Delivered within plan,No material delay
+HIST-01206,Power,Kerala,289.2,318.8,65,63,100.0,100.0,16,3,1,0,0,0,6.6,11,11-month delay,Land acquisition
+HIST-01207,Ports,Karnataka,166.6,173.0,18,41,93.2,94.1,4,1,0,0,0,1,-1.2,0,Delivered within plan,No material delay
+HIST-01208,Water & Sanitation,Telangana,209.3,214.8,41,83,97.6,93.4,8,0,0,0,0,0,-3.6,4,4-month delay,No material delay
+HIST-01209,Industrial Corridors,Uttar Pradesh,813.5,829.0,17,34,93.9,87.8,4,2,0,0,0,0,-1.4,0,Delivered within plan,Milestone slippage
+HIST-01210,Roads,Maharashtra,1321.0,1385.1,42,51,100.0,99.2,8,0,0,1,1,0,3.7,0,Delivered within plan,Funding release
+HIST-01211,Railways,Telangana,394.1,426.1,36,18,45.7,58.7,8,0,1,1,0,0,-3.0,1,1-month delay,Land acquisition
+HIST-01212,Power,Odisha,852.6,853.0,78,49,58.1,74.5,18,2,0,0,0,0,1.1,0,Delivered within plan,Milestone slippage
+HIST-01213,Railways,Rajasthan,383.0,416.5,42,36,74.3,56.6,13,0,1,1,0,0,-0.3,0,Delivered within plan,Land acquisition
+HIST-01214,Water & Sanitation,Uttar Pradesh,398.0,421.4,61,48,78.1,68.3,17,1,0,0,0,1,4.5,4,4-month delay,No material delay
+HIST-01215,Urban Transit,Gujarat,219.4,228.9,51,27,47.0,52.8,14,1,0,0,0,0,2.0,1,1-month delay,No material delay
+HIST-01216,Roads,Bihar,113.3,118.1,34,34,88.6,81.7,10,0,0,0,0,1,1.6,1,1-month delay,No material delay
+HIST-01217,Water & Sanitation,Madhya Pradesh,165.1,171.0,32,27,69.7,73.9,8,0,0,0,0,0,3.1,3,3-month delay,No material delay
+HIST-01218,Roads,Odisha,182.0,186.9,72,52,67.5,60.2,15,0,1,1,0,0,-6.9,6,6-month delay,Land acquisition
+HIST-01219,Airports,Odisha,81.6,84.3,27,16,58.7,66.6,4,0,0,0,0,0,1.6,0,Delivered within plan,No material delay
+HIST-01220,Water & Sanitation,Odisha,157.0,164.8,46,21,41.8,32.6,12,0,0,0,0,0,1.8,0,Delivered within plan,No material delay
+HIST-01221,Water & Sanitation,Tamil Nadu,549.8,638.6,44,48,96.8,80.8,10,2,0,0,1,1,2.9,3,3-month delay,Milestone slippage
+HIST-01222,Roads,Telangana,477.0,486.8,12,37,93.4,97.3,7,1,0,0,0,0,-0.4,0,Delivered within plan,No material delay
+HIST-01223,Roads,Uttar Pradesh,442.4,475.1,34,46,88.0,97.8,9,0,1,0,1,0,-1.6,0,Delivered within plan,Land acquisition
+HIST-01224,Urban Transit,Haryana,300.8,304.6,37,79,100.0,100.0,9,0,0,0,0,0,0.0,0,Delivered within plan,No material delay
+HIST-01225,Urban Transit,Tamil Nadu,243.4,266.6,32,44,94.7,76.7,8,0,1,0,1,0,-7.2,1,1-month delay,Land acquisition
+HIST-01226,Industrial Corridors,Karnataka,244.7,265.8,45,83,93.0,95.1,10,0,1,1,0,1,-5.0,0,Delivered within plan,Land acquisition
+HIST-01227,Airports,Gujarat,354.6,395.3,41,84,99.3,93.7,10,0,1,0,0,0,8.7,5,5-month delay,Land acquisition
+HIST-01228,Railways,Bihar,293.6,327.7,14,62,100.0,100.0,6,0,1,0,1,0,-4.7,7,7-month delay,Land acquisition
+HIST-01229,Industrial Corridors,Maharashtra,181.0,190.9,62,47,75.3,67.7,19,1,0,0,1,0,0.9,1,1-month delay,Funding release
+HIST-01230,Roads,Andhra Pradesh,165.4,170.9,67,41,63.1,59.1,17,1,0,0,0,1,5.6,0,Delivered within plan,No material delay
+HIST-01231,Urban Transit,Jharkhand,1424.0,1614.8,44,45,100.0,95.5,10,2,1,0,0,1,4.3,1,1-month delay,Land acquisition
+HIST-01232,Railways,Kerala,104.5,119.4,43,35,73.4,59.2,12,2,1,1,0,1,1.9,6,6-month delay,Land acquisition
+HIST-01233,Water & Sanitation,Karnataka,109.3,123.4,58,15,9.0,6.2,13,2,1,0,1,0,9.9,8,8-month delay,Land acquisition
+HIST-01234,Water & Sanitation,Rajasthan,115.2,115.6,43,54,100.0,95.8,9,1,0,0,0,0,10.6,5,5-month delay,No material delay
+HIST-01235,Roads,Haryana,200.5,205.7,12,11,92.7,84.6,4,1,1,0,0,0,-5.3,7,7-month delay,Land acquisition
+HIST-01236,Industrial Corridors,Rajasthan,591.9,612.6,48,35,77.4,80.1,11,0,1,0,0,0,5.1,5,5-month delay,Land acquisition
+HIST-01237,Urban Transit,Rajasthan,165.3,168.8,45,64,84.4,84.5,13,0,0,0,0,0,4.6,0,Delivered within plan,No material delay
+HIST-01238,Railways,Bihar,283.6,310.6,40,52,100.0,91.9,13,1,1,0,0,0,-4.1,8,8-month delay,Land acquisition
+HIST-01239,Industrial Corridors,Bihar,81.1,81.5,45,76,100.0,100.0,10,0,0,0,0,0,-0.4,2,2-month delay,No material delay
+HIST-01240,Power,Jharkhand,265.7,279.7,44,64,77.1,74.1,11,2,0,0,0,1,9.3,0,Delivered within plan,Milestone slippage
+HIST-01241,Industrial Corridors,Haryana,115.7,120.6,24,21,75.6,75.3,5,0,1,0,0,0,-2.3,6,6-month delay,Land acquisition
+HIST-01242,Water & Sanitation,Tamil Nadu,246.7,255.0,40,31,92.8,92.6,12,2,0,1,0,0,4.1,1,1-month delay,Milestone slippage
+HIST-01243,Power,West Bengal,711.8,728.1,43,41,97.1,94.0,11,0,0,1,0,0,5.0,2,2-month delay,Pending clearance
+HIST-01244,Industrial Corridors,Rajasthan,62.5,75.8,37,26,84.0,90.4,10,4,1,0,1,1,21.1,11,11-month delay,Land acquisition
+HIST-01245,Water & Sanitation,Maharashtra,109.3,122.9,16,27,97.6,99.5,4,2,1,0,0,0,14.6,8,8-month delay,Land acquisition
+HIST-01246,Water & Sanitation,Kerala,407.5,419.4,43,49,100.0,95.8,9,1,0,0,0,0,3.5,0,Delivered within plan,No material delay
+HIST-01247,Railways,Bihar,389.3,425.3,19,18,97.9,100.0,5,2,1,0,0,0,1.5,11,11-month delay,Land acquisition
+HIST-01248,Power,Haryana,268.2,278.4,41,69,99.1,100.0,8,1,0,0,0,0,5.1,5,5-month delay,No material delay
+HIST-01249,Railways,Kerala,614.7,682.9,33,30,88.1,86.7,7,1,1,1,0,0,0.7,11,11-month delay,Land acquisition
+HIST-01250,Roads,Uttar Pradesh,626.1,643.8,51,14,24.2,29.0,10,0,0,0,0,0,-0.9,0,Delivered within plan,No material delay
+HIST-01251,Airports,Karnataka,97.4,99.0,65,46,78.1,85.4,18,1,0,0,0,0,5.1,0,Delivered within plan,No material delay
+HIST-01252,Railways,West Bengal,251.2,255.8,50,48,100.0,100.0,12,1,1,0,0,0,-0.8,0,Delivered within plan,Land acquisition
+HIST-01253,Water & Sanitation,Andhra Pradesh,66.7,70.3,35,21,66.7,68.9,9,0,0,0,0,1,2.5,0,Delivered within plan,No material delay
+HIST-01254,Water & Sanitation,West Bengal,94.2,96.4,40,54,100.0,95.5,11,0,0,0,1,0,3.9,0,Delivered within plan,Funding release
+HIST-01255,Urban Transit,Gujarat,504.5,521.8,12,79,98.5,100.0,5,1,0,0,0,0,-0.7,0,Delivered within plan,No material delay
+HIST-01256,Roads,Madhya Pradesh,205.6,227.2,64,73,100.0,88.9,15,1,1,0,0,0,9.3,9,9-month delay,Land acquisition
+HIST-01257,Water & Sanitation,Rajasthan,65.2,71.6,48,83,98.5,99.6,11,0,1,0,1,0,0.5,0,Delivered within plan,Land acquisition
+HIST-01258,Power,West Bengal,510.4,523.6,29,24,80.3,79.7,8,1,0,0,0,0,-1.4,1,1-month delay,No material delay
+HIST-01259,Urban Transit,West Bengal,804.2,837.0,43,18,44.8,41.7,10,2,0,0,0,0,8.8,2,2-month delay,Milestone slippage
+HIST-01260,Water & Sanitation,Telangana,172.4,179.1,28,9,32.2,50.7,6,0,0,0,0,0,-6.5,0,Delivered within plan,No material delay
+HIST-01261,Railways,West Bengal,113.5,124.3,55,58,100.0,86.2,15,0,1,1,0,0,-1.0,9,9-month delay,Land acquisition
+HIST-01262,Power,Andhra Pradesh,86.6,92.0,43,38,90.0,98.8,10,0,0,0,0,1,-10.4,0,Delivered within plan,No material delay
+HIST-01263,Water & Sanitation,Haryana,420.7,433.7,31,54,100.0,100.0,6,2,0,0,0,0,3.8,0,Delivered within plan,Milestone slippage
+HIST-01264,Industrial Corridors,Karnataka,88.3,88.7,53,8,7.2,0.0,15,1,1,0,0,0,1.2,0,Delivered within plan,Land acquisition
+HIST-01265,Roads,Maharashtra,352.3,357.7,41,23,49.1,56.6,12,1,0,0,0,0,11.1,1,1-month delay,No material delay
+HIST-01266,Power,West Bengal,375.5,388.0,49,55,99.8,86.2,14,0,0,0,0,0,1.8,1,1-month delay,No material delay
+HIST-01267,Power,Telangana,174.3,189.3,60,38,66.0,65.1,12,2,0,0,0,1,11.3,0,Delivered within plan,Milestone slippage
+HIST-01268,Railways,Maharashtra,188.6,196.8,34,19,53.5,52.0,8,1,0,0,0,0,2.6,4,4-month delay,No material delay
+HIST-01269,Railways,Odisha,721.6,804.2,58,54,90.2,88.3,11,0,1,0,0,1,8.5,5,5-month delay,Land acquisition
+HIST-01270,Ports,Uttar Pradesh,107.1,113.4,19,67,87.5,100.0,4,0,0,0,0,0,-6.8,1,1-month delay,No material delay
+HIST-01271,Railways,Kerala,232.7,262.6,30,26,81.1,86.0,7,2,1,0,0,1,3.3,10,10-month delay,Land acquisition
+HIST-01272,Urban Transit,Maharashtra,368.2,382.0,31,25,93.0,100.0,9,2,0,0,0,0,12.5,2,2-month delay,Milestone slippage
+HIST-01273,Urban Transit,Uttar Pradesh,267.9,275.1,31,46,95.9,95.0,8,1,0,0,0,0,-0.1,0,Delivered within plan,No material delay
+HIST-01274,Roads,Uttar Pradesh,237.7,262.5,56,64,86.8,87.4,17,2,0,0,0,1,13.4,1,1-month delay,Milestone slippage
+HIST-01275,Power,Odisha,25.0,25.5,31,7,17.9,19.5,10,0,0,0,0,0,1.6,0,Delivered within plan,No material delay
+HIST-01276,Railways,Tamil Nadu,772.4,909.1,43,84,100.0,100.0,9,4,1,1,0,0,20.9,10,10-month delay,Land acquisition
+HIST-01277,Ports,Kerala,388.1,420.9,46,26,67.5,68.9,10,2,1,0,0,0,5.2,9,9-month delay,Land acquisition
+HIST-01278,Airports,Uttar Pradesh,214.4,222.9,15,12,68.8,75.2,4,0,0,0,0,1,4.0,1,1-month delay,No material delay
+HIST-01279,Urban Transit,Karnataka,420.3,441.9,12,41,91.3,100.0,4,0,0,0,0,1,0.5,0,Delivered within plan,No material delay
+HIST-01280,Railways,Telangana,109.7,125.7,68,72,94.6,94.7,15,0,1,0,1,0,3.8,5,5-month delay,Land acquisition
+HIST-01281,Railways,Telangana,173.8,173.8,81,42,51.6,61.6,24,0,0,0,0,0,-3.5,0,Delivered within plan,No material delay
+HIST-01282,Power,Kerala,179.0,188.0,25,42,90.2,83.4,6,2,0,0,0,1,3.3,0,Delivered within plan,Milestone slippage
+HIST-01283,Industrial Corridors,Odisha,229.0,231.6,54,14,29.1,27.6,13,1,0,0,0,0,-0.5,1,1-month delay,No material delay
+HIST-01284,Water & Sanitation,West Bengal,108.9,110.9,51,65,96.9,100.0,14,0,0,0,0,0,4.6,0,Delivered within plan,No material delay
+HIST-01285,Urban Transit,Jharkhand,950.2,992.1,61,41,68.8,74.2,13,1,0,0,0,0,-5.6,0,Delivered within plan,No material delay
+HIST-01286,Railways,Haryana,440.0,499.7,43,55,100.0,100.0,13,0,1,0,1,0,4.2,7,7-month delay,Land acquisition
+HIST-01287,Roads,Gujarat,266.9,300.1,26,73,92.9,89.3,8,3,0,0,0,1,11.8,9,9-month delay,Milestone slippage
+HIST-01288,Water & Sanitation,Bihar,276.7,311.4,46,65,96.9,82.1,12,2,0,1,0,0,13.3,3,3-month delay,Milestone slippage
+HIST-01289,Railways,Maharashtra,79.4,81.5,42,49,92.5,99.7,12,1,0,1,0,0,5.7,4,4-month delay,Pending clearance
+HIST-01290,Urban Transit,West Bengal,360.9,368.8,24,72,94.0,100.0,8,1,0,0,0,0,-1.7,0,Delivered within plan,No material delay
+HIST-01291,Roads,Jharkhand,595.5,595.5,17,40,93.0,92.3,7,0,1,0,0,0,0.9,0,Delivered within plan,Land acquisition
+HIST-01292,Railways,Maharashtra,194.8,207.0,12,67,93.8,100.0,4,0,1,0,0,0,-0.5,4,4-month delay,Land acquisition
+HIST-01293,Urban Transit,Karnataka,130.1,141.6,53,84,100.0,100.0,13,0,1,1,0,0,6.7,5,5-month delay,Land acquisition
+HIST-01294,Railways,Jharkhand,247.3,259.6,64,12,18.1,17.0,13,0,0,1,0,0,-1.8,0,Delivered within plan,Pending clearance
+HIST-01295,Roads,Andhra Pradesh,257.9,268.3,56,22,28.3,27.1,12,2,0,0,0,0,1.5,4,4-month delay,Milestone slippage
+HIST-01296,Railways,West Bengal,387.9,407.8,36,41,91.8,84.5,14,1,0,1,0,0,7.1,1,1-month delay,Pending clearance
+HIST-01297,Railways,Haryana,199.1,211.8,19,9,50.6,53.9,4,1,1,0,0,0,3.2,8,8-month delay,Land acquisition
+HIST-01298,Roads,Tamil Nadu,443.4,449.6,57,65,89.4,92.5,12,0,0,1,0,0,-1.8,5,5-month delay,Pending clearance
+HIST-01299,Roads,Madhya Pradesh,470.1,524.8,52,47,87.6,100.0,17,1,1,1,0,0,7.4,4,4-month delay,Land acquisition
+HIST-01300,Power,Karnataka,331.2,345.2,14,52,100.0,97.0,4,3,0,1,0,0,4.7,0,Delivered within plan,Milestone slippage
+HIST-01301,Industrial Corridors,West Bengal,145.3,152.8,62,37,56.9,59.4,15,0,0,0,0,0,4.3,1,1-month delay,No material delay
+HIST-01302,Urban Transit,Tamil Nadu,138.7,144.1,22,9,47.0,41.8,5,1,0,0,0,0,1.9,1,1-month delay,No material delay
+HIST-01303,Industrial Corridors,Gujarat,105.2,116.1,47,12,27.8,30.1,10,2,1,0,1,0,0.7,6,6-month delay,Land acquisition
+HIST-01304,Power,Andhra Pradesh,93.0,101.2,27,16,48.9,51.7,7,2,0,1,0,0,3.8,6,6-month delay,Milestone slippage
+HIST-01305,Roads,Karnataka,560.9,587.1,38,72,100.0,100.0,6,1,0,0,0,0,7.5,0,Delivered within plan,No material delay
+HIST-01306,Ports,Jharkhand,260.2,289.3,51,41,88.4,87.5,14,1,1,0,1,0,0.6,1,1-month delay,Land acquisition
+HIST-01307,Railways,Haryana,1049.4,1108.6,41,65,97.4,92.7,7,1,0,0,0,0,0.2,0,Delivered within plan,No material delay
+HIST-01308,Railways,Karnataka,365.2,392.5,63,30,46.2,51.3,13,4,0,0,0,0,7.9,1,1-month delay,Milestone slippage
+HIST-01309,Airports,Gujarat,54.2,55.2,49,40,81.3,98.5,12,1,0,0,0,0,9.1,3,3-month delay,No material delay
+HIST-01310,Airports,Jharkhand,102.4,102.4,24,62,100.0,100.0,7,0,0,0,0,0,-1.9,1,1-month delay,No material delay
+HIST-01311,Railways,Uttar Pradesh,392.7,428.3,20,15,95.6,73.1,5,1,1,0,0,0,-1.9,8,8-month delay,Land acquisition
+HIST-01312,Water & Sanitation,Telangana,259.7,264.7,58,24,45.4,42.5,10,1,0,0,0,0,-3.0,0,Delivered within plan,No material delay
+HIST-01313,Industrial Corridors,Odisha,558.0,564.8,31,26,78.7,71.4,6,0,0,0,0,0,-4.6,1,1-month delay,No material delay
+HIST-01314,Railways,Rajasthan,208.8,228.1,34,73,87.9,85.0,9,2,1,1,0,0,8.9,1,1-month delay,Land acquisition
+HIST-01315,Power,Gujarat,261.4,264.0,17,40,84.2,74.2,6,1,0,0,0,0,-2.3,0,Delivered within plan,No material delay
+HIST-01316,Ports,Kerala,107.7,116.6,28,71,95.0,91.3,10,1,0,1,1,0,3.7,3,3-month delay,Funding release
+HIST-01317,Urban Transit,Gujarat,376.8,382.5,56,20,32.3,17.6,16,0,0,0,0,0,-6.4,0,Delivered within plan,No material delay
+HIST-01318,Power,Madhya Pradesh,515.2,550.9,29,79,100.0,100.0,7,1,1,0,0,0,4.8,6,6-month delay,Land acquisition
+HIST-01319,Railways,Andhra Pradesh,174.4,175.0,23,31,90.9,87.4,5,0,0,0,0,0,-1.6,0,Delivered within plan,No material delay
+HIST-01320,Urban Transit,West Bengal,93.4,93.9,28,25,80.8,87.7,8,1,0,0,0,0,7.6,0,Delivered within plan,No material delay
+HIST-01321,Urban Transit,Odisha,945.6,959.8,31,73,88.9,93.2,9,0,0,0,0,0,-1.8,0,Delivered within plan,No material delay
+HIST-01322,Roads,Uttar Pradesh,104.7,114.2,36,22,64.6,56.8,11,1,1,0,0,0,11.4,1,1-month delay,Land acquisition
+HIST-01323,Airports,Tamil Nadu,1420.4,1442.3,57,79,100.0,84.0,14,0,0,0,0,0,-3.9,0,Delivered within plan,No material delay
+HIST-01324,Roads,Telangana,381.2,401.4,31,55,100.0,100.0,10,0,0,0,0,0,5.2,0,Delivered within plan,No material delay
+HIST-01325,Roads,Haryana,417.4,451.0,43,67,100.0,100.0,12,2,1,0,0,0,5.2,8,8-month delay,Land acquisition
+HIST-01326,Urban Transit,Jharkhand,380.3,397.5,56,41,81.8,78.0,12,0,0,0,0,0,-4.1,0,Delivered within plan,No material delay
+HIST-01327,Urban Transit,Rajasthan,562.4,595.3,46,71,100.0,97.9,8,2,0,1,0,0,1.7,0,Delivered within plan,Milestone slippage
+HIST-01328,Airports,Telangana,67.5,69.9,36,25,73.7,80.9,11,2,0,0,0,0,-1.6,0,Delivered within plan,Milestone slippage
+HIST-01329,Airports,West Bengal,546.9,565.7,40,79,97.7,92.7,8,1,0,1,0,0,-1.1,0,Delivered within plan,Pending clearance
+HIST-01330,Urban Transit,Uttar Pradesh,83.0,84.9,36,22,48.7,61.1,10,1,0,0,0,0,-5.1,0,Delivered within plan,No material delay
+HIST-01331,Water & Sanitation,Odisha,1308.5,1443.0,50,27,56.4,68.7,10,2,1,0,0,0,2.2,0,Delivered within plan,Land acquisition
+HIST-01332,Industrial Corridors,Maharashtra,104.1,121.0,48,73,100.0,95.9,12,2,1,0,0,1,6.4,6,6-month delay,Land acquisition
+HIST-01333,Roads,Jharkhand,224.3,237.7,13,10,88.9,72.0,4,1,1,0,0,0,3.3,7,7-month delay,Land acquisition
+HIST-01334,Airports,Gujarat,42.2,43.1,56,82,100.0,98.1,12,0,0,1,0,0,3.6,0,Delivered within plan,Pending clearance
+HIST-01335,Railways,Bihar,254.6,267.4,25,80,100.0,90.8,6,2,0,0,0,0,1.4,0,Delivered within plan,Milestone slippage
+HIST-01336,Railways,Tamil Nadu,244.4,275.3,60,28,54.4,42.0,16,3,0,1,1,1,2.7,8,8-month delay,Milestone slippage
+HIST-01337,Urban Transit,Kerala,90.0,92.5,50,18,42.9,28.3,14,0,0,0,0,0,-3.1,0,Delivered within plan,No material delay
+HIST-01338,Roads,Kerala,82.2,92.8,47,57,89.7,81.5,15,2,1,0,0,1,1.8,0,Delivered within plan,Land acquisition
+HIST-01339,Railways,West Bengal,251.4,281.2,58,79,84.2,77.4,12,2,0,0,1,0,-0.3,7,7-month delay,Milestone slippage
+HIST-01340,Water & Sanitation,Telangana,396.7,430.4,52,73,100.0,100.0,12,0,1,0,0,0,5.8,0,Delivered within plan,Land acquisition
+HIST-01341,Industrial Corridors,Tamil Nadu,155.0,170.6,41,82,91.4,89.6,10,0,1,1,0,0,6.6,8,8-month delay,Land acquisition
+HIST-01342,Railways,Andhra Pradesh,357.2,363.4,23,54,93.5,78.8,10,0,0,0,0,0,6.2,1,1-month delay,No material delay
+HIST-01343,Water & Sanitation,Kerala,315.2,366.8,37,82,91.8,85.4,12,2,1,0,0,1,10.3,7,7-month delay,Land acquisition
+HIST-01344,Roads,Haryana,360.1,364.1,54,47,91.5,84.2,13,2,0,0,0,0,2.1,0,Delivered within plan,Milestone slippage
+HIST-01345,Power,Odisha,178.0,183.8,21,37,89.3,100.0,6,2,0,0,0,0,-1.6,0,Delivered within plan,Milestone slippage
+HIST-01346,Urban Transit,Bihar,234.2,236.7,27,28,99.0,92.8,6,0,0,0,0,0,2.6,0,Delivered within plan,No material delay
+HIST-01347,Railways,Bihar,245.8,283.7,38,59,97.7,93.3,8,2,1,0,0,1,7.5,11,11-month delay,Land acquisition
+HIST-01348,Water & Sanitation,Bihar,175.6,176.6,45,50,100.0,100.0,13,1,0,0,0,0,-2.4,0,Delivered within plan,No material delay
+HIST-01349,Ports,Kerala,315.2,323.1,37,8,26.3,32.7,9,0,1,0,0,0,-5.1,0,Delivered within plan,Land acquisition
+HIST-01350,Urban Transit,Bihar,980.5,985.5,71,55,74.5,81.4,17,1,0,0,0,0,-8.1,0,Delivered within plan,No material delay
+HIST-01351,Urban Transit,Karnataka,1069.4,1097.7,42,43,100.0,95.8,13,1,0,0,0,0,0.9,0,Delivered within plan,No material delay
+HIST-01352,Railways,Telangana,360.9,371.6,46,53,100.0,100.0,12,0,0,0,0,0,2.7,0,Delivered within plan,No material delay
+HIST-01353,Roads,Uttar Pradesh,416.9,428.4,39,12,42.7,39.0,6,2,0,0,0,0,4.7,5,5-month delay,Milestone slippage
+HIST-01354,Power,Tamil Nadu,119.7,137.4,26,14,51.1,47.5,4,2,1,0,0,1,-0.4,0,Delivered within plan,Land acquisition
+HIST-01355,Urban Transit,Jharkhand,277.1,281.1,16,52,97.3,100.0,5,0,0,0,0,0,0.6,0,Delivered within plan,No material delay
+HIST-01356,Industrial Corridors,West Bengal,78.5,89.2,48,29,63.7,73.5,11,1,1,0,1,0,5.4,0,Delivered within plan,Land acquisition
+HIST-01357,Power,Gujarat,202.7,214.5,12,16,99.5,93.1,4,2,1,0,0,0,8.6,0,Delivered within plan,Land acquisition
+HIST-01358,Railways,Gujarat,1376.1,1395.9,46,21,56.7,50.4,12,0,0,0,0,0,-10.1,0,Delivered within plan,No material delay
+HIST-01359,Industrial Corridors,Uttar Pradesh,258.1,266.9,44,12,26.8,19.4,11,1,0,0,0,0,-5.9,0,Delivered within plan,No material delay
+HIST-01360,Power,Rajasthan,112.3,115.9,38,20,48.0,57.6,8,0,0,0,0,0,-4.8,0,Delivered within plan,No material delay
+HIST-01361,Roads,Andhra Pradesh,253.8,253.8,60,73,93.4,85.2,15,0,0,1,0,0,4.2,1,1-month delay,Pending clearance
+HIST-01362,Water & Sanitation,Madhya Pradesh,85.2,92.6,27,73,88.2,77.4,4,1,0,0,1,0,6.3,3,3-month delay,Funding release
+HIST-01363,Ports,Tamil Nadu,186.0,219.2,29,35,95.6,84.1,7,3,1,1,0,1,6.8,11,11-month delay,Land acquisition
+HIST-01364,Water & Sanitation,Karnataka,242.3,265.1,12,47,100.0,94.4,4,2,0,0,0,1,9.0,0,Delivered within plan,Milestone slippage
+HIST-01365,Power,Andhra Pradesh,268.9,294.9,12,41,86.3,94.2,4,0,1,0,1,0,4.2,4,4-month delay,Land acquisition
+HIST-01366,Water & Sanitation,Rajasthan,103.5,107.8,30,68,100.0,100.0,8,1,0,1,0,0,1.2,0,Delivered within plan,Pending clearance
+HIST-01367,Ports,Haryana,146.7,151.2,12,13,92.8,100.0,4,0,0,0,0,0,6.7,1,1-month delay,No material delay
+HIST-01368,Water & Sanitation,Maharashtra,322.1,324.0,43,33,82.3,91.3,11,0,0,0,0,0,-8.1,0,Delivered within plan,No material delay
+HIST-01369,Ports,Karnataka,603.2,663.1,12,29,100.0,99.5,6,2,0,0,0,1,4.8,6,6-month delay,Milestone slippage
+HIST-01370,Water & Sanitation,Odisha,321.4,335.9,45,12,26.4,20.8,15,3,0,0,0,0,12.7,7,7-month delay,Milestone slippage
+HIST-01371,Roads,Telangana,455.8,467.2,50,57,98.9,87.7,15,0,0,0,0,0,-1.8,0,Delivered within plan,No material delay
+HIST-01372,Power,Jharkhand,111.3,134.0,45,71,100.0,94.6,11,2,1,0,1,0,16.0,10,10-month delay,Land acquisition
+HIST-01373,Power,Uttar Pradesh,126.2,128.9,37,35,100.0,95.2,9,1,1,0,0,0,2.6,6,6-month delay,Land acquisition
+HIST-01374,Urban Transit,Tamil Nadu,111.5,114.4,51,19,32.0,57.1,17,1,0,0,0,0,-1.3,0,Delivered within plan,No material delay
+HIST-01375,Power,Jharkhand,188.8,188.8,52,59,100.0,100.0,13,1,0,0,0,0,-0.8,0,Delivered within plan,No material delay
+HIST-01376,Water & Sanitation,Gujarat,231.2,241.7,66,84,95.0,77.2,16,0,0,0,0,1,3.0,0,Delivered within plan,No material delay
+HIST-01377,Urban Transit,Gujarat,205.9,208.4,50,76,100.0,100.0,12,2,0,0,0,0,3.9,1,1-month delay,Milestone slippage
+HIST-01378,Roads,Jharkhand,530.4,575.1,33,12,28.4,31.0,13,1,1,0,0,0,5.3,7,7-month delay,Land acquisition
+HIST-01379,Airports,Gujarat,545.3,584.5,55,56,100.0,100.0,11,1,0,1,0,0,6.9,0,Delivered within plan,Pending clearance
+HIST-01380,Urban Transit,West Bengal,94.1,95.2,89,31,23.5,20.8,22,1,0,1,0,0,-2.7,1,1-month delay,Pending clearance
+HIST-01381,Industrial Corridors,Telangana,466.0,483.5,32,79,88.0,90.6,8,0,0,0,0,1,1.2,0,Delivered within plan,No material delay
+HIST-01382,Airports,Kerala,325.1,336.7,28,25,81.2,78.4,7,1,0,0,0,0,2.9,0,Delivered within plan,No material delay
+HIST-01383,Power,Tamil Nadu,217.0,220.8,47,26,52.2,63.9,11,1,0,0,0,0,3.2,0,Delivered within plan,No material delay
+HIST-01384,Ports,West Bengal,160.2,164.3,71,82,90.0,89.5,18,0,0,1,0,0,1.6,3,3-month delay,Pending clearance
+HIST-01385,Water & Sanitation,Karnataka,420.7,460.3,34,19,48.3,59.5,6,2,0,0,0,1,6.8,4,4-month delay,Milestone slippage
+HIST-01386,Water & Sanitation,Uttar Pradesh,376.5,392.5,35,62,91.4,85.9,5,0,1,0,0,0,2.1,0,Delivered within plan,Land acquisition
+HIST-01387,Power,Madhya Pradesh,129.3,129.4,20,28,100.0,100.0,6,0,0,0,0,0,1.0,0,Delivered within plan,No material delay
+HIST-01388,Roads,Bihar,1524.1,1553.8,61,14,26.0,20.9,12,0,0,0,0,0,3.1,0,Delivered within plan,No material delay
+HIST-01389,Industrial Corridors,Haryana,153.1,157.3,55,54,100.0,100.0,13,0,1,0,0,0,-1.2,1,1-month delay,Land acquisition
+HIST-01390,Ports,Karnataka,391.9,417.2,39,79,100.0,100.0,8,0,1,1,0,0,-1.0,6,6-month delay,Land acquisition
+HIST-01391,Roads,West Bengal,85.5,86.5,38,45,93.4,94.0,8,2,0,0,0,0,8.9,3,3-month delay,Milestone slippage
+HIST-01392,Urban Transit,Rajasthan,197.4,217.2,73,68,100.0,91.4,17,1,0,1,1,0,6.5,4,4-month delay,Funding release
+HIST-01393,Roads,Maharashtra,148.0,156.1,48,16,37.7,30.9,14,3,0,0,0,0,6.1,5,5-month delay,Milestone slippage
+HIST-01394,Roads,Karnataka,999.1,1138.1,61,71,100.0,96.1,13,3,1,0,0,0,8.2,11,11-month delay,Land acquisition
+HIST-01395,Ports,Bihar,96.9,102.4,50,61,98.5,90.3,13,1,1,0,0,0,-0.7,0,Delivered within plan,Land acquisition
+HIST-01396,Roads,Andhra Pradesh,198.0,206.0,62,60,100.0,100.0,17,1,1,1,0,0,1.1,0,Delivered within plan,Land acquisition
+HIST-01397,Railways,West Bengal,301.7,329.2,35,12,19.0,5.7,8,0,0,1,1,0,-3.0,1,1-month delay,Funding release
+HIST-01398,Water & Sanitation,Jharkhand,376.9,422.8,66,45,61.0,49.0,18,1,0,0,1,0,13.1,3,3-month delay,Funding release
+HIST-01399,Urban Transit,Andhra Pradesh,669.4,700.0,51,77,98.2,96.2,9,2,0,0,1,0,5.5,1,1-month delay,Milestone slippage
+HIST-01400,Urban Transit,Uttar Pradesh,148.2,151.1,22,14,64.2,70.0,6,1,0,0,0,0,-1.9,3,3-month delay,No material delay
+HIST-01401,Airports,Odisha,109.8,112.2,56,47,85.7,72.8,11,1,0,0,0,0,5.0,3,3-month delay,No material delay
+HIST-01402,Water & Sanitation,Madhya Pradesh,344.9,351.3,25,65,100.0,96.8,6,1,0,0,0,0,5.5,0,Delivered within plan,No material delay
+HIST-01403,Airports,Telangana,349.8,395.3,42,63,100.0,89.6,13,2,1,0,0,1,12.2,9,9-month delay,Land acquisition
+HIST-01404,Roads,Maharashtra,73.9,85.3,58,65,100.0,100.0,15,3,1,0,0,1,3.3,8,8-month delay,Land acquisition
+HIST-01405,Roads,Rajasthan,791.8,806.3,12,37,100.0,98.3,4,0,1,0,0,0,-3.6,0,Delivered within plan,Land acquisition
+HIST-01406,Railways,Haryana,172.2,175.7,30,46,77.5,76.5,8,1,0,1,0,0,-5.1,1,1-month delay,Pending clearance
+HIST-01407,Power,Bihar,188.7,200.6,48,37,70.3,70.1,12,0,0,0,1,0,-8.0,2,2-month delay,Funding release
+HIST-01408,Urban Transit,Uttar Pradesh,445.4,496.6,50,70,99.1,100.0,10,1,0,0,1,0,4.0,3,3-month delay,Funding release
+HIST-01409,Urban Transit,Madhya Pradesh,219.6,232.4,53,82,100.0,95.7,12,2,0,0,0,0,10.7,0,Delivered within plan,Milestone slippage
+HIST-01410,Ports,Telangana,446.0,491.2,62,37,61.4,75.1,17,0,1,1,0,0,3.1,0,Delivered within plan,Land acquisition
+HIST-01411,Water & Sanitation,Madhya Pradesh,628.6,642.4,35,6,21.5,33.7,7,0,0,0,0,0,-6.1,1,1-month delay,No material delay
+HIST-01412,Power,Uttar Pradesh,1628.2,1727.1,23,48,100.0,94.5,5,2,0,0,0,0,11.0,0,Delivered within plan,Milestone slippage
+HIST-01413,Railways,Madhya Pradesh,101.5,115.1,49,74,100.0,98.9,10,1,0,1,1,0,4.3,2,2-month delay,Funding release
+HIST-01414,Urban Transit,Telangana,399.3,407.3,51,20,41.1,37.7,14,2,0,0,0,0,1.7,0,Delivered within plan,Milestone slippage
+HIST-01415,Water & Sanitation,Rajasthan,53.9,55.4,32,23,68.9,79.3,9,0,0,0,0,0,-5.5,0,Delivered within plan,No material delay
+HIST-01416,Ports,Gujarat,58.3,61.0,32,7,16.1,11.9,4,3,0,0,0,0,12.8,5,5-month delay,Milestone slippage
+HIST-01417,Power,Kerala,57.4,59.0,61,55,73.1,77.5,15,2,0,0,0,0,7.4,1,1-month delay,Milestone slippage
+HIST-01418,Water & Sanitation,Rajasthan,867.2,886.8,24,52,100.0,100.0,6,3,0,0,0,0,3.6,0,Delivered within plan,Milestone slippage
+HIST-01419,Urban Transit,Tamil Nadu,270.6,282.1,22,7,47.4,41.2,5,1,1,0,0,0,1.1,0,Delivered within plan,Land acquisition
+HIST-01420,Roads,Kerala,873.6,921.2,31,15,46.0,45.0,12,1,0,0,0,1,3.6,2,2-month delay,No material delay
+HIST-01421,Power,Maharashtra,202.0,203.7,37,62,94.3,83.4,8,0,0,0,0,0,-4.3,1,1-month delay,No material delay
+HIST-01422,Power,Kerala,177.0,180.3,44,11,25.2,30.4,11,0,0,0,0,0,-7.5,0,Delivered within plan,No material delay
+HIST-01423,Water & Sanitation,West Bengal,232.4,238.7,47,73,100.0,97.5,12,1,0,0,0,0,9.2,3,3-month delay,No material delay
+HIST-01424,Ports,Karnataka,66.8,68.3,35,26,57.0,52.7,7,0,1,0,0,0,-4.7,1,1-month delay,Land acquisition
+HIST-01425,Roads,Tamil Nadu,131.8,139.0,59,13,19.3,26.6,15,3,0,0,1,0,4.8,0,Delivered within plan,Milestone slippage
+HIST-01426,Roads,West Bengal,128.1,147.1,47,39,93.8,90.2,10,1,1,0,0,1,0.3,6,6-month delay,Land acquisition
+HIST-01427,Roads,Jharkhand,151.0,155.9,14,19,100.0,100.0,4,0,0,1,0,0,-2.8,1,1-month delay,Pending clearance
+HIST-01428,Power,Rajasthan,181.6,189.9,26,24,88.4,87.0,6,1,0,0,0,0,8.1,0,Delivered within plan,No material delay
+HIST-01429,Industrial Corridors,Gujarat,196.9,203.4,43,63,94.4,100.0,9,0,0,0,0,1,-1.3,0,Delivered within plan,No material delay
+HIST-01430,Urban Transit,Odisha,466.2,466.2,57,57,94.9,99.8,13,0,0,0,0,0,-1.7,1,1-month delay,No material delay
+HIST-01431,Roads,Maharashtra,299.1,315.8,40,27,68.3,69.5,9,0,0,0,1,0,-0.3,0,Delivered within plan,Funding release
+HIST-01432,Railways,Maharashtra,200.2,219.2,39,63,90.6,89.9,12,0,1,0,0,1,-1.4,5,5-month delay,Land acquisition
+HIST-01433,Railways,Odisha,82.5,88.6,31,12,32.6,23.0,8,0,0,1,1,0,-5.4,0,Delivered within plan,Funding release
+HIST-01434,Railways,Madhya Pradesh,366.1,372.3,28,20,73.0,64.3,9,1,0,0,0,0,3.7,0,Delivered within plan,No material delay
+HIST-01435,Ports,Madhya Pradesh,282.9,313.6,61,17,33.0,43.6,15,2,1,0,0,0,13.0,1,1-month delay,Land acquisition
+HIST-01436,Power,Haryana,439.4,445.6,25,24,98.7,96.0,7,1,0,1,0,0,4.2,0,Delivered within plan,Pending clearance
+HIST-01437,Industrial Corridors,Uttar Pradesh,179.5,188.9,79,75,95.6,100.0,17,1,0,1,0,0,4.6,1,1-month delay,Pending clearance
+HIST-01438,Ports,Uttar Pradesh,67.5,69.1,55,37,58.6,59.6,11,0,0,1,0,0,-2.5,0,Delivered within plan,Pending clearance
+HIST-01439,Railways,Maharashtra,184.8,213.1,20,81,98.0,100.0,7,1,1,1,0,0,12.4,5,5-month delay,Land acquisition
+HIST-01440,Railways,Kerala,123.8,126.9,52,36,60.4,74.0,16,2,0,0,0,0,11.7,0,Delivered within plan,Milestone slippage
+HIST-01441,Water & Sanitation,West Bengal,460.4,465.6,69,23,36.4,34.5,16,3,0,0,0,0,6.9,0,Delivered within plan,Milestone slippage
+HIST-01442,Airports,Tamil Nadu,601.7,664.3,42,7,41.4,40.1,12,5,0,0,0,0,16.4,1,1-month delay,Milestone slippage
+HIST-01443,Urban Transit,Maharashtra,373.4,410.0,60,80,92.7,89.4,14,1,0,1,1,0,1.3,4,4-month delay,Funding release
+HIST-01444,Railways,Andhra Pradesh,4244.1,4653.1,73,40,56.7,57.1,22,1,1,0,0,0,12.6,0,Delivered within plan,Land acquisition
+HIST-01445,Railways,Kerala,509.8,568.4,38,33,77.6,86.1,10,0,1,1,0,0,-5.3,0,Delivered within plan,Land acquisition
+HIST-01446,Railways,Kerala,37.9,44.7,52,78,98.5,92.8,10,1,1,0,1,0,4.7,8,8-month delay,Land acquisition
+HIST-01447,Railways,Jharkhand,125.6,127.4,18,14,82.2,97.2,6,1,0,0,0,0,1.6,0,Delivered within plan,No material delay
+HIST-01448,Railways,Maharashtra,164.8,174.3,41,35,80.9,100.0,10,1,0,1,0,0,10.0,0,Delivered within plan,Pending clearance
+HIST-01449,Water & Sanitation,Tamil Nadu,130.8,145.0,30,81,100.0,99.0,10,1,1,0,0,0,9.2,1,1-month delay,Land acquisition
+HIST-01450,Ports,Gujarat,258.7,278.1,21,53,90.6,86.1,4,1,1,0,0,0,0.3,8,8-month delay,Land acquisition
+HIST-01451,Industrial Corridors,Maharashtra,83.4,88.3,56,11,27.0,31.2,18,1,0,0,1,0,-3.5,1,1-month delay,Funding release
+HIST-01452,Roads,Karnataka,406.1,412.7,21,70,83.3,90.7,5,1,0,0,0,0,2.6,1,1-month delay,No material delay
+HIST-01453,Urban Transit,Haryana,408.2,445.2,55,76,100.0,90.5,16,1,0,0,0,1,-1.9,0,Delivered within plan,No material delay
+HIST-01454,Railways,Madhya Pradesh,237.1,241.1,29,39,97.7,99.9,7,0,0,0,0,0,4.8,1,1-month delay,No material delay
+HIST-01455,Urban Transit,Madhya Pradesh,276.0,280.9,33,59,97.8,97.2,9,1,0,0,0,0,-3.1,3,3-month delay,No material delay
+HIST-01456,Water & Sanitation,West Bengal,159.6,163.1,54,17,41.4,31.4,14,1,0,0,0,0,-1.4,0,Delivered within plan,No material delay
+HIST-01457,Railways,Andhra Pradesh,276.0,285.6,19,29,89.5,96.2,4,0,0,0,0,0,3.9,0,Delivered within plan,No material delay
+HIST-01458,Roads,Uttar Pradesh,316.9,329.0,32,60,100.0,98.9,6,1,0,0,1,0,12.4,0,Delivered within plan,Funding release
+HIST-01459,Roads,Madhya Pradesh,177.3,206.7,72,59,88.4,92.1,19,4,1,1,0,1,13.5,10,10-month delay,Land acquisition
+HIST-01460,Roads,Odisha,277.2,289.2,49,41,69.0,58.6,8,1,0,0,0,0,-0.7,0,Delivered within plan,No material delay
+HIST-01461,Roads,Bihar,135.0,136.8,36,81,94.1,77.0,12,0,0,0,0,0,-3.1,0,Delivered within plan,No material delay
+HIST-01462,Industrial Corridors,Madhya Pradesh,730.4,882.3,22,25,99.9,71.8,4,3,1,1,0,1,10.4,9,9-month delay,Land acquisition
+HIST-01463,Ports,Telangana,423.6,452.1,30,79,100.0,88.2,7,1,0,1,0,0,9.5,2,2-month delay,Pending clearance
+HIST-01464,Roads,Odisha,132.9,148.0,31,83,99.0,93.2,6,2,1,0,0,0,7.1,8,8-month delay,Land acquisition
+HIST-01465,Railways,West Bengal,807.5,917.6,49,60,99.5,100.0,11,4,1,0,0,0,12.1,0,Delivered within plan,Land acquisition
+HIST-01466,Ports,Karnataka,209.2,209.3,50,21,42.5,25.0,12,0,0,0,0,0,-3.0,0,Delivered within plan,No material delay
+HIST-01467,Railways,Madhya Pradesh,440.4,450.0,69,68,99.2,99.3,17,1,0,1,0,0,-4.5,0,Delivered within plan,Pending clearance
+HIST-01468,Ports,Odisha,371.2,412.1,34,82,100.0,100.0,6,1,1,0,0,0,6.8,8,8-month delay,Land acquisition
+HIST-01469,Railways,Haryana,284.4,289.9,58,47,87.3,90.1,14,1,0,1,0,0,4.5,0,Delivered within plan,Pending clearance
+HIST-01470,Water & Sanitation,Jharkhand,1007.4,1008.2,54,8,10.8,13.7,9,0,0,0,0,0,1.9,0,Delivered within plan,No material delay
+HIST-01471,Railways,Odisha,841.0,871.3,75,67,86.4,83.5,17,0,0,0,0,0,1.3,1,1-month delay,No material delay
+HIST-01472,Industrial Corridors,Andhra Pradesh,701.0,780.4,48,78,93.9,74.7,10,0,0,1,0,1,5.4,2,2-month delay,Pending clearance
+HIST-01473,Roads,Uttar Pradesh,812.4,895.6,46,20,40.0,21.2,12,1,1,0,0,0,-2.7,8,8-month delay,Land acquisition
+HIST-01474,Industrial Corridors,Haryana,205.8,206.2,36,20,55.4,58.3,5,1,0,0,0,0,0.8,1,1-month delay,No material delay
+HIST-01475,Railways,Tamil Nadu,225.8,233.9,50,66,83.6,69.3,13,0,0,1,0,0,3.4,1,1-month delay,Pending clearance
+HIST-01476,Industrial Corridors,Bihar,1245.3,1418.7,51,71,100.0,90.0,12,1,1,0,1,0,-0.3,0,Delivered within plan,Land acquisition
+HIST-01477,Water & Sanitation,Bihar,243.9,251.2,46,33,69.4,78.7,12,0,0,0,0,0,6.1,3,3-month delay,No material delay
+HIST-01478,Urban Transit,West Bengal,363.4,412.7,12,76,100.0,100.0,4,0,1,1,0,1,5.5,8,8-month delay,Land acquisition
+HIST-01479,Urban Transit,Tamil Nadu,146.4,154.0,42,58,83.4,95.6,11,1,0,0,0,1,6.7,1,1-month delay,No material delay
+HIST-01480,Ports,Jharkhand,919.2,1057.0,35,42,100.0,96.0,9,1,1,0,1,0,2.0,0,Delivered within plan,Land acquisition
+HIST-01481,Water & Sanitation,Telangana,135.8,144.5,37,7,30.1,34.1,6,0,0,0,0,1,-0.4,0,Delivered within plan,No material delay
+HIST-01482,Ports,Rajasthan,481.7,536.7,51,77,100.0,100.0,14,1,1,1,0,0,3.6,5,5-month delay,Land acquisition
+HIST-01483,Ports,Karnataka,382.7,440.9,12,71,92.2,85.8,5,3,1,1,0,0,9.2,9,9-month delay,Land acquisition
+HIST-01484,Roads,Haryana,114.3,116.5,33,39,91.2,84.8,10,1,0,1,0,0,-1.1,3,3-month delay,Pending clearance
+HIST-01485,Airports,Jharkhand,2385.3,2420.0,32,47,100.0,91.7,6,0,0,0,0,0,-0.4,0,Delivered within plan,No material delay
+HIST-01486,Roads,Uttar Pradesh,1159.0,1230.4,56,79,96.1,97.0,13,2,0,0,0,0,7.3,0,Delivered within plan,Milestone slippage
+HIST-01487,Roads,Rajasthan,252.1,265.3,43,67,100.0,97.1,10,0,1,0,0,0,-2.9,5,5-month delay,Land acquisition
+HIST-01488,Industrial Corridors,Telangana,540.7,561.0,43,17,39.8,50.6,8,0,1,0,0,0,-8.1,1,1-month delay,Land acquisition
+HIST-01489,Railways,Bihar,312.3,327.4,23,13,55.2,69.7,9,1,0,1,0,0,5.3,0,Delivered within plan,Pending clearance
+HIST-01490,Urban Transit,Rajasthan,86.1,96.3,21,75,100.0,100.0,4,0,1,0,1,0,7.4,7,7-month delay,Land acquisition
+HIST-01491,Water & Sanitation,Kerala,227.6,232.5,56,24,51.8,67.2,13,4,0,0,0,0,10.9,0,Delivered within plan,Milestone slippage
+HIST-01492,Water & Sanitation,Maharashtra,102.5,115.1,71,42,60.5,52.0,19,1,1,1,0,0,-3.9,9,9-month delay,Land acquisition
+HIST-01493,Railways,Tamil Nadu,65.8,66.9,29,51,98.7,100.0,5,1,0,1,0,0,2.3,0,Delivered within plan,Pending clearance
+HIST-01494,Airports,Andhra Pradesh,335.5,338.3,72,61,88.0,89.9,21,0,0,0,0,0,2.5,0,Delivered within plan,No material delay
+HIST-01495,Water & Sanitation,Kerala,119.8,124.7,44,22,57.2,66.3,8,2,0,0,0,1,-0.7,0,Delivered within plan,Milestone slippage
+HIST-01496,Railways,Kerala,379.9,418.8,43,23,36.0,35.3,15,3,0,0,0,0,6.3,0,Delivered within plan,Milestone slippage
+HIST-01497,Water & Sanitation,Jharkhand,290.8,301.9,34,39,97.6,100.0,8,0,0,0,0,0,-1.6,0,Delivered within plan,No material delay
+HIST-01498,Power,Telangana,145.5,156.0,67,55,91.2,92.1,13,0,0,0,1,0,-0.1,0,Delivered within plan,Funding release
+HIST-01499,Ports,Maharashtra,336.6,344.6,53,32,38.2,45.3,12,1,0,0,0,0,3.0,4,4-month delay,No material delay
+HIST-01500,Railways,Karnataka,665.4,715.9,32,41,100.0,89.1,6,2,1,0,0,0,1.8,7,7-month delay,Land acquisition
