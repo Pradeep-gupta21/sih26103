@@ -1,3 +1,5 @@
+import type { BoundaryCategory, CollisionType, Severity } from "@/lib/gis-api";
+
 export type ProjectRiskInput = {
   sector: string;
   state: string;
@@ -62,28 +64,35 @@ export async function predictProjectRisk(input: ProjectRiskInput): Promise<Proje
 
 // --- Historical project similarity ---
 
+// Mirrors backend/app/schemas/similarity.py (HistoricalProjectMatch / HistoricalEvidence / SimilarityResponse).
 export type HistoricalProjectMatch = {
   project_id: string;
-  similarity_percentage: number;
+  project_name: string;
   sector: string;
   state: string;
-  original_cost: number;
+  similarity_score: number;
   actual_delay_months: number;
-  actual_outcome: string;
+  actual_cost_overrun_percentage: number;
+  final_status: string;
   primary_delay_cause: string;
+  intervention_taken: string;
+  intervention_outcome: string;
 };
 
-export type SimilarityEvidence = {
-  similar_projects_count: number;
-  delayed_projects_count: number;
-  delayed_over_six_months_count: number;
-  delay_rate: number;
-  summary: string;
+export type HistoricalEvidence = {
+  projects_analyzed: number;
+  average_similarity: number;
+  average_actual_delay_months: number;
+  average_cost_overrun_percentage: number;
+  projects_with_significant_delay: number;
+  significant_delay_percentage: number;
+  most_common_delay_cause: string;
 };
 
 export type SimilarityResponse = {
-  matches: HistoricalProjectMatch[];
-  evidence: SimilarityEvidence;
+  similar_projects: HistoricalProjectMatch[];
+  historical_evidence: HistoricalEvidence;
+  historical_summary: string;
 };
 
 export type ProjectIntelligenceResponse = {
@@ -106,6 +115,10 @@ export type ProjectIntelligenceResponse = {
     most_common_delay_cause: string;
   };
   historical_summary: string;
+  /** Present only when latitude/longitude were supplied to the pipeline. */
+  gis_screening?: GisScreening | null;
+  priority?: PriorityResult | null;
+  interventions?: InterventionRecommendation[];
 };
 
 async function readApiError(response: Response, fallback: string): Promise<Error> {
@@ -162,10 +175,7 @@ export async function findSimilarProjects(input: ProjectRiskInput): Promise<Simi
   return response.json() as Promise<SimilarityResponse>;
 }
 
-<<<<<<< HEAD
 // --- Full intelligence pipeline (risk -> SHAP -> similarity -> GIS -> priority -> interventions) ---
-
-import type { BoundaryCategory, CollisionType, Severity } from "@/lib/gis-api";
 
 /**
  * The GIS screening section of the intelligence response.
@@ -231,18 +241,6 @@ export type InterventionRecommendation = {
   evidence_source: string;
 };
 
-export type ProjectIntelligenceResponse = {
-  project_risk: ProjectRiskResponse["project_risk"];
-  top_risk_factors: RiskFactor[];
-  risk_summary: string;
-  similar_projects: HistoricalProjectMatch[];
-  historical_evidence: HistoricalEvidence;
-  historical_summary: string;
-  gis_screening: GisScreening | null;
-  priority: PriorityResult | null;
-  interventions: InterventionRecommendation[];
-};
-
 /**
  * Run the whole pipeline in one call.
  *
@@ -264,7 +262,7 @@ export async function fetchProjectIntelligence(
   }
   return response.json() as Promise<ProjectIntelligenceResponse>;
 }
-=======
+
 export type GISBufferInput = { project_id?: string; latitude: number; longitude: number; buffer_distance_km: number; zone_categories?: string[] };
 export type ZoneCollision = { zone_id: string; zone_name: string; zone_category: string; state: string; designation: string; clearance_type_required: string; distance_to_boundary_km: number; is_direct_intersection: boolean; intersection_area_sq_km: number; severity: "CRITICAL" | "HIGH" | "WARNING" };
 export type GISFeatureProperties = { name?: string; category?: string; state?: string; collision_severity?: string; clearance_type_required?: string; [key: string]: unknown };
@@ -307,6 +305,41 @@ export function getDocumentDownloadUrl(projectId: string, documentId: string): s
   return `${API_URL}/api/v1/projects/${encodeURIComponent(projectId)}/documents/${encodeURIComponent(documentId)}/download`;
 }
 
+// --- Document analyzer (POST /documents/extract) ---
+
+export type ExtractionConfidence = "high" | "low";
+export type ExtractedValueType = "text" | "number" | "integer" | "boolean";
+/** One prediction input as read from a PDF. `value` is null when the document did not state it. */
+export type ExtractedField = {
+  field: string;
+  label: string;
+  value_type: ExtractedValueType;
+  value: string | number | boolean | null;
+  confidence: ExtractionConfidence | null;
+  source_snippet: string | null;
+  page: number | null;
+  note: string | null;
+};
+export type DocumentExtractionResponse = {
+  filename: string;
+  page_count: number;
+  text_characters: number;
+  /** One entry per ProjectRiskInput field, in model order. */
+  fields: ExtractedField[];
+  /** latitude / longitude when the document states them; optional to the pipeline. */
+  optional_fields: ExtractedField[];
+  unmatched_text: string[];
+  warnings: string[];
+};
+
+export async function extractDocumentFields(file: File): Promise<DocumentExtractionResponse> {
+  const formData = new FormData();
+  formData.append("file", file);
+  const response = await fetch(`${API_URL}/api/v1/documents/extract`, { method: "POST", body: formData });
+  if (!response.ok) throw await readApiError(response, "Document extraction failed");
+  return response.json() as Promise<DocumentExtractionResponse>;
+}
+
 export type SlaStatusResponse = {
   project_id: string;
   milestone: string;
@@ -333,4 +366,3 @@ export async function getProjectSla(projectId: string): Promise<SlaStatusRespons
   }
   return response.json() as Promise<SlaStatusResponse>;
 }
->>>>>>> arushi/main

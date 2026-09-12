@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-<<<<<<< HEAD
 from app.config import spatial_config
 from app.models.projection import validate_buffer_meters, validate_coordinates
 from app.schemas.gis_signal import GISIntelligenceSignal
@@ -44,10 +43,8 @@ class ProjectIntelligenceRequest(ProjectRiskRequest):
     @property
     def has_location(self) -> bool:
         return self.latitude is not None and self.longitude is not None
-=======
 from app.schemas.project import ProjectRiskResponse, ProjectRiskSummary, RiskFactor
 from app.schemas.similarity import SimilarityResponse
->>>>>>> arushi/main
 
 
 class IntelligenceSimilarProject(BaseModel):
@@ -88,14 +85,11 @@ class ProjectIntelligenceResponse(BaseModel):
     similar_projects: list[IntelligenceSimilarProject]
     historical_evidence: IntelligenceHistoricalEvidence
     historical_summary: str
-<<<<<<< HEAD
     gis_screening: GISIntelligenceSignal | None = Field(
         default=None, description="Present only when latitude/longitude were supplied."
     )
     priority: PriorityResponse | None = None
     interventions: list[InterventionRecommendation] = Field(default_factory=list)
-=======
     # Retain the original nested contract while exposing the newer flat fields.
     prediction: ProjectRiskResponse
     similarity: SimilarityResponse
->>>>>>> arushi/main

@@ -23,9 +23,10 @@ export function GisScreeningPanel({
   projectId,
 }: {
   screening: GisScreening | null;
-  projectId: string;
+  /** Registry project id, used to preselect the site on /gis-check. Absent for document-sourced reports. */
+  projectId?: string;
 }) {
-  const openHref = `/gis-check?projectId=${encodeURIComponent(projectId)}`;
+  const openHref = projectId ? `/gis-check?projectId=${encodeURIComponent(projectId)}` : "/gis-check";
 
   if (!screening) {
     return (

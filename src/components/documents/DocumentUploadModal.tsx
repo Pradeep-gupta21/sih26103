@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import {
   AlertCircle,
   CheckCircle2,
@@ -26,6 +26,7 @@ import {
   uploadProjectDocument,
   updateProjectDocument,
 } from "@/lib/prediction-api";
+import DocumentDropzone, { fileExtension, validateDocumentFile } from "@/components/documents/DocumentDropzone";
 
 interface DocumentUploadModalProps {
   isOpen: boolean;
@@ -49,21 +50,6 @@ export interface QueuedFileItem {
   category: DocumentCategory;
   description?: string;
 }
-
-const SUPPORTED_EXTENSIONS = [
-  ".pdf",
-  ".doc",
-  ".docx",
-  ".xls",
-  ".xlsx",
-  ".csv",
-  ".jpg",
-  ".jpeg",
-  ".png",
-];
-
-const MAX_FILE_SIZE_MB = 20;
-const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
 
 const CATEGORIES: DocumentCategory[] = [
   "Detailed Project Report (DPR)",
@@ -110,7 +96,6 @@ export default function DocumentUploadModal({
     "Detailed Project Report (DPR)"
   );
   const [globalDescription, setGlobalDescription] = useState("");
-  const [isDragging, setIsDragging] = useState(false);
   const [isUploadingAny, setIsUploadingAny] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [generalMessage, setGeneralMessage] = useState<{
@@ -118,8 +103,6 @@ export default function DocumentUploadModal({
     text: string;
   } | null>(null);
 
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const dropzoneRef = useRef<HTMLDivElement>(null);
 
   const loadDocuments = async () => {
     setIsLoading(true);
@@ -161,17 +144,9 @@ export default function DocumentUploadModal({
   const addFilesToQueue = (files: FileList | File[]) => {
     const newItems: QueuedFileItem[] = [];
     Array.from(files).forEach((file) => {
-      const ext = `.${file.name.split(".").pop()?.toLowerCase() ?? ""}`;
-      let status: QueuedFileStatus = "Waiting";
-      let errorMessage: string | undefined;
-
-      if (!SUPPORTED_EXTENSIONS.includes(ext)) {
-        status = "Failed";
-        errorMessage = `Unsupported type (${ext}). Allowed: PDF, DOC, DOCX, XLS, XLSX, CSV, JPG, JPEG, PNG.`;
-      } else if (file.size > MAX_FILE_SIZE_BYTES) {
-        status = "Failed";
-        errorMessage = `Exceeds maximum size of ${MAX_FILE_SIZE_MB} MB.`;
-      }
+      const ext = fileExtension(file);
+      const errorMessage = validateDocumentFile(file) ?? undefined;
+      const status: QueuedFileStatus = errorMessage ? "Failed" : "Waiting";
 
       newItems.push({
         id: `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`,
@@ -188,32 +163,6 @@ export default function DocumentUploadModal({
     });
     setFileQueue((prev) => [...prev, ...newItems]);
     setGeneralMessage(null);
-  };
-
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(true);
-  };
-
-  const handleDragLeave = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-  };
-
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-    if (e.dataTransfer.files?.length > 0) {
-      addFilesToQueue(e.dataTransfer.files);
-    }
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (files && files.length > 0) {
-      addFilesToQueue(files);
-      if (fileInputRef.current) fileInputRef.current.value = "";
-    }
   };
 
   const removeQueueItem = (id: string) => {
@@ -409,53 +358,7 @@ export default function DocumentUploadModal({
               <UploadCloud size={16} /> Select &amp; Upload Files
             </h3>
 
-            <div
-              ref={dropzoneRef}
-              className={`doc-dropzone${isDragging ? " dragging" : ""}`}
-              onDragOver={handleDragOver}
-              onDragLeave={handleDragLeave}
-              onDrop={handleDrop}
-              onClick={() => fileInputRef.current?.click()}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  fileInputRef.current?.click();
-                }
-              }}
-              tabIndex={0}
-              role="button"
-              aria-label="Drag and drop documents here or click to browse files"
-            >
-              <input
-                type="file"
-                ref={fileInputRef}
-                onChange={handleFileChange}
-                accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png"
-                multiple
-                style={{ display: "none" }}
-                aria-hidden="true"
-              />
-              <div className="doc-dropzone-prompt">
-                <UploadCloud size={30} className="dropzone-icon" />
-                <p>
-                  <strong>Drag &amp; drop documents here</strong>
-                </p>
-                <p className="doc-subprompt">
-                  or <span className="browse-link">browse files</span>
-                </p>
-                <div className="doc-format-badges">
-                  {["PDF","DOC","DOCX","XLS","XLSX","CSV","JPG","JPEG","PNG"].map(
-                    (fmt) => (
-                      <span key={fmt}>{fmt}</span>
-                    )
-                  )}
-                </div>
-                <small className="doc-size-notice">
-                  Maximum file size: <strong>{MAX_FILE_SIZE_MB} MB</strong> per
-                  file
-                </small>
-              </div>
-            </div>
+            <DocumentDropzone onFiles={addFilesToQueue} />
 
             <div className="doc-form-row">
               <div className="doc-form-group">

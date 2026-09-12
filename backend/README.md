@@ -17,11 +17,9 @@ This phase implements:
 - Pydantic request and response validation
 - Health check and CORS for the Next.js frontend
 
-<<<<<<< HEAD
 Anomaly detection, RAG, LLM features, and other product capabilities are intentionally out of scope. Authentication exists only for the GIS API (see below) and is a deliberately minimal seam, not a general auth system.
-=======
+
 The SLA alert matrix is an additional capability and does not change the prediction model or project-intelligence contract.
->>>>>>> arushi/main
 
 ## Project setup
 
@@ -393,7 +391,6 @@ Example response (verified live output):
 }
 ```
 
-<<<<<<< HEAD
 ## GIS boundary data layer (Feature 4)
 
 Stores environmental and otherwise restricted geographic boundaries -- wildlife sanctuaries, national parks, forests, eco-sensitive zones, tiger reserves, Ramsar wetlands, and other restricted zones -- so later features can ask spatial questions about project sites. This phase is the data layer only: model, storage, validation, import, and seed data. No API routes, no frontend, no collision/intersection calculation.
@@ -794,7 +791,6 @@ Example `gis_screening` (verified live output):
 }
 ```
 
-=======
 ### SLA alert endpoints
 
 - `GET /api/v1/projects/{project_id}/sla` evaluates configured SLA status and applies duplicate-protected notification rules.
@@ -803,7 +799,6 @@ Example `gis_screening` (verified live output):
 - `GET /api/v1/projects/{project_id}/sla/audit` returns masked notification audit events.
 
 `GREEN` is healthy, `AMBER` is approaching the configured deadline, `RED` is breached, and `CRITICAL` is a breach with a high saved-model risk score. With `MSG91_ENABLED=false`, breach alerts are recorded as `dry_run` and no provider request is made. MSG91 credentials are never returned by an API.
->>>>>>> arushi/main
 
 ## Architecture
 

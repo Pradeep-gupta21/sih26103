@@ -14,21 +14,17 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
-  Activity,
   AlertTriangle,
   ArrowLeft,
   CheckCircle2,
   ChevronDown,
   ClipboardList,
   Crosshair,
-  Gauge,
   History,
   Info,
-  LayoutDashboard,
   Loader2,
   Map as MapIcon,
   Search,
-  Settings,
   ShieldAlert,
   ShieldCheck,
   Signal,
@@ -56,6 +52,7 @@ import {
   type GeoJsonFeatureCollection,
 } from "@/lib/gis-api";
 import { BUFFER_PRESETS, GIS_PROJECTS } from "@/lib/gis-projects";
+import { Sidebar } from "../page";
 import {
   DEFAULT_LAYERS,
   LAYER_OPTIONS,
@@ -78,68 +75,6 @@ type ErrorState =
   | { kind: "server"; message: string }
   | { kind: "network"; message: string };
 
-function Sidebar() {
-  return (
-    <aside className="sidebar">
-      <div className="brand">
-        <span className="brand-mark">
-          <Activity size={17} />
-        </span>
-        <span>PAIMANA</span>
-        <small>INTELLIGENCE</small>
-      </div>
-      <div className="workspace-label">
-        WORKSPACE <ChevronDown size={13} />
-      </div>
-      <div className="workspace-name">
-        National Infrastructure <span className="online-dot" />
-      </div>
-      <nav>
-        <p className="nav-label">MONITORING</p>
-        <Link href="/" className="nav-item">
-          <LayoutDashboard size={17} />
-          Overview
-        </Link>
-        <Link href="/" className="nav-item">
-          <ClipboardList size={17} />
-          Project portfolio
-        </Link>
-        <button type="button" className="nav-item">
-          <AlertTriangle size={17} />
-          Risk signals
-          <b>7</b>
-        </button>
-        <Link href="/gis-check" className="nav-item active" aria-current="page">
-          <MapIcon size={17} />
-          Geospatial view
-        </Link>
-        <p className="nav-label second">DECISIONS</p>
-        <Link href="/" className="nav-item">
-          <ShieldCheck size={17} />
-          Interventions
-        </Link>
-        <Link href="/" className="nav-item">
-          <Gauge size={17} />
-          Scenario lab
-        </Link>
-      </nav>
-      <div className="sidebar-bottom">
-        <button className="nav-item" type="button">
-          <Settings size={17} />
-          Workspace settings
-        </button>
-        <div className="user-mini">
-          <span>AS</span>
-          <div>
-            <strong>Ananya Sharma</strong>
-            <small>Portfolio director</small>
-          </div>
-        </div>
-      </div>
-    </aside>
-  );
-}
-
 function GisCheckWorkspace() {
   // Deep link from the Project Intelligence report: /gis-check?projectId=EFC-04.
   // Resolved once, at mount, as the initial selection -- after that the dropdown owns
@@ -149,6 +84,7 @@ function GisCheckWorkspace() {
   const initialProject =
     GIS_PROJECTS.find((project) => project.id === requestedProjectId) ?? GIS_PROJECTS[0];
 
+  const [activeNav, setActiveNav] = useState("Geospatial view");
   const [projectId, setProjectId] = useState<string>(initialProject.id);
   const [latitude, setLatitude] = useState<string>(String(initialProject.latitude ?? ""));
   const [longitude, setLongitude] = useState<string>(String(initialProject.longitude ?? ""));
@@ -352,7 +288,7 @@ function GisCheckWorkspace() {
 
   return (
     <div className="app-shell">
-      <Sidebar />
+      <Sidebar active={activeNav} setActive={setActiveNav} />
       <main className="main-content">
         <header className="topbar">
           <div className="mobile-brand">
