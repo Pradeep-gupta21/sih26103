@@ -1041,3 +1041,11 @@ button, input { font: inherit; }
   .analyses-open > span:nth-child(2), .analyses-open > span:nth-child(3), .analyses-open > span:nth-child(4), .analyses-open > span:nth-child(5) { grid-column: span 1; }
   .analyses-open > span:nth-child(2) { grid-column: span 2; }
 }
+
+/* --- Dashboard: active risk-signals filter --- */
+.active-filter { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: #eef3ed; border: 1px solid #d5e0d6; border-left: 3px solid #557664; padding: 16px 20px; margin: -14px 0 22px; }
+.active-filter p { margin: 8px 0 0; color: #53645a; font-size: 12px; line-height: 1.6; max-width: 900px; }
+.active-filter p strong { color: #1c211f; }
+.active-filter .export-button { flex: 0 0 auto; background: transparent; border: 1px solid #557664; color: #41644f; }
+.active-filter .export-button:hover { background: #e2ebe2; }
+@media (max-width: 700px) { .active-filter { flex-direction: column; align-items: stretch; } }
