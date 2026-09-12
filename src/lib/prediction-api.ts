@@ -1,4 +1,5 @@
 import type { BoundaryCategory, CollisionType, Severity } from "@/lib/gis-api";
+import { getDemoDisplayName } from "@/lib/demo-auth";
 
 export type ProjectRiskInput = {
   sector: string;
@@ -285,7 +286,7 @@ export async function fetchProjectDocuments(projectId: string): Promise<Document
   if (!response.ok) throw new Error(`Failed to fetch documents (${response.status})`);
   return response.json() as Promise<DocumentListResponse>;
 }
-export async function uploadProjectDocument(projectId: string, file: File, category: DocumentCategory = "Other / Supporting Document", description?: string, uploader = "Ananya Sharma"): Promise<DocumentUploadResponse> {
+export async function uploadProjectDocument(projectId: string, file: File, category: DocumentCategory = "Other / Supporting Document", description?: string, uploader = getDemoDisplayName()): Promise<DocumentUploadResponse> {
   const formData = new FormData(); formData.append("file", file); formData.append("category", category); if (description) formData.append("description", description); formData.append("uploader", uploader);
   const response = await fetch(`${API_URL}/api/v1/projects/${encodeURIComponent(projectId)}/documents`, { method: "POST", body: formData });
   if (!response.ok) throw new Error(`Document upload failed (${response.status})`);

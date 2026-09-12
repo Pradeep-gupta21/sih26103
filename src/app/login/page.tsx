@@ -22,7 +22,7 @@ export default function LoginPage() {
       setError("The email or password is incorrect.");
       return;
     }
-    startDemoSession();
+    startDemoSession(email);
     router.replace("/portfolio");
   }
 

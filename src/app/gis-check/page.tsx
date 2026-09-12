@@ -52,6 +52,7 @@ import {
   type GeoJsonFeatureCollection,
 } from "@/lib/gis-api";
 import { BUFFER_PRESETS, GIS_PROJECTS } from "@/lib/gis-projects";
+import { useDemoDisplayName } from "@/lib/demo-auth";
 import { Sidebar } from "../page";
 import {
   DEFAULT_LAYERS,
@@ -76,6 +77,7 @@ type ErrorState =
   | { kind: "network"; message: string };
 
 function GisCheckWorkspace() {
+  const displayName = useDemoDisplayName();
   // Deep link from the Project Intelligence report: /gis-check?projectId=EFC-04.
   // Resolved once, at mount, as the initial selection -- after that the dropdown owns
   // the value, so a later re-render cannot fight the user's choice.
@@ -307,7 +309,7 @@ function GisCheckWorkspace() {
               <span>Search projects</span>
               <kbd>Cmd K</kbd>
             </button>
-            <div className="avatar">AS</div>
+            <div className="avatar" aria-label={`Signed in as ${displayName}`}>{displayName.slice(0, 2).toUpperCase()}</div>
           </div>
         </header>
 
