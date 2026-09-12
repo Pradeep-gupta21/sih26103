@@ -58,3 +58,6 @@ backend/data/auth/
 
 # GIS assessment audit log: runtime state, written by the API.
 backend/data/gis/assessments.json
+# Saved document analyses: user-created runtime state, not registry data.
+backend/data/saved_analyses.db
+.env.local

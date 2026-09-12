@@ -340,6 +340,53 @@ export async function extractDocumentFields(file: File): Promise<DocumentExtract
   return response.json() as Promise<DocumentExtractionResponse>;
 }
 
+// --- Saved document analyses (/analyses) ---
+// Mirrors backend/app/schemas/analysis.py. Kept apart from ProjectRecord on purpose: these are
+// document-derived records a user chose to keep, not rows of the project registry.
+
+export type SavedFieldMeta = { confidence: ExtractionConfidence | null; edited: boolean; source_snippet?: string | null; page?: number | null };
+export type SavedDocument = { filename: string; page_count: number };
+export type SavedAnalysisCreate = {
+  name: string;
+  document: SavedDocument;
+  confirmed_values: ProjectRiskInput;
+  latitude?: number | null;
+  longitude?: number | null;
+  field_metadata: Record<string, SavedFieldMeta>;
+  result: ProjectIntelligenceResponse;
+};
+export type SavedAnalysis = SavedAnalysisCreate & { id: string; saved_at: string };
+export type SavedAnalysisSummary = {
+  id: string;
+  name: string;
+  document_filename: string;
+  saved_at: string;
+  risk_percentage: number;
+  risk_level: string;
+  edited_field_count: number;
+};
+
+export async function createAnalysis(payload: SavedAnalysisCreate): Promise<SavedAnalysis> {
+  const response = await fetch(`${API_URL}/api/v1/analyses`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+  if (!response.ok) throw await readApiError(response, "Saving the analysis failed");
+  return response.json() as Promise<SavedAnalysis>;
+}
+export async function listAnalyses(): Promise<SavedAnalysisSummary[]> {
+  const response = await fetch(`${API_URL}/api/v1/analyses`);
+  if (!response.ok) throw await readApiError(response, "Loading saved analyses failed");
+  return response.json() as Promise<SavedAnalysisSummary[]>;
+}
+export async function getAnalysis(analysisId: string): Promise<SavedAnalysis> {
+  const response = await fetch(`${API_URL}/api/v1/analyses/${encodeURIComponent(analysisId)}`);
+  if (!response.ok) throw await readApiError(response, "Loading the saved analysis failed");
+  return response.json() as Promise<SavedAnalysis>;
+}
+export async function deleteAnalysis(analysisId: string): Promise<{ status: string; message: string }> {
+  const response = await fetch(`${API_URL}/api/v1/analyses/${encodeURIComponent(analysisId)}`, { method: "DELETE" });
+  if (!response.ok) throw await readApiError(response, "Deleting the analysis failed");
+  return response.json();
+}
+
 export type SlaStatusResponse = {
   project_id: string;
   milestone: string;

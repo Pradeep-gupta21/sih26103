@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
+import sqlite3
 from typing import AsyncIterator
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api.routes.analyses import router as analyses_router
 from app.api.routes.document_extraction import router as document_extraction_router
 from app.api.routes.documents import router as documents_router
 from app.api.routes.gis import router as gis_router
@@ -16,6 +18,7 @@ from app.api.routes.priority import router as priority_router
 from app.api.routes.projects import router as projects_router
 from app.api.routes.similarity import router as similarity_router
 from app.api.security import build_token_registry
+from app.services.analysis_service import build_analysis_service
 from app.services.assessment_service import build_assessment_service
 from app.services.gis_boundary_service import build_gis_boundary_service
 from app.api.routes.sla import router as sla_router
@@ -67,6 +70,12 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     if getattr(app.state, "document_service", None) is None:
         app.state.document_service = build_document_service()
     try:
+        app.state.analysis_service = build_analysis_service()
+        app.state.analysis_error = None
+    except (OSError, sqlite3.Error) as exc:
+        app.state.analysis_service = None
+        app.state.analysis_error = str(exc)
+    try:
         app.state.project_service = build_project_service()
         app.state.project_error = None
     except (FileNotFoundError, ValueError, OSError) as exc:
@@ -96,6 +105,7 @@ app.include_router(priority_router, prefix="/api/v1")
 app.include_router(gis_router, prefix="/api/v1")
 app.include_router(documents_router, prefix="/api/v1")
 app.include_router(document_extraction_router, prefix="/api/v1")
+app.include_router(analyses_router, prefix="/api/v1")
 app.include_router(projects_router, prefix="/api/v1")
 app.include_router(sla_router, prefix="/api/v1")
 

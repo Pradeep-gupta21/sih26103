@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { AlertTriangle, ArrowUpRight, Check, FileSearch, FileText, Loader2, RotateCcw } from "lucide-react";
 import Home, { Sidebar, type ReportDraft } from "../page";
 import DocumentDropzone, { validateDocumentFile } from "@/components/documents/DocumentDropzone";
-import { extractDocumentFields, type DocumentExtractionResponse, type ExtractedField, type ProjectRiskInput } from "@/lib/prediction-api";
+import { createAnalysis, extractDocumentFields, type DocumentExtractionResponse, type ExtractedField, type ProjectIntelligenceResponse, type ProjectRiskInput, type SavedFieldMeta } from "@/lib/prediction-api";
 
 /**
  * Document analyzer: upload a project PDF -> the backend reads the ProjectRiskInput fields
@@ -87,6 +87,8 @@ export default function DocumentsPage() {
   const [extraction, setExtraction] = useState<DocumentExtractionResponse | null>(null);
   const [values, setValues] = useState<FormValues>({});
   const [draft, setDraft] = useState<ReportDraft | null>(null);
+  // Per-field provenance frozen at confirm time, so what gets saved is exactly what was reviewed.
+  const [fieldMetadata, setFieldMetadata] = useState<Record<string, SavedFieldMeta>>({});
   const [showUnmatched, setShowUnmatched] = useState(false);
 
   const handleFiles = async (files: File[]) => {
@@ -108,7 +110,20 @@ export default function DocumentsPage() {
     }
   };
 
-  const reset = () => { setStep("upload"); setFile(null); setExtraction(null); setValues({}); setDraft(null); setFileError(null); };
+  const reset = () => { setStep("upload"); setFile(null); setExtraction(null); setValues({}); setDraft(null); setFieldMetadata({}); setFileError(null); };
+
+  const saveAnalysis = async (name: string, result: ProjectIntelligenceResponse) => {
+    if (!draft || !extraction) return;
+    await createAnalysis({
+      name,
+      document: { filename: extraction.filename, page_count: extraction.page_count },
+      confirmed_values: draft.input,
+      latitude: draft.latitude ?? null,
+      longitude: draft.longitude ?? null,
+      field_metadata: fieldMetadata,
+      result,
+    });
+  };
 
   const errors = useMemo(() => {
     if (!extraction) return {} as Record<string, string>;
@@ -142,6 +157,12 @@ export default function DocumentsPage() {
     if (!extraction || !file || Object.keys(errors).length > 0) return;
     const input = Object.fromEntries(extraction.fields.map((field) => [field.field, coerce(field, values[field.field] ?? "")])) as unknown as ProjectRiskInput;
     const hasLocation = (values.latitude ?? "").trim() !== "" && (values.longitude ?? "").trim() !== "";
+    setFieldMetadata(Object.fromEntries(extraction.fields.map((field) => [field.field, {
+      confidence: field.confidence,
+      edited: (values[field.field] ?? "") !== (field.value === null ? "" : String(field.value)),
+      source_snippet: field.source_snippet,
+      page: field.page,
+    }])));
     setDraft({
       label: file.name.replace(/\.pdf$/i, ""),
       source: file.name,
@@ -152,7 +173,7 @@ export default function DocumentsPage() {
     setStep("confirmed");
   };
 
-  if (step === "confirmed" && draft) return <Home draft={draft} onEditDraft={() => setStep("review")} />;
+  if (step === "confirmed" && draft) return <Home draft={draft} onEditDraft={() => setStep("review")} onSave={saveAnalysis} />;
 
   const groups = extraction ? GROUP_ORDER.map((group) => ({ group, fields: [...extraction.fields, ...extraction.optional_fields].filter((field) => metaFor(field).group === group) })).filter((entry) => entry.fields.length > 0) : [];
   const stepIndex = STEPS.findIndex((item) => item.id === step);
@@ -161,7 +182,7 @@ export default function DocumentsPage() {
     <header className="intro"><div><span className="eyebrow"><FileSearch size={13} /> DOCUMENTS</span><h1>Document analyzer</h1><p>Upload a project PDF, review the values it states, then run the same risk, explanation, similarity and GIS pipeline used for registry projects.</p></div>{file && <button className="export-button" onClick={reset}><RotateCcw size={15} /> Start over</button>}</header>
     <ol className="analyzer-steps" aria-label="Analyzer progress">{STEPS.map((item, index) => <li key={item.id} className={index === stepIndex ? "current" : index < stepIndex ? "done" : ""}><span>{String(index + 1).padStart(2, "0")}</span>{item.label}</li>)}</ol>
 
-    {step === "upload" && <section className="analyzer-panel"><DocumentDropzone accept={[".pdf"]} multiple={false} onFiles={handleFiles} prompt="Drag & drop a project PDF here" />{fileError && <div className="prediction-error" role="alert"><AlertTriangle size={15} /> {fileError}</div>}<p className="analyzer-note">Only the PDF&apos;s text layer is read. Scanned documents without a text layer will return no values. Nothing is stored: the file is read once for extraction and the values are shown here for you to confirm.</p></section>}
+    {step === "upload" && <section className="analyzer-panel"><DocumentDropzone accept={[".pdf"]} multiple={false} onFiles={handleFiles} prompt="Drag & drop a project PDF here" />{fileError && <div className="prediction-error" role="alert"><AlertTriangle size={15} /> {fileError}</div>}<p className="analyzer-note">Only the PDF&apos;s text layer is read. Scanned documents without a text layer will return no values. The PDF itself is never stored: it is read once for extraction and then discarded. Only the values you confirm on the review step, and the report computed from them, can be saved -- and only when you choose to save the analysis.</p></section>}
 
     {step === "extracting" && <div className="prediction-hint" aria-live="polite"><Loader2 size={14} className="spinner" /> Reading {file?.name}…</div>}
 
