@@ -387,6 +387,63 @@ export async function deleteAnalysis(analysisId: string): Promise<{ status: stri
   return response.json();
 }
 
+// --- SLA rule monitoring (/sla/*) — deterministic threshold checks on projects.csv fields ---
+// Mirrors backend/app/schemas/sla_rules.py. Separate from the older milestone-deadline SLA below.
+
+export type SlaRuleId = "schedule_overrun" | "cost_escalation" | "progress_shortfall" | "reporting_divergence" | "milestone_slippage";
+export type SlaRuleSeverity = "CRITICAL" | "WARNING";
+export type SlaRuleDefinition = { id: SlaRuleId; name: string; description: string; threshold: number; unit: string; comparison: "greater_than" };
+export type SlaRuleResult = { rule_id: SlaRuleId; name: string; measured_value: number; threshold: number; unit: string; breached: boolean; severity: SlaRuleSeverity | null; detail: string };
+export type SlaAlertPreview = {
+  dispatched: false;
+  delivery_enabled: boolean;
+  recipient_role: string;
+  recipient_configured: boolean;
+  rule_id: SlaRuleId;
+  rule_name: string;
+  project_id: string;
+  measured_value: number;
+  threshold: number;
+  unit: string;
+  message: string;
+};
+export type ProjectSlaReport = {
+  project_id: string;
+  sector: string;
+  state: string;
+  evaluated_rules: number;
+  breached_rules: number;
+  overall_status: "PASS" | "BREACH";
+  worst_severity: SlaRuleSeverity | null;
+  results: SlaRuleResult[];
+  alert_preview: SlaAlertPreview | null;
+};
+export type SlaBreachRow = { project_id: string; sector: string; state: string; breached_rules: SlaRuleId[]; worst_severity: SlaRuleSeverity; worst_rule: SlaRuleResult; /** The filtered rule's measurement, present only when a rule filter is applied. */ filter_rule: SlaRuleResult | null };
+export type SlaBreachListResponse = {
+  summary: { projects_evaluated: number; projects_in_breach: number; projects_passing: number; breaches_by_rule: Record<string, number>; delivery_enabled: boolean };
+  rules: SlaRuleDefinition[];
+  rule_filter: SlaRuleId | null;
+  total_matching: number;
+  rows: SlaBreachRow[];
+  passing_project_ids: string[];
+};
+
+export async function getSlaBreaches(options: { rule?: SlaRuleId | null; limit?: number; offset?: number } = {}): Promise<SlaBreachListResponse> {
+  const params = new URLSearchParams();
+  if (options.rule) params.set("rule", options.rule);
+  if (options.limit) params.set("limit", String(options.limit));
+  if (options.offset) params.set("offset", String(options.offset));
+  const query = params.toString();
+  const response = await fetch(`${API_URL}/api/v1/sla/breaches${query ? `?${query}` : ""}`);
+  if (!response.ok) throw await readApiError(response, "SLA evaluation failed");
+  return response.json() as Promise<SlaBreachListResponse>;
+}
+export async function getProjectSlaReport(projectId: string): Promise<ProjectSlaReport> {
+  const response = await fetch(`${API_URL}/api/v1/sla/projects/${encodeURIComponent(projectId)}`);
+  if (!response.ok) throw await readApiError(response, "SLA evaluation failed");
+  return response.json() as Promise<ProjectSlaReport>;
+}
+
 export type SlaStatusResponse = {
   project_id: string;
   milestone: string;

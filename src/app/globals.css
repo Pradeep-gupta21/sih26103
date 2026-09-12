@@ -1049,3 +1049,66 @@ button, input { font: inherit; }
 .active-filter .export-button { flex: 0 0 auto; background: transparent; border: 1px solid #557664; color: #41644f; }
 .active-filter .export-button:hover { background: #e2ebe2; }
 @media (max-width: 700px) { .active-filter { flex-direction: column; align-items: stretch; } }
+
+/* --- SLA rule monitoring: /sla page and report section 06 --- */
+.sla-delivery { display: inline-flex; align-items: center; gap: 7px; font-size: 10px; letter-spacing: .04em; padding: 8px 12px; border: 1px solid #dfe5df; background: #fbfcfa; color: #77827a; white-space: nowrap; }
+.sla-delivery.on { color: #a34f3b; border-color: #e6c7bd; background: #f7e9e4; }
+.sla-metrics { margin-bottom: 30px; }
+.sla-rule-cards { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; border: 1px solid #dfe5df; background: #fbfcfa; margin-bottom: 26px; }
+.sla-rule-card { border: 0; border-right: 1px solid #dfe5df; background: transparent; text-align: left; padding: 18px 18px 16px; cursor: pointer; display: flex; flex-direction: column; gap: 6px; min-width: 0; color: #53645a; border-top: 2px solid transparent; }
+.sla-rule-card:last-child { border-right: 0; }
+.sla-rule-card:hover { background: #f4f8f3; }
+.sla-rule-card.active { background: #eef3ed; border-top-color: #557664; }
+.sla-rule-card strong { color: #1c211f; font-size: 24px; letter-spacing: -.04em; font-weight: 600; line-height: 1; margin-top: 4px; }
+.sla-rule-card small { color: #53645a; font-size: 10px; }
+.sla-rule-card em { color: #9aa49e; font-size: 9px; font-style: normal; line-height: 1.5; }
+.sla-list { padding: 0 22px; }
+.sla-list-head, .sla-row { display: grid; grid-template-columns: 150px 1.1fr 1.8fr 110px 20px; gap: 16px; align-items: center; }
+.sla-list-head { padding: 12px 0 8px; border-bottom: 1px solid #dfe5df; color: #929d95; font-size: 8px; letter-spacing: .12em; font-weight: 700; }
+.sla-row { width: 100%; text-align: left; min-height: 78px; padding: 12px 0; border: 0; border-bottom: 1px solid #e2e8e2; background: transparent; color: #53645a; cursor: pointer; }
+.sla-row:hover, .sla-row:focus-visible { background: #f4f8f3; outline: none; }
+.sla-row > span { min-width: 0; }
+.sla-row small { display: block; color: #919c95; font-size: 9px; margin-top: 4px; line-height: 1.5; }
+.sla-row-rules { display: flex !important; flex-wrap: wrap; gap: 4px; }
+.sla-row-rules i { font-style: normal; font-size: 9px; letter-spacing: .06em; text-transform: uppercase; padding: 3px 6px; border: 1px solid #e3cbb2; background: #f8efe3; color: #9a5f2c; }
+.sla-row-measure strong { display: block; color: #1c211f; font-size: 12px; font-weight: 600; }
+.sla-row-measure b { display: block; font-size: 11px; font-weight: 500; color: #53645a; margin-top: 3px; }
+.measured-breach { color: #bd5140; font-weight: 700; }
+.sla-passing { margin: 22px 0 10px; }
+.sla-passing-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; padding: 14px; border: 1px solid #dfe5df; background: #fbfcfa; }
+.sla-pass-chip { border: 1px solid #d5e0d6; background: #eef3ed; color: #3f6b50; font-size: 10px; padding: 5px 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
+.sla-pass-chip:hover { background: #e2ebe2; }
+.sla-pass-more { align-self: center; color: #9aa49e; font-size: 10px; padding-left: 6px; }
+.analyzer-note code { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: #53645a; }
+/* report section 06 */
+.sla-rules-section .report-title .risk-pill { margin-left: auto; align-self: flex-start; }
+.sla-rule-table { margin-top: 24px; border: 1px solid #dfe5df; background: #fbfcfa; padding: 0 22px; }
+.sla-rule-head, .sla-rule-row { display: grid; grid-template-columns: 2.2fr 1fr 1fr 130px; gap: 16px; align-items: center; }
+.sla-rule-head { padding: 12px 0 8px; border-bottom: 1px solid #dfe5df; color: #929d95; font-size: 8px; letter-spacing: .12em; font-weight: 700; }
+.sla-rule-row { padding: 14px 0; border-bottom: 1px solid #e6ebe6; color: #53645a; }
+.sla-rule-row:last-child { border-bottom: 0; }
+.sla-rule-row strong { display: block; color: #1c211f; font-size: 12px; font-weight: 600; }
+.sla-rule-row small { display: block; color: #919c95; font-size: 9px; margin-top: 4px; line-height: 1.5; }
+.sla-rule-row > b { font-size: 16px; letter-spacing: -.02em; font-weight: 600; color: #1c211f; }
+.sla-rule-row > b.measured-breach { color: #bd5140; }
+.sla-rule-row > span:nth-child(3) { font-size: 12px; color: #53645a; }
+.sla-rule-row > span:nth-child(3) small { margin-top: 2px; }
+.sla-rule-row.breached { background: linear-gradient(90deg, #fae8e366, transparent 40%); }
+.sla-alert-preview { margin-top: 18px; border: 1px dashed #c9856c; background: #fbfcfa; padding: 18px 22px; }
+.sla-alert-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+.sla-not-sent { display: inline-flex; align-items: center; gap: 6px; font-size: 9px; letter-spacing: .12em; font-weight: 700; color: #a34f3b; border: 1px solid #e6c7bd; background: #f7e9e4; padding: 5px 8px; }
+.sla-alert-preview dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 16px 0 0; }
+.sla-alert-preview dt { color: #8a968e; font-size: 8px; letter-spacing: .12em; font-weight: 700; }
+.sla-alert-preview dd { margin: 5px 0 0; color: #1c211f; font-size: 12px; }
+.sla-alert-preview p { margin: 16px 0 0; padding: 12px 14px; background: #f4f5f3; border-left: 2px solid #c9856c; color: #53645a; font-size: 11px; line-height: 1.6; font-family: var(--font-geist-mono), monospace; }
+.sla-pass-note { display: flex; align-items: center; gap: 8px; margin-top: 18px; color: #3f6b50; font-size: 12px; }
+@media (max-width: 900px) {
+  .sla-rule-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sla-rule-card { border-bottom: 1px solid #dfe5df; }
+  .sla-list-head { display: none; }
+  .sla-row { grid-template-columns: 1fr 20px; }
+  .sla-rule-head { display: none; }
+  .sla-rule-row { grid-template-columns: 1fr 1fr; }
+  .sla-alert-preview dl { grid-template-columns: 1fr 1fr; }
+  .intro .sla-delivery { display: none; }
+}

@@ -22,6 +22,7 @@ from app.services.analysis_service import build_analysis_service
 from app.services.assessment_service import build_assessment_service
 from app.services.gis_boundary_service import build_gis_boundary_service
 from app.api.routes.sla import router as sla_router
+from app.api.routes.sla_rules import router as sla_rules_router
 from app.services.document_service import build_document_service
 from app.services.prediction_service import build_prediction_service
 from app.services.intervention_service import build_intervention_service
@@ -29,6 +30,7 @@ from app.services.priority_service import build_priority_service
 from app.services.spatial_analysis_service import build_spatial_analysis_service
 from app.services.project_service import build_project_service
 from app.services.sla_service import SlaService
+from app.services.sla_rules_service import build_sla_rules_service
 from app.services.similarity_service import build_similarity_service
 
 
@@ -81,6 +83,10 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     except (FileNotFoundError, ValueError, OSError) as exc:
         app.state.project_service = None
         app.state.project_error = str(exc)
+    # Field-threshold SLA rules read the same validated registry; no model, no network.
+    app.state.sla_rules_service = (
+        build_sla_rules_service(app.state.project_service) if app.state.project_service is not None else None
+    )
     try:
         app.state.sla_service = SlaService(prediction_service=app.state.prediction_service)
         app.state.sla_error = None
@@ -108,6 +114,7 @@ app.include_router(document_extraction_router, prefix="/api/v1")
 app.include_router(analyses_router, prefix="/api/v1")
 app.include_router(projects_router, prefix="/api/v1")
 app.include_router(sla_router, prefix="/api/v1")
+app.include_router(sla_rules_router, prefix="/api/v1")
 
 
 def _auth_status() -> str:
