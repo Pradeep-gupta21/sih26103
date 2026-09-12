@@ -1,8 +1,53 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from app.schemas.project import ProjectRiskSummary, RiskFactor
+<<<<<<< HEAD
+from app.config import spatial_config
+from app.models.projection import validate_buffer_meters, validate_coordinates
+from app.schemas.gis_signal import GISIntelligenceSignal
+from app.schemas.intervention import InterventionRecommendation
+from app.schemas.priority import PriorityResponse
+from app.schemas.project import ProjectRiskRequest, ProjectRiskSummary, RiskFactor
+
+
+class ProjectIntelligenceRequest(ProjectRiskRequest):
+    """The existing project shape, plus OPTIONAL coordinates for GIS screening.
+
+    Optional by design: every field the endpoint accepted before is unchanged and still
+    sufficient. Supplying coordinates adds the GIS screening stage and switches the
+    priority engine to its GIS weight profile; omitting them reproduces the previous
+    behaviour exactly.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    latitude: float | None = Field(default=None, ge=-90, le=90)
+    longitude: float | None = Field(default=None, ge=-180, le=180)
+    buffer_meters: float = Field(
+        default=spatial_config.DEFAULT_BUFFER_METERS,
+        ge=spatial_config.MIN_BUFFER_METERS,
+        le=spatial_config.MAX_BUFFER_METERS,
+    )
+
+    @model_validator(mode="after")
+    def _validate_location(self) -> "ProjectIntelligenceRequest":
+        if (self.latitude is None) != (self.longitude is None):
+            raise ValueError("latitude and longitude must be supplied together, or both omitted")
+        if self.latitude is not None and self.longitude is not None:
+            # Routed through the engine's own checks so HTTP and in-process callers can
+            # never disagree about what a valid coordinate is.
+            validate_coordinates(self.latitude, self.longitude)
+            validate_buffer_meters(self.buffer_meters)
+        return self
+
+    @property
+    def has_location(self) -> bool:
+        return self.latitude is not None and self.longitude is not None
+=======
+from app.schemas.project import ProjectRiskResponse, ProjectRiskSummary, RiskFactor
+from app.schemas.similarity import SimilarityResponse
+>>>>>>> arushi/main
 
 
 class IntelligenceSimilarProject(BaseModel):
@@ -28,7 +73,14 @@ class IntelligenceHistoricalEvidence(BaseModel):
 
 
 class ProjectIntelligenceResponse(BaseModel):
-    """Flat combined risk prediction and historical similarity response."""
+    """The full intelligence pipeline for one project.
+
+    Risk prediction -> SHAP explanation -> historical similarity -> GIS boundary
+    screening -> priority -> intervention recommendations. The three trailing sections
+    are optional: `gis_screening` is present only when coordinates were supplied, and
+    `priority`/`interventions` only when both upstream models were available. Existing
+    clients that read only the first six fields are unaffected.
+    """
 
     project_risk: ProjectRiskSummary
     top_risk_factors: list[RiskFactor]
@@ -36,3 +88,14 @@ class ProjectIntelligenceResponse(BaseModel):
     similar_projects: list[IntelligenceSimilarProject]
     historical_evidence: IntelligenceHistoricalEvidence
     historical_summary: str
+<<<<<<< HEAD
+    gis_screening: GISIntelligenceSignal | None = Field(
+        default=None, description="Present only when latitude/longitude were supplied."
+    )
+    priority: PriorityResponse | None = None
+    interventions: list[InterventionRecommendation] = Field(default_factory=list)
+=======
+    # Retain the original nested contract while exposing the newer flat fields.
+    prediction: ProjectRiskResponse
+    similarity: SimilarityResponse
+>>>>>>> arushi/main

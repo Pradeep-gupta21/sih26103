@@ -242,6 +242,6 @@ def main() -> None:
     print(f"Delay rate: {(data['actual_delay_months'] > 0).mean():.1%}")
     print(f"final_status distribution:\n{data['final_status'].value_counts(normalize=True).round(3).to_string()}")
 
-q
+
 if __name__ == "__main__":
     main()
