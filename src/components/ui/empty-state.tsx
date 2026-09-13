@@ -2,10 +2,7 @@
 
 import type { ReactNode } from "react";
 
-/**
- * The "nothing here yet / choose something first" panel used by the scenario, settings,
- * saved-analyses and no-project screens. Same markup those pages rendered inline.
- */
-export function EmptyState({ icon, eyebrow, title, children, actions }: { icon: ReactNode; eyebrow: string; title: string; children?: ReactNode; actions?: ReactNode }) {
-  return <section className="signal-panel state-page-panel"><div className="signal-icon">{icon}</div><span className="eyebrow">{eyebrow}</span><h3>{title}</h3>{children}{actions}</section>;
+/** Muted icon, one heading, one line of guidance, optionally one action. Never placeholder rows. */
+export function EmptyState({ icon, title, hint, action, compact = false }: { icon: ReactNode; title: string; hint: string; action?: ReactNode; compact?: boolean }) {
+  return <div className={`empty-state${compact ? " compact" : ""}`}><span className="empty-icon" aria-hidden="true">{icon}</span><strong>{title}</strong><p>{hint}</p>{action}</div>;
 }

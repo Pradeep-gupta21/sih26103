@@ -400,7 +400,7 @@ export default function DocumentUploadModal({
                   {waitingCount > 0 && (
                     <button
                       type="button"
-                      className="doc-btn-primary"
+                      className="btn btn-primary"
                       onClick={handleUploadAll}
                       disabled={isUploadingAny}
                       aria-label={`Upload ${waitingCount} queued file${waitingCount > 1 ? "s" : ""}`}

@@ -1,12 +1,20 @@
 "use client";
 
 import { Suspense, useEffect, useMemo, useState } from "react";
-import { AlertTriangle, ArrowUpRight, Bell, CalendarDays, ChevronDown, ChevronLeft, ChevronRight, ClipboardList, Search, X } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, ClipboardList, X } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Sidebar } from "@/components/shell/sidebar";
-import { TopBar } from "@/components/shell/topbar";
 import { getProjects, type ProjectRecord } from "@/lib/prediction-api";
 import { RISK_SIGNAL_RULE, hasRiskSignal } from "@/lib/risk-signals";
+import { AppShell, PageFooter } from "@/components/shell/app-shell";
+import { PageHeader } from "@/components/ui/page-header";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Cell, DataTable, TableRow } from "@/components/ui/data-table";
+import { TableBlockHeader } from "@/components/ui/table-block-header";
+import { SearchInput } from "@/components/ui/search-input";
+import { EmptyState } from "@/components/ui/empty-state";
+import { formatIndian } from "@/lib/format";
+import { downloadCsv } from "@/lib/csv";
 
 /**
  * The full project registry list. This used to be /dashboard; it moved here unchanged
@@ -26,7 +34,7 @@ function readMonths(value: string | null): number | null {
 }
 
 export default function ProjectsPage() {
-  return <Suspense fallback={<div className="app-shell"><main className="main-content"><div className="content-wrap"><div className="prediction-hint">Loading projects...</div></div></main></div>}><ProjectsWorkspace /></Suspense>;
+  return <Suspense fallback={<div className="app-shell"><main className="main-content"><div className="page"><div className="notice">Loading projects...</div></div></main></div>}><ProjectsWorkspace /></Suspense>;
 }
 
 function ProjectsWorkspace() {
@@ -49,7 +57,6 @@ function ProjectsWorkspace() {
   const [pageState, setPageState] = useState<{ key: string; page: number }>({ key: "", page: 0 });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [notice, setNotice] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -86,6 +93,47 @@ function ProjectsWorkspace() {
   const currentPage = Math.min(pageState.key === filterKey ? pageState.page : 0, pageCount - 1);
   const pageRows = filteredProjects.slice(currentPage * PAGE_SIZE, (currentPage + 1) * PAGE_SIZE);
   const filtered = Boolean(sector || state || search || overrunMode);
+  const clearFilter = () => router.push("/projects");
+  const exportCsv = () => downloadCsv(`${riskMode ? "risk-signals" : "projects"}.csv`, ["project_id", "sector", "state", "physical_progress", "financial_progress", "milestones_delayed", "milestones_total"], filteredProjects.map(p => [p.project_id, p.sector, p.state, p.physical_progress, p.financial_progress, p.milestones_delayed, p.milestones_total]));
 
-  return <div className="app-shell"><Sidebar active={active} setActive={() => undefined} /><main className="main-content"><TopBar title={riskMode ? "RISK SIGNALS" : "PROJECTS"} actions={<><button className="period" onClick={() => router.push("/settings")} aria-label="Open National Infrastructure workspace">National Infrastructure <ChevronDown size={14} /></button><button className="period" aria-label="Current reporting date"><CalendarDays size={16} /> Q3 FY 2026</button><button className="icon-only" onClick={() => setNotice(!notice)} aria-label="Notifications" aria-expanded={notice}><Bell size={18} />{notice && <span className="notification-pop" role="status">3 new signals · Review risk signals</span>}</button><button className="avatar" onClick={() => router.push("/settings")} aria-label="Open Ananya Sharma profile">AS</button></>} /><div className="content-wrap portfolio-wrap"><header className="intro"><div><span className="eyebrow"><ClipboardList size={13} /> NATIONAL INFRASTRUCTURE</span>  <h1>{riskMode ? "Risk signals" : "Projects"}</h1><p>{riskMode ? "Projects with active risk indicators from current project data." : "Select a project to open its intelligence report."}</p></div></header>{riskMode && <section className="active-filter" role="status" aria-live="polite"><div><span className="eyebrow"><AlertTriangle size={13} /> FILTER ACTIVE · RISK SIGNALS</span><p>{loading ? "Checking project records for risk indicators..." : <>Showing <strong>{filteredProjects.length.toLocaleString()}</strong> of {projects.length.toLocaleString()} projects with a recorded risk indicator: {RISK_SIGNAL_RULE}. These are signals from project data, not model risk scores.</>}</p></div><button className="export-button" onClick={() => router.push("/projects")}><X size={14} /> Clear filter</button></section>}{overrunMode && <section className="active-filter" role="status" aria-live="polite"><div><span className="eyebrow"><AlertTriangle size={13} /> FILTER ACTIVE · SCHEDULE OVERRUN</span><p>{loading ? "Checking project schedules..." : <>Showing <strong>{filteredProjects.length.toLocaleString()}</strong> of {projects.length.toLocaleString()} projects whose age past planned duration is <strong>{overrunLabel}</strong>. Measured as project_age_months minus planned_duration_months from the record itself.</>}</p></div><button className="export-button" onClick={() => router.push("/projects")}><X size={14} /> Clear filter</button></section>}<section className="portfolio-toolbar" aria-label="Project filters"><div className="portfolio-search"><Search size={16} /><input value={search} onChange={event => setSearch(event.target.value)} placeholder="Search by project, sector or state" aria-label="Search projects" />{search && <button onClick={() => setSearch("")} aria-label="Clear project search"><X size={15} /></button>}</div><label><span>Sector</span><select value={sector} onChange={event => setSector(event.target.value)}><option value="">All sectors</option>{sectors.map(value => <option key={value} value={value}>{value}</option>)}</select><ChevronDown size={14} /></label><label><span>State</span><select value={state} onChange={event => setState(event.target.value)}><option value="">All states</option>{states.map(value => <option key={value} value={value}>{value}</option>)}</select><ChevronDown size={14} /></label></section>{loading && <div className="prediction-hint">Loading projects...</div>}{error && <div className="prediction-error" role="alert"><AlertTriangle size={15} /> {error} <button onClick={() => window.location.reload()}>Retry</button></div>}{!loading && !error && <section className="portfolio-list table-panel" aria-live="polite"><div className="portfolio-list-header"><strong>{filteredProjects.length.toLocaleString()} projects</strong><span>{riskMode ? "Risk signals only" : filtered ? "Filtered results" : "All available projects"}</span></div>{pageRows.map(project => <button className="portfolio-row" key={project.project_id} onClick={() => router.push(`/projects/${encodeURIComponent(project.project_id)}`)}><span className="portfolio-id">{project.project_id}</span><span><strong>{project.sector}</strong><small>{project.state}</small></span><span><small>PROGRESS</small><b>{Math.round(project.physical_progress)}% physical · {Math.round(project.financial_progress)}% financial</b></span><span><small>MILESTONES</small><b>{project.milestones_delayed}/{project.milestones_total} delayed</b></span><ArrowUpRight size={17} /></button>)}{filteredProjects.length === 0 && <div className="portfolio-empty">{riskMode && !filtered ? "No project records carry a risk indicator." : "No projects match the current filters."}</div>}{filteredProjects.length > PAGE_SIZE && <nav className="portfolio-pagination" aria-label="Project list pages"><span>Showing {(currentPage * PAGE_SIZE + 1).toLocaleString()}–{Math.min((currentPage + 1) * PAGE_SIZE, filteredProjects.length).toLocaleString()} of {filteredProjects.length.toLocaleString()}</span><div><button onClick={() => setPage(currentPage - 1)} disabled={currentPage === 0} aria-label="Previous page"><ChevronLeft size={14} /> Previous</button><span>Page {currentPage + 1} of {pageCount}</span><button onClick={() => setPage(currentPage + 1)} disabled={currentPage >= pageCount - 1} aria-label="Next page">Next <ChevronRight size={14} /></button></div></nav>}</section>}<footer><span><span className="green-dot" /> AI monitoring active</span><span>Project records from backend data</span><span>PAIMANA Intelligence v2.4</span></footer></div></main></div>;
+  return (
+    <AppShell active={active}>
+      <PageHeader eyebrow="National Infrastructure" title={riskMode ? "Risk signals" : "Projects"} subtitle={riskMode ? "Projects with active risk indicators from current project data." : "Select a project to open its intelligence report."} />
+
+      {riskMode && <Card tint accent className="filter-banner" role="status" aria-live="polite"><div><span className="eyebrow"><AlertTriangle size={12} aria-hidden="true" style={{ verticalAlign: -2 }} /> Filter active · risk signals</span><p>{loading ? "Checking project records for risk indicators..." : <>Showing <strong>{formatIndian(filteredProjects.length)}</strong> of {formatIndian(projects.length)} projects with a recorded risk indicator: {RISK_SIGNAL_RULE}. These are signals from project data, not model risk scores.</>}</p></div><Button variant="secondary" onClick={clearFilter}><X size={14} aria-hidden="true" /> Clear filter</Button></Card>}
+      {overrunMode && <Card tint accent className="filter-banner" role="status" aria-live="polite"><div><span className="eyebrow"><AlertTriangle size={12} aria-hidden="true" style={{ verticalAlign: -2 }} /> Filter active · schedule overrun</span><p>{loading ? "Checking project schedules..." : <>Showing <strong>{formatIndian(filteredProjects.length)}</strong> of {formatIndian(projects.length)} projects whose age past planned duration is <strong>{overrunLabel}</strong>. Measured as project_age_months minus planned_duration_months from the record itself.</>}</p></div><Button variant="secondary" onClick={clearFilter}><X size={14} aria-hidden="true" /> Clear filter</Button></Card>}
+
+      {loading && <div className="notice">Loading projects...</div>}
+      {error && <div className="notice notice-error" role="alert"><AlertTriangle size={15} aria-hidden="true" /> {error} <button onClick={() => window.location.reload()}>Retry</button></div>}
+
+      {!loading && !error && <Card className="projects-list" aria-live="polite">
+        <TableBlockHeader
+          title={`${formatIndian(filteredProjects.length)} projects`}
+          subtitle={riskMode ? "Risk signals only" : filtered ? "Filtered results" : "All available projects"}
+          onExport={exportCsv}
+          controls={<>
+            <SearchInput value={search} onChange={setSearch} onClear={() => setSearch("")} placeholder="Search by project, sector or state" aria-label="Search projects" />
+            <label className={`pill pill-select${sector ? " is-active" : ""}`}><span className="visually-hidden">Sector</span><select value={sector} onChange={event => setSector(event.target.value)} aria-label="Filter by sector"><option value="">All sectors</option>{sectors.map(value => <option key={value} value={value}>{value}</option>)}</select><ChevronDown size={14} aria-hidden="true" /></label>
+            <label className={`pill pill-select${state ? " is-active" : ""}`}><span className="visually-hidden">State</span><select value={state} onChange={event => setState(event.target.value)} aria-label="Filter by state"><option value="">All states</option>{states.map(value => <option key={value} value={value}>{value}</option>)}</select><ChevronDown size={14} aria-hidden="true" /></label>
+          </>}
+        />
+        {filteredProjects.length === 0 && <EmptyState icon={<ClipboardList size={20} />} title={riskMode && !filtered ? "No project records carry a risk indicator" : "No projects match the current filters"} hint={filtered ? "Clear the search or filters to see every project." : "The registry returned no rows for this view."} action={filtered ? <Button variant="secondary" onClick={() => { setSearch(""); setSector(""); setState(""); if (overrunMode) clearFilter(); }}>Clear filters</Button> : undefined} />}
+        {filteredProjects.length > 0 && (
+          <DataTable ariaLabel="Projects" columns={[{ key: "id", label: "Project", width: "120px" }, { key: "sector", label: "Sector · state", width: "minmax(0, 1.2fr)" }, { key: "progress", label: "Progress", width: "minmax(0, 1.4fr)" }, { key: "milestones", label: "Milestones delayed", width: "minmax(0, 1fr)", align: "right" }, { key: "open", label: "Open", srOnly: true, width: "16px" }]}>
+            {pageRows.map(project => (
+              <TableRow key={project.project_id} onClick={() => router.push(`/projects/${encodeURIComponent(project.project_id)}`)} ariaLabel={`Open ${project.project_id} intelligence report`}>
+                <Cell><strong className="id">{project.project_id}</strong></Cell>
+                <Cell><strong>{project.sector}</strong><small>{project.state}</small></Cell>
+                <Cell>{Math.round(project.physical_progress)}% physical · {Math.round(project.financial_progress)}% financial</Cell>
+                <Cell align="right">{project.milestones_delayed} / {project.milestones_total}</Cell>
+                <Cell><ArrowUpRight size={16} className="row-arrow" aria-hidden="true" /></Cell>
+              </TableRow>
+            ))}
+          </DataTable>
+        )}
+        {filteredProjects.length > PAGE_SIZE && <nav className="pagination" aria-label="Project list pages"><span>Showing {formatIndian(currentPage * PAGE_SIZE + 1)}–{formatIndian(Math.min((currentPage + 1) * PAGE_SIZE, filteredProjects.length))} of {formatIndian(filteredProjects.length)}</span><div><Button variant="secondary" onClick={() => setPage(currentPage - 1)} disabled={currentPage === 0} aria-label="Previous page"><ChevronLeft size={14} aria-hidden="true" /> Previous</Button><span>Page {currentPage + 1} of {pageCount}</span><Button variant="secondary" onClick={() => setPage(currentPage + 1)} disabled={currentPage >= pageCount - 1} aria-label="Next page">Next <ChevronRight size={14} aria-hidden="true" /></Button></div></nav>}
+      </Card>}
+      <PageFooter>Project records from backend data</PageFooter>
+    </AppShell>
+  );
 }

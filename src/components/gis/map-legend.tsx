@@ -10,20 +10,8 @@
 
 import { CATEGORY_LABELS, type BoundaryCategory } from "@/lib/gis-api";
 
-/** One colour per category, muted to sit inside the app's existing palette. */
-export const CATEGORY_COLORS: Record<BoundaryCategory, string> = {
-  WILDLIFE_SANCTUARY: "#6b8f5e",
-  NATIONAL_PARK: "#3f7a55",
-  FOREST: "#7a8b46",
-  ECO_SENSITIVE_ZONE: "#b08a3c",
-  TIGER_RESERVE: "#b5623a",
-  RAMSAR_WETLAND: "#4a7f96",
-  OTHER_RESTRICTED_ZONE: "#7d7f88",
-};
-
-export const COLLISION_COLOR = "#c7543f";
-export const BUFFER_COLOR = "#31463a";
-export const PROJECT_COLOR = "#1c211f";
+export { CATEGORY_COLORS, COLLISION_COLOR, BUFFER_COLOR, PROJECT_COLOR } from "./map-colors";
+import { CATEGORY_COLORS } from "./map-colors";
 
 export type LayerKey = "project" | "buffer" | "boundaries" | "intersecting" | "collisions";
 export type LayerVisibility = Record<LayerKey, boolean>;

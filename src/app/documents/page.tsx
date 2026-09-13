@@ -1,10 +1,16 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AlertTriangle, ArrowUpRight, Check, FileSearch, FileText, Loader2, RotateCcw } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, Check, FileText, Loader2, RotateCcw } from "lucide-react";
 import Home, { type ReportDraft } from "../page";
-import { Sidebar } from "@/components/shell/sidebar";
-import { TopBar } from "@/components/shell/topbar";
+import { AppShell, PageFooter } from "@/components/shell/app-shell";
+import { PageHeader } from "@/components/ui/page-header";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { StatCard } from "@/components/ui/stat-card";
+import { StatusChip } from "@/components/ui/status-chip";
+import { AlertCircle, FileCheck2, FileQuestion } from "lucide-react";
+import { formatIndian } from "@/lib/format";
 import DocumentDropzone, { validateDocumentFile } from "@/components/documents/DocumentDropzone";
 import { createAnalysis, extractDocumentFields, type DocumentExtractionResponse, type ExtractedField, type ProjectIntelligenceResponse, type ProjectRiskInput, type SavedFieldMeta } from "@/lib/prediction-api";
 
@@ -180,46 +186,54 @@ export default function DocumentsPage() {
   const groups = extraction ? GROUP_ORDER.map((group) => ({ group, fields: [...extraction.fields, ...extraction.optional_fields].filter((field) => metaFor(field).group === group) })).filter((entry) => entry.fields.length > 0) : [];
   const stepIndex = STEPS.findIndex((item) => item.id === step);
 
-  return <div className="app-shell"><Sidebar active={active} setActive={setActive} /><main className="main-content"><TopBar title="DOCUMENT ANALYZER" /><div className="content-wrap">
-    <header className="intro"><div><span className="eyebrow"><FileSearch size={13} /> DOCUMENTS</span><h1>Document analyzer</h1><p>Upload a project PDF, review the values it states, then run the same risk, explanation, similarity and GIS pipeline used for registry projects.</p></div>{file && <button className="export-button" onClick={reset}><RotateCcw size={15} /> Start over</button>}</header>
-    <ol className="analyzer-steps" aria-label="Analyzer progress">{STEPS.map((item, index) => <li key={item.id} className={index === stepIndex ? "current" : index < stepIndex ? "done" : ""}><span>{String(index + 1).padStart(2, "0")}</span>{item.label}</li>)}</ol>
+  const errorCount = Object.keys(errors).length;
+  return (
+    <AppShell active={active} setActive={setActive}>
+      <PageHeader eyebrow="Documents" title="Document analyzer" subtitle="Upload a project PDF, review the values it states, then run the same pipeline used for registry projects."
+        controls={file && <Button variant="secondary" onClick={reset}><RotateCcw size={15} aria-hidden="true" /> Start over</Button>} />
+      <ol className="stepper" aria-label="Analyzer progress">{STEPS.map((item, index) => <li key={item.id} className={index === stepIndex ? "is-current" : index < stepIndex ? "is-done" : ""} aria-current={index === stepIndex ? "step" : undefined}><span>{index < stepIndex ? <Check size={12} aria-hidden="true" /> : index + 1}</span>{item.label}</li>)}</ol>
 
-    {step === "upload" && <section className="analyzer-panel"><DocumentDropzone accept={[".pdf"]} multiple={false} onFiles={handleFiles} prompt="Drag & drop a project PDF here" />{fileError && <div className="prediction-error" role="alert"><AlertTriangle size={15} /> {fileError}</div>}<p className="analyzer-note">Only the PDF&apos;s text layer is read. Scanned documents without a text layer will return no values. The PDF itself is never stored: it is read once for extraction and then discarded. Only the values you confirm on the review step, and the report computed from them, can be saved -- and only when you choose to save the analysis.</p></section>}
+      {step === "upload" && <Card className="analyzer-panel"><DocumentDropzone accept={[".pdf"]} multiple={false} onFiles={handleFiles} prompt="Drag & drop a project PDF here" />{fileError && <div className="notice notice-error" role="alert" style={{ marginTop: 16, marginBottom: 0 }}><AlertTriangle size={15} aria-hidden="true" /> {fileError}</div>}<p className="analyzer-note">Only the PDF&apos;s text layer is read; the file itself is never stored. Only the values you confirm, and the report computed from them, can be saved.</p></Card>}
 
-    {step === "extracting" && <div className="prediction-hint" aria-live="polite"><Loader2 size={14} className="spinner" /> Reading {file?.name}…</div>}
+      {step === "extracting" && <div className="notice" aria-live="polite"><Loader2 size={14} className="spinner" aria-hidden="true" /> Reading {file?.name}…</div>}
 
-    {step === "review" && extraction && <>
-      <section className="analyzer-summary" aria-label="Extraction summary"><div><span>DOCUMENT</span><strong><FileText size={14} /> {extraction.filename}</strong><small>{extraction.page_count} {extraction.page_count === 1 ? "page" : "pages"} · {extraction.text_characters.toLocaleString()} characters of text</small></div><div><span>FOUND</span><strong>{stats.found} <small>/ {stats.total}</small></strong></div><div className={stats.low ? "warn" : ""}><span>LOW CONFIDENCE</span><strong>{stats.low}</strong></div><div className={stats.missing ? "warn" : ""}><span>NOT FOUND</span><strong>{stats.missing}</strong></div></section>
-      {extraction.warnings.map((warning) => <div className="prediction-hint" key={warning}><AlertTriangle size={14} /> {warning}</div>)}
-      <p className="analyzer-note">Check every value against its source line. Low-confidence and missing fields are flagged; edit anything that is wrong. The report runs only on what you confirm here.</p>
+      {step === "review" && extraction && <>
+        <section className="kpi-row" style={{ marginTop: 0 }} aria-label="Extraction summary">
+          <StatCard icon={<FileText size={18} />} label="Document" value={`${extraction.page_count} ${extraction.page_count === 1 ? "page" : "pages"}`} caption={`${extraction.filename} · ${formatIndian(extraction.text_characters)} characters`} />
+          <StatCard icon={<FileCheck2 size={18} />} label="Fields found" value={String(stats.found)} unit={`/ ${stats.total}`} caption="Values read from the text layer" />
+          <StatCard icon={<AlertCircle size={18} />} label="Low confidence" value={String(stats.low)} caption="Check these against the source line" tone={stats.low ? "critical" : undefined} />
+          <StatCard icon={<FileQuestion size={18} />} label="Not found" value={String(stats.missing)} caption="Enter these manually" tone={stats.missing ? "critical" : undefined} />
+        </section>
+        {extraction.warnings.map((warning) => <div className="notice" key={warning}><AlertTriangle size={14} aria-hidden="true" /> {warning}</div>)}
 
-      <form className="analyzer-form" onSubmit={(event) => { event.preventDefault(); confirm(); }}>
-        {groups.map(({ group, fields }) => <fieldset className="analyzer-group" key={group}><legend className="eyebrow">{group.toUpperCase()}{group === "Location" && <small> · optional, enables GIS screening</small>}</legend>
-          {fields.map((field) => {
-            const meta = metaFor(field);
-            const raw = values[field.field] ?? "";
-            const edited = raw !== (field.value === null ? "" : String(field.value));
-            const optional = field.field in COORDINATE_META;
-            const status = edited ? "edited" : field.value === null ? (optional ? "optional" : "missing") : field.confidence === "low" ? "low" : "high";
-            const error = errors[field.field];
-            const id = `field-${field.field}`;
-            return <div className={`analyzer-field conf-${status}${error ? " invalid" : ""}`} key={field.field}>
-              <label htmlFor={id}><span>{field.label}</span>{meta.unit && <small>{meta.unit}</small>}</label>
-              <div className="analyzer-input">
-                {field.value_type === "boolean" ? <select id={id} value={raw} onChange={(event) => setValues((previous) => ({ ...previous, [field.field]: event.target.value }))}><option value="">Not stated</option><option value="true">Yes</option><option value="false">No</option></select>
-                  : <input id={id} type={field.value_type === "text" ? "text" : "number"} step={field.value_type === "integer" ? 1 : "any"} value={raw} placeholder={field.value === null ? (optional ? "Optional" : "Not found — enter manually") : ""} onChange={(event) => setValues((previous) => ({ ...previous, [field.field]: event.target.value }))} aria-invalid={Boolean(error)} />}
-                <span className={`field-badge conf-${status}`}>{status === "edited" ? "Edited" : status === "missing" ? "Not found" : status === "optional" ? "Not stated" : status === "low" ? "Low confidence" : "High confidence"}</span>
-              </div>
-              <div className="field-source">{field.source_snippet ? <q title={field.source_snippet}>{field.page ? `p.${field.page} · ` : ""}{field.source_snippet}</q> : <small>No matching line in the document{meta.help ? ` · ${meta.help}` : ""}</small>}{field.note && !(optional && field.value === null) && <em>{field.note}</em>}{error && <b role="alert">{error}</b>}</div>
-            </div>;
-          })}
-        </fieldset>)}
+        <form className="analyzer-form" onSubmit={(event) => { event.preventDefault(); confirm(); }}>
+          {groups.map(({ group, fields }) => <Card key={group}><fieldset className="analyzer-group"><legend className="eyebrow">{group}{group === "Location" && <small> · optional, enables GIS screening</small>}</legend>
+            {fields.map((field) => {
+              const meta = metaFor(field);
+              const raw = values[field.field] ?? "";
+              const edited = raw !== (field.value === null ? "" : String(field.value));
+              const optional = field.field in COORDINATE_META;
+              const status = edited ? "edited" : field.value === null ? (optional ? "optional" : "missing") : field.confidence === "low" ? "low" : "high";
+              const error = errors[field.field];
+              const id = `field-${field.field}`;
+              return <div className={`analyzer-field conf-${status}${error ? " invalid" : ""}`} key={field.field}>
+                <label htmlFor={id}><span>{field.label}</span>{meta.unit && <small>{meta.unit}</small>}</label>
+                <div className="analyzer-input">
+                  {field.value_type === "boolean" ? <select id={id} className="input" value={raw} onChange={(event) => setValues((previous) => ({ ...previous, [field.field]: event.target.value }))}><option value="">Not stated</option><option value="true">Yes</option><option value="false">No</option></select>
+                    : <input id={id} className="input" type={field.value_type === "text" ? "text" : "number"} step={field.value_type === "integer" ? 1 : "any"} value={raw} placeholder={field.value === null ? (optional ? "Optional" : "Not found — enter manually") : ""} onChange={(event) => setValues((previous) => ({ ...previous, [field.field]: event.target.value }))} aria-invalid={Boolean(error)} />}
+                  <StatusChip className="field-badge" tone={status === "missing" ? "critical" : status === "low" ? "warning" : "neutral"}>{status === "edited" ? "Edited" : status === "missing" ? "Not found" : status === "optional" ? "Not stated" : status === "low" ? "Low confidence" : "High confidence"}</StatusChip>
+                </div>
+                <div className="field-source">{field.source_snippet ? <q title={field.source_snippet}>{field.page ? `p.${field.page} · ` : ""}{field.source_snippet}</q> : <small>No matching line in the document{meta.help ? ` · ${meta.help}` : ""}</small>}{field.note && !(optional && field.value === null) && <em>{field.note}</em>}{error && <b role="alert">{error}</b>}</div>
+              </div>;
+            })}
+          </fieldset></Card>)}
 
-        {extraction.unmatched_text.length > 0 && <section className="analyzer-unmatched"><button type="button" className="text-button" onClick={() => setShowUnmatched(!showUnmatched)} aria-expanded={showUnmatched}>{showUnmatched ? "Hide" : "Show"} {extraction.unmatched_text.length} numeric lines not mapped to any field</button>{showUnmatched && <ul>{extraction.unmatched_text.map((line) => <li key={line}>{line}</li>)}</ul>}</section>}
+          {extraction.unmatched_text.length > 0 && <section className="analyzer-unmatched"><button type="button" className="link" onClick={() => setShowUnmatched(!showUnmatched)} aria-expanded={showUnmatched}>{showUnmatched ? "Hide" : "Show"} {extraction.unmatched_text.length} numeric lines not mapped to any field</button>{showUnmatched && <ul>{extraction.unmatched_text.map((line) => <li key={line}>{line}</li>)}</ul>}</section>}
 
-        <div className="analyzer-actions"><button type="submit" className="dark-button" disabled={Object.keys(errors).length > 0}><Check size={14} /> Confirm values and run analysis <ArrowUpRight size={14} /></button><span>{Object.keys(errors).length > 0 ? `${Object.keys(errors).length} field${Object.keys(errors).length === 1 ? "" : "s"} still need${Object.keys(errors).length === 1 ? "s" : ""} a valid value` : "All required fields have a value"}</span></div>
-      </form>
-    </>}
-    <footer><span><span className="green-dot" /> AI monitoring active</span><span>Values are read from the uploaded document only</span><span>PAIMANA Intelligence v2.4</span></footer>
-  </div></main></div>;
+          <div className="analyzer-actions"><button type="submit" className="btn btn-primary" disabled={errorCount > 0}><Check size={14} aria-hidden="true" /> Confirm values and run analysis <ArrowUpRight size={14} aria-hidden="true" /></button><span>{errorCount > 0 ? `${errorCount} field${errorCount === 1 ? "" : "s"} still need${errorCount === 1 ? "s" : ""} a valid value` : "All required fields have a value"}</span></div>
+        </form>
+      </>}
+      <PageFooter>Values are read from the uploaded document only</PageFooter>
+    </AppShell>
+  );
 }

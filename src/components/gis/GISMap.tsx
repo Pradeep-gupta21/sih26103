@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { BUFFER_STYLES, CATEGORY_STYLES, POPUP_TEXT, SEVERITY_STYLES } from "./map-colors";
 import { MapContainer, TileLayer, Circle, Marker, Popup, GeoJSON, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -43,27 +44,27 @@ export default function GISMap({ center, bufferDistanceKm, geojsonLayers, hasCol
     const cat = feature?.properties?.category;
 
     if (sev === "CRITICAL") {
-      return { color: "#be4d3c", fillColor: "#fae8e3", fillOpacity: 0.55, weight: 2 };
+      return { ...SEVERITY_STYLES.CRITICAL };
     }
     if (sev === "HIGH") {
-      return { color: "#c16b3f", fillColor: "#fbede0", fillOpacity: 0.45, weight: 2 };
+      return { ...SEVERITY_STYLES.HIGH };
     }
     if (sev === "WARNING") {
-      return { color: "#aa893d", fillColor: "#f7f1dc", fillOpacity: 0.35, weight: 1.5 };
+      return { ...SEVERITY_STYLES.WARNING };
     }
 
     // Default category styling
     switch (cat) {
       case "Tiger Reserve":
       case "National Park":
-        return { color: "#bd4f3c", fillColor: "#fae8e3", fillOpacity: 0.3, weight: 1.5 };
+        return { ...CATEGORY_STYLES.reserve };
       case "Ramsar Wetland":
-        return { color: "#4f8a63", fillColor: "#e7f1e8", fillOpacity: 0.3, weight: 1.5 };
+        return { ...CATEGORY_STYLES.wetland };
       case "Wildlife Sanctuary":
       case "Eco-Sensitive Zone":
-        return { color: "#ad893e", fillColor: "#f7f1df", fillOpacity: 0.3, weight: 1.5 };
+        return { ...CATEGORY_STYLES.sensitive };
       default:
-        return { color: "#547e9b", fillColor: "#e7eff4", fillOpacity: 0.25, weight: 1 };
+        return { ...CATEGORY_STYLES.other };
     }
   };
 
@@ -72,10 +73,10 @@ export default function GISMap({ center, bufferDistanceKm, geojsonLayers, hasCol
     if (props.name) {
       const content = `
         <div style="font-family: sans-serif; font-size: 11px; padding: 4px;">
-          <strong style="color: #27382e; font-size: 12px; display: block; margin-bottom: 3px;">${props.name}</strong>
-          <span style="color: #7d8a81; display: block; font-weight: 600;">Category: ${props.category || 'Protected Zone'}</span>
-          <span style="color: #8b968f; display: block; margin-top: 2px;">State: ${props.state || 'N/A'}</span>
-          ${props.clearance_type_required ? `<div style="margin-top: 6px; font-size: 10px; color: #be4d3c; font-weight: 600;">Clearance: ${props.clearance_type_required}</div>` : ''}
+          <strong style="color: ${POPUP_TEXT.heading}; font-size: 12px; display: block; margin-bottom: 3px;">${props.name}</strong>
+          <span style="color: ${POPUP_TEXT.label}; display: block; font-weight: 600;">Category: ${props.category || 'Protected Zone'}</span>
+          <span style="color: ${POPUP_TEXT.muted}; display: block; margin-top: 2px;">State: ${props.state || 'N/A'}</span>
+          ${props.clearance_type_required ? `<div style="margin-top: 6px; font-size: 10px; color: ${POPUP_TEXT.alert}; font-weight: 600;">Clearance: ${props.clearance_type_required}</div>` : ''}
         </div>
       `;
       layer.bindPopup(content);
@@ -95,7 +96,7 @@ export default function GISMap({ center, bufferDistanceKm, geojsonLayers, hasCol
         <Marker position={position}>
           <Popup>
             <div style={{ fontFamily: "sans-serif", fontSize: "11px" }}>
-              <strong style={{ display: "block", color: "#27382e" }}>Project Coordinates</strong>
+              <strong style={{ display: "block", color: POPUP_TEXT.heading }}>Project Coordinates</strong>
               <span>Lat: {center.lat.toFixed(4)}, Lng: {center.lng.toFixed(4)}</span>
             </div>
           </Popup>
@@ -106,8 +107,8 @@ export default function GISMap({ center, bufferDistanceKm, geojsonLayers, hasCol
           center={position}
           radius={bufferRadiusMeters}
           pathOptions={{
-            color: hasCollision ? "#c95740" : "#4a8a69",
-            fillColor: hasCollision ? "#f0d9d3" : "#d3e1d4",
+            color: hasCollision ? BUFFER_STYLES.collision.color : BUFFER_STYLES.clear.color,
+            fillColor: hasCollision ? BUFFER_STYLES.collision.fillColor : BUFFER_STYLES.clear.fillColor,
             fillOpacity: 0.2,
             weight: 2,
             dashArray: "6, 6",

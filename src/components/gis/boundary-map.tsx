@@ -33,6 +33,7 @@ import {
   type LayerKey,
   type LayerVisibility,
 } from "@/components/gis/map-legend";
+import { PROJECT_MARKER_FILL } from "@/components/gis/map-colors";
 
 import "leaflet/dist/leaflet.css";
 
@@ -397,7 +398,7 @@ export default function BoundaryMap({
           <CircleMarker
             center={[latitude, longitude]}
             radius={6}
-            pathOptions={{ color: PROJECT_COLOR, weight: 2, fillColor: "#f8f9f7", fillOpacity: 1 }}
+            pathOptions={{ color: PROJECT_COLOR, weight: 2, fillColor: PROJECT_MARKER_FILL, fillOpacity: 1 }}
           >
             <Tooltip direction="top" offset={[0, -8]} className="gis-map-tooltip">
               Project location
