@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAIMANA — Technical Approach</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --primary: #1a2744;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --bg-section: #f8fafc;
+    --success: #059669;
+    --warning: #d97706;
+    --danger: #dc2626;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  @media print {
+    body { font-size: 9.5pt; }
+    .page-break { page-break-before: always; }
+    .no-break { page-break-inside: avoid; }
+    @page { margin: 18mm 16mm; size: A4; }
+    .cover { min-height: auto; padding: 60pt 0; }
+  }
+
+  /* ─── Cover ─── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1a2744 100%);
+    color: #fff;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(5, 150, 105, 0.1) 0%, transparent 50%);
+  }
+  .cover > * { position: relative; z-index: 1; }
+  .cover-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: rgba(255,255,255,0.8);
+  }
+  .cover h1 {
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .cover h1 span { color: #60a5fa; }
+  .cover .subtitle {
+    font-size: 1.1em;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+    max-width: 600px;
+  }
+  .cover .full-form {
+    font-size: 0.85em;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+    margin-top: 12px;
+  }
+  .cover-meta {
+    margin-top: 48px;
+    display: flex;
+    gap: 32px;
+    font-size: 0.8em;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ─── Sections ─── */
+  .content { max-width: 800px; margin: 0 auto; padding: 40px 32px; }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 40px 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+  }
+  h2 .num {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 0.65em;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 24px 0 10px;
+  }
+
+  p { margin-bottom: 12px; }
+
+  /* ─── Tables ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92em;
+  }
+  th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+  th {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85em;
+    letter-spacing: 0.3px;
+  }
+  tr:nth-child(even) { background: var(--bg-section); }
+  td:first-child { font-weight: 500; }
+
+  /* ─── Feature cards ─── */
+  .feature-card {
+    background: var(--bg-section);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    border-left: 4px solid var(--accent);
+  }
+  .feature-card h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+  .feature-card .tag {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+
+  /* ─── Pipeline blocks ─── */
+  .pipeline {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85em;
+    margin: 10px 0 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .pipeline .arrow { color: #60a5fa; }
+  .pipeline .highlight { color: #34d399; font-weight: 600; }
+
+  /* ─── Architecture diagram (text-based) ─── */
+  .arch-diagram {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 24px;
+    border-radius: 8px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.78em;
+    line-height: 1.5;
+    overflow-x: auto;
+    margin: 16px 0;
+    white-space: pre;
+  }
+
+  /* ─── Key principle boxes ─── */
+  .principle {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .principle .icon {
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85em;
+  }
+  .principle strong { color: var(--primary); }
+
+  /* ─── Flow diagram ─── */
+  .flow-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 10px 0;
+  }
+  .flow-step {
+    background: var(--accent);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.82em;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .flow-arrow {
+    color: var(--text-light);
+    font-size: 1.2em;
+  }
+
+  /* ─── Badges ─── */
+  .severity-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  .severity-badge.critical { background: #fef2f2; color: var(--danger); }
+  .severity-badge.warning { background: #fffbeb; color: var(--warning); }
+  .severity-badge.success { background: #f0fdf4; color: var(--success); }
+  .severity-badge.info { background: var(--accent-light); color: var(--accent); }
+
+  ul { margin: 8px 0 16px 20px; }
+  li { margin-bottom: 4px; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+
+  footer {
+    text-align: center;
+    padding: 32px;
+    color: var(--text-light);
+    font-size: 0.8em;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ COVER -->
+<div class="cover">
+  <div class="cover-badge">SIH 2026 · Technical Approach</div>
+  <h1>P<span>AI</span>MANA</h1>
+  <p class="subtitle">AI-Powered Project Intelligence for Indian Infrastructure Monitoring</p>
+  <p class="full-form"><b>P</b>roject <b>A</b>nalytics &amp; <b>I</b>ntelligence for <b>M</b>onitoring <b>A</b>ctions with <b>N</b>ational <b>A</b>ccountability</p>
+  <div class="cover-meta">
+    <span>Next.js · FastAPI · XGBoost · Shapely</span>
+    <span>September 2026</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ CONTENT -->
+<div class="content">
+
+<!-- ─── 1. Architecture ─── -->
+<h2><span class="num">1</span> System Architecture</h2>
+
+<div class="arch-diagram">
+┌──────────────────────────────────────────────────────────────────────┐
+│                     FRONTEND  (Next.js 15 + React 19)                │
+│  ┌────────────┐ ┌──────────────┐ ┌────────────────┐ ┌────────────┐  │
+│  │  Dashboard  │ │ GIS Checker  │ │ Doc Analyzer   │ │ Intelligence│  │
+│  │  Portfolio  │ │ Spatial View │ │ PDF Extraction │ │ Reports    │  │
+│  └─────┬──────┘ └──────┬───────┘ └───────┬────────┘ └─────┬──────┘  │
+└────────┼───────────────┼─────────────────┼───────────────┼──────────┘
+         │               │                 │               │
+         └───────────────┴────────┬────────┴───────────────┘
+                                  ▼
+                        ┌─────────────────┐
+                        │   RESTful API   │  ◄── Bearer Token + RBAC
+                        │   /api/v1/*     │
+                        └────────┬────────┘
+              ┌──────────────────┼──────────────────┐
+              ▼                  ▼                  ▼
+  ┌───────────────────┐ ┌──────────────┐ ┌─────────────────┐
+  │   ML ENGINE       │ │  GIS ENGINE  │ │  DOC ENGINE     │
+  │                   │ │              │ │                 │
+  │ • XGBoost (risk)  │ │ • Boundary   │ │ • PDF Extract   │
+  │ • SHAP (explain)  │ │   Data Layer │ │ • Field Match   │
+  │ • k-NN (similar)  │ │ • Spatial    │ │ • Confidence    │
+  │ • Priority Engine │ │   Analysis   │ │   Scoring       │
+  │ • Interventions   │ │ • Assessment │ │                 │
+  └────────┬──────────┘ └──────┬───────┘ └────────┬────────┘
+           │                   │                  │
+           ▼                   ▼                  ▼
+  ┌───────────────────────────────────────────────────────┐
+  │                    DATA LAYER                         │
+  │  CSV (2,500+ projects)  │  GeoJSON (boundaries)      │
+  │  Historical outcomes    │  SQLite (analyses)          │
+  │  joblib (trained models)│  Document store             │
+  └───────────────────────────────────────────────────────┘</div>
+
+<!-- ─── 2. Core Features ─── -->
+<h2 class="page-break"><span class="num">2</span> Core Technical Features</h2>
+
+<!-- Feature 1 -->
+<div class="feature-card no-break">
+  <h3>Feature 1 — AI Delay Risk Prediction</h3>
+  <span class="tag">XGBoost</span>
+  <span class="tag">SHAP</span>
+  <span class="tag">scikit-learn</span>
+
+  <table>
+    <tr><th style="width:35%">Aspect</th><th>Detail</th></tr>
+    <tr><td>Algorithm</td><td>XGBoost Binary Classifier (<code>binary:logistic</code>)</td></tr>
+    <tr><td>Input Features</td><td><code>land_acquisition_pct</code>, <code>milestone_slippage_count</code>, <code>financial_progress_gap_pct</code>, <code>pending_clearances_count</code>, <code>contractual_issues_count</code>, <code>months_elapsed</code></td></tr>
+    <tr><td>Output</td><td>Calibrated delay probability (0–1)</td></tr>
+    <tr><td>Explainability</td><td>SHAP TreeExplainer → top 5 risk factors with human-readable descriptions</td></tr>
+    <tr><td>Hyperparameters</td><td>120 estimators, max_depth=3, learning_rate=0.06, subsample=0.9</td></tr>
+    <tr><td>Training Data</td><td>2,500+ Indian infrastructure projects with labelled delay outcomes</td></tr>
+  </table>
+
+  <p><strong>Pipeline:</strong></p>
+  <div class="flow-row">
+    <span class="flow-step">Raw Project Data</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Feature Engineering</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">XGBoost predict_proba</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">SHAP Explain</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Top Risk Factors</span>
+  </div>
+</div>
+
+<!-- Feature 2 -->
+<div class="feature-card no-break">
+  <h3>Feature 2 — Historical Similarity Engine</h3>
+  <span class="tag">k-NN</span>
+  <span class="tag">StandardScaler</span>
+  <span class="tag">OneHotEncoder</span>
+
+  <table>
+    <tr><th style="width:35%">Aspect</th><th>Detail</th></tr>
+    <tr><td>Algorithm</td><td>k-Nearest Neighbors (Euclidean distance, brute-force)</td></tr>
+    <tr><td>Preprocessing</td><td>StandardScaler (numeric) + OneHotEncoder (categorical: sector, state)</td></tr>
+    <tr><td>Engineered Features</td><td><code>cost_overrun_percentage</code>, <code>financial_physical_gap</code>, <code>milestone_delay_ratio</code>, <code>project_age_ratio</code></td></tr>
+    <tr><td>Feature Weighting</td><td>Domain-tuned: <code>milestone_delay_ratio</code> (2.5×), <code>land_acquisition_pending</code> (2.0×), <code>funding_issue</code> (2.0×)</td></tr>
+    <tr><td>Output</td><td>Top-k similar historical projects + aggregated evidence statistics</td></tr>
+  </table>
+
+  <p><strong>Pipeline:</strong></p>
+  <div class="flow-row">
+    <span class="flow-step">Project Features</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Feature Engineering</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Scale + Encode</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Feature Weighting</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">k-NN Search</span>
+  </div>
+</div>
+
+<!-- Feature 3 -->
+<div class="feature-card no-break">
+  <h3>Feature 3 — Priority &amp; Decision Engine</h3>
+  <span class="tag">Deterministic</span>
+  <span class="tag">Weighted Scoring</span>
+
+  <p>Fully transparent, no ML — combines evidence from Features 1, 2, and 5 into one composite score.</p>
+
+  <table>
+    <tr><th>Component</th><th>Weight</th><th>Source</th></tr>
+    <tr><td>AI Delay Risk</td><td><strong>0.35</strong></td><td>XGBoost probability × 100</td></tr>
+    <tr><td>Predicted Delay Severity</td><td><strong>0.20</strong></td><td>P(delay) × avg_historical_delay</td></tr>
+    <tr><td>Cost Overrun Risk</td><td><strong>0.15</strong></td><td>Historical evidence</td></tr>
+    <tr><td>Milestone Health</td><td><strong>0.15</strong></td><td>delayed / total milestones</td></tr>
+    <tr><td>GIS Spatial Risk</td><td><strong>0.15</strong></td><td>Environmental collision severity</td></tr>
+  </table>
+
+  <p><strong>Output:</strong> Composite score (0–100) → <span class="severity-badge critical">Critical</span> <span class="severity-badge warning">High</span> <span class="severity-badge info">Medium</span> <span class="severity-badge success">Low</span></p>
+</div>
+
+<!-- Feature 4 -->
+<div class="feature-card no-break page-break">
+  <h3>Feature 4 — GIS Boundary Data Layer</h3>
+  <span class="tag">Shapely</span>
+  <span class="tag">GeoJSON</span>
+  <span class="tag">PostGIS</span>
+
+  <table>
+    <tr><th style="width:35%">Aspect</th><th>Detail</th></tr>
+    <tr><td>Storage</td><td>Dual-backend: GeoJSON file store (default) / PostGIS (production)</td></tr>
+    <tr><td>Geometry Model</td><td>Polygon + MultiPolygon with full RFC 7946 validation</td></tr>
+    <tr><td>Validation</td><td>Ring closure, winding order normalization, self-intersection rejection, coordinate bounds checking</td></tr>
+    <tr><td>Categories</td><td>Wildlife sanctuary, national park, tiger reserve, forest reserve, wetland, heritage site, coastal zone, tribal area, defence zone, river/floodplain</td></tr>
+    <tr><td>Spatial Index</td><td>Shapely STRtree / PostGIS GiST (bbox pre-filter → exact geometry test)</td></tr>
+    <tr><td>ID Strategy</td><td>UUIDv5 (deterministic from source + name + category)</td></tr>
+  </table>
+</div>
+
+<!-- Feature 5 -->
+<div class="feature-card no-break">
+  <h3>Feature 5 — Spatial Analysis Engine</h3>
+  <span class="tag">Shapely</span>
+  <span class="tag">pyproj</span>
+  <span class="tag">AEQD Projection</span>
+
+  <table>
+    <tr><th style="width:35%">Aspect</th><th>Detail</th></tr>
+    <tr><td>CRS Handling</td><td>WGS84 → AEQD (centred on project point) → metres → back to WGS84</td></tr>
+    <tr><td>Key Principle</td><td><em>"Metres are never applied to degrees"</em> — buffer only in projected CRS</td></tr>
+    <tr><td>Index Strategy</td><td>Bounding-box pre-filter (over-inclusive) → exact geometry intersection</td></tr>
+  </table>
+
+  <p><strong>Collision Classification:</strong></p>
+  <table>
+    <tr><th>Type</th><th>Description</th></tr>
+    <tr><td><span class="severity-badge critical">DIRECT COLLISION</span></td><td>Project point lies inside a protected boundary</td></tr>
+    <tr><td><span class="severity-badge warning">BUFFER COLLISION</span></td><td>Project buffer zone intersects a boundary</td></tr>
+    <tr><td><span class="severity-badge info">PROXIMITY WARNING</span></td><td>Boundary within proximity threshold</td></tr>
+    <tr><td><span class="severity-badge success">CLEAR</span></td><td>No nearby boundaries detected</td></tr>
+  </table>
+
+  <p><strong>Pipeline:</strong></p>
+  <div class="flow-row">
+    <span class="flow-step">Lat/Lon</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Validate</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Project to AEQD</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Buffer (metres)</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Spatial Index</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Exact Intersection</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Classify</span>
+  </div>
+</div>
+
+<!-- Feature 6 -->
+<div class="feature-card no-break">
+  <h3>Feature 6 — Intervention Recommendations</h3>
+  <span class="tag">Rule-Based</span>
+  <span class="tag">Deterministic</span>
+  <span class="tag">No LLM</span>
+
+  <p>Evidence-linked, ranked actions. Statutory obligations above managerial ones.</p>
+
+  <table>
+    <tr><th>Rule</th><th>Trigger Condition</th></tr>
+    <tr><td>Spatial Clearance</td><td>GIS boundary screening requires clearance</td></tr>
+    <tr><td>Site Review</td><td>Direct collision with protected area</td></tr>
+    <tr><td>Land Acquisition</td><td><code>land_acquisition_pending = true</code></td></tr>
+    <tr><td>Regulatory Clearance</td><td><code>clearance_pending = true</code></td></tr>
+    <tr><td>Milestone Recovery</td><td>Milestone delay ratio ≥ threshold</td></tr>
+    <tr><td>Funding Release</td><td><code>funding_issue = true</code></td></tr>
+    <tr><td>Cost Baseline Review</td><td>Cost overrun ≥ threshold</td></tr>
+    <tr><td>Contractor Review</td><td><code>contractor_issue = true</code></td></tr>
+    <tr><td>Schedule Review</td><td>Late schedule + high risk probability</td></tr>
+  </table>
+</div>
+
+<!-- Feature 7 -->
+<div class="feature-card no-break">
+  <h3>Feature 7 — Document Intelligence (PDF Extraction)</h3>
+  <span class="tag">pdfplumber</span>
+  <span class="tag">Label Matching</span>
+
+  <table>
+    <tr><th style="width:35%">Aspect</th><th>Detail</th></tr>
+    <tr><td>Method</td><td>Label-based matching over text lines and table rows — no guessing</td></tr>
+    <tr><td>Extracted Fields</td><td>All ProjectRiskRequest fields (costs, durations, milestones, coordinates)</td></tr>
+    <tr><td>Confidence</td><td>Each field tagged <code>high</code> / <code>low</code> + explanatory note</td></tr>
+    <tr><td>Unit Handling</td><td>Auto-conversion: crore ↔ lakh ↔ million ↔ billion</td></tr>
+    <tr><td>Human Review</td><td>Extracted values presented for confirmation before reaching ML pipeline</td></tr>
+  </table>
+</div>
+
+<!-- Feature 8 -->
+<div class="feature-card no-break">
+  <h3>Feature 8 — SLA Monitoring &amp; Notifications</h3>
+  <span class="tag">MSG91 SMS</span>
+  <span class="tag">Threshold Rules</span>
+
+  <table>
+    <tr><th style="width:35%">Aspect</th><th>Detail</th></tr>
+    <tr><td>SLA Engine</td><td>Deadline tracking per project milestone</td></tr>
+    <tr><td>Notification</td><td>MSG91 SMS API (configurable)</td></tr>
+    <tr><td>Amber Threshold</td><td>30 days remaining before deadline</td></tr>
+    <tr><td>Critical Threshold</td><td>Risk probability ≥ 80%</td></tr>
+  </table>
+</div>
+
+
+<!-- ─── 3. Technology Stack ─── -->
+<h2 class="page-break"><span class="num">3</span> Technology Stack</h2>
+
+<table>
+  <tr><th>Layer</th><th>Technology</th></tr>
+  <tr><td>Frontend</td><td>Next.js 15, React 19, TypeScript, TailwindCSS v4, Lucide Icons</td></tr>
+  <tr><td>Backend</td><td>Python, FastAPI, Uvicorn (ASGI server)</td></tr>
+  <tr><td>ML / AI</td><td>XGBoost, scikit-learn, SHAP, NumPy, Pandas</td></tr>
+  <tr><td>Geospatial</td><td>Shapely, pyproj, GeoPandas (optional), PostGIS (optional)</td></tr>
+  <tr><td>Document Processing</td><td>pdfplumber (text + table extraction from PDFs)</td></tr>
+  <tr><td>Data Storage</td><td>CSV (projects), GeoJSON (boundaries), SQLite (analyses), joblib (models)</td></tr>
+  <tr><td>Authentication</td><td>Bearer Token + RBAC (SHA-256 hashed registry)</td></tr>
+  <tr><td>Notifications</td><td>MSG91 SMS API</td></tr>
+  <tr><td>Validation</td><td>Pydantic v2 (strict schema enforcement)</td></tr>
+</table>
+
+
+<!-- ─── 4. API Endpoints ─── -->
+<h2><span class="num">4</span> API Endpoints</h2>
+
+<table>
+  <tr><th>Endpoint Group</th><th>Purpose</th></tr>
+  <tr><td><code>/api/v1/predict</code></td><td>Delay risk prediction</td></tr>
+  <tr><td><code>/api/v1/similar-projects</code></td><td>Historical similarity search</td></tr>
+  <tr><td><code>/api/v1/project-intelligence</code></td><td>Combined intelligence report (all engines)</td></tr>
+  <tr><td><code>/api/v1/priority</code></td><td>Priority scoring &amp; ranking</td></tr>
+  <tr><td><code>/api/v1/gis/*</code></td><td>Boundary CRUD, spatial analysis, collision checks</td></tr>
+  <tr><td><code>/api/v1/documents/*</code></td><td>Document upload, extraction, repository</td></tr>
+  <tr><td><code>/api/v1/analyses/*</code></td><td>Saved analyses management</td></tr>
+  <tr><td><code>/api/v1/projects</code></td><td>Project catalogue</td></tr>
+  <tr><td><code>/api/v1/sla/*</code></td><td>SLA status and monitoring</td></tr>
+  <tr><td><code>/health</code></td><td>System health check</td></tr>
+</table>
+
+
+<!-- ─── 5. Intelligence Pipeline ─── -->
+<h2><span class="num">5</span> Intelligence Report — Data Flow</h2>
+
+<div class="arch-diagram" style="font-size: 0.72em;">
+                          ┌─────────────────────┐
+                          │   Project Data       │
+                          │  (user input or PDF) │
+                          └──────────┬──────────┘
+                                     │
+                    ┌────────────────┼────────────────┐
+                    ▼                ▼                ▼
+          ┌─────────────┐  ┌──────────────┐  ┌──────────────┐
+          │  XGBoost     │  │   k-NN       │  │   Spatial    │
+          │  Classifier  │  │   Similarity │  │   Analysis   │
+          │  (Feature 1) │  │  (Feature 2) │  │  (Feature 5) │
+          └──────┬──────┘  └──────┬───────┘  └──────┬───────┘
+                 │                │                  │
+          ┌──────┴──────┐        │                  │
+          │    SHAP     │        │                  │
+          │  Explainer  │        │                  │
+          └──────┬──────┘        │                  │
+                 │                │                  │
+                 └────────────────┼──────────────────┘
+                                  ▼
+                        ┌─────────────────┐
+                        │  Priority Engine │
+                        │   (Feature 3)    │
+                        └────────┬────────┘
+                                 ▼
+                        ┌─────────────────┐
+                        │  Intervention   │
+                        │  Recommender    │
+                        │   (Feature 6)   │
+                        └────────┬────────┘
+                                 ▼
+                     ┌───────────────────────┐
+                     │  INTELLIGENCE REPORT  │
+                     │                       │
+                     │ • Risk probability    │
+                     │ • Top risk factors    │
+                     │ • Historical matches  │
+                     │ • Priority score      │
+                     │ • GIS screening       │
+                     │ • Interventions       │
+                     └───────────────────────┘</div>
+
+
+<!-- ─── 6. Security ─── -->
+<h2><span class="num">6</span> Security Architecture</h2>
+
+<ul>
+  <li><strong>Bearer Token Authentication</strong> — SHA-256 hashed token registry, loaded once at startup</li>
+  <li><strong>Role-Based Access Control (RBAC)</strong> — Roles: <code>admin</code>, <code>analyst</code>, <code>viewer</code></li>
+  <li><strong>Permission-gated endpoints</strong> — Routes declare required permissions, not raw token checks</li>
+  <li><strong>CORS policy</strong> — Restricted to application origins only</li>
+  <li><strong>Designed as a seam</strong> — Swappable to OIDC/JWT without modifying any route handler</li>
+</ul>
+
+
+<!-- ─── 7. Design Principles ─── -->
+<h2><span class="num">7</span> Key Design Principles</h2>
+
+<div class="principle no-break">
+  <div class="icon">1</div>
+  <div>
+    <strong>Deterministic &amp; Auditable</strong><br>
+    Identical inputs → identical outputs. Every threshold lives in a config file. No randomness in production inference.
+  </div>
+</div>
+<div class="principle no-break">
+  <div class="icon">2</div>
+  <div>
+    <strong>Explainability First</strong><br>
+    SHAP for ML predictions; template-based rationale for interventions; geometry-derived reasons for GIS flags.
+  </div>
+</div>
+<div class="principle no-break">
+  <div class="icon">3</div>
+  <div>
+    <strong>Separation of Concerns</strong><br>
+    ML models → services → API routes → frontend. Each layer has a single responsibility.
+  </div>
+</div>
+<div class="principle no-break">
+  <div class="icon">4</div>
+  <div>
+    <strong>Graceful Degradation</strong><br>
+    If any service (ML, GIS, similarity) fails to load, the app starts in degraded mode and reports exactly what's unavailable.
+  </div>
+</div>
+<div class="principle no-break">
+  <div class="icon">5</div>
+  <div>
+    <strong>No Silent Repairs</strong><br>
+    GIS geometry is rejected, not silently fixed. Document extraction reports low confidence, not a guess.
+  </div>
+</div>
+<div class="principle no-break">
+  <div class="icon">6</div>
+  <div>
+    <strong>Domain-Weighted Features</strong><br>
+    Similarity engine weights features by their empirically validated association with delay outcomes in historical data.
+  </div>
+</div>
+
+
+<!-- ─── 8. Frontend Pages ─── -->
+<h2><span class="num">8</span> Frontend Pages</h2>
+
+<table>
+  <tr><th>Page</th><th>Description</th></tr>
+  <tr><td>Login</td><td>Secure workspace access with email/password</td></tr>
+  <tr><td>Dashboard</td><td>Portfolio view of all projects with search, sector/state filters</td></tr>
+  <tr><td>Risk Signals</td><td>Filtered view showing only projects with active risk indicators</td></tr>
+  <tr><td>Project Intelligence</td><td>Full per-project report: risk, SHAP factors, matches, priority, interventions, GIS</td></tr>
+  <tr><td>Geospatial Checker</td><td>Interactive GIS collision analysis with boundary visualization</td></tr>
+  <tr><td>Document Analyzer</td><td>PDF upload → auto extraction → human review → feed to prediction</td></tr>
+  <tr><td>Scenario Lab</td><td>What-if analysis for project parameters</td></tr>
+  <tr><td>Settings</td><td>Workspace and user configuration</td></tr>
+</table>
+
+</div>
+
+<footer>
+  PAIMANA · Project Analytics & Intelligence for Monitoring Actions with National Accountability<br>
+  Smart India Hackathon 2026 · Technical Approach Document
+</footer>
+
+</body>
+</html>

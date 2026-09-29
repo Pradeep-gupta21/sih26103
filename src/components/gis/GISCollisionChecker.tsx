@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { AlertTriangle, Compass, Layers, MapPin, RefreshCw, ShieldAlert, ShieldCheck, Sliders, Zap } from "lucide-react";
 import { checkGisCollision, type GISCollisionResponse } from "@/lib/prediction-api";
+import { StatusChip } from "@/components/ui/status-chip";
 
 // Dynamically import GISMap to prevent SSR window issues with Leaflet
 const GISMap = dynamic(() => import("./GISMap"), { ssr: false });
@@ -198,9 +199,7 @@ export default function GISCollisionChecker() {
               </div>
               <div className="status-info">
                 <div className="status-top">
-                  <span className={`risk-pill ${gisResult.highest_severity.toLowerCase()}`}>
-                    <i /> {gisResult.has_collision ? `${gisResult.highest_severity} COLLISION DETECTED` : "BUFFER CLEAR"}
-                  </span>
+                  <StatusChip tone={gisResult.highest_severity.toLowerCase()}> {gisResult.has_collision ? `${gisResult.highest_severity} COLLISION DETECTED` : "BUFFER CLEAR"}</StatusChip>
                   {gisResult.clearance_required && (
                     <span className="clearance-badge">
                       <Zap size={12} /> MANDATORY MOEFCC / NBWL CLEARANCE REQUIRED
@@ -269,9 +268,7 @@ export default function GISCollisionChecker() {
                         <td>{col.intersection_area_sq_km > 0 ? `${col.intersection_area_sq_km} sq km` : "Proximity Buffer"}</td>
                         <td><small className="clearance-text">{col.clearance_type_required}</small></td>
                         <td>
-                          <span className={`risk-pill ${col.severity.toLowerCase()}`}>
-                            <i /> {col.severity}
-                          </span>
+                          <StatusChip tone={col.severity.toLowerCase()}> {col.severity}</StatusChip>
                         </td>
                       </tr>
                     ))}

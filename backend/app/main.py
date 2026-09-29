@@ -13,6 +13,7 @@ from app.api.routes.documents import router as documents_router
 from app.api.routes.gis import router as gis_router
 from app.config import auth_config
 from app.api.routes.intelligence import router as intelligence_router
+from app.api.routes.portfolio import router as portfolio_router
 from app.api.routes.prediction import router as prediction_router
 from app.api.routes.priority import router as priority_router
 from app.api.routes.projects import router as projects_router
@@ -24,6 +25,7 @@ from app.services.gis_boundary_service import build_gis_boundary_service
 from app.api.routes.sla import router as sla_router
 from app.api.routes.sla_rules import router as sla_rules_router
 from app.services.document_service import build_document_service
+from app.services.portfolio_service import build_portfolio_service
 from app.services.prediction_service import build_prediction_service
 from app.services.intervention_service import build_intervention_service
 from app.services.priority_service import build_priority_service
@@ -87,6 +89,12 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     app.state.sla_rules_service = (
         build_sla_rules_service(app.state.project_service) if app.state.project_service is not None else None
     )
+    # Dashboard aggregates reuse the registry and the SLA evaluation above; computed lazily once, then cached.
+    app.state.portfolio_service = (
+        build_portfolio_service(app.state.project_service, app.state.sla_rules_service)
+        if app.state.sla_rules_service is not None
+        else None
+    )
     try:
         app.state.sla_service = SlaService(prediction_service=app.state.prediction_service)
         app.state.sla_error = None
@@ -115,6 +123,7 @@ app.include_router(analyses_router, prefix="/api/v1")
 app.include_router(projects_router, prefix="/api/v1")
 app.include_router(sla_router, prefix="/api/v1")
 app.include_router(sla_rules_router, prefix="/api/v1")
+app.include_router(portfolio_router, prefix="/api/v1")
 
 
 def _auth_status() -> str:

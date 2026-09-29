@@ -17,6 +17,7 @@ import { ArrowUpRight, MapPin, ShieldAlert, ShieldCheck } from "lucide-react";
 
 import { SEVERITY_CLASS, STATUS_LABELS, formatBuffer, formatDistance } from "@/lib/gis-api";
 import type { GisScreening } from "@/lib/prediction-api";
+import { StatusChip } from "@/components/ui/status-chip";
 
 export function GisScreeningPanel({
   screening,
@@ -89,10 +90,7 @@ export function GisScreeningPanel({
           <dt>SEVERITY</dt>
           <dd>
             {screening.gis_severity ? (
-              <span className={`risk-pill ${severityClass}`}>
-                <i />
-                {screening.gis_severity}
-              </span>
+              <StatusChip tone={severityClass}>{screening.gis_severity}</StatusChip>
             ) : (
               "None"
             )}

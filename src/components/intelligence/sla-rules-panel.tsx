@@ -11,6 +11,7 @@
 
 import { BellOff, CheckCircle2, ShieldAlert } from "lucide-react";
 import type { ProjectSlaReport, SlaRuleResult } from "@/lib/prediction-api";
+import { StatusChip } from "@/components/ui/status-chip";
 
 export function formatMeasure(value: number, unit: string): string {
   const rounded = Math.abs(value) >= 100 ? Math.round(value) : Math.round(value * 10) / 10;
@@ -19,6 +20,11 @@ export function formatMeasure(value: number, unit: string): string {
 
 export function severityClass(severity: SlaRuleResult["severity"]): string {
   return severity === "CRITICAL" ? "critical" : severity === "WARNING" ? "high" : "stable";
+}
+
+/** The severity chip used on /sla and the dashboard watchlist: colour plus the word, never colour alone. */
+export function SeverityChip({ severity, className = "" }: { severity: SlaRuleResult["severity"]; className?: string }) {
+  return <StatusChip tone={severityClass(severity)} className={className}>{severity ?? "PASS"}</StatusChip>;
 }
 
 export function SlaRulesPanel({ report, error, loading }: { report: ProjectSlaReport | null; error?: string | null; loading?: boolean }) {
@@ -32,10 +38,9 @@ export function SlaRulesPanel({ report, error, loading }: { report: ProjectSlaRe
           <p>Deterministic checks on the project&apos;s recorded fields against configurable policy thresholds. Measured facts, separate from the risk model.</p>
         </div>
         {report && (
-          <span className={`risk-pill ${report.overall_status === "PASS" ? "stable" : severityClass(report.worst_severity)}`}>
-            <i />
+          <StatusChip tone={report.overall_status === "PASS" ? "stable" : severityClass(report.worst_severity)}>
             {report.overall_status === "PASS" ? "ALL RULES PASS" : `${report.breached_rules} OF ${report.evaluated_rules} BREACHED`}
-          </span>
+          </StatusChip>
         )}
       </div>
 
@@ -51,7 +56,7 @@ export function SlaRulesPanel({ report, error, loading }: { report: ProjectSlaRe
                 <div><strong>{result.name}</strong><small>{result.detail}</small></div>
                 <b className={result.breached ? "measured-breach" : ""}>{formatMeasure(result.measured_value, result.unit)}</b>
                 <span>&gt; {formatMeasure(result.threshold, result.unit)}<small>policy threshold</small></span>
-                <span className={`risk-pill ${result.breached ? severityClass(result.severity) : "stable"}`}><i />{result.breached ? result.severity : "PASS"}</span>
+                <StatusChip tone={result.breached ? severityClass(result.severity) : "stable"}>{result.breached ? result.severity : "PASS"}</StatusChip>
               </div>
             ))}
           </div>

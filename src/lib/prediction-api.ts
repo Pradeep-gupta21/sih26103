@@ -1,5 +1,4 @@
 import type { BoundaryCategory, CollisionType, Severity } from "@/lib/gis-api";
-import { getDemoDisplayName } from "@/lib/demo-auth";
 
 export type ProjectRiskInput = {
   sector: string;
@@ -286,7 +285,7 @@ export async function fetchProjectDocuments(projectId: string): Promise<Document
   if (!response.ok) throw new Error(`Failed to fetch documents (${response.status})`);
   return response.json() as Promise<DocumentListResponse>;
 }
-export async function uploadProjectDocument(projectId: string, file: File, category: DocumentCategory = "Other / Supporting Document", description?: string, uploader = getDemoDisplayName()): Promise<DocumentUploadResponse> {
+export async function uploadProjectDocument(projectId: string, file: File, category: DocumentCategory = "Other / Supporting Document", description?: string, uploader = "Ananya Sharma"): Promise<DocumentUploadResponse> {
   const formData = new FormData(); formData.append("file", file); formData.append("category", category); if (description) formData.append("description", description); formData.append("uploader", uploader);
   const response = await fetch(`${API_URL}/api/v1/projects/${encodeURIComponent(projectId)}/documents`, { method: "POST", body: formData });
   if (!response.ok) throw new Error(`Document upload failed (${response.status})`);
@@ -391,7 +390,8 @@ export async function deleteAnalysis(analysisId: string): Promise<{ status: stri
 // --- SLA rule monitoring (/sla/*) — deterministic threshold checks on projects.csv fields ---
 // Mirrors backend/app/schemas/sla_rules.py. Separate from the older milestone-deadline SLA below.
 
-export type SlaRuleId = "schedule_overrun" | "cost_escalation" | "progress_shortfall" | "reporting_divergence" | "milestone_slippage";
+export const SLA_RULE_IDS = ["schedule_overrun", "cost_escalation", "progress_shortfall", "reporting_divergence", "milestone_slippage"] as const;
+export type SlaRuleId = (typeof SLA_RULE_IDS)[number];
 export type SlaRuleSeverity = "CRITICAL" | "WARNING";
 export type SlaRuleDefinition = { id: SlaRuleId; name: string; description: string; threshold: number; unit: string; comparison: "greater_than" };
 export type SlaRuleResult = { rule_id: SlaRuleId; name: string; measured_value: number; threshold: number; unit: string; breached: boolean; severity: SlaRuleSeverity | null; detail: string };
@@ -470,4 +470,42 @@ export async function getProjectSla(projectId: string): Promise<SlaStatusRespons
     throw new Error(error?.detail ?? `SLA status failed (${response.status})`);
   }
   return response.json() as Promise<SlaStatusResponse>;
+}
+
+// --- Portfolio overview (/dashboard) ---------------------------------------------------
+// One request for every aggregate on the overview; every number is computed by the backend
+// from the registry and the same SLA evaluation /sla uses.
+
+export type PortfolioKpis = { projects_tracked: number; risk_signals_active: number; sla_in_breach: number; cost_overrun_total: number; cost_overrun_unit: string; schedule_overrun_median_months: number; schedule_overrun_project_count: number; milestones_delayed_total: number; milestones_total: number };
+export type SectorCost = { sector: string; original_cost_sum: number; revised_cost_sum: number; project_count: number };
+export type ProgressPoint = { project_id: string; sector: string; physical_progress: number; financial_progress: number };
+export type ProgressDivergence = { points: ProgressPoint[]; sampled: boolean; total_points: number; below_line_total: number };
+export type SlaRuleBreakdown = { rule_key: SlaRuleId; rule_label: string; breach_count: number; threshold_label: string };
+export type OverrunBucketKey = "on_time" | "0_6" | "6_12" | "12_24" | "24_plus";
+export type OverrunBucket = { bucket_key: OverrunBucketKey; bucket_label: string; project_count: number; min_months: number | null; max_months: number | null };
+export type StateDelays = { state: string; delayed_project_count: number; total_project_count: number };
+export type PortfolioSummary = {
+  kpis: PortfolioKpis;
+  cost_by_sector: SectorCost[];
+  progress_divergence: ProgressDivergence;
+  sla_rule_breakdown: SlaRuleBreakdown[];
+  schedule_overrun_histogram: OverrunBucket[];
+  top_states: StateDelays[];
+  /** The first rows of /sla/breaches, in that endpoint's exact order. */
+  critical_watchlist: SlaBreachRow[];
+  generated_at: string;
+};
+
+export async function getPortfolioSummary(): Promise<PortfolioSummary> {
+  const response = await fetch(`${API_URL}/api/v1/portfolio/summary`);
+  if (!response.ok) throw await readApiError(response, "Unable to load the portfolio summary");
+  return response.json();
+}
+
+export type RecentAnalysis = { analysis_id: string; project_name: string; created_at: string; risk_band_or_score: string; risk_percentage: number };
+
+export async function getRecentAnalyses(limit = 5): Promise<RecentAnalysis[]> {
+  const response = await fetch(`${API_URL}/api/v1/analyses/recent?limit=${limit}`);
+  if (!response.ok) throw await readApiError(response, "Unable to load recent analyses");
+  return response.json();
 }

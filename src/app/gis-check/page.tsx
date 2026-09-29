@@ -24,7 +24,6 @@ import {
   Info,
   Loader2,
   Map as MapIcon,
-  Search,
   ShieldAlert,
   ShieldCheck,
   Signal,
@@ -52,8 +51,12 @@ import {
   type GeoJsonFeatureCollection,
 } from "@/lib/gis-api";
 import { BUFFER_PRESETS, GIS_PROJECTS } from "@/lib/gis-projects";
-import { useDemoDisplayName } from "@/lib/demo-auth";
-import { Sidebar } from "../page";
+import { AppShell } from "@/components/shell/app-shell";
+import { PageHeader } from "@/components/ui/page-header";
+import { Card } from "@/components/ui/card";
+import { PanelHeader } from "@/components/ui/panel-header";
+import { Cell, DataTable, TableRow } from "@/components/ui/data-table";
+import { StatusChip } from "@/components/ui/status-chip";
 import {
   DEFAULT_LAYERS,
   LAYER_OPTIONS,
@@ -77,7 +80,6 @@ type ErrorState =
   | { kind: "network"; message: string };
 
 function GisCheckWorkspace() {
-  const displayName = useDemoDisplayName();
   // Deep link from the Project Intelligence report: /gis-check?projectId=EFC-04.
   // Resolved once, at mount, as the initial selection -- after that the dropdown owns
   // the value, so a later re-render cannot fight the user's choice.
@@ -289,56 +291,22 @@ function GisCheckWorkspace() {
   const severityClass = result?.overall_severity ? SEVERITY_CLASS[result.overall_severity] : "stable";
 
   return (
-    <div className="app-shell">
-      <Sidebar active={activeNav} setActive={setActiveNav} />
-      <main className="main-content">
-        <header className="topbar">
-          <div className="mobile-brand">
-            <MapIcon size={20} />
-            <strong>PAIMANA</strong>
-          </div>
-          <div className="breadcrumb">
-            <Link href="/" className="back-link">
-              <ArrowLeft size={13} /> Portfolio
-            </Link>{" "}
-            / <strong>GIS BOUNDARY CHECK</strong>
-          </div>
-          <div className="top-actions">
-            <button className="icon-button search-trigger" type="button">
-              <Search size={18} />
-              <span>Search projects</span>
-              <kbd>Cmd K</kbd>
-            </button>
-            <div className="avatar" aria-label={`Signed in as ${displayName}`}>{displayName.slice(0, 2).toUpperCase()}</div>
-          </div>
-        </header>
-
-        <div className="gis-wrap">
-          <header className="gis-header">
-            <div>
-              <div className="eyebrow">
-                <span className="live-dot" /> SPATIAL SCREENING
-              </div>
-              <h1>GIS Environmental Boundary Check</h1>
-              <p>
-                Screen infrastructure projects for potential spatial conflicts with protected and
-                regulated geographic zones.
-              </p>
-            </div>
-          </header>
+    <AppShell active={activeNav} setActive={setActiveNav} wide before={requestedProjectId ? <Link href={`/projects/${encodeURIComponent(requestedProjectId)}`} className="back-link"><ArrowLeft size={13} aria-hidden="true" /> {requestedProjectId}</Link> : undefined}>
+        <PageHeader eyebrow="Spatial screening" title="GIS environmental boundary check" subtitle="Screen a project location for conflicts with protected and regulated geographic zones." />
+        <div>
 
           <div className="gis-layout">
             {/* ----------------------------- Control panel ----------------------------- */}
-            <section className="gis-controls" aria-label="Analysis parameters">
+            <Card className="gis-controls" aria-label="Analysis parameters">
               <form
                 onSubmit={(event) => {
                   event.preventDefault();
                   void runCheck();
                 }}
               >
-                <div className="gis-field">
+                <div className="field">
                   <label htmlFor="gis-project">Existing project</label>
-                  <div className="gis-select-wrap">
+                  <div className="select-wrap">
                     <select
                       id="gis-project"
                       value={projectId}
@@ -362,8 +330,8 @@ function GisCheckWorkspace() {
                   </small>
                 </div>
 
-                <div className="gis-field-row">
-                  <div className="gis-field">
+                <div className="field-row">
+                  <div className="field">
                     <label htmlFor="gis-lat">Latitude</label>
                     <input
                       id="gis-lat"
@@ -375,7 +343,7 @@ function GisCheckWorkspace() {
                       className={fieldInvalid("latitude") ? "invalid" : undefined}
                     />
                   </div>
-                  <div className="gis-field">
+                  <div className="field">
                     <label htmlFor="gis-lon">Longitude</label>
                     <input
                       id="gis-lon"
@@ -389,14 +357,14 @@ function GisCheckWorkspace() {
                   </div>
                 </div>
 
-                <fieldset className="gis-fieldset">
+                <fieldset className="field">
                   <legend>Buffer distance</legend>
                   <div className="gis-buffer-options" role="group">
                     {BUFFER_PRESETS.map((preset) => (
                       <button
                         key={preset.meters}
                         type="button"
-                        className={!useCustomBuffer && bufferMeters === preset.meters ? "gis-chip active" : "gis-chip"}
+                        className={!useCustomBuffer && bufferMeters === preset.meters ? "pill is-active" : "pill"}
                         aria-pressed={!useCustomBuffer && bufferMeters === preset.meters}
                         onClick={() => applyBuffer(preset.meters, false)}
                       >
@@ -405,7 +373,7 @@ function GisCheckWorkspace() {
                     ))}
                     <button
                       type="button"
-                      className={useCustomBuffer ? "gis-chip active" : "gis-chip"}
+                      className={useCustomBuffer ? "pill is-active" : "pill"}
                       aria-pressed={useCustomBuffer}
                       onClick={() => setUseCustomBuffer(true)}
                       title="Enter an exact buffer radius in metres"
@@ -414,7 +382,7 @@ function GisCheckWorkspace() {
                     </button>
                   </div>
                   {useCustomBuffer && (
-                    <div className="gis-custom-buffer">
+                    <div className="field">
                       <label htmlFor="gis-buffer-custom">Custom buffer (metres)</label>
                       <input
                         id="gis-buffer-custom"
@@ -437,12 +405,12 @@ function GisCheckWorkspace() {
                   )}
                 </fieldset>
 
-                <fieldset className="gis-fieldset">
+                <fieldset className="field">
                   <legend>Boundary categories</legend>
                   <p className="gis-hint">All categories are screened unless you narrow the scan.</p>
                   <div className="gis-category-grid">
                     {BOUNDARY_CATEGORIES.map((category) => (
-                      <label key={category} className="gis-checkbox">
+                      <label key={category} className="checkbox">
                         <input
                           type="checkbox"
                           checked={categories.includes(category)}
@@ -453,13 +421,13 @@ function GisCheckWorkspace() {
                     ))}
                   </div>
                   {categories.length > 0 && (
-                    <button type="button" className="gis-link-button" onClick={() => setCategories([])}>
+                    <button type="button" className="link" onClick={() => setCategories([])}>
                       Clear {categories.length} filter{categories.length > 1 ? "s" : ""}
                     </button>
                   )}
                 </fieldset>
 
-                <button className="gis-primary-button" type="submit" disabled={isChecking}>
+                <button className="btn btn-primary btn-block" type="submit" disabled={isChecking}>
                   {isChecking ? <Loader2 size={15} className="gis-spin" /> : <Crosshair size={15} />}
                   {isChecking ? "Analyzing…" : "Check Boundaries"}
                 </button>
@@ -486,20 +454,20 @@ function GisCheckWorkspace() {
                     </strong>
                     <p>{error.message}</p>
                     {error.kind !== "validation" && (
-                      <button type="button" className="gis-link-button" onClick={() => void runCheck()}>
+                      <button type="button" className="link" onClick={() => void runCheck()}>
                         Retry
                       </button>
                     )}
                   </div>
                 </div>
               )}
-            </section>
+            </Card>
 
             {/* ------------------------------- Map + results ------------------------------- */}
             <section className="gis-results" aria-label="Analysis result">
-              <div className="gis-map-panel">
+              <Card className="gis-map-panel">
                 <div className="gis-map-head">
-                  <h2>Spatial context</h2>
+                  <PanelHeader title="Spatial context" subtitle="Project point, buffer and boundary polygons. Hover a table row to highlight it." />
                   <div className="gis-layer-toggles" role="group" aria-label="Layer visibility">
                     {LAYER_OPTIONS.map((option) => (
                       <label key={option.key} className="gis-layer-toggle">
@@ -547,10 +515,10 @@ function GisCheckWorkspace() {
                       .filter((c): c is string => typeof c === "string") as never[]),
                   ]}
                 />
-              </div>
+              </Card>
 
               <div
-                className="gis-result-panel"
+                className="card gis-result-panel"
                 ref={resultRef}
                 tabIndex={-1}
                 aria-live="polite"
@@ -596,10 +564,7 @@ function GisCheckWorkspace() {
                           </strong>
                           <p>{STATUS_HEADLINES[statusKey]}</p>
                         </div>
-                        <span className={`risk-pill ${severityClass}`}>
-                          <i />
-                          {STATUS_LABELS[statusKey]}
-                        </span>
+                        <StatusChip tone={severityClass}>{STATUS_LABELS[statusKey]}</StatusChip>
                       </div>
 
                       <dl className="gis-verdict-stats">
@@ -633,10 +598,7 @@ function GisCheckWorkspace() {
                         <ul className="gis-flag-list">
                           {result.clearance_flags.map((flag) => (
                             <li key={flag.boundary_id}>
-                              <span className={`risk-pill ${SEVERITY_CLASS[flag.severity]}`}>
-                                <i />
-                                {flag.severity}
-                              </span>
+                              <StatusChip tone={SEVERITY_CLASS[flag.severity]}>{flag.severity}</StatusChip>
                               <div>
                                 <strong>{flag.boundary_name}</strong>
                                 <p>{flag.reason}</p>
@@ -662,52 +624,17 @@ function GisCheckWorkspace() {
                           </small>
                         </div>
                       ) : (
-                        <div className="gis-table" role="table">
-                          <div className="gis-table-head" role="row">
-                            <span role="columnheader">BOUNDARY</span>
-                            <span role="columnheader">TYPE</span>
-                            <span role="columnheader">DISTANCE</span>
-                            <span role="columnheader">OVERLAP</span>
-                            <span role="columnheader">SEVERITY</span>
-                          </div>
+                        <DataTable ariaLabel="Detected boundaries" columns={[{ key: "b", label: "Boundary", width: "minmax(0, 1.6fr)" }, { key: "t", label: "Type", width: "minmax(0, 1fr)" }, { key: "d", label: "Distance", width: "110px", align: "right" }, { key: "o", label: "Overlap", width: "120px", align: "right" }, { key: "s", label: "Severity", width: "96px" }]}>
                           {result.collisions.map((collision) => (
-                            <div
-                              key={collision.boundary_id}
-                              className="gis-table-row"
-                              role="row"
-                              tabIndex={0}
-                              onMouseEnter={() => setHighlightedId(collision.boundary_id)}
-                              onMouseLeave={() => setHighlightedId(null)}
-                              onFocus={() => setHighlightedId(collision.boundary_id)}
-                              onBlur={() => setHighlightedId(null)}
-                            >
-                              <span role="cell" className="gis-boundary-name">
-                                <strong>{collision.boundary_name}</strong>
-                                <small>
-                                  {collision.category_label}
-                                  {collision.district ? ` · ${collision.district}` : ""}
-                                  {collision.is_demo ? " · demo data" : ""}
-                                </small>
-                              </span>
-                              <span role="cell" className="gis-collision-type">
-                                {STATUS_LABELS[collision.collision_type]}
-                              </span>
-                              <span role="cell">{formatDistance(collision.distance_meters)}</span>
-                              <span role="cell">
-                                {collision.buffer_overlap_percentage > 0
-                                  ? `${collision.buffer_overlap_percentage.toFixed(1)}%`
-                                  : "--"}
-                                <small>{formatArea(collision.intersection_area_sqm)}</small>
-                              </span>
-                              <span role="cell">
-                                <span className={`risk-pill ${SEVERITY_CLASS[collision.severity]}`}>
-                                  <i />
-                                  {collision.severity}
-                                </span>
-                              </span>
-                            </div>
+                            <TableRow key={collision.boundary_id} onClick={() => setHighlightedId(highlightedId === collision.boundary_id ? null : collision.boundary_id)} ariaLabel={`Highlight ${collision.boundary_name} on the map`} className="gis-table-row">
+                              <Cell><span onMouseEnter={() => setHighlightedId(collision.boundary_id)} onMouseLeave={() => setHighlightedId(null)}><strong>{collision.boundary_name}</strong><small>{collision.category_label}{collision.district ? ` · ${collision.district}` : ""}{collision.is_demo ? " · demo data" : ""}</small></span></Cell>
+                              <Cell>{STATUS_LABELS[collision.collision_type]}</Cell>
+                              <Cell align="right">{formatDistance(collision.distance_meters)}</Cell>
+                              <Cell align="right">{collision.buffer_overlap_percentage > 0 ? `${collision.buffer_overlap_percentage.toFixed(1)}%` : "--"}<small>{formatArea(collision.intersection_area_sqm)}</small></Cell>
+                              <Cell><StatusChip tone={SEVERITY_CLASS[collision.severity]}>{collision.severity}</StatusChip></Cell>
+                            </TableRow>
                           ))}
-                        </div>
+                        </DataTable>
                       )}
                     </div>
 
@@ -715,7 +642,7 @@ function GisCheckWorkspace() {
                       {projectId !== MANUAL && (
                         <button
                           type="button"
-                          className="gis-secondary-button"
+                          className="btn btn-secondary"
                           onClick={() => void saveAssessment()}
                           disabled={isSaving}
                         >
@@ -724,7 +651,7 @@ function GisCheckWorkspace() {
                         </button>
                       )}
                       {projectId !== MANUAL && (
-                        <button type="button" className="gis-secondary-button" onClick={() => void loadHistory()}>
+                        <button type="button" className="btn btn-secondary" onClick={() => void loadHistory()}>
                           <History size={14} />
                           Assessment history
                         </button>
@@ -751,10 +678,7 @@ function GisCheckWorkspace() {
                           <ul className="gis-history">
                             {history.map((record) => (
                               <li key={record.id}>
-                                <span className={`risk-pill ${record.overall_severity ? SEVERITY_CLASS[record.overall_severity] : "stable"}`}>
-                                  <i />
-                                  {record.overall_status === "CLEAR" ? "CLEAR" : record.overall_severity}
-                                </span>
+                                <StatusChip tone={record.overall_severity ? SEVERITY_CLASS[record.overall_severity] : "stable"}>{record.overall_status === "CLEAR" ? "CLEAR" : record.overall_severity}</StatusChip>
                                 <div>
                                   <strong>{STATUS_LABELS[record.overall_status]}</strong>
                                   <small>
@@ -787,8 +711,7 @@ function GisCheckWorkspace() {
             </section>
           </div>
         </div>
-      </main>
-    </div>
+    </AppShell>
   );
 }
 

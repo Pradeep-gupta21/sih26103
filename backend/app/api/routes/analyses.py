@@ -1,8 +1,9 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, HTTPException, Request, status
+from fastapi import APIRouter, HTTPException, Query, Request, status
 
 from app.schemas.analysis import SavedAnalysis, SavedAnalysisCreate, SavedAnalysisSummary
+from app.schemas.portfolio import RecentAnalysis
 from app.services.analysis_service import AnalysisNotFoundError, AnalysisService, build_analysis_service
 
 router = APIRouter(prefix="/analyses", tags=["Saved Analyses"])
@@ -37,6 +38,22 @@ def create_analysis(request: Request, payload: SavedAnalysisCreate) -> SavedAnal
 @router.get("", response_model=list[SavedAnalysisSummary], summary="List saved analyses, newest first")
 def list_analyses(request: Request) -> list[SavedAnalysisSummary]:
     return get_analysis_service(request).list()
+
+
+# Declared before "/{analysis_id}" so the literal path is matched first.
+@router.get("/recent", response_model=list[RecentAnalysis], summary="Newest saved analyses, for the dashboard overview")
+def recent_analyses(request: Request, limit: int = Query(default=5, ge=1, le=50)) -> list[RecentAnalysis]:
+    """Read from the saved-analysis store only. An empty store returns an empty list."""
+    return [
+        RecentAnalysis(
+            analysis_id=item.id,
+            project_name=item.name,
+            created_at=item.saved_at,
+            risk_band_or_score=item.risk_level,
+            risk_percentage=item.risk_percentage,
+        )
+        for item in get_analysis_service(request).list()[:limit]
+    ]
 
 
 @router.get("/{analysis_id}", response_model=SavedAnalysis, summary="Full saved analysis")

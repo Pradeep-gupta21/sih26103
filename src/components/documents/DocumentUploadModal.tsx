@@ -27,7 +27,6 @@ import {
   updateProjectDocument,
 } from "@/lib/prediction-api";
 import DocumentDropzone, { fileExtension, validateDocumentFile } from "@/components/documents/DocumentDropzone";
-import { useDemoDisplayName } from "@/lib/demo-auth";
 
 interface DocumentUploadModalProps {
   isOpen: boolean;
@@ -88,7 +87,6 @@ export default function DocumentUploadModal({
   projectName,
   onDocumentCountChange,
 }: DocumentUploadModalProps) {
-  const displayName = useDemoDisplayName();
   const [documents, setDocuments] = useState<DocumentMetadata[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [fetchError, setFetchError] = useState<string | null>(null);
@@ -185,7 +183,7 @@ export default function DocumentUploadModal({
         item.file,
         item.category,
         item.description,
-        displayName
+        "Ananya Sharma"
       );
       setFileQueue((prev) =>
         prev.map((i) => (i.id === item.id ? { ...i, status: "Uploaded" } : i))
@@ -402,7 +400,7 @@ export default function DocumentUploadModal({
                   {waitingCount > 0 && (
                     <button
                       type="button"
-                      className="doc-btn-primary"
+                      className="btn btn-primary"
                       onClick={handleUploadAll}
                       disabled={isUploadingAny}
                       aria-label={`Upload ${waitingCount} queued file${waitingCount > 1 ? "s" : ""}`}

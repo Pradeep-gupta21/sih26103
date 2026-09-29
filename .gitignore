@@ -61,3 +61,10 @@ backend/data/gis/assessments.json
 # Saved document analyses: user-created runtime state, not registry data.
 backend/data/saved_analyses.db
 .env.local
+
+# added at baseline commit
+/backend/venv/
+*.db
+*.sqlite
+*.sqlite3
+/backend/uploads/

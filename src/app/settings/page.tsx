@@ -2,12 +2,19 @@
 
 import { useState } from "react";
 import { Check, Settings } from "lucide-react";
-import { Sidebar } from "../page";
-import { useDemoDisplayName } from "@/lib/demo-auth";
+import { AppShell } from "@/components/shell/app-shell";
+import { PageHeader } from "@/components/ui/page-header";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { EmptyState } from "@/components/ui/empty-state";
 
 export default function SettingsPage() {
   const [active, setActive] = useState("Workspace settings");
-  const displayName = useDemoDisplayName();
   const [saved, setSaved] = useState(false);
-  return <div className="app-shell"><Sidebar active={active} setActive={setActive} /><main className="main-content"><header className="topbar"><div className="breadcrumb"><strong>WORKSPACE SETTINGS</strong></div></header><div className="content-wrap"><header className="intro"><div><span className="eyebrow"><Settings size={13} /> WORKSPACE</span><h1>Workspace settings</h1><p>Manage the local workspace preferences used by this interface.</p></div></header><section className="signal-panel state-page-panel"><div className="signal-icon"><Settings size={17} /></div><span className="eyebrow">WORKSPACE PROFILE</span><h3>National Infrastructure</h3>  <p>Portfolio director access is active for {displayName}. Authentication and persistence are not connected in this environment.</p><button className="dark-button" onClick={() => setSaved(true)}>{saved ? <><Check size={14} /> Settings acknowledged</> : "Save workspace state"}</button></section></div></main></div>;
+  return (
+    <AppShell active={active} setActive={setActive}>
+      <PageHeader eyebrow="Workspace" title="Workspace settings" subtitle="Manage the local workspace preferences used by this interface." />
+      <Card><EmptyState icon={<Settings size={20} />} title="National Infrastructure" hint="Portfolio director access is active for Ananya Sharma. Authentication and persistence are not connected in this environment." action={<Button variant="primary" onClick={() => setSaved(true)}>{saved ? <><Check size={14} aria-hidden="true" /> Settings acknowledged</> : "Save workspace state"}</Button>} /></Card>
+    </AppShell>
+  );
 }
